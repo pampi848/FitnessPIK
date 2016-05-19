@@ -9,6 +9,7 @@
 namespace Accounts;
 
 require_once "Validators/ALLvalidators.php";
+
 abstract class Account
 {
     var $login = '';
@@ -29,8 +30,7 @@ abstract class Account
     var $activated = false;
     var $level = 0;
 
-    
-    
+
     // Getters&&Setters \\
     /**
      * @return string
@@ -45,7 +45,7 @@ abstract class Account
      */
     protected function setHaslo($haslo)
     {
-            $this->haslo = $haslo;
+        $this->haslo = $haslo;
 
     }
 
@@ -304,5 +304,5 @@ abstract class Account
     {
         $this->level = $level;
     }
-    
+
 }

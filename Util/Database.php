@@ -17,18 +17,16 @@ class Database
     var $dblogin = "root";
     var $dbpass = "root";
 
-    public function getConnection() {
-        try
-        {
+    public function getConnection()
+    {
+        try {
             $dsn = "mysql:host={$this->getHost()};dbname={$this->getDbname()}";
             $params = [PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'utf8'"];
 
             $pdo = new PDO($dsn, $this->getDblogin(), $this->getDbpass(), $params);
 
             return $pdo;
-        }
-        catch (PDOException $e)
-        {
+        } catch (PDOException $e) {
             //TODO:
             //print "Błąd połączenia z bazą!: " . $e->getMessage() . "<br/>";
             die();

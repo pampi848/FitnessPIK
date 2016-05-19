@@ -11,5 +11,5 @@ namespace Accounts;
 
 class Admin extends User
 {
-var $level = 1;
+    var $level = 1;
 }
