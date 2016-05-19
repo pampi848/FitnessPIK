@@ -9,7 +9,7 @@
 namespace Accounts;
 
 
-class Admin extends Account
+class Admin extends User
 {
-
+var $level = 1;
 }

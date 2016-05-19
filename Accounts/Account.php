@@ -8,7 +8,7 @@
 
 namespace Accounts;
 
-
+require_once "Validators/ALLvalidators.php";
 abstract class Account
 {
     var $login = '';
@@ -18,11 +18,16 @@ abstract class Account
     var $imie = '';
     var $nazwisko = '';
     var $miejscowosc = '';
-    var $NrDomu = 0;
-    var $NrMieszkania = 0;
+    var $ulica = '';
+    var $nrDomu = 0;
+    var $nrMieszkania = 0;
     var $kodPocztowy = '';
-    var $dataUrodzenia = '';
+    var $dzienUrodzin = '';
+    var $miesiacUrodzin = '';
+    var $rokUrodzin = '';
     var $dataUtworzenia = '';
+    var $activated = false;
+    var $level = 0;
 
     
     
@@ -38,9 +43,10 @@ abstract class Account
     /**
      * @param string $haslo
      */
-    public function setHaslo($haslo)
+    protected function setHaslo($haslo)
     {
-        $this->haslo = $haslo;
+            $this->haslo = $haslo;
+
     }
 
     /**
@@ -54,7 +60,7 @@ abstract class Account
     /**
      * @param string $login
      */
-    public function setLogin($login)
+    protected function setLogin($login)
     {
         $this->login = $login;
     }
@@ -70,7 +76,7 @@ abstract class Account
     /**
      * @param int $nrTel
      */
-    public function setNrTel($nrTel)
+    protected function setNrTel($nrTel)
     {
         $this->nrTel = $nrTel;
     }
@@ -86,7 +92,7 @@ abstract class Account
     /**
      * @param string $email
      */
-    public function setEmail($email)
+    protected function setEmail($email)
     {
         $this->email = $email;
     }
@@ -102,7 +108,7 @@ abstract class Account
     /**
      * @param string $imie
      */
-    public function setImie($imie)
+    protected function setImie($imie)
     {
         $this->imie = $imie;
     }
@@ -118,7 +124,7 @@ abstract class Account
     /**
      * @param string $nazwisko
      */
-    public function setNazwisko($nazwisko)
+    protected function setNazwisko($nazwisko)
     {
         $this->nazwisko = $nazwisko;
     }
@@ -134,9 +140,25 @@ abstract class Account
     /**
      * @param string $miejscowosc
      */
-    public function setMiejscowosc($miejscowosc)
+    protected function setMiejscowosc($miejscowosc)
     {
         $this->miejscowosc = $miejscowosc;
+    }
+
+    /**
+     * @return string
+     */
+    public function getUlica()
+    {
+        return $this->ulica;
+    }
+
+    /**
+     * @param string $ulica
+     */
+    protected function setUlica($ulica)
+    {
+        $this->ulica = $ulica;
     }
 
     /**
@@ -144,15 +166,15 @@ abstract class Account
      */
     public function getNrDomu()
     {
-        return $this->NrDomu;
+        return $this->nrDomu;
     }
 
     /**
-     * @param int $NrDomu
+     * @param int $nrDomu
      */
-    public function setNrDomu($NrDomu)
+    protected function setNrDomu($nrDomu)
     {
-        $this->NrDomu = $NrDomu;
+        $this->nrDomu = $nrDomu;
     }
 
     /**
@@ -166,7 +188,7 @@ abstract class Account
     /**
      * @param string $kodPocztowy
      */
-    public function setKodPocztowy($kodPocztowy)
+    protected function setKodPocztowy($kodPocztowy)
     {
         $this->kodPocztowy = $kodPocztowy;
     }
@@ -176,31 +198,31 @@ abstract class Account
      */
     public function getNrMieszkania()
     {
-        return $this->NrMieszkania;
+        return $this->nrMieszkania;
     }
 
     /**
-     * @param int $NrMieszkania
+     * @param int $nrMieszkania
      */
-    public function setNrMieszkania($NrMieszkania)
+    protected function setNrMieszkania($nrMieszkania)
     {
-        $this->NrMieszkania = $NrMieszkania;
+        $this->nrMieszkania = $nrMieszkania;
     }
 
     /**
      * @return string
      */
-    public function getDataUrodzenia()
+    public function getDzienUrodzin()
     {
-        return $this->dataUrodzenia;
+        return $this->dzienUrodzin;
     }
 
     /**
-     * @param string $dataUrodzenia
+     * @param string $dzienUrodzin
      */
-    public function setDataUrodzenia($dataUrodzenia)
+    protected function setDzienUrodzin($dzienUrodzin)
     {
-        $this->dataUrodzenia = $dataUrodzenia;
+        $this->dzienUrodzin = $dzienUrodzin;
     }
 
     /**
@@ -214,8 +236,73 @@ abstract class Account
     /**
      * @param string $dataUtworzenia
      */
-    public function setDataUtworzenia($dataUtworzenia)
+    protected function setDataUtworzenia($dataUtworzenia)
     {
         $this->dataUtworzenia = $dataUtworzenia;
     }
+
+    /**
+     * @return string
+     */
+    public function getMiesiacUrodzin()
+    {
+        return $this->miesiacUrodzin;
+    }
+
+    /**
+     * @param string $miesiacUrodzin
+     */
+    protected function setMiesiacUrodzin($miesiacUrodzin)
+    {
+        $this->miesiacUrodzin = $miesiacUrodzin;
+    }
+
+    /**
+     * @return string
+     */
+    public function getRokUrodzin()
+    {
+        return $this->rokUrodzin;
+    }
+
+    /**
+     * @param string $rokUrodzin
+     */
+    protected function setRokUrodzin($rokUrodzin)
+    {
+        $this->rokUrodzin = $rokUrodzin;
+    }
+
+    /**
+     * @return boolean
+     */
+    public function isActivated()
+    {
+        return $this->activated;
+    }
+
+    /**
+     * @param boolean $activated
+     */
+    protected function setActivated($activated)
+    {
+        $this->activated = $activated;
+    }
+
+    /**
+     * @return int
+     */
+    public function getLevel()
+    {
+        return $this->level;
+    }
+
+    /**
+     * @param int $level
+     */
+    protected function setLevel($level)
+    {
+        $this->level = $level;
+    }
+    
 }

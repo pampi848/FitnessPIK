@@ -1,28 +1,22 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: pampi
- * Date: 17.05.16
- * Time: 19:03
- */
+require "autoload.php";
+use Accounts\User;
 
-include_once "Validators/ALLvalidators.php";
-
-/**
-$test = "Select * from db_users where login='' and password='' -- [ ] { } \ / . , ; ) ( @ # $ % ^ & * \"\" ";
-
-echo SQLinjection($test);
- */
-
-/**
-
-$email = 'pampi.com@gmail.com';
-echo is_mail($email);
- */
-
-/**
-$email = '76-248';
-echo is_zipcode($email);
- */
-
-
+ $login = 'michal';
+ $haslo = 'mojehaslo';
+ $email = 'mail@lol.com';
+ $nrTel = 123456789;
+ $imie = 'michal';
+ $nazwisko = 'klemiato';
+ $miejscowosc = 'debnica';
+ $ulica = 'fabryczna';
+ $nrDomu = 10;
+ $nrMieszkania = 3;
+ $kodPocztowy = '76-248';
+ $dzienUrodzin = 18;
+ $miesiacUrodzin = 01;
+ $rokUrodzin = 1997;
+ $obiekt = User::userCreate($login,$haslo,$email,$nrTel,$imie,$nazwisko,$miejscowosc,$ulica, $nrDomu,
+                            $nrMieszkania,$kodPocztowy,$dzienUrodzin,$miesiacUrodzin,$rokUrodzin);
+var_dump($obiekt);
+// koniecznie ogarnij autoloada! http://stackoverflow.com/questions/6961914/class-not-found-using-use
