@@ -7,8 +7,9 @@
  */
 
 namespace Accounts;
-
-require_once "Validators/ALLvalidators.php";
+require_once "../autoload.php";
+use Util\Database;
+use PDO;
 
 abstract class Account
 {
@@ -30,6 +31,27 @@ abstract class Account
     var $activated = false;
     var $level = 0;
 
+    public static function fetchPasswordByLogin($login)
+    {
+        {
+            try {
+                $pdo = Database::getInstance()->getConnection();
+
+                $stmt = $pdo->prepare("SELECT `haslo` FROM `Account` WHERE `login`=:login LIMIT 1");
+                $stmt->bindValue(':login', $login, PDO::PARAM_STR);        //id tournament
+
+                $stmt->execute();
+                $haslo = $stmt->fetch();
+                $haslo = $haslo[0];
+            } catch (PDOException $exception) {
+                // TODO: log database errors
+                $haslo="error";
+                throw $exception;
+            }
+
+            return $haslo;
+        }
+    }
 
     // Getters&&Setters \\
     /**

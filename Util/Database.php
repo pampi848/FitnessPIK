@@ -1,102 +1,50 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: pampi
- * Date: 17.05.16
- * Time: 18:07
- */
 
 namespace Util;
 
+use Util\Config;
 use PDO;
+
 
 class Database
 {
-    var $host = "localhost";
-    var $dbname = "FitnessPIK";
-    var $dblogin = "root";
-    var $dbpass = "root";
+    /**
+     * @var Database
+     */
+    protected static $instance = null;
 
-    public function getConnection()
-    {
-        try {
-            $dsn = "mysql:host={$this->getHost()};dbname={$this->getDbname()}";
-            $params = [PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'utf8'"];
+    /**
+     * @var array
+     */
+    protected $config = null;
 
-            $pdo = new PDO($dsn, $this->getDblogin(), $this->getDbpass(), $params);
-
-            return $pdo;
-        } catch (PDOException $e) {
-            //TODO:
-            //print "Błąd połączenia z bazą!: " . $e->getMessage() . "<br/>";
-            die();
+    /**
+     * @return Database
+     */
+    public static function getInstance() {
+        if (!isset(self::$instance)) {
+            self::$instance = new self();
         }
-    }
 
-
-    // Getters&&Setters \\
-    /**
-     * @return string
-     */
-    public function getHost()
-    {
-        return $this->host;
+        return self::$instance;
     }
 
     /**
-     * @param string $host
+     * @param Config $config
      */
-    public function setHost($host)
-    {
-        $this->host = $host;
+    protected function __construct() {
+        $this->config = Config::getInstance()->getDatabase();
     }
 
     /**
-     * @return string
+     * @return \PDO
      */
-    public function getDbname()
-    {
-        return $this->dbname;
-    }
+    public function getConnection() {
+        $dsn = "mysql:host={$this->config['host']};dbname={$this->config['database']}";
+        $params = [PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'utf8'"];
 
-    /**
-     * @param string $dbname
-     */
-    public function setDbname($dbname)
-    {
-        $this->dbname = $dbname;
-    }
+        $pdo = new PDO($dsn, $this->config['user'], $this->config['pass'], $params);
 
-    /**
-     * @return string
-     */
-    public function getDblogin()
-    {
-        return $this->dblogin;
+        return $pdo;
     }
-
-    /**
-     * @param string $dblogin
-     */
-    public function setDblogin($dblogin)
-    {
-        $this->dblogin = $dblogin;
-    }
-
-    /**
-     * @return string
-     */
-    public function getDbpass()
-    {
-        return $this->dbpass;
-    }
-
-    /**
-     * @param string $dbpass
-     */
-    public function setDbpass($dbpass)
-    {
-        $this->dbpass = $dbpass;
-    }
-
 }
