@@ -1,0 +1,148 @@
+#porn{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 1;
+    width: 100%;
+}
+#content {
+    position: relative;
+    padding-top: 3vh;
+}
+
+#text {
+    margin-top: 2vw;
+}
+
+#clicker {
+    float: right;
+}
+
+#clicker:hover {
+    cursor: pointer;
+}
+
+#login_form input[type=text]
+{
+	width: 30vw;
+    height: 6vh;
+	background-color: #efefef;
+	color: #666;
+	border: 0.2vw solid #ddd;
+	border-radius: 5vw;
+	font-size: 2.8vw;
+	padding: 1vw;
+	box-sizing: border-box;
+	outline: none;
+}
+
+#login_form input[type=password]
+{
+	width: 30vw;
+    height: 6vh;
+	background-color: #efefef;
+	color: #666;
+	border: 0.2vw solid #ddd;
+	border-radius: 5vw;
+	font-size: 2.8vw;
+	padding: 1vw;
+	box-sizing: border-box;
+	outline: none;
+}
+
+#login_form input[type=submit]
+{
+	width: 30vw;
+    height: 10vh;
+	background-color: #FF8E0D;
+	font-size:4vh;
+	color: white;
+	padding: 1vh 1vw;
+	border: none;
+	border-radius: 0.1vw;
+	cursor: pointer;
+	letter-spacing: 0.1vw;
+	outline: none;
+}
+
+#login_form input{
+    margin-top: 1vh;
+}
+
+#login_panel{
+    width: 34vw;
+    height: 46vh;
+    background-color: azure;
+    text-align: center;
+    border: 0.1vh solid black;
+    border-radius: 53px 53px 53px 53px;
+    -moz-border-radius: 53px 53px 53px 53px;
+    -webkit-border-radius: 53px 53px 53px 53px;
+    border: 6px solid #000000;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+span#com{
+    margin-top: 3vh;
+    font-size:2vh;
+}
+#socials {
+    text-decoration: none;
+    list-style-type: none;
+}
+
+#sidebar_social {
+    background-color: azure;
+    width: 7vw;
+    float: right;
+    position: fixed;
+    bottom: 40vh;
+    right: 0;
+    border-radius: 84px 0px 0px 198px;
+-moz-border-radius: 84px 0px 0px 198px;
+-webkit-border-radius: 84px 0px 0px 198px;
+border: 0px solid #000000;
+    padding-bottom: 3vh;
+    border: 0.3vw solid black;
+}
+
+.carousel-caption {
+    font-size: 1vh;
+}
+
+.social {
+    background-color: aqua;
+    width: 3vw;
+    text-align: center;
+    margin-top: 2vh;
+    height: 3vw;
+    vertical-align: middle;
+    border-radius: 200px 200px 200px 200px;
+-moz-border-radius: 200px 200px 200px 200px;
+-webkit-border-radius: 200px 200px 200px 200px;
+border: 0px solid #000000;
+}
+
+.social_text {
+    vertical-align: middle;
+    padding-top: 1vh;
+}
+
+body {
+    background-image: url("../img/back.png");
+}
+
+.container {
+    background-color: #fafafa !important;
+}
+
+
+.container-fluid {
+    margin-bottom: 0;
+}
+
+.navbar-default {
+    margin-bottom: 0;
+}
