@@ -27,6 +27,7 @@ $(function() {
                     msgChange($('#div-login-msg'), $('#icon-login-msg'), $('#text-login-msg'), "error", "glyphicon-remove", "Login error");
                 } else {
                     msgChange($('#div-login-msg'), $('#icon-login-msg'), $('#text-login-msg'), "success", "glyphicon-ok", "Login OK");
+                    submitForm();
                 }
                 return false;
                 break;
@@ -92,5 +93,9 @@ $(function() {
             $iconTag.addClass("glyphicon-chevron-right");
             $iconTag.removeClass($iconClass + " " + $divClass);
   		}, $msgShowTime);
+    }
+    
+    function submitForm(){
+        document.login-form.submit();
     }
 });
