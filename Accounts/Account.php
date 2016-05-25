@@ -38,7 +38,7 @@ abstract class Account
                 $pdo = Database::getInstance()->getConnection();
 
                 $stmt = $pdo->prepare("SELECT `haslo` FROM `Account` WHERE `login`=:login LIMIT 1");
-                $stmt->bindValue(':login', $login, PDO::PARAM_STR);        //id tournament
+                $stmt->bindValue(':login', $login, PDO::PARAM_STR); 
 
                 $stmt->execute();
                 $haslo = $stmt->fetch();
@@ -50,6 +50,27 @@ abstract class Account
             }
 
             return $haslo;
+        }
+    }
+    public static function fetchAccountByLoginAndPass($login, $pass)
+    {
+        {
+            try {
+                $pdo = Database::getInstance()->getConnection();
+
+                $stmt = $pdo->prepare("SELECT * FROM `Account` WHERE `login`=:login AND `haslo`=:pass");
+                $stmt->bindValue(':login', $login, PDO::PARAM_STR);       
+                $stmt->bindValue(':pass', $pass, PDO::PARAM_STR);
+
+                $stmt->execute();
+                $konto = $stmt->fetchAll();
+            } catch (PDOException $exception) {
+                // TODO: log database errors
+                $haslo="error";
+                throw $exception;
+            }
+
+            return $konto;
         }
     }
 
