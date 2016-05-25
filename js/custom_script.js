@@ -4,10 +4,8 @@ function alert(){
 
 $(document).ready(function(){
     var screen = document.documentElement.clientWidth;
-    if(screen < 1100){
-        $("#sidebar_social").fadeOut(1);
-    }
     if(screen >= 1100){
         $("#sidebar_social").fadeIn(600);
     }
+    console.log(screen);
 });

@@ -1,9 +1,9 @@
 #porn{
     position: absolute;
-    left: 0px;
-    top: 0px;
+    left: 0vw;
+    top: 0vh;
     z-index: 1;
-    width: 100%;
+    width: 100% !important;
 }
 #content {
     position: relative;
@@ -106,6 +106,7 @@ span#com{
 border: 0px solid #000000;
     padding-bottom: 3vh;
     border: 0.3vw solid black;
+    display: none;
 }
 
 .carousel-caption {
@@ -145,4 +146,12 @@ body {
 
 .navbar-default {
     margin-bottom: 0;
+}
+
+body {
+    /*overflow:hidden;*/
+}
+
+.float {
+    float: left;
 }
