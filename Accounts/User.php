@@ -41,9 +41,7 @@ class User extends Account
             $nowekonto->setNrDomu(addslashes($home));
             $nowekonto->setNrMieszkania(addslashes($flat));
             $nowekonto->setKodPocztowy(addslashes($zipcode));
-            $nowekonto->setDzienUrodzin(addslashes($birthday));
-            $nowekonto->setMiesiacUrodzin(addslashes($birthmonth));
-            $nowekonto->setRokUrodzin(addslashes($birthyear));
+            $nowekonto->setDataUrodzin(addslashes($birthyear),addslashes($birthmonth),addslashes($birthday));
             $nowekonto->setDataUtworzenia(date("Y-m-d H:i:s"));
             return $nowekonto;
         } else {

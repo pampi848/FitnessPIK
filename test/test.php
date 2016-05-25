@@ -2,22 +2,22 @@
 require "../autoload.php";
 use Accounts\User;
 
-//$login = 'michal';
-//$haslo = 'mojehaslo';
-//$email = 'mail@lol.com';
-//$nrTel = 123456789;
-//$imie = 'michal';
-//$nazwisko = 'klemiato';
-//$miejscowosc = 'debnica';
-//$ulica = 'fabryczna';
-//$nrDomu = 10;
-//$nrMieszkania = 3;
-//$kodPocztowy = '76-248';
-//$dzienUrodzin = 18;
-//$miesiacUrodzin = 01;
-//$rokUrodzin = 1997;
-//$obiekt = User::userCreate($login, $haslo, $email, $nrTel, $imie, $nazwisko, $miejscowosc, $ulica, $nrDomu,
-//                           $nrMieszkania, $kodPocztowy, $dzienUrodzin, $miesiacUrodzin, $rokUrodzin);
-//var_dump($obiekt);
+$login = 'loltrwe';
+$haslo = 'lewfgtl';
+$email = 'fg@lol.com';
+$nrTel = 123456789;
+$imie = 'ddddfq';
+$nazwisko ='edddwf';
+$miejscowosc = 'edeee';
+$ulica = 'eeeee';
+$nrDomu = 1;
+$nrMieszkania = 1;
+$kodPocztowy = '66-666';
+$dzienUrodzin = 1;
+$miesiacUrodzin = 1;
+$rokUrodzin = 1111;
+$obiekt = User::userCreate($login, $haslo, $email, $nrTel, $imie, $nazwisko, $miejscowosc, $ulica, $nrDomu,
+                           $nrMieszkania, $kodPocztowy, $dzienUrodzin, $miesiacUrodzin, $rokUrodzin);
+var_dump($obiekt);
 
-var_dump(User::fetchAccountByLoginAndPass('root','root'));
+$obiekt->insertAccountIntoSQL();

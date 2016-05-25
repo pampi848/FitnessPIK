@@ -13,6 +13,7 @@ use PDO;
 
 abstract class Account
 {
+    var $id = 0;
     var $login = '';
     var $haslo = '';
     var $email = '';
@@ -24,16 +25,13 @@ abstract class Account
     var $nrDomu = 0;
     var $nrMieszkania = 0;
     var $kodPocztowy = '';
-    var $dzienUrodzin = '';
-    var $miesiacUrodzin = '';
-    var $rokUrodzin = '';
+    var $dataUrodzin = '';
     var $dataUtworzenia = '';
     var $activated = false;
     var $level = 0;
 
     public static function fetchPasswordByLogin($login)
     {
-        {
             try {
                 $pdo = Database::getInstance()->getConnection();
 
@@ -50,11 +48,10 @@ abstract class Account
             }
 
             return $haslo;
-        }
     }
+    
     public static function fetchAccountByLoginAndPass($login, $pass)
     {
-        {
             try {
                 $pdo = Database::getInstance()->getConnection();
 
@@ -63,7 +60,8 @@ abstract class Account
                 $stmt->bindValue(':pass', $pass, PDO::PARAM_STR);
 
                 $stmt->execute();
-                $konto = $stmt->fetchAll();
+                $konto = new User;
+                $konto = $stmt->fetch(5);
             } catch (PDOException $exception) {
                 // TODO: log database errors
                 $haslo="error";
@@ -71,7 +69,56 @@ abstract class Account
             }
 
             return $konto;
+    }
+    
+    public function insertAccountIntoSQL(){
+        try{
+            $pdo = Database::getInstance()->getConnection();
+            $stmt = $pdo->prepare("
+            INSERT INTO `Account` 
+            (`login`,`haslo`,`email`,`nrTel`,`imie`,`nazwisko`,`miejscowosc`,`ulica`,`nrDomu`,`nrMieszkania`,`kodPocztowy`,`dataUrodzin`,`dataUtworzenia`,`activated`,`level`) 
+            VALUES
+            (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+            ");
+            $stmt->bindValue(1, $this->getLogin(), PDO::PARAM_STR);
+            $stmt->bindValue(2, $this->getHaslo(), PDO::PARAM_STR);
+            $stmt->bindValue(3, $this->getEmail(), PDO::PARAM_STR);
+            $stmt->bindValue(4, $this->getNrTel(), PDO::PARAM_STR);
+            $stmt->bindValue(5, $this->getImie(), PDO::PARAM_STR);
+            $stmt->bindValue(6, $this->getNazwisko(), PDO::PARAM_STR);
+            $stmt->bindValue(7, $this->getMiejscowosc(), PDO::PARAM_STR);
+            $stmt->bindValue(8, $this->getUlica(), PDO::PARAM_STR);
+            $stmt->bindValue(9, $this->getNrDomu(), PDO::PARAM_INT);
+            $stmt->bindValue(10, $this->getNrMieszkania(), PDO::PARAM_INT);
+            $stmt->bindValue(11, $this->getKodPocztowy(), PDO::PARAM_STR);
+            $stmt->bindValue(12, $this->getDataUrodzin(), PDO::PARAM_STR);
+            $stmt->bindValue(13, $this->getDataUtworzenia(), PDO::PARAM_STR);
+            $stmt->bindValue(14, $this->isActivated(), PDO::PARAM_BOOL);
+            $stmt->bindValue(15, $this->getLevel(), PDO::PARAM_INT);
+
+            $stmt->execute();
         }
+        catch (PDOException $exception) {
+            // TODO: log database errors
+            $haslo="error";
+            throw $exception;
+        }
+    }
+
+    /**
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * @param int $id
+     */
+    public function setId($id)
+    {
+        $this->id = $id;
     }
 
     // Getters&&Setters \\
@@ -251,23 +298,6 @@ abstract class Account
     {
         $this->nrMieszkania = $nrMieszkania;
     }
-
-    /**
-     * @return string
-     */
-    public function getDzienUrodzin()
-    {
-        return $this->dzienUrodzin;
-    }
-
-    /**
-     * @param string $dzienUrodzin
-     */
-    protected function setDzienUrodzin($dzienUrodzin)
-    {
-        $this->dzienUrodzin = $dzienUrodzin;
-    }
-
     /**
      * @return string
      */
@@ -287,33 +317,17 @@ abstract class Account
     /**
      * @return string
      */
-    public function getMiesiacUrodzin()
+    public function getDataUrodzin()
     {
-        return $this->miesiacUrodzin;
+        return $this->dataUrodzin;
     }
 
     /**
-     * @param string $miesiacUrodzin
+     * @param string $dataUrodzin
      */
-    protected function setMiesiacUrodzin($miesiacUrodzin)
+    public function setDataUrodzin($dzienUrodzin,$miesiacUrodzin,$rokUrodzin)
     {
-        $this->miesiacUrodzin = $miesiacUrodzin;
-    }
-
-    /**
-     * @return string
-     */
-    public function getRokUrodzin()
-    {
-        return $this->rokUrodzin;
-    }
-
-    /**
-     * @param string $rokUrodzin
-     */
-    protected function setRokUrodzin($rokUrodzin)
-    {
-        $this->rokUrodzin = $rokUrodzin;
+        $this->dataUrodzin = $rokUrodzin.'-'.$miesiacUrodzin.'-'.$dzienUrodzin;
     }
 
     /**
@@ -327,7 +341,7 @@ abstract class Account
     /**
      * @param boolean $activated
      */
-    protected function setActivated($activated)
+    protected function setActivated($activated=false)
     {
         $this->activated = $activated;
     }
@@ -343,7 +357,7 @@ abstract class Account
     /**
      * @param int $level
      */
-    protected function setLevel($level)
+    protected function setLevel($level=0)
     {
         $this->level = $level;
     }
