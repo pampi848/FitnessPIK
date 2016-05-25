@@ -9,8 +9,8 @@ if(isset($_POST['login'])&&isset($_POST['pass'])){
     if($haslo === Account::fetchPasswordByLogin($login)){
         session_start();
         
-//        echo "<meta charset='utf-8'><p> Witaj $login!</p>";
-        header('location: ../index.php');
+        echo "<meta charset='utf-8'><p> Witaj $login!</p>";
+       // header('location: ../index.php');
     }
     else{
         echo "<meta charset='utf-8'><p>Zapewne pomyliłeś login lub hasło ;) </p>";

@@ -131,7 +131,7 @@ END;
                 <div id="div-forms">
                 
                     <!-- Begin # Login Form -->
-                    <form id="login-form" action="login.php" method="post">
+                    <form id="login-form" action="Accounts/index.php" method="post">
 		                <div class="modal-body">
 				    		<div id="div-login-msg">
                                 <div id="icon-login-msg" class="glyphicon glyphicon-chevron-right"></div>
