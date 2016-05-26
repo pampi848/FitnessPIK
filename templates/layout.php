@@ -11,7 +11,7 @@
     <title><?php echo $p['title'] ?></title>
 
     <!-- Bootstrap core CSS -->
-    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
@@ -23,14 +23,11 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-    <link href="../css/custom_style.css" rel="stylesheet">
-    <link href="../css/login_css.css" rel="stylesheet">
-    <link href="../css/arrow.css" rel="stylesheet">
+    <link href="css/custom_style.css" rel="stylesheet">
+    <link href="css/login_css.css" rel="stylesheet">
+    <link href="css/arrow.css" rel="stylesheet">
 </head>
-
-<body>
 
 <?php echo $p['content'] ?>
 
-</body>
 </html>
