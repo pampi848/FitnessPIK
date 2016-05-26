@@ -292,7 +292,7 @@ END;
             $dataUrodzin = $_POST['dataUrodzin'];
             
             echo "Hello ".$imie." ".$nazwisko ;
-            
+            var_dump($_POST);
             ?>
         </div>
         <div class="scroll-top-wrapper ">

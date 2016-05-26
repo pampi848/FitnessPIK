@@ -7,7 +7,7 @@ require "Account.php";
 class User extends Account
 {
 
-    public static function userCreate($log, $pass, $mail, $tel, $name, $lastname, $place, $street, $home, $flat, $zipcode, $birthday, $birthmonth, $birthyear)
+    public static function userCreate($log, $pass, $mail, $tel, $name, $lastname, $place, $street, $home, $flat, $zipcode, $birthday)
     {
         $checker = 0;
         $checker += isset($log) && has_spaces($log) && (mb_strlen($log, 'utf-8') > 5) ? 0 : 1;
