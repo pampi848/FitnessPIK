@@ -68,7 +68,7 @@
           <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Admin panel <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="#">Action</a></li>
+            <li><a href="uprawnienia.php">Uprawnienia</a></li>
             <li><a href="#">Another action</a></li>
             <li><a href="#">Something else here</a></li>
             <li role="separator" class="divider"></li>
@@ -131,7 +131,7 @@ END;
                 <div id="div-forms">
                 
                     <!-- Begin # Login Form -->
-                    <form id="login-form" action="Accounts/index.php" method="post">
+                    <form id="login-form" action="login.php" method="post">
 		                <div class="modal-body">
 				    		<div id="div-login-msg">
                                 <div id="icon-login-msg" class="glyphicon glyphicon-chevron-right"></div>
@@ -179,15 +179,27 @@ END;
                     <!-- End | Lost Password Form -->
                     
                     <!-- Begin | Register Form -->
-                    <form id="register-form" style="display:none;">
+                    <form id="register-form" style="display:none;" action="register.php" method="post">
             		    <div class="modal-body">
 		    				<div id="div-register-msg">
                                 <div id="icon-register-msg" class="glyphicon glyphicon-chevron-right"></div>
                                 <span id="text-register-msg">Register an account.</span>
                             </div>
-		    				<input id="register_username" class="form-control" type="text" placeholder="Username (type ERROR for error effect)" required>
-                            <input id="register_email" class="form-control" type="text" placeholder="E-Mail" required>
-                            <input id="register_password" class="form-control" type="password" placeholder="Password" required>
+		    				<input name="login" id="register_username" class="form-control" type="text" placeholder="Username (type ERROR for error effect)" required>
+                            <input name="email" id="register_email" class="form-control" type="text" placeholder="E-Mail" required>
+                            <input name="haslo" name="" id="register_password" class="form-control" type="password" placeholder="Password" required>
+                            <input name="imie" id="register_forename" class="form-control" type="text" placeholder="Forename" required>
+                            <input name="nazwisko" id="register_surname" class="form-control" type="text" placeholder="Surname" required>
+                            <input name="miejscowosc" id="register_place" class="form-control" type="text" placeholder="Place" required>
+                            <input name="dataUrodzin" id="register_birth" class="form-control" type="date" placeholder="Birthdate" required>
+                            <input name="nrTel" id="register_phonenumber" class="form-control" type="tel" placeholder="Phone number" required>
+                            <input name="ulica" id="register_street" class="form-control" type="text" placeholder="Street" required>
+                            <input name="nrDomu" id="register_housenumber" class="form-control" type="number" placeholder="House number" required>
+                            <input name="nrMieszkania" id="register_apartmentnumber" class="form-control" type="number" placeholder="Apartment number" required>
+                            <input name="kodPocztowy" id="register_zipcode" class="form-control" type="number" placeholder="Zip Code" required>
+                            <!-- 
+(`login`,`haslo`,`email`,`nrTel`,`imie`,`nazwisko`,`miejscowosc`,`ulica`,`nrDomu`,`nrMieszkania`,`kodPocztowy`,`dataUrodzin`,`dataUtworzenia`,`activated`,`level`) do zrobienia
+-->
             			</div>
 		    		    <div class="modal-footer">
                             <div>
