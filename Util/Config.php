@@ -38,7 +38,7 @@ class Config
 
     protected function __construct()
     {
-        include_once '../config.php';
+        include_once 'config.php'; // chodzi o ../config.php
     }
 
     /**

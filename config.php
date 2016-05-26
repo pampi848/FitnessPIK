@@ -12,12 +12,6 @@ $this->templates = [
 ];
 
 $this->actions = [
-    'default' => 'Knightlik\\Knightlik\\Controller\\ActionIndex',
-    'addTeam' => 'Knightlik\\Knightlik\\Controller\\ActionTeamAdd',
-    'showTeam' => 'Knightlik\\Knightlik\\Controller\\ActionTeamShow',
-    'addTournament' => 'Knightlik\\Knightlik\\Controller\\ActionTournamentAdd',
-    'listTournament' => 'Knightlik\\Knightlik\\Controller\\ActionTournamentList',
-    'treeTournament' => 'Knightlik\\Knightlik\\Controller\\ActionTournamentTree',
-    'teamTournament' => 'Knightlik\\Knightlik\\Controller\\ActionTeamTournament'
-
+    'default' => 'Actions\\ActionIndex',
+    'LogIn' => 'Actions\\ActionTeamAdd'
 ];
