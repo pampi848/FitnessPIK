@@ -49,8 +49,8 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li><a href="templates/index.php">Link <span class="sr-only">(current)</span></a></li>
-        <li class="active"><a href="news.php" onclick="console.log(document.documentElement.clientWidth)">Link</a></li>
+        <li class="active"><a href="index.php">Link <span class="sr-only">(current)</span></a></li>
+        <li><a href="news.php" onclick="console.log(document.documentElement.clientWidth)">Link</a></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
           <ul class="dropdown-menu">
@@ -179,7 +179,7 @@ END;
                     <!-- End | Lost Password Form -->
                     
                     <!-- Begin | Register Form -->
-                    <form id="register-form" style="display:none;">
+                    <form id="register-form" style="display:none;" action="register.php" method="post">
             		    <div class="modal-body">
 		    				<div id="div-register-msg">
                                 <div id="icon-register-msg" class="glyphicon glyphicon-chevron-right"></div>
@@ -188,6 +188,18 @@ END;
 		    				<input id="register_username" class="form-control" type="text" placeholder="Username (type ERROR for error effect)" required>
                             <input id="register_email" class="form-control" type="text" placeholder="E-Mail" required>
                             <input id="register_password" class="form-control" type="password" placeholder="Password" required>
+                            <input id="register_forename" class="form-control" type="text" placeholder="Forename" required>
+                            <input id="register_surname" class="form-control" type="text" placeholder="Surname" required>
+                            <input id="register_place" class="form-control" type="text" placeholder="Place" required>
+                            <input id="register_birth" class="form-control" type="date" placeholder="Birthdate" required>
+                            <input id="register_phonenumber" class="form-control" type="tel" placeholder="Phone number" required>
+                            <input id="register_street" class="form-control" type="text" placeholder="Street" required>
+                            <input id="register_housenumber" class="form-control" type="number" placeholder="House number" required>
+                            <input id="register_apartmentnumber" class="form-control" type="number" placeholder="Apartment number" required>
+                            <input id="register_zipcode" class="form-control" type="number" placeholder="Zip Code" required>
+                            <!-- 
+(`login`,`haslo`,`email`,`nrTel`,`imie`,`nazwisko`,`miejscowosc`,`ulica`,`nrDomu`,`nrMieszkania`,`kodPocztowy`,`dataUrodzin`,`dataUtworzenia`,`activated`,`level`) do zrobienia
+-->
             			</div>
 		    		    <div class="modal-footer">
                             <div>
@@ -262,76 +274,26 @@ END;
   </a>
 </div>
         <div id="text">
-            <div class="news_container">
-                <div class="row news_row">
-                    <div class="col-md-5 news">
-                        <div class="row">
-                            <div class="col-md-4">
-                                <img src="img/news_1.png" alt="..." class="img-thumbnail">
-                            </div>
-                            <div class="col-md-8"> 
-                                <div class="row">
-                                <h4>Wprowadzenie do omawianego newsa</h4>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-9">Rozwinięcie omawianego newsa, jego opis i w ogóle taka zachęta</div>
-                                    <div class="col-md-3"><a class="btn btn-default" href="#" role="button">Więcej</a></div>   
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-5 col-md-offset-2 news">
-                        <div class="row">
-                            <div class="col-md-4">
-                                <img src="img/news_2.jpeg" alt="..." class="img-thumbnail">
-                            </div>
-                            <div class="col-md-8"> 
-                                <div class="row">
-                                <h4>Wprowadzenie do omawianego newsa</h4>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-9">Rozwinięcie omawianego newsa, jego opis i w ogóle taka zachęta</div>
-                                    <div class="col-md-3"><a class="btn btn-default" href="#" role="button">Więcej</a></div>   
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row news_row">
-                    <div class="col-md-5 news">
-                        <div class="row">
-                            <div class="col-md-4">
-                                <img src="img/news_3.jpg" alt="..." class="img-thumbnail">
-                            </div>
-                            <div class="col-md-8"> 
-                                <div class="row">
-                                <h4>Wprowadzenie do omawianego newsa</h4>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-9">Rozwinięcie omawianego newsa, jego opis i w ogóle taka zachęta</div>
-                                    <div class="col-md-3"><a class="btn btn-default" href="#" role="button">Więcej</a></div>   
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-5 col-md-offset-2 news">
-                        <div class="row">
-                            <div class="col-md-4">
-                                <img src="img/news_4.jpg" alt="..." class="img-thumbnail">
-                            </div>
-                            <div class="col-md-8"> 
-                                <div class="row">
-                                <h4>Wprowadzenie do omawianego newsa</h4>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-9">Rozwinięcie omawianego newsa, jego opis i w ogóle taka zachęta</div>
-                                    <div class="col-md-3"><a class="btn btn-default" href="#" role="button">Więcej</a></div>   
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <?php
+            
+            //(`login`,`haslo`,`email`,`nrTel`,`imie`,`nazwisko`,`miejscowosc`,`ulica`,`nrDomu`,`nrMieszkania`,`kodPocztowy`,`dataUrodzin`,`dataUtworzenia`,`activated`,`level`)
+            
+            $login = $_POST['login'];
+            $haslo = $_POST['haslo'];
+            $email = $_POST['email'];
+            $nrTel = $_POST['nrTel'];
+            $imie = $_POST['imie'];
+            $nazwisko = $_POST['nazwisko'];
+            $miejscowosc = $_POST['miejscowosc'];
+            $ulica = $_POST['ulica'];
+            $nrDomu = $_POST['nrDomu'];
+            $nrMieszkania = $_POST['nrMieszkania'];
+            $kodPocztowy = $_POST['kodPocztowy'];
+            $dataUrodzin = $_POST['dataUrodzin'];
+            
+            echo "Hello ".$imie." ".$nazwisko ;
+            
+            ?>
         </div>
         <div class="scroll-top-wrapper ">
   <span class="scroll-top-inner">

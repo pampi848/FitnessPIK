@@ -8,10 +8,13 @@
 #content {
     position: relative;
     padding-top: 3vh;
+    padding-bottom: 3vh;
 }
 
 #text {
     margin-top: 2vw;
+    margin-left: 5vw;
+    margin-right: 5vw;
 }
 
 #clicker {
@@ -154,4 +157,8 @@ body {
 
 .float {
     float: left;
+}
+
+.news_row {
+    margin-bottom: 5vh;
 }
