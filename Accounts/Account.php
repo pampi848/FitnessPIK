@@ -325,9 +325,9 @@ abstract class Account
     /**
      * @param string $dataUrodzin
      */
-    public function setDataUrodzin($dzienUrodzin,$miesiacUrodzin,$rokUrodzin)
+    public function setDataUrodzin($dataUrodzin)
     {
-        $this->dataUrodzin = $rokUrodzin.'-'.$miesiacUrodzin.'-'.$dzienUrodzin;
+        $this->dataUrodzin = $dataUrodzin;
     }
 
     /**

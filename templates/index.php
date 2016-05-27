@@ -148,7 +148,7 @@ END;
                     <!-- End | Lost Password Form -->
 
                     <!-- Begin | Register Form -->
-                    <form id="register-form" style="display:none;" action="register.php" method="post">
+                    <form id="register-form" style="display:none;" action="Actions/Register.php" method="post">
                         <div class="modal-body">
                             <div id="div-register-msg">
                                 <div id="icon-register-msg" class="glyphicon glyphicon-chevron-right"></div>

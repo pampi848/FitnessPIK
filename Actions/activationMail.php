@@ -1,5 +1,5 @@
 <?php
-    function smtpmailer($to, $from, $from_name, $subject, $body) {
+    function smtpmailer($to, $from, $fromName, $subject, $body) {
         global $error;
         $mail = new PHPMailer();  // create a new object
         $mail->IsSMTP(); // enable SMTP
@@ -11,7 +11,7 @@
         $mail->IsHTML(true);
         $mail->Username = GUSER;
         $mail->Password = GPWD;
-        $mail->SetFrom($from, $from_name);
+        $mail->SetFrom($from, $fromName);
         $mail->Subject = $subject;
         $mail->Body = $body;
         $mail->AddAddress($to);

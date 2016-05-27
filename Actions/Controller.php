@@ -51,7 +51,6 @@ class Controller
 
         $response = new Response404();
         $response->setContent('Strona nie istnieje');
-
         $response->send();
     }
 }

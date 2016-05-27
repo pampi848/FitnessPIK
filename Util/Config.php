@@ -38,7 +38,13 @@ class Config
 
     protected function __construct()
     {
-        include_once 'config.php'; // chodzi o ../config.php
+        //TODO: usprawnić to ...
+        if(file_exists('config.php')) {
+            include_once 'config.php';
+        }
+        elseif(file_exists('../config.php')) {
+            include_once '../config.php';
+        }
     }
 
     /**
