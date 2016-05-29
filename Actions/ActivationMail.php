@@ -1,4 +1,9 @@
 <?php
+const GUSER = 'fitnesspik@gmail.com'; // GMail username
+const GPWD = 'xsw2#EDC'; // GMail password
+const FROM = 'fitnesspik@gmail.com';
+const FROMNAME = 'Administracja Fitness Club';
+
     function smtpmailer($to, $from, $fromName, $subject, $body) {
         global $error;
         $mail = new PHPMailer();  // create a new object

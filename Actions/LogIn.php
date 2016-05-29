@@ -1,22 +1,34 @@
 <?php
-require_once "../autoload.php";
+namespace Actions;
+
 use Util\Database;
 use Accounts\Account;
-if(isset($_POST['login'])&&isset($_POST['pass'])){
-    $login = addslashes($_POST['login']);
-    $haslo = addslashes($_POST['pass']);
+use Accounts\User;
 
-    if($haslo === Account::fetchPasswordByLogin($login)){
-        session_start();
-        
-        echo "<meta charset='utf-8'><p> Witaj $login!</p>";
-       // header('location: ../index.php');
-    }
-    else{
-        echo "<meta charset='utf-8'><p>Zapewne pomyliłeś login lub hasło ;) </p>";
+require_once "autoload.php";
+
+class LogIn extends  Action{
+    
+    function doExecute()
+    {
+        if (isset($_POST['newUser']['log']) && isset($_POST['newUser']['pass'])) {
+            $login = addslashes($_POST['newUser']['log']);
+            $haslo = addslashes($_POST['newUser']['pass']);
+
+            if ($haslo === Account::fetchPasswordByLogin($login)) {
+                $konto = Account::fetchAccountByLoginAndPass($login,$haslo);
+                if(isset($konto)&&is_object($konto)&&$konto->activated==true) {
+                    $_SESSION['logged'] = ['online' => true, 'imie' => $konto->imie, 'level' => $konto->level];
+                }
+                else {
+                    $_SESSION['messages'][0] = ['class' => 'alert-warning', 'content' => 'Konto nie zostało aktywowane! Proszę aktywować konto linkiem w wiadomości e-mail.'];
+                }
+            } else {
+                $_SESSION['messages'][0] = ['class' => 'alert-danger', 'content' => 'Zapewne pomyliłeś login lub hasło.'];
+            }
+
+        }
+        header('location: http://localhost/FitnessPIK/');
     }
     
-}
-else{
-    echo "proszę podać login i hasło!";
 }

@@ -1,41 +1,66 @@
 <?php
-require_once "../autoload.php";
-require_once('../PHPMailer/class.phpmailer.php');
-require_once '../PHPMailer/PHPMailerAutoload.php';
-require_once "../Actions/activationMail.php"; // funkcja do wysyłania maili
+namespace Actions;
 
 use Accounts\User;
 
-//odbiorca\\
-$login = $_POST['login'];
-$haslo = $_POST['haslo'];
-$email = $_POST['email'];
-$nrTel = $_POST['nrTel'];
-$imie = $_POST['imie'];
-$nazwisko = $_POST['nazwisko'];
-$miejscowosc = $_POST['miejscowosc'];
-$ulica = $_POST['ulica'];
-$nrDomu = $_POST['nrDomu'];
-$nrMieszkania = $_POST['nrMieszkania'];
-$kodPocztowy = $_POST['kodPocztowy'];
-$dataUrodzin = $_POST['dataUrodzin'];
+require_once "autoload.php";
+require_once('PHPMailer/class.phpmailer.php');
+require_once 'PHPMailer/PHPMailerAutoload.php';
+require_once "Actions/ActivationMail.php"; // funkcja do wysyłania maili
 
-//naDawca\\
-const GUSER = 'pampi.com@gmail.com'; // GMail username
-const GPWD = 'poweRvolumE4'; // GMail password
-const FROM ='pampi.com@gmail.com';
-const FROMNAME = 'Administracja Fitness Club';
-$subject = 'Kod aktywacyjny';
-$body = '123';
+const ALFABET = 'qwertyuiopasdfghjklzxcvbnm'; //26
+class Register extends Action
+{
+    protected function doExecute()
+    {
+        //odbiorca\\
+        // $_POST[newUser]['log' => '', 'pass'=> '', 'mail'=> '', 'tel'=> 1, 'name' => '', 'lastname'=> '', 'place'=> '', 'street'=> '', 'home' => 0, 'flat' =>0, 'zipcode'=> '', 'birthday'=> '' 'activationCode'=> ''];
 
-//Logic\\
-$user = User::userCreate($login, $haslo, $email, $nrTel, $imie, $nazwisko, $miejscowosc, $ulica, $nrDomu,
-    $nrMieszkania, $kodPocztowy, $dataUrodzin);
-if(is_object($user)) { // jeśli nie to jest to komunikat o błędach
-    smtpmailer($email, FROM, FROMNAME, $subject, $body);
-    $user->insertAccountIntoSQL();
-    echo "Zarejestrowano pomyślnie, sprawdź pocztę, aby aktywować konto! <a href='../'>Wróć do strony głównej</a>";
-}
-else{
-    echo $user;
+        //naDawca\\
+        // i wszystkie stałe użyte w smtpmailer(GUSER, GPWD, FROM, FROMNAME)
+        $subject = 'Aktywacyja konta';
+        $code = $this->randCode(); //losowy kod
+        $_POST['newUser']['activationCode'] = $code;
+        $body = "Link aktywanycjny: http://localhost/FitnessPIK/?action=activation&&code=$code";
+        $_SESSION['messages'] = [];
+
+
+        if (isset($_POST['newUser']) && is_array($_POST['newUser']) && (User::findSameMail($_POST['newUser']['mail'])==$_POST['newUser']['mail'])){
+            $_SESSION['messages'][0] = ['class' => 'alert-warning', 'content' => 'Podany adres e-mail jest już zajęty!', 'style' => 'z-index: 50;'];
+        }
+
+        if (isset($_POST['newUser']) && is_array($_POST['newUser']) && (User::findSameLogin($_POST['newUser']['log'])==$_POST['newUser']['log'])){
+            $i = isset($_SESSION['messages'][0])&&!empty($_SESSION['messages'][0]) ? 1 : 0;
+            $_SESSION['messages'][$i] = ['class' => 'alert-warning', 'content' => 'Podany login jest już zajęty!', 'style' => 'z-index: 100;'];
+        }
+        if (isset($_POST['newUser']) && is_array($_POST['newUser']) && (User::findSameLogin($_POST['newUser']['log'])!=$_POST['newUser']['log']) && (User::findSameMail($_POST['newUser']['mail'])!=$_POST['newUser']['mail'])) {
+            //Logic\\
+            $user = User::userCreate($_POST['newUser']);
+
+            if (is_object($user)) { // jeśli nie to jest to komunikat o błędach
+                smtpmailer($_POST['newUser']['mail'], FROM, FROMNAME, $subject, $body);
+                $user->insertAccountIntoSQL();
+
+                $_SESSION['messages'][0] = ['class' => 'alert-success', 'content' => 'Zarejestrowano pomyślnie! Aby aktywować konto kliknij w link w wiadomości na twoim mailu.'];
+
+            }
+            else {
+                $_SESSION['messages'][0] = ['class' => 'alert-warning', 'content' => $user];
+                 }
+        }
+        header('location: http://localhost/FitnessPIK/');
+    }
+
+    private static function randCode(){ //
+        $code = '';
+        for($i=0;$i<10;$i++) {
+            $alfabet = str_split(ALFABET, 1);
+            $code .= $alfabet[rand(0, 25)];
+        }
+        $code = md5($code);
+        if (User::findSameCode($code)==$code){
+            $code = randCode();
+        }
+        return $code;
+    }
 }

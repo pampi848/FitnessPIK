@@ -1,7 +1,7 @@
 <?php
 //require "../autoload.php";
 //require_once('../PHPMailer/class.phpmailer.php');
-//require_once "../Actions/activationMail.php";
+//require_once "../Actions/ActivationMail.php";
 //require '../PHPMailer/PHPMailerAutoload.php';
 //use Accounts\User;
 //

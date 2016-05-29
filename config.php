@@ -13,5 +13,8 @@ $this->templates = [
 
 $this->actions = [
     'default' => 'Actions\\ActionIndex',
-    'LogIn' => 'Actions\\ActionTeamAdd'
+    'activation' => 'Actions\\ActivationLink',
+    'register' => 'Actions\\Register',
+    'login' => 'Actions\\LogIn'
+    
 ];

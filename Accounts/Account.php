@@ -7,7 +7,7 @@
  */
 
 namespace Accounts;
-require_once "../autoload.php";
+require_once "autoload.php";
 use Util\Database;
 use PDO;
 
@@ -29,6 +29,7 @@ abstract class Account
     var $dataUtworzenia = '';
     var $activated = false;
     var $level = 0;
+    var $activationCode = '';
 
     public static function fetchPasswordByLogin($login)
     {
@@ -60,25 +61,27 @@ abstract class Account
                 $stmt->bindValue(':pass', $pass, PDO::PARAM_STR);
 
                 $stmt->execute();
-                $konto = new User;
-                $konto = $stmt->fetch(5);
+                $konto = new User();
+                $konto = $stmt->fetch(5); // zwraca obiekt
+
             } catch (PDOException $exception) {
                 // TODO: log database errors
-                $haslo="error";
                 throw $exception;
             }
 
             return $konto;
     }
-    
+
+   
+
     public function insertAccountIntoSQL(){
         try{
             $pdo = Database::getInstance()->getConnection();
             $stmt = $pdo->prepare("
             INSERT INTO `Account` 
-            (`login`,`haslo`,`email`,`nrTel`,`imie`,`nazwisko`,`miejscowosc`,`ulica`,`nrDomu`,`nrMieszkania`,`kodPocztowy`,`dataUrodzin`,`dataUtworzenia`,`activated`,`level`) 
+            (`login`,`haslo`,`email`,`nrTel`,`imie`,`nazwisko`,`miejscowosc`,`ulica`,`nrDomu`,`nrMieszkania`,`kodPocztowy`,`dataUrodzin`,`dataUtworzenia`,`activated`,`level`,`activationCode`) 
             VALUES
-            (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+            (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
             ");
             $stmt->bindValue(1, $this->getLogin(), PDO::PARAM_STR);
             $stmt->bindValue(2, $this->getHaslo(), PDO::PARAM_STR);
@@ -95,6 +98,7 @@ abstract class Account
             $stmt->bindValue(13, $this->getDataUtworzenia(), PDO::PARAM_STR);
             $stmt->bindValue(14, $this->isActivated(), PDO::PARAM_BOOL);
             $stmt->bindValue(15, $this->getLevel(), PDO::PARAM_INT);
+            $stmt->bindValue(16, $this->getActivationCode(), PDO::PARAM_STR);
 
             $stmt->execute();
         }
@@ -360,6 +364,22 @@ abstract class Account
     protected function setLevel($level=0)
     {
         $this->level = $level;
+    }
+
+    /**
+     * @return string
+     */
+    public function getActivationCode()
+    {
+        return $this->activationCode;
+    }
+
+    /**
+     * @param string $activationCode
+     */
+    protected function setActivationCode($activationCode)
+    {
+        $this->activationCode = $activationCode;
     }
 
 }

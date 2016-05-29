@@ -57,7 +57,13 @@ END;
                 <button type="submit" class="btn btn-default">Submit</button>
             </form>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#" class="btn btn-lg" role="button" data-toggle="modal" data-target="#login-modal">Sign in</a></li>
+                <?php if((!isset($_SESSION['logged']))||($_SESSION['logged']['online']==false)){?>
+                    <!-- gość -->
+                    <li><a href="#" class="btn btn-lg" role="button" data-toggle="modal" data-target="#login-modal">Sign in</a></li>
+                <?php } elseif((isset($_SESSION['logged']))&&($_SESSION['logged']['online']==true)){ ?>
+                    <!-- user online -->
+                    <li><a href="#" class="btn btn-lg" role="button" data-toggle="modal" data-target="#login-modal"><?="Witaj {$_SESSION['logged']['imie']}"?></a></li>  <!--@Iwo, Jakoś to "obuduj w js, bo to już nie będzie przycisk logowania-->
+                <?php } ?>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
                     <ul class="dropdown-menu">
@@ -84,7 +90,14 @@ END;
     </div>
     <div style="clear:both"></div>
     <!-- END # SIDEBAR -->
-    <div class="alert alert-success" role="alert" id="porn" onclick="alert()">Alert! Ostrzeżenie o wkraczaniu na witrynę o tematyce pornograficznej. <span id="clicker">X</span></div>
+    <?php if( isset($_SESSION['messages']) && is_array($_SESSION['messages']) ){?>
+        <!-- BEGIN #MESSAGES -->
+        <?php foreach ($_SESSION['messages'] as $message){?>
+            <div class="alert <?=isset($message['class'])?$message['class']:''?>" <?=isset($message['style'])?"style='{$message['style']}'":''?>role="alert" id="porn" onclick="alert()"><?=$message['content']?><span id="clicker">X</span></div>
+        <?php } ?>
+        <?php unset($_SESSION['messages']); ?>
+        <!-- END #MESSAGES -->
+    <?php } ?>
     <!-- BEGIN # MODAL LOGIN -->
     <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
         <div class="modal-dialog">
@@ -100,14 +113,14 @@ END;
                 <div id="div-forms">
 
                     <!-- Begin # Login Form -->
-                    <form id="login-form" action="login.php" method="post">
+                    <form id="login-form" action="http://localhost/FitnessPIK/?action=login" method="post">
                         <div class="modal-body">
                             <div id="div-login-msg">
                                 <div id="icon-login-msg" class="glyphicon glyphicon-chevron-right"></div>
                                 <span id="text-login-msg">Type your username and password.</span>
                             </div>
-                            <input id="login_username" name="login" class="form-control" type="text" placeholder="Username (type ERROR for error effect)" required>
-                            <input id="login_password" class="form-control" type="password" placeholder="Password" required>
+                            <input id="login_username" name="newUser[log]" class="form-control" type="text" placeholder="Username (type ERROR for error effect)" required>
+                            <input id="login_password" name="newUser[pass]" class="form-control" type="password" placeholder="Password" required>
                             <div class="checkbox">
                                 <label>
                                     <input type="checkbox"> Remember me
@@ -148,24 +161,24 @@ END;
                     <!-- End | Lost Password Form -->
 
                     <!-- Begin | Register Form -->
-                    <form id="register-form" style="display:none;" action="Actions/Register.php" method="post">
+                    <form id="register-form" style="display:none;" action="http://localhost/FitnessPIK/?action=register" method="post">
                         <div class="modal-body">
                             <div id="div-register-msg">
                                 <div id="icon-register-msg" class="glyphicon glyphicon-chevron-right"></div>
                                 <span id="text-register-msg">Register an account.</span>
                             </div>
-                            <input name="login" id="register_username" class="form-control" type="text" placeholder="Username (type ERROR for error effect)" required>
-                            <input name="email" id="register_email" class="form-control" type="text" placeholder="E-Mail" required>
-                            <input name="haslo" name="" id="register_password" class="form-control" type="password" placeholder="Password" required>
-                            <input name="imie" id="register_forename" class="form-control" type="text" placeholder="Forename" required>
-                            <input name="nazwisko" id="register_surname" class="form-control" type="text" placeholder="Surname" required>
-                            <input name="miejscowosc" id="register_place" class="form-control" type="text" placeholder="Place" required>
-                            <input name="dataUrodzin" id="register_birth" class="form-control" type="date" placeholder="Birthdate" required>
-                            <input name="nrTel" id="register_phonenumber" class="form-control" type="tel" placeholder="Phone number" required>
-                            <input name="ulica" id="register_street" class="form-control" type="text" placeholder="Street" required>
-                            <input name="nrDomu" id="register_housenumber" class="form-control" type="number" placeholder="House number" required>
-                            <input name="nrMieszkania" id="register_apartmentnumber" class="form-control" type="number" placeholder="Apartment number" required>
-                            <input name="kodPocztowy" id="register_zipcode" class="form-control" type="number" placeholder="Zip Code" required>
+                            <input name="newUser[log]" id="register_username" class="form-control" type="text" placeholder="Username (type ERROR for error effect)" required>
+                            <input name="newUser[mail]" id="register_email" class="form-control" type="text" placeholder="E-Mail" required>
+                            <input name="newUser[pass]" name="" id="register_password" class="form-control" type="password" placeholder="Password" required>
+                            <input name="newUser[name]" id="register_forename" class="form-control" type="text" placeholder="Forename" required>
+                            <input name="newUser[lastname]" id="register_surname" class="form-control" type="text" placeholder="Surname" required>
+                            <input name="newUser[place]" id="register_place" class="form-control" type="text" placeholder="Place" required>
+                            <input name="newUser[birthday]" id="register_birth" class="form-control" type="date" placeholder="Birthdate" required>
+                            <input name="newUser[tel]" id="register_phonenumber" class="form-control" type="tel" placeholder="Phone number" required>
+                            <input name="newUser[street]" id="register_street" class="form-control" type="text" placeholder="Street" required>
+                            <input name="newUser[home]" id="register_housenumber" class="form-control" type="number" placeholder="House number" required>
+                            <input name="newUser[flat]" id="register_apartmentnumber" class="form-control" type="number" placeholder="Apartment number" required>
+                            <input name="newUser[zipcode]" id="register_zipcode" class="form-control" type="text" placeholder="Zip Code" required><!--zamieniłem z number na text -->
                             <!-- 
 (`login`,`haslo`,`email`,`nrTel`,`imie`,`nazwisko`,`miejscowosc`,`ulica`,`nrDomu`,`nrMieszkania`,`kodPocztowy`,`dataUrodzin`,`dataUtworzenia`,`activated`,`level`) do zrobienia
 -->
