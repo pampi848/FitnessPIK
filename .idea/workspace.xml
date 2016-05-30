@@ -2,17 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="127cc81d-169e-40f7-b176-a1349521a095" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FitnessPIK.sql" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fitnessclub.sql" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/fitnesscluball.sql" afterPath="$PROJECT_DIR$/FitnessPIK.sql" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Accounts/Account.php" afterPath="$PROJECT_DIR$/Accounts/Account.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Accounts/User.php" afterPath="$PROJECT_DIR$/Accounts/User.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Actions/ActivationMail.php" afterPath="$PROJECT_DIR$/Actions/ActivationMail.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Actions/LogIn.php" afterPath="$PROJECT_DIR$/Actions/LogIn.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Actions/Register.php" afterPath="$PROJECT_DIR$/Actions/Register.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config.php" afterPath="$PROJECT_DIR$/config.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/index.php" afterPath="$PROJECT_DIR$/templates/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test.php" afterPath="$PROJECT_DIR$/test/test.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Util/Session.php" afterPath="$PROJECT_DIR$/Util/Session.php" />
     </list>
     <ignored path="FitnessPIK.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -47,8 +43,8 @@
       <file leaf-file-name="LogIn.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Actions/LogIn.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="18" column="76" selection-start-line="18" selection-start-column="76" selection-end-line="18" selection-end-column="76" />
+            <state relative-caret-position="504">
+              <caret line="28" column="78" selection-start-line="28" selection-start-column="78" selection-end-line="28" selection-end-column="78" />
               <folding>
                 <element signature="e#26#44#0#PHP" expanded="true" />
               </folding>
@@ -56,11 +52,46 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="Session.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Util/Session.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="Register.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Actions/Register.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1044">
-              <caret line="58" column="9" selection-start-line="58" selection-start-column="9" selection-end-line="58" selection-end-column="9" />
+            <state relative-caret-position="468">
+              <caret line="35" column="19" selection-start-line="35" selection-start-column="19" selection-end-line="35" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="User.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Accounts/User.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="612">
+              <caret line="44" column="16" selection-start-line="44" selection-start-column="16" selection-end-line="44" selection-end-column="16" />
+              <folding>
+                <marker date="1464617265580" expanded="true" signature="3547:3616" ph="SELECT `acti... Account" />
+                <marker date="1464617265580" expanded="true" signature="4108:4160" ph="SELECT `emai... Account" />
+                <marker date="1464617265580" expanded="true" signature="4645:4697" ph="SELECT `logi... Account" />
+                <marker date="1464617265580" expanded="true" signature="5194:5261" ph="UPDATE `Acco... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FitnessPIK.sql" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/FitnessPIK.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1287">
+              <caret line="108" column="26" selection-start-line="108" selection-start-column="26" selection-end-line="108" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -69,8 +100,8 @@
       <file leaf-file-name="Account.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Accounts/Account.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1008">
-              <caret line="62" column="33" selection-start-line="62" selection-start-column="33" selection-end-line="63" selection-end-column="36" />
+            <state relative-caret-position="3451">
+              <caret line="254" column="0" selection-start-line="254" selection-start-column="0" selection-end-line="254" selection-end-column="0" />
               <folding>
                 <element signature="e#136#154#0#PHP" expanded="true" />
                 <marker date="1464559321728" expanded="true" signature="778:836" ph="SELECT `hasl... Account" />
@@ -99,8 +130,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/model/user.php" />
-        <option value="$PROJECT_DIR$/accounts/user.php" />
         <option value="$PROJECT_DIR$/Accounts/user.php" />
         <option value="$PROJECT_DIR$/Validators/validator.php" />
         <option value="$PROJECT_DIR$/Validators/addSlashes.php" />
@@ -119,7 +148,6 @@
         <option value="$PROJECT_DIR$/Validators/HASspaces.php" />
         <option value="$PROJECT_DIR$/Validators/ISphonenr.php" />
         <option value="$PROJECT_DIR$/Validators/MBucfirst.php" />
-        <option value="$PROJECT_DIR$/Util/Session.php" />
         <option value="$PROJECT_DIR$/Accounts/Instruktor.php" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/Util/Database.php" />
@@ -143,13 +171,16 @@
         <option value="$PROJECT_DIR$/Actions/ActivationMail.php" />
         <option value="$PROJECT_DIR$/Actions/generateRandCode.php" />
         <option value="$PROJECT_DIR$/Actions/GenerateRandCode.php" />
-        <option value="$PROJECT_DIR$/Accounts/User.php" />
-        <option value="$PROJECT_DIR$/Actions/Register.php" />
         <option value="$PROJECT_DIR$/Actions/ActivationLink.php" />
         <option value="$PROJECT_DIR$/config.php" />
         <option value="$PROJECT_DIR$/Accounts/Account.php" />
-        <option value="$PROJECT_DIR$/Actions/LogIn.php" />
         <option value="$PROJECT_DIR$/templates/index.php" />
+        <option value="$PROJECT_DIR$/fitnesscluball.sql" />
+        <option value="$PROJECT_DIR$/Actions/Register.php" />
+        <option value="$PROJECT_DIR$/Accounts/User.php" />
+        <option value="$PROJECT_DIR$/FitnessPIK.sql" />
+        <option value="$PROJECT_DIR$/Util/Session.php" />
+        <option value="$PROJECT_DIR$/Actions/LogIn.php" />
       </list>
     </option>
   </component>
@@ -164,9 +195,10 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="y" value="-4" />
+    <option name="x" value="1280" />
+    <option name="y" value="24" />
     <option name="width" value="1280" />
-    <option name="height" value="1028" />
+    <option name="height" value="1000" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -209,6 +241,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -285,8 +319,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -371,19 +403,20 @@
       <workItem from="1464464326311" duration="4181000" />
       <workItem from="1464551554382" duration="28000" />
       <workItem from="1464560403769" duration="593000" />
+      <workItem from="1464615367527" duration="3584000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="141007000" />
+    <option name="totallyTimeSpent" value="144591000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="-4" width="1280" height="1028" extended-state="6" />
+    <frame x="1280" y="24" width="1280" height="1000" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2515625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32901832" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -422,13 +455,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Util/Session.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Util/Response404.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
@@ -661,13 +687,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Util/Session.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Util/Response404.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
@@ -725,13 +744,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Accounts/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1404">
-          <caret line="79" column="36" selection-start-line="79" selection-start-column="36" selection-end-line="79" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Actions/ActivationMail.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="36">
@@ -756,8 +768,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Accounts/Account.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1008">
-          <caret line="62" column="33" selection-start-line="62" selection-start-column="33" selection-end-line="63" selection-end-column="36" />
+        <state relative-caret-position="3451">
+          <caret line="254" column="0" selection-start-line="254" selection-start-column="0" selection-end-line="254" selection-end-column="0" />
           <folding>
             <element signature="e#136#154#0#PHP" expanded="true" />
             <marker date="1464559321728" expanded="true" signature="778:836" ph="SELECT `hasl... Account" />
@@ -769,8 +781,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Actions/Register.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1044">
-          <caret line="58" column="9" selection-start-line="58" selection-start-column="9" selection-end-line="58" selection-end-column="9" />
+        <state relative-caret-position="468">
+          <caret line="35" column="19" selection-start-line="35" selection-start-column="19" selection-end-line="35" selection-end-column="19" />
           <folding />
         </state>
       </provider>
@@ -783,10 +795,39 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Util/Session.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FitnessPIK.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1287">
+          <caret line="108" column="26" selection-start-line="108" selection-start-column="26" selection-end-line="108" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Accounts/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="44" column="16" selection-start-line="44" selection-start-column="16" selection-end-line="44" selection-end-column="16" />
+          <folding>
+            <marker date="1464617265580" expanded="true" signature="3547:3616" ph="SELECT `acti... Account" />
+            <marker date="1464617265580" expanded="true" signature="4108:4160" ph="SELECT `emai... Account" />
+            <marker date="1464617265580" expanded="true" signature="4645:4697" ph="SELECT `logi... Account" />
+            <marker date="1464617265580" expanded="true" signature="5194:5261" ph="UPDATE `Acco... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Actions/LogIn.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="18" column="76" selection-start-line="18" selection-start-column="76" selection-end-line="18" selection-end-column="76" />
+        <state relative-caret-position="504">
+          <caret line="28" column="78" selection-start-line="28" selection-start-column="78" selection-end-line="28" selection-end-column="78" />
           <folding>
             <element signature="e#26#44#0#PHP" expanded="true" />
           </folding>

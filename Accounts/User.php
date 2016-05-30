@@ -43,8 +43,8 @@ class User extends Account
             $nowekonto->setActivationCode(addslashes($konto['activationCode']));
             return $nowekonto;
         } else {
-            //można zrobić coś wincyj albo po chamsku - die...
-            return $checker.var_dump($konto);
+            $checker .= 'Spróbuj jeszcze raz.';
+            return $checker;
         }
     }
 
