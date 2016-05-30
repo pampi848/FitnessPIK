@@ -21,22 +21,31 @@ class Session
     {
         $this->create();
     }
-    protected function create(){
+
+    protected function create()
+    {
         session_name(self::SESSION_IDENTIFIER);
         session_set_cookie_params(self::SESSION_LIFETIME);
         session_start();
     }
-    public function add($name,$value){
+
+    public function add($name, $value)
+    {
         $_SESSION[$name] = $value;
     }
-    public function remove($name){
-       if (isset($_SESSION[$name])) unset($_SESSION[$name]);
+
+    public function remove($name)
+    {
+        if (isset($_SESSION[$name])) unset($_SESSION[$name]);
     }
-    
-    public function get($name,$default=null){
+
+    public function get($name, $default = null)
+    {
         return isset($_SESSION[$name]) ? $_SESSION[$name] : $default;
     }
-    public function pop($name, $default) {
+
+    public function pop($name, $default)
+    {
         $value = $this->get($name, $default);
         $this->remove($name);
 

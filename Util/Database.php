@@ -2,7 +2,6 @@
 
 namespace Util;
 
-use Util\Config;
 use PDO;
 
 
@@ -21,7 +20,8 @@ class Database
     /**
      * @return Database
      */
-    public static function getInstance() {
+    public static function getInstance()
+    {
         if (!isset(self::$instance)) {
             self::$instance = new self();
         }
@@ -32,14 +32,16 @@ class Database
     /**
      * @param Config $config
      */
-    protected function __construct() {
+    protected function __construct()
+    {
         $this->config = Config::getInstance()->getDatabase();
     }
 
     /**
      * @return \PDO
      */
-    public function getConnection() {
+    public function getConnection()
+    {
         $dsn = "mysql:host={$this->config['host']};dbname={$this->config['database']}";
         $params = [PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'utf8'"];
 

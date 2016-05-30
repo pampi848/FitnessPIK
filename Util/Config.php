@@ -28,7 +28,8 @@ class Config
     /**
      * @return Config
      */
-    public static function getInstance() {
+    public static function getInstance()
+    {
         if (!isset(self::$instance)) {
             self::$instance = new self();
         }
@@ -39,10 +40,9 @@ class Config
     protected function __construct()
     {
         //TODO: usprawnić to ...
-        if(file_exists('config.php')) {
+        if (file_exists('config.php')) {
             include_once 'config.php';
-        }
-        elseif(file_exists('../config.php')) {
+        } elseif (file_exists('../config.php')) {
             include_once '../config.php';
         }
     }

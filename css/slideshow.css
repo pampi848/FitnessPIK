@@ -1,31 +1,41 @@
 #haberSlide .carousel-caption {
-    left:0;
-    right:0;
-	bottom:0;
-	text-align:left;
-	padding:10px;
-	background:rgba(0,0,0,0.6);
-	text-shadow:none;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: left;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.6);
+    text-shadow: none;
 }
 
 #haberSlide .list-group {
-	position:absolute;
-	top:0;
-	right:0;
-}
-#haberSlide .list-group-item {
-	border-radius:0px;
-	cursor:pointer;
-}
-#haberSlide .list-group .active {
-	background-color:#eee;	
+    position: absolute;
+    top: 0;
+    right: 0;
 }
 
-@media (min-width: 992px) { 
-	#haberSlide {padding-right:33.3333%;}
-	#haberSlide .carousel-controls {display:none;} 	
+#haberSlide .list-group-item {
+    border-radius: 0px;
+    cursor: pointer;
 }
-@media (max-width: 991px) { 
-	.carousel-caption p,
-	#haberSlide .list-group {display:none;} 
+
+#haberSlide .list-group .active {
+    background-color: #eee;
+}
+
+@media (min-width: 992px) {
+    #haberSlide {
+        padding-right: 33.3333%;
+    }
+
+    #haberSlide .carousel-controls {
+        display: none;
+    }
+}
+
+@media (max-width: 991px) {
+    .carousel-caption p,
+    #haberSlide .list-group {
+        display: none;
+    }
 }

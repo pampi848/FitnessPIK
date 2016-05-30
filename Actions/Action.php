@@ -37,7 +37,8 @@ abstract class Action
      * @param Session $session
      * @param Config $config
      */
-    public function __construct(Request $request, Session $session) {
+    public function __construct(Request $request, Session $session)
+    {
         $this->request = $request;
         $this->session = $session;
         $this->config = Config::getInstance();
@@ -45,7 +46,8 @@ abstract class Action
         $this->response = new Response($this->session, $this->request);
     }
 
-    public function execute() {
+    public function execute()
+    {
         $this->doExecute();
 
         return $this->response;

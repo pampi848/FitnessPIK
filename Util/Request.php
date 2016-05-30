@@ -21,7 +21,8 @@ class Request
      *
      * @return mixed
      */
-    public function get($name, $default = null) {
+    public function get($name, $default = null)
+    {
         return isset($_REQUEST[$name]) ? $_REQUEST[$name] : $default;
     }
 
@@ -29,7 +30,8 @@ class Request
      * @param string $method
      * @return bool
      */
-    public function isMethod($method) {
+    public function isMethod($method)
+    {
         return (strtolower($_SERVER['REQUEST_METHOD']) == strtolower($method));
     }
 }

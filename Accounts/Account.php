@@ -8,8 +8,8 @@
 
 namespace Accounts;
 require_once "autoload.php";
-use Util\Database;
 use PDO;
+use Util\Database;
 
 abstract class Account
 {
@@ -33,49 +33,49 @@ abstract class Account
 
     public static function fetchPasswordByLogin($login)
     {
-            try {
-                $pdo = Database::getInstance()->getConnection();
+        try {
+            $pdo = Database::getInstance()->getConnection();
 
-                $stmt = $pdo->prepare("SELECT `haslo` FROM `Account` WHERE `login`=:login LIMIT 1");
-                $stmt->bindValue(':login', $login, PDO::PARAM_STR); 
+            $stmt = $pdo->prepare("SELECT `haslo` FROM `Account` WHERE `login`=:login LIMIT 1");
+            $stmt->bindValue(':login', $login, PDO::PARAM_STR);
 
-                $stmt->execute();
-                $haslo = $stmt->fetch();
-                $haslo = $haslo[0];
-            } catch (PDOException $exception) {
-                // TODO: log database errors
-                $haslo="error";
-                throw $exception;
-            }
+            $stmt->execute();
+            $haslo = $stmt->fetch();
+            $haslo = $haslo[0];
+        } catch (PDOException $exception) {
+            // TODO: log database errors
+            $haslo = "error";
+            throw $exception;
+        }
 
-            return $haslo;
+        return $haslo;
     }
-    
+
     public static function fetchAccountByLoginAndPass($login, $pass)
     {
-            try {
-                $pdo = Database::getInstance()->getConnection();
+        try {
+            $pdo = Database::getInstance()->getConnection();
 
-                $stmt = $pdo->prepare("SELECT * FROM `Account` WHERE `login`=:login AND `haslo`=:pass");
-                $stmt->bindValue(':login', $login, PDO::PARAM_STR);       
-                $stmt->bindValue(':pass', $pass, PDO::PARAM_STR);
+            $stmt = $pdo->prepare("SELECT * FROM `Account` WHERE `login`=:login AND `haslo`=:pass");
+            $stmt->bindValue(':login', $login, PDO::PARAM_STR);
+            $stmt->bindValue(':pass', $pass, PDO::PARAM_STR);
 
-                $stmt->execute();
-                $konto = new User();
-                $konto = $stmt->fetch(5); // zwraca obiekt
+            $stmt->execute();
+            $konto = new User();
+            $konto = $stmt->fetch(5); // zwraca obiekt
 
-            } catch (PDOException $exception) {
-                // TODO: log database errors
-                throw $exception;
-            }
+        } catch (PDOException $exception) {
+            // TODO: log database errors
+            throw $exception;
+        }
 
-            return $konto;
+        return $konto;
     }
 
-   
 
-    public function insertAccountIntoSQL(){
-        try{
+    public function insertAccountIntoSQL()
+    {
+        try {
             $pdo = Database::getInstance()->getConnection();
             $stmt = $pdo->prepare("
             INSERT INTO `Account` 
@@ -101,10 +101,9 @@ abstract class Account
             $stmt->bindValue(16, $this->getActivationCode(), PDO::PARAM_STR);
 
             $stmt->execute();
-        }
-        catch (PDOException $exception) {
+        } catch (PDOException $exception) {
             // TODO: log database errors
-            $haslo="error";
+            $haslo = "error";
             throw $exception;
         }
     }
@@ -302,6 +301,7 @@ abstract class Account
     {
         $this->nrMieszkania = $nrMieszkania;
     }
+
     /**
      * @return string
      */
@@ -345,7 +345,7 @@ abstract class Account
     /**
      * @param boolean $activated
      */
-    protected function setActivated($activated=false)
+    protected function setActivated($activated = false)
     {
         $this->activated = $activated;
     }
@@ -361,7 +361,7 @@ abstract class Account
     /**
      * @param int $level
      */
-    protected function setLevel($level=0)
+    protected function setLevel($level = 0)
     {
         $this->level = $level;
     }

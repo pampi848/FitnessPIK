@@ -24,13 +24,15 @@ class Controller
      */
     protected $request = null;
 
-    public function __construct() {
+    public function __construct()
+    {
         $this->config = Config::getInstance(); // utwórz Config, jeśli jeszcze nie istnieje
         $this->session = new Session();
         $this->request = new Request();
     }
 
-    public function run() {
+    public function run()
+    {
         $actionMap = $this->config->getActions();
 
         $actionName = $this->request->get('action', 'default');

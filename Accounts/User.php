@@ -3,12 +3,13 @@
 namespace Accounts;
 require_once "autoload.php";
 
-use Util\Database;
 use PDO;
+use Util\Database;
+
 class User extends Account
 {
 
-    public static function userCreate($konto = ['log' => '', 'pass'=> '', 'mail'=> '', 'tel'=> 1, 'name' => '', 'lastname'=> '', 'place'=> '', 'street'=> '', 'home' => 0, 'flat' =>0, 'zipcode'=> '', 'birthday'=> '', 'activationCode'=> ''])
+    public static function userCreate($konto = ['log' => '', 'pass' => '', 'mail' => '', 'tel' => 1, 'name' => '', 'lastname' => '', 'place' => '', 'street' => '', 'home' => 0, 'flat' => 0, 'zipcode' => '', 'birthday' => '', 'activationCode' => ''])
     {
         $checker = '';
         $checker .= isset($konto['log']) && has_spaces($konto['log']) && (mb_strlen($konto['log'], 'utf-8') > 5) ? '' : 'Zły login! <br/>';
@@ -23,7 +24,7 @@ class User extends Account
         $checker .= isset($konto['home']) && is_numeric($konto['home']) && ($konto['home'] > 0) ? '' : 'Zły nr. domu! <br/>';
         $checker .= isset($konto['flat']) && is_numeric($konto['flat']) && ($konto['flat'] > 0) ? '' : 'Zły nr. mieszkania! <br/>';
         $checker .= isset($konto['zipcode']) && is_zipcode($konto['zipcode']) ? '' : 'Zły kod pocztowy! <br/>';
-        $checker .= isset($konto['birthday']) && checkdate(substr($konto['birthday'],5,-3), substr($konto['birthday'],8), substr($konto['birthday'],0,-6)) ? '' : 'Zła data urodzin! <br/>'; // $miesiąc, $dzień, $rok
+        $checker .= isset($konto['birthday']) && checkdate(substr($konto['birthday'], 5, -3), substr($konto['birthday'], 8), substr($konto['birthday'], 0, -6)) ? '' : 'Zła data urodzin! <br/>'; // $miesiąc, $dzień, $rok
 
         if (empty($checker)) {
             $nowekonto = new User;
@@ -52,6 +53,7 @@ class User extends Account
     {
 
     }
+
     public static function findSameCode($activationCode)
     {
         try {
@@ -71,6 +73,7 @@ class User extends Account
 
         return $code;
     }
+
     public static function findSameMail($mail)
     {
         try {
@@ -90,6 +93,7 @@ class User extends Account
 
         return $mail;
     }
+
     public static function findSameLogin($login)
     {
         try {

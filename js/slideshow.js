@@ -1,10 +1,10 @@
-$(document).ready(function(){
+$(document).ready(function () {
     $()
 });
 
-$(window).load(function() {
+$(window).load(function () {
     var boxheight = $('#myCarousel .carousel-inner').innerHeight();
     var itemlength = $('#myCarousel .item').length;
-    var triggerheight = Math.round(boxheight/itemlength+1);
-	$('#myCarousel .list-group-item').outerHeight(triggerheight);
+    var triggerheight = Math.round(boxheight / itemlength + 1);
+    $('#myCarousel .list-group-item').outerHeight(triggerheight);
 });

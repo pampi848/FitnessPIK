@@ -7,7 +7,6 @@
    #   Last Change   : 08/02/2015
    #
    ##################################################################### */
-   
 @import url(http://fonts.googleapis.com/css?family=Roboto);
 
 * {
@@ -19,7 +18,7 @@
 }
 
 #login-modal input[type=text], input[type=password], input[type=number], input[type=date], input[type=tel] {
-	margin-top: 10px;
+    margin-top: 10px;
 }
 
 #div-login-msg,
@@ -124,7 +123,7 @@
     outline: none;
 }
 
-.btn-lg, .btn-group-lg>.btn {
+.btn-lg, .btn-group-lg > .btn {
     border-radius: 0px;
 }
 
@@ -143,5 +142,5 @@
 }
 
 .form-control {
-  border-radius: 0px;
+    border-radius: 0px;
 }

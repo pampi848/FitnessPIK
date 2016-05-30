@@ -43,13 +43,15 @@ class Response
     /**
      * @param Config $config
      */
-    public function __construct(Session $session, Request $request) {
+    public function __construct(Session $session, Request $request)
+    {
         $this->config = Config::getInstance();
         $this->session = $session;
         $this->request = $request;
     }
 
-    public function send() {
+    public function send()
+    {
         if (!isset($this->headers[self::HEADER_CONTENT_LENGTH])) {
             $this->setHeader(self::HEADER_CONTENT_LENGTH, strlen($this->content));
         }
@@ -71,7 +73,8 @@ class Response
      *
      * @return string
      */
-    public function processTemplate($template, $params = array()) {
+    public function processTemplate($template, $params = array())
+    {
         $p = &$params;
         $r = $this->request;
         $s = $this->session;
@@ -95,7 +98,8 @@ class Response
     /**
      * @param $url
      */
-    public function redirect($url) {
+    public function redirect($url)
+    {
         $this->setHeader('Location', $url);
     }
 
@@ -103,14 +107,16 @@ class Response
      * @param string $header
      * @param string $value
      */
-    public function setHeader($header, $value = '') {
+    public function setHeader($header, $value = '')
+    {
         $this->headers[$header] = $value;
     }
 
     /**
      * @param string $header
      */
-    public function removeHeader($header) {
+    public function removeHeader($header)
+    {
         unset($this->headers[$header]);
     }
 
@@ -118,14 +124,16 @@ class Response
      * @param string $parameter
      * @param string $value
      */
-    public function setParameter($parameter, $value = '') {
+    public function setParameter($parameter, $value = '')
+    {
         $this->parameters[$parameter] = $value;
     }
 
     /**
      * @param string $parameter
      */
-    public function removeParameter($parameter) {
+    public function removeParameter($parameter)
+    {
         unset($this->parameters[$parameter]);
     }
 

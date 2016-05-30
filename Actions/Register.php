@@ -13,17 +13,17 @@ class Register extends Action
 {
     protected function doExecute()
     {
-        
+
         $_SESSION['messages'] = [];
-        if (isset($_POST['newUser']) && is_array($_POST['newUser']) && (User::findSameMail($_POST['newUser']['mail'])==$_POST['newUser']['mail'])){
+        if (isset($_POST['newUser']) && is_array($_POST['newUser']) && (User::findSameMail($_POST['newUser']['mail']) == $_POST['newUser']['mail'])) {
             $_SESSION['messages'][0] = ['class' => 'alert-warning', 'content' => 'Podany adres e-mail jest już zajęty!', 'style' => 'z-index: 50;'];
         }
 
-        if (isset($_POST['newUser']) && is_array($_POST['newUser']) && (User::findSameLogin($_POST['newUser']['log'])==$_POST['newUser']['log'])){
-            $i = isset($_SESSION['messages'][0])&&!empty($_SESSION['messages'][0]) ? 1 : 0;
+        if (isset($_POST['newUser']) && is_array($_POST['newUser']) && (User::findSameLogin($_POST['newUser']['log']) == $_POST['newUser']['log'])) {
+            $i = isset($_SESSION['messages'][0]) && !empty($_SESSION['messages'][0]) ? 1 : 0;
             $_SESSION['messages'][$i] = ['class' => 'alert-warning', 'content' => 'Podany login jest już zajęty!', 'style' => 'z-index: 100;'];
         }
-        if (isset($_POST['newUser']) && is_array($_POST['newUser']) && (User::findSameLogin($_POST['newUser']['log'])!=$_POST['newUser']['log']) && (User::findSameMail($_POST['newUser']['mail'])!=$_POST['newUser']['mail'])) {
+        if (isset($_POST['newUser']) && is_array($_POST['newUser']) && (User::findSameLogin($_POST['newUser']['log']) != $_POST['newUser']['log']) && (User::findSameMail($_POST['newUser']['mail']) != $_POST['newUser']['mail'])) {
             $code = $this->randCode(); //losowy kod
             $_POST['newUser']['activationCode'] = $code; // i przypisanie go do usera
             $user = User::userCreate($_POST['newUser']); // tworzenie obiektu user
@@ -34,30 +34,30 @@ class Register extends Action
 
                 //naDawca\\
                 // wszystkie stałe użyte w smtpmailer(GUSER, GPWD, FROM, FROMNAME)
-                
-                $user->insertAccountIntoSQL(); 
-                
+
+                $user->insertAccountIntoSQL();
+
                 $subject = 'Aktywacyja konta';
                 $body = "Link aktywanycjny: http://localhost/FitnessPIK/?action=activation&&code=$code";
                 smtpmailer($_POST['newUser']['mail'], FROM, FROMNAME, $subject, $body);
-                
+
                 $_SESSION['messages'][0] = ['class' => 'alert-success', 'content' => 'Zarejestrowano pomyślnie! Aby aktywować konto kliknij w link w wiadomości na twoim mailu.'];
-            }
-            else {
+            } else {
                 $_SESSION['messages'][0] = ['class' => 'alert-warning', 'content' => $user];
-                 }
+            }
         }
         header('location: http://localhost/FitnessPIK/');
     }
 
-    private static function randCode(){ //
+    private static function randCode()
+    { //
         $code = '';
-        for($i=0;$i<10;$i++) {
+        for ($i = 0; $i < 10; $i++) {
             $alfabet = str_split(ALFABET, 1);
             $code .= $alfabet[rand(0, 25)];
         }
         $code = md5($code);
-        if (User::findSameCode($code)==$code){
+        if (User::findSameCode($code) == $code) {
             $code = randCode();
         }
         return $code;
