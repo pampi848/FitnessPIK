@@ -36,7 +36,7 @@ class Controller
         $actionMap = $this->config->getActions();
 
         $actionName = $this->request->get('action', 'default');
-
+		
         if (isset($actionMap[$actionName])) {
             $actionClassName = $actionMap[$actionName];
 

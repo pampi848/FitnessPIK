@@ -30,21 +30,38 @@ class Config
      */
     public static function getInstance()
     {
+
         if (!isset(self::$instance)) {
             self::$instance = new self();
         }
-
         return self::$instance;
     }
 
     protected function __construct()
     {
-        //TODO: usprawnić to ...
-        if (file_exists('config.php')) {
-            include_once 'config.php';
-        } elseif (file_exists('../config.php')) {
-            include_once '../config.php';
-        }
+        $this->database = [
+            'user' => "root",
+            'pass' => "dev",
+            'host' => "localhost",
+            'database' => "fitnesspik"
+        ];
+
+        $this->templates = [
+            'dir' => 'templates'
+        ];
+
+        $this->actions = [
+            'default' => 'Actions\\ActionIndex',
+            'activation' => 'Actions\\ActivationLink',
+            'register' => 'Actions\\Register',
+            'login' => 'Actions\\LogIn'
+
+        ];
+
+        //TODO: usprawnić to ... // to wszystko co jest wyżej musi zostać w tym pliku, bo windows/xampp nie wykonuje od razu dołączonego pliku 
+        //  if (file_exists('config.php')) {
+        //   include_once 'config.php';
+        // }
     }
 
     /**

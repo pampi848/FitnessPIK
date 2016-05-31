@@ -36,7 +36,7 @@ abstract class Account
         try {
             $pdo = Database::getInstance()->getConnection();
 
-            $stmt = $pdo->prepare("SELECT `haslo` FROM `Account` WHERE `login`=:login LIMIT 1");
+            $stmt = $pdo->prepare("SELECT `haslo` FROM `account` WHERE `login`=:login LIMIT 1");
             $stmt->bindValue(':login', $login, PDO::PARAM_STR);
 
             $stmt->execute();
@@ -56,7 +56,7 @@ abstract class Account
         try {
             $pdo = Database::getInstance()->getConnection();
 
-            $stmt = $pdo->prepare("SELECT * FROM `Account` WHERE `login`=:login AND `haslo`=:pass");
+            $stmt = $pdo->prepare("SELECT * FROM `account` WHERE `login`=:login AND `haslo`=:pass");
             $stmt->bindValue(':login', $login, PDO::PARAM_STR);
             $stmt->bindValue(':pass', $pass, PDO::PARAM_STR);
 
@@ -78,7 +78,7 @@ abstract class Account
         try {
             $pdo = Database::getInstance()->getConnection();
             $stmt = $pdo->prepare("
-            INSERT INTO `Account` 
+            INSERT INTO `account` 
             (`login`,`haslo`,`email`,`nrTel`,`imie`,`nazwisko`,`miejscowosc`,`ulica`,`nrDomu`,`nrMieszkania`,`kodPocztowy`,`dataUrodzin`,`dataUtworzenia`,`activated`,`level`,`activationCode`) 
             VALUES
             (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)

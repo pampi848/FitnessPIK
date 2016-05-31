@@ -59,7 +59,7 @@ class User extends Account
         try {
             $pdo = Database::getInstance()->getConnection();
 
-            $stmt = $pdo->prepare("SELECT `activationCode` FROM `Account` WHERE `activationCode` = :code");
+            $stmt = $pdo->prepare("SELECT `activationCode` FROM `account` WHERE `activationCode` = :code");
             $stmt->bindValue(':code', $activationCode, PDO::PARAM_STR);
 
             $stmt->execute();
@@ -79,7 +79,7 @@ class User extends Account
         try {
             $pdo = Database::getInstance()->getConnection();
 
-            $stmt = $pdo->prepare("SELECT `email` FROM `Account` WHERE `email` = :email");
+            $stmt = $pdo->prepare("SELECT `email` FROM `account` WHERE `email` = :email");
             $stmt->bindValue(':email', $mail, PDO::PARAM_STR);
 
             $stmt->execute();
@@ -99,7 +99,7 @@ class User extends Account
         try {
             $pdo = Database::getInstance()->getConnection();
 
-            $stmt = $pdo->prepare("SELECT `login` FROM `Account` WHERE `login` = :login");
+            $stmt = $pdo->prepare("SELECT `login` FROM `account` WHERE `login` = :login");
             $stmt->bindValue(':login', $login, PDO::PARAM_STR);
 
             $stmt->execute();
@@ -119,7 +119,7 @@ class User extends Account
         try {
             $pdo = Database::getInstance()->getConnection();
 
-            $stmt = $pdo->prepare("UPDATE `Account` SET `activated` = 1 WHERE `activationCode` = :code");
+            $stmt = $pdo->prepare("UPDATE `account` SET `activated` = 1 WHERE `activationCode` = :code");
             $stmt->bindValue(':code', $activationCode, PDO::PARAM_STR);
 
             $stmt->execute();
