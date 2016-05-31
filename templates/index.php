@@ -23,6 +23,7 @@
             <ul class="nav navbar-nav">
                 <li class="active"><a href="index.php">Link <span class="sr-only">(current)</span></a></li>
                 <li><a href="news.php" onclick="console.log(document.documentElement.clientWidth)">Link</a></li>
+                <?php if ((isset($_SESSION['logged'])) && ($_SESSION['logged']['online'] == true)) { ?>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                        aria-expanded="false">Dropdown <span class="caret"></span></a>
@@ -36,6 +37,7 @@
                         <li><a href="#">One more separated link</a></li>
                     </ul>
                 </li>
+                <?php } ?>
                 <?php if ($admin == true) {
                     print <<<END
           <li class="dropdown">
@@ -61,17 +63,19 @@ END;
                 <button type="submit" class="btn btn-default">Submit</button>
             </form>
             <ul class="nav navbar-nav navbar-right">
+
                 <?php if ((!isset($_SESSION['logged'])) || ($_SESSION['logged']['online'] == false)) { ?>
                     <!-- gość -->
                     <li><a href="#" class="btn btn-lg" role="button" data-toggle="modal" data-target="#login-modal">Sign
                             in</a></li>
+                    //tutaj dodaj taki element jak ten poniżej tzn #toto tylko, żeby nie działał, a był utrzymaniem takiej samej odległości
                 <?php } elseif ((isset($_SESSION['logged'])) && ($_SESSION['logged']['online'] == true)) { ?>
                     <!-- user online -->
                     <li><a href="#" class="btn btn-lg" role="button" data-toggle="modal"
                            data-target="#login-modal"><?= "Witaj {$_SESSION['logged']['imie']}" ?></a>
                     </li>  <!--@Iwo, Jakoś to "obuduj w js, bo to już nie będzie przycisk logowania-->
-                <?php } ?>
-                <li class="dropdown">
+
+                <li class="dropdown" id="toto">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                        aria-expanded="false">Dropdown <span class="caret"></span></a>
                     <ul class="dropdown-menu">
@@ -82,6 +86,8 @@ END;
                         <li><a href="#">Separated link</a></li>
                     </ul>
                 </li>
+                <?php } ?>
+
             </ul>
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
