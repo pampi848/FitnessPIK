@@ -68,24 +68,26 @@ END;
                     <!-- gość -->
                     <li><a href="#" class="btn btn-lg" role="button" data-toggle="modal" data-target="#login-modal">Sign
                             in</a></li>
-                    //tutaj dodaj taki element jak ten poniżej tzn #toto tylko, żeby nie działał, a był utrzymaniem takiej samej odległości
+                    <!--tutaj dodaj taki element jak ten poniżej tzn #toto tylko, żeby nie działał, a był utrzymaniem takiej samej odległości -->
+                <?php //} ?>
+
                 <?php } elseif ((isset($_SESSION['logged'])) && ($_SESSION['logged']['online'] == true)) { ?>
                     <!-- user online -->
                     <li><a href="#" class="btn btn-lg" role="button" data-toggle="modal"
                            data-target="#login-modal"><?= "Witaj {$_SESSION['logged']['imie']}" ?></a>
                     </li>  <!--@Iwo, Jakoś to "obuduj w js, bo to już nie będzie przycisk logowania-->
 
-                <li class="dropdown" id="toto">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                       aria-expanded="false">Dropdown <span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">Action</a></li>
-                        <li><a href="#">Another action</a></li>
-                        <li><a href="#">Something else here</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li><a href="#">Separated link</a></li>
-                    </ul>
-                </li>
+                    <li class="dropdown" id="toto">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                           aria-expanded="false">Dropdown <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                            <li><a href="#">Something else here</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="http://localhost/FitnessPIK/?action=logout">Log out</a></li>
+                        </ul>
+                    </li>
                 <?php } ?>
 
             </ul>

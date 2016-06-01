@@ -1,5 +1,5 @@
 <?php
-
+// nieużywany obecnie plik, idź do Util/Config.php
 $this->database = [
     'user' => "root",
     'pass' => "dev",

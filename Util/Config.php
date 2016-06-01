@@ -54,7 +54,8 @@ class Config
             'default' => 'Actions\\ActionIndex',
             'activation' => 'Actions\\ActivationLink',
             'register' => 'Actions\\Register',
-            'login' => 'Actions\\LogIn'
+            'login' => 'Actions\\LogIn',
+            'logout' => 'Actions\\LogOut'
 
         ];
 
