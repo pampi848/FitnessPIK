@@ -46,7 +46,13 @@ class Register extends Action
                 $_SESSION['messages'][0] = ['class' => 'alert-warning', 'content' => $user];
             }
         }
-        header('location: http://localhost/FitnessPIK/');
+        $content = "";
+        $content = $this->response->processTemplate('index', $content);
+        $content = $this->response->processTemplate('layout', [
+            'title' => 'Strona fitness',
+            'content' => $content
+        ]);
+        $this->response->setContent($content);
     }
 
     private static function randCode()

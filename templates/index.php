@@ -1,7 +1,7 @@
 <body>
 <div class="container-fluid">
-    <div class="jumbotron" style="margin-bottom: 0px;"> <?php $admin = true;
-        echo "TO JEST "; ?>MOJA STRONA
+    <div class="jumbotron" style="margin-bottom: 0px;">
+        TO JEST MOJA STRONA //zrób coś z tym bo brzydko
     </div>
 </div>
 <nav class="navbar navbar-default">
@@ -36,25 +36,22 @@
                         <li role="separator" class="divider"></li>
                         <li><a href="#">One more separated link</a></li>
                     </ul>
-                </li>
+                    <?php if ((isset($_SESSION['logged']['level'])) && ($_SESSION['logged']['level'] == 1)) { ?>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Admin panel <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Zaplanuj event</a></li>
+                                <li><a href="#">Dodaj news</a></li>
+                                <li><a href="#">Dodaj ofertę</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="uprawnienia.php">Uprawnienia</a></li> <!-- czoto? -->
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">Zarządzaj użytkownikami</a></li>
+                            </ul>
+                        </li>
+                        <?php } ?>
+
                 <?php } ?>
-                <?php if ($admin == true) {
-                    print <<<END
-          <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Admin panel <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="uprawnienia.php">Uprawnienia</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">One more separated link</a></li>
-          </ul>
-        </li>
-END;
-                }
-                ?>
             </ul>
             <form class="navbar-form navbar-left" role="search">
                 <div class="form-group">
@@ -120,7 +117,7 @@ END;
 
     <?php //bo nie ma potrzeby wczytywania formularzy jeśli user już się zalogował ?>
     <?php if ((!isset($_SESSION['logged'])) || ($_SESSION['logged']['online'] == false)) { ?>
-        <?php include_once 'templates/forms.php'; ?>
+        <?php include_once 'templates/signForms.php'; ?>
     <?php } ?>
 
 

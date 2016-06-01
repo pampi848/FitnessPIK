@@ -28,7 +28,13 @@ class LogIn extends Action
             }
 
         }
-        header('location: http://localhost/FitnessPIK/');
+        $content = "";
+        $content = $this->response->processTemplate('index', $content);
+        $content = $this->response->processTemplate('layout', [
+            'title' => 'Strona fitness',
+            'content' => $content
+        ]);
+        $this->response->setContent($content);
     }
 
 }

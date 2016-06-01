@@ -16,7 +16,7 @@ class User extends Account
         $checker .= isset($konto['pass']) && has_spaces($konto['pass']) && (mb_strlen($konto['pass'], 'utf-8') > 5) ? '' : 'Złe hasło! <br/>';
 
         $checker .= isset($konto['mail']) && has_spaces($konto['mail']) && is_mail($konto['mail']) ? '' : 'Zły mail! <br/>';
-        $checker .= isset($konto['tel']) && is_numeric($konto['tel']) && ($konto['tel'] > 0) && (strlen((string)$konto['tel']) == 9) ? '' : 'Złe numer telefonu! <br/>';
+        $checker .= isset($konto['tel']) && is_numeric($konto['tel']) && ($konto['tel'] > 0) && (strlen((string)$konto['tel']) == 9) ? '' : 'Zły numer telefonu! <br/>';
         $checker .= isset($konto['name']) && has_spaces($konto['name']) && (mb_strlen($konto['name'], 'utf-8') > 3) ? '' : 'Złe imię! <br/>';
         $checker .= isset($konto['lastname']) && has_spaces($konto['lastname']) && (mb_strlen($konto['lastname'], 'utf-8') > 3) ? '' : 'Złe nazwisko! <br/>';
         $checker .= isset($konto['place']) && (mb_strlen($konto['place'], 'utf-8') > 3) ? '' : 'Zła miejscowość! <br/>'; // ma spacje bo np Dębnica Kaszubska

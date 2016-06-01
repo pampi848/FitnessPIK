@@ -3,31 +3,26 @@
  * Created by PhpStorm.
  * User: pampi
  * Date: 01.06.16
- * Time: 11:01
+ * Time: 18:21
  */
 
 namespace Actions;
 
-use Accounts\Account;
-
 require_once "autoload.php";
-
-class LogOut extends Action
+class AddNews extends Action
 {
+
     function doExecute()
     {
-        if (isset($_SESSION)) {
-            session_destroy();
-            session_start();
-            $_SESSION['messages'][0] = ['class' => 'alert-info', 'content' => 'Wylogowano pomyślnie.'];
+        if(isset($_POST['addNews'])){
+
         }
         $content = "";
-        $content = $this->response->processTemplate('index', $content);
+        $content = $this->response->processTemplate('addnews', $content);
         $content = $this->response->processTemplate('layout', [
             'title' => 'Strona fitness',
             'content' => $content
         ]);
         $this->response->setContent($content);
     }
-    
 }
