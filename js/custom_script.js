@@ -13,3 +13,15 @@ $(document).ready(function () {
     }
     console.log(screen);
 });
+
+$('button.cat').click(function(){
+    var objectID = $(this).attr('id');
+    console.log(objectID);
+    console.log($(this).text());
+    var cat = $(this).text();
+    $('input#cat').val(cat);
+    console.log($('input#cat').val());
+    
+    $('button.cat').removeClass('active');
+    $('button#'+objectID).addClass('active');
+});
