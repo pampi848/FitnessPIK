@@ -68,7 +68,7 @@ END;
                     <!-- gość -->
                     <li><a href="#" class="btn btn-lg" role="button" data-toggle="modal" data-target="#login-modal">Sign
                             in</a></li>
-                    //tutaj dodaj taki element jak ten poniżej tzn #toto tylko, żeby nie działał, a był utrzymaniem takiej samej odległości
+                    <!--tutaj dodaj taki element jak ten poniżej tzn #toto tylko, żeby nie działał, a był utrzymaniem takiej samej odległości -->
                 <?php } elseif ((isset($_SESSION['logged'])) && ($_SESSION['logged']['online'] == true)) { ?>
                     <!-- user online -->
                     <li><a href="#" class="btn btn-lg" role="button" data-toggle="modal"
