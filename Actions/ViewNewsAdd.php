@@ -9,12 +9,13 @@
 namespace Actions;
 
 require_once "autoload.php";
-class AddNews extends Action
+
+class ViewNewsAdd extends Action
 {
 
     function doExecute()
     {
-		
+		// narazie nie używane
         $content = "";
         if ((isset($_SESSION['logged']['online'])) && ($_SESSION['logged']['online'] == true) && (isset($_SESSION['logged']['level'])) && ($_SESSION['logged']['level'] == 1)) {
 
@@ -29,7 +30,7 @@ class AddNews extends Action
 		{
 			// TODO: 404
 		$_SESSION['messages'][0] = ['class' => 'alert-danger', 'content' => 'Coś poszło nie tak!'];
-        
+
 		$content = $this->response->processTemplate('index', $content);
         $content = $this->response->processTemplate('layout', [
             'title' => 'Strona fitness',

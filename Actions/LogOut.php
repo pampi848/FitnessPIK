@@ -16,7 +16,7 @@ class LogOut extends Action
 {
     function doExecute()
     {
-        if (isset($_SESSION)) {
+        if (isset($_SESSION['logged'])) {
             session_destroy();
             session_start();
             $_SESSION['messages'][0] = ['class' => 'alert-info', 'content' => 'Wylogowano pomyślnie.'];
