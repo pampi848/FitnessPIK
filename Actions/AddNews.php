@@ -14,15 +14,28 @@ class AddNews extends Action
 
     function doExecute()
     {
-        if(isset($_POST['addNews'])){
-
-        }
+		
         $content = "";
-        $content = $this->response->processTemplate('addnews', $content);
+        if ((isset($_SESSION['logged']['online'])) && ($_SESSION['logged']['online'] == true) && (isset($_SESSION['logged']['level'])) && ($_SESSION['logged']['level'] == 1)) {
+
+        $content = $this->response->processTemplate('newsForm', $content);
         $content = $this->response->processTemplate('layout', [
             'title' => 'Strona fitness',
             'content' => $content
         ]);
         $this->response->setContent($content);
-    }
+		}
+		else
+		{
+			// TODO: 404
+		$_SESSION['messages'][0] = ['class' => 'alert-danger', 'content' => 'Coś poszło nie tak!'];
+        
+		$content = $this->response->processTemplate('index', $content);
+        $content = $this->response->processTemplate('layout', [
+            'title' => 'Strona fitness',
+            'content' => $content
+        ]);
+        $this->response->setContent($content);
+		}
+	}
 }

@@ -41,7 +41,7 @@ class Config
     {
         $this->database = [
             'user' => "root",
-            'pass' => "dev",
+            'pass' => "",
             'host' => "localhost",
             'database' => "fitnesspik"
         ];
@@ -55,7 +55,8 @@ class Config
             'activation' => 'Actions\\ActivationLink',
             'register' => 'Actions\\Register',
             'login' => 'Actions\\LogIn',
-            'logout' => 'Actions\\LogOut'
+            'logout' => 'Actions\\LogOut',
+			'addnews' => 'Actions\\AddNews'
 
         ];
 
