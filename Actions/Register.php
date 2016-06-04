@@ -46,13 +46,8 @@ class Register extends Action
                 $_SESSION['messages'][0] = ['class' => 'alert-warning', 'content' => $user];
             }
         }
-        $content = "";
-        $content = $this->response->processTemplate('index', $content);
-        $content = $this->response->processTemplate('layout', [
-            'title' => 'Strona fitness',
-            'content' => $content
-        ]);
-        $this->response->setContent($content);
+
+        $this->setContent();
     }
 
     private static function randCode()

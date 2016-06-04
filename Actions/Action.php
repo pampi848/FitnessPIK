@@ -2,14 +2,16 @@
 
 namespace Actions;
 
+require_once 'ViewCalendarData.php';
+
 use Util\Config;
 use Util\Request;
 use Util\Response;
 use Util\Session;
 
-
 abstract class Action
 {
+    protected $content = "";
     /**
      * @var Request
      */
@@ -19,6 +21,11 @@ abstract class Action
      * @var Session
      */
     protected $session = null;
+
+    /**
+     * @var Request
+     */
+    protected $cookie = null;
 
     /**
      * @var Config
@@ -35,15 +42,18 @@ abstract class Action
     /**
      * @param Request $request
      * @param Session $session
+    // * @param Cookie $cookie
      * @param Config $config
      */
     public function __construct(Request $request, Session $session)
     {
         $this->request = $request;
         $this->session = $session;
+        $this->cookie = $session;
         $this->config = Config::getInstance();
 
         $this->response = new Response($this->session, $this->request);
+
     }
 
     public function execute()
@@ -51,5 +61,23 @@ abstract class Action
         $this->doExecute();
 
         return $this->response;
+    }
+    
+    protected function setContent($container = 'index'){
+        $calendar = "";
+        $logged = $this->session->get('logged');
+        if (isset($logged)){
+            $calendar = $this->response->processTemplate('calendarData', enterDataToCookies($logged));
+        }
+
+        $content = "";
+        $content = $this->response->processTemplate($container, $content);
+        $content = $this->response->processTemplate('layout', [
+            'title' => 'Strona fitness',
+            'content' => $content,
+            'calendarData' => $calendar
+        ]);
+
+        $this->response->setContent($content);
     }
 }

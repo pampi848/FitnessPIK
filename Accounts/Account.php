@@ -7,6 +7,7 @@
  */
 
 namespace Accounts;
+
 require_once "autoload.php";
 use PDO;
 use Util\Database;
@@ -49,6 +50,25 @@ abstract class Account
         }
 
         return $haslo;
+    }
+    public static function fetchIdByLogin($login)
+    {
+        try {
+            $pdo = Database::getInstance()->getConnection();
+
+            $stmt = $pdo->prepare("SELECT `id` FROM `account` WHERE `login`=:login LIMIT 1");
+            $stmt->bindValue(':login', $login, PDO::PARAM_STR);
+
+            $stmt->execute();
+            $id = $stmt->fetch();
+            $id = $id[0];
+        } catch (PDOException $exception) {
+            // TODO: log database errors
+            $haslo = "error";
+            throw $exception;
+        }
+        
+        return $id;
     }
 
     public static function fetchAccountByLoginAndPass($login, $pass)

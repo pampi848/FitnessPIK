@@ -24,9 +24,11 @@ class Session
 
     protected function create()
     {
-        session_name(self::SESSION_IDENTIFIER);
-        session_set_cookie_params(self::SESSION_LIFETIME);
-        session_start();
+        if(!isset($_SESSION)) {
+            session_name(self::SESSION_IDENTIFIER);
+            session_set_cookie_params(self::SESSION_LIFETIME);
+            session_start();
+        }
     }
 
     public function add($name, $value)

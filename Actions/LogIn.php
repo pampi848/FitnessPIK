@@ -2,11 +2,13 @@
 namespace Actions;
 
 use Accounts\Account;
+use Util\Session;
 
 require_once "autoload.php";
 
 class LogIn extends Action
 {
+    var $session = null;
 
     function doExecute()
     {
@@ -17,7 +19,7 @@ class LogIn extends Action
             if ($haslo === Account::fetchPasswordByLogin($login)) {
                 $konto = Account::fetchAccountByLoginAndPass($login, $haslo);
                 if (isset($konto) && is_object($konto) && $konto->activated == true) {
-                    $_SESSION['logged'] = ['online' => true, 'imie' => $konto->imie, 'level' => $konto->level];
+                    $this->session->add('logged',['online' => true, 'imie' => $konto->imie, 'level' => $konto->level, 'login' => $login]);//  $_SESSION['logged'] = ['online' => true, 'imie' => $konto->imie, 'level' => $konto->level];
                     $_SESSION['messages'][0] = ['class' => 'alert-success', 'content' => 'Zalogowano pomyślnie.'];
 
                 } else {
@@ -28,13 +30,7 @@ class LogIn extends Action
             }
 
         }
-        $content = "";
-        $content = $this->response->processTemplate('index', $content);
-        $content = $this->response->processTemplate('layout', [
-            'title' => 'Strona fitness',
-            'content' => $content
-        ]);
-        $this->response->setContent($content);
+        $this->setContent();
     }
 
 }

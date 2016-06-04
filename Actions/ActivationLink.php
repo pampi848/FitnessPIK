@@ -23,12 +23,7 @@ class ActivationLink extends Action
         else {
             $_SESSION['messages'][0] = ['class' => 'alert-danger', 'content' => 'Nie udało się aktywować konta! Sprawdź skopiowany link, jeśli błąd dalej występuje wyślij kod aktywacyjny ponownie.'];
         }
-        $content = "";
-        $content = $this->response->processTemplate('index', $content);
-        $content = $this->response->processTemplate('layout', [
-            'title' => 'Strona fitness',
-            'content' => $content
-        ]);
-        $this->response->setContent($content);
+
+        $this->setContent();
     }
 }

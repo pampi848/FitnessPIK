@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title><?php echo $p['title'] ?></title>
+    <title><?=$p['title'] ?></title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -134,7 +134,7 @@
                             <th>Pn</th>
                             <th>Wt</th>
                             <th>Śr</th>
-                            <th id="czw">Czw</th>
+                            <th>Czw</th>
                             <th>Pt</th>
                             <th>Sob</th>
                             <th>Nd</th>
@@ -219,11 +219,12 @@
         <?php include_once 'templates/signForms.php'; ?>
     <?php } ?>
    
-	<?php echo $p['content'] ?>
+	<?=$p['content'] ?>
 
 	<!-- Bootstrap core JavaScript
 	================================================== -->
 	<!-- Placed at the end of the document so the pages load faster -->
+    <?=$p['calendarData']?>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<script>window.jQuery || document.write('<script src="js/vendor/jquery.min.js"><\/script>')</script>
 	<script src="js/bootstrap.min.js"></script>
