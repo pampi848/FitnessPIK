@@ -90,11 +90,11 @@ function toggleCalendar(){
     if(positioned==false)
     {positionCalendar();}
     $('button.calendar-show').toggleClass("active");
-    $('div.calendar-container').toggle(1000);
+    $('div.calendar-container').slideToggle(1000);
 };
 
 function closeCalendar(){
-    $('div.calendar-container').toggle(1000);
+    $('div.calendar-container').slideToggle(1000);
     $('button.calendar-show').toggleClass("active");
 };
 
