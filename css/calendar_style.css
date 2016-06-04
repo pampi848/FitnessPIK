@@ -1,0 +1,74 @@
+
+#month {
+    text-align: center;
+}
+
+.calendar {
+    text-align: center;
+    background-color: floralwhite;
+}
+
+.header-row {
+    background-color: black;
+    color: white;
+    border-color: black;
+}
+
+.other-month {
+    background-color: #FAFAFA;
+}
+
+#dymek {
+    background-color: cornsilk;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    /*width: 100px;
+    height: 100px;*/
+    display: none;
+    opacity: 0.9;
+    z-index: 70;
+}
+
+.calendar_day:hover {
+    cursor: pointer;
+    background-color: white;
+    opacity: 1;
+}
+
+.calendar_day {
+    
+}
+
+.important {
+    background-color: firebrick;
+}
+
+.occasional {
+    background-color: skyblue;
+}
+
+.aerobic {
+    background-color: chartreuse;
+}
+
+.dance {
+    background-color: coral;
+}
+
+.calendar-container {
+    display: none;
+    position: fixed;
+    z-index: 60;
+    opacity: 0.9;
+}
+
+.month {
+    background-color: white;
+    text-align: center;
+    border-radius: 82px 82px 82px 82px;
+    -moz-border-radius: 82px 82px 82px 82px;
+    -webkit-border-radius: 82px 82px 82px 82px;
+}

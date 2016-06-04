@@ -96,7 +96,7 @@ span#com {
 }
 
 #sidebar_social {
-    background-color: azure;
+    background-color: #eee;
     width: 7vw;
     float: right;
     position: fixed;
@@ -105,9 +105,7 @@ span#com {
     border-radius: 84px 0px 0px 198px;
     -moz-border-radius: 84px 0px 0px 198px;
     -webkit-border-radius: 84px 0px 0px 198px;
-    border: 0px solid #000000;
     padding-bottom: 3vh;
-    border: 0.3vw solid black;
     display: none;
 }
 
@@ -116,16 +114,11 @@ span#com {
 }
 
 .social {
-    background-color: aqua;
     width: 3vw;
     text-align: center;
     margin-top: 2vh;
     height: 3vw;
     vertical-align: middle;
-    border-radius: 200px 200px 200px 200px;
-    -moz-border-radius: 200px 200px 200px 200px;
-    -webkit-border-radius: 200px 200px 200px 200px;
-    border: 0px solid #000000;
 }
 
 .social_text {
