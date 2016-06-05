@@ -26,7 +26,7 @@ class User extends Account
         $checker .= isset($konto['zipcode']) && is_zipcode($konto['zipcode']) ? '' : 'Zły kod pocztowy! <br/>';
         $checker .= isset($konto['birthday']) && checkdate(substr($konto['birthday'], 5, -3), substr($konto['birthday'], 8), substr($konto['birthday'], 0, -6)) ? '' : 'Zła data urodzin! <br/>'; // $miesiąc, $dzień, $rok
 
-        if (empty($checker)) {
+        if (empty($checker)) { //TODO: przerobić to na wzykłego konstrukta XD
             $nowekonto = new User;
             $nowekonto->setLogin(addslashes(mb_strtolower($konto['log'])));
             $nowekonto->setHaslo(addslashes($konto['pass']));

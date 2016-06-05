@@ -53,9 +53,9 @@ $(function () {
                 return false;
                 break;
             default:
-                return false;
+                break;
         }
-        return false;
+        return null;
     });
 
     $('#login_register_btn').click(function () {

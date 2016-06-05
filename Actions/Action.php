@@ -63,14 +63,13 @@ abstract class Action
         return $this->response;
     }
     
-    protected function setContent($container = 'index'){
+    protected function setContent($container = 'index', $content = ""){
         $calendar = "";
         $logged = $this->session->get('logged');
         if (isset($logged)){
-            $calendar = $this->response->processTemplate('calendarData', enterDataToCookies($logged));
+            $calendar = $this->response->processTemplate('calendarData', returnData($logged));
         }
-
-        $content = "";
+       
         $content = $this->response->processTemplate($container, $content);
         $content = $this->response->processTemplate('layout', [
             'title' => 'Strona fitness',

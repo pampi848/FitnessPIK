@@ -10,8 +10,7 @@ require_once "autoload.php";
 use Accounts\Account;
 use Models\Zajecia;
 
-
-function enterDataToCookies($logged)
+function returnData($logged)
 {
     if (isset($logged['login'])) {
         $login = $logged['login'];

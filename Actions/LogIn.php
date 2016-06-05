@@ -19,7 +19,7 @@ class LogIn extends Action
             if ($haslo === Account::fetchPasswordByLogin($login)) {
                 $konto = Account::fetchAccountByLoginAndPass($login, $haslo);
                 if (isset($konto) && is_object($konto) && $konto->activated == true) {
-                    $this->session->add('logged',['online' => true, 'imie' => $konto->imie, 'level' => $konto->level, 'login' => $login]);//  $_SESSION['logged'] = ['online' => true, 'imie' => $konto->imie, 'level' => $konto->level];
+                    $this->session->add('logged',['online' => true, 'imie' => $konto->imie, 'level' => $konto->level, 'login' => $login, 'id' => $konto->id]);//  $_SESSION['logged'] = ['online' => true, 'imie' => $konto->imie, 'level' => $konto->level];
                     $_SESSION['messages'][0] = ['class' => 'alert-success', 'content' => 'Zalogowano pomyślnie.'];
 
                 } else {

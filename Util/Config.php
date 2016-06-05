@@ -56,7 +56,8 @@ class Config
             'register' => 'Actions\\Register',
             'login' => 'Actions\\LogIn',
             'logout' => 'Actions\\LogOut',
-			'addnews' => 'Actions\\ViewNewsAdd'
+			'addnews' => 'Actions\\ViewNewsAdd',
+            'allnews' => 'Actions\\ViewNewsAll'
         ];
 
         //TODO: usprawnić to ... // to wszystko co jest wyżej musi zostać w tym pliku, bo windows/xampp nie wykonuje od razu dołączonego pliku 
