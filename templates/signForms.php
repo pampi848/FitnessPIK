@@ -13,7 +13,7 @@
             <div id="div-forms">
 
                 <!-- Begin # Login Form -->
-                <form id="login-form" action="http://localhost/FitnessPIK/?action=login" method="post">
+                <form id="login-form" action="?action=login" method="post">
                     <div class="modal-body">
                         <div id="div-login-msg">
                             <div id="icon-login-msg" class="glyphicon glyphicon-chevron-right"></div>
@@ -64,7 +64,7 @@
                 <!-- End | Lost Password Form -->
 
                 <!-- Begin | Register Form -->
-                <form id="register-form" style="display:none;" action="http://localhost/FitnessPIK/?action=register"
+                <form id="register-form" style="display:none;" action="?action=register"
                       method="post">
                     <div class="modal-body">
                         <div id="div-register-msg">

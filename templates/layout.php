@@ -52,8 +52,8 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="index.php">Home <span class="sr-only">(current)</span></a></li>
-                <li><a href="index.php/?action=allnews" onclick="console.log(document.documentElement.clientWidth)">News</a></li>
+                <li class="active"><a href="?action=default">Home <span class="sr-only">(current)</span></a></li>
+                <li><a href="?action=allnews" onclick="console.log(document.documentElement.clientWidth)">News</a></li>
                 <?php if ((isset($_SESSION['logged'])) && ($_SESSION['logged']['online'] == true)) { ?>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
@@ -72,7 +72,7 @@
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Admin panel <span class="caret"></span></a>
                             <ul class="dropdown-menu">
                                 <li><a href="#">Zaplanuj event</a></li>
-                                <li><a href="index.php?action=addnews">Dodaj news</a></li>
+                                <li><a href="?action=addnews">Dodaj news</a></li>
                                 <li><a href="#">Dodaj ofertę</a></li>
                                 <li role="separator" class="divider"></li>
                                 <li><a href="uprawnienia.php">Uprawnienia</a></li> <!-- czoto? -->
@@ -113,7 +113,7 @@
                             <li><a href="#">Another action</a></li>
                             <li><a href="#">Something else here</a></li>
                             <li role="separator" class="divider"></li>
-                            <li><a href="index.php?action=logout">Log out</a></li>
+                            <li><a href="?action=logout">Log out</a></li>
                         </ul>
                     </li>
                 <?php } ?>
