@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title><?=$p['title'] ?></title>
+    <title><?= $p['title'] ?></title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -55,7 +55,7 @@
                 <li class="active"><a href="?action=default">Home <span class="sr-only">(current)</span></a></li>
                 <li><a href="?action=allnews" onclick="console.log(document.documentElement.clientWidth)">News</a></li>
                 <?php if ((isset($_SESSION['logged'])) && ($_SESSION['logged']['online'] == true)) { ?>
-                <li class="dropdown">
+                    <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                        aria-expanded="false">Dropdown <span class="caret"></span></a>
                     <ul class="dropdown-menu">
@@ -69,7 +69,8 @@
                     </ul>
                     <?php if ((isset($_SESSION['logged']['level'])) && ($_SESSION['logged']['level'] == 1)) { ?>
                         <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Admin panel <span class="caret"></span></a>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                               aria-haspopup="true" aria-expanded="false">Admin panel <span class="caret"></span></a>
                             <ul class="dropdown-menu">
                                 <li><a href="#">Zaplanuj event</a></li>
                                 <li><a href="?action=addnews">Dodaj news</a></li>
@@ -80,7 +81,7 @@
                                 <li><a href="#">Zarządzaj użytkownikami</a></li>
                             </ul>
                         </li>
-                        <?php } ?>
+                    <?php } ?>
 
                 <?php } ?>
             </ul>
@@ -97,7 +98,7 @@
                     <li><a href="#" class="btn btn-lg" role="button" data-toggle="modal" data-target="#login-modal">Sign
                             in</a></li>
                     <!--tutaj dodaj taki element jak ten poniżej tzn #toto tylko, żeby nie działał, a był utrzymaniem takiej samej odległości -->
-                <?php //} ?>
+                    <?php //} ?>
 
                 <?php } elseif ((isset($_SESSION['logged'])) && ($_SESSION['logged']['online'] == true)) { ?>
                     <!-- user online -->
@@ -122,82 +123,95 @@
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
 </nav>
-    <div class="calendar-container">
-                    <table class="table table-bordered table-responsive table-condensed calendar">
-                        <div class="row">
-                            <div class="col-md-12 month">
-                                <h3 class="pull-left">Czerwiec</h3>
-                                <button type="button" class="close pull-right calendar-close" aria-label="Close" onclick="closeCalendar()"><span aria-hidden="true">&times;</span></button>
-                            </div>
-                        </div>
-                        <tr class="header-row">
-                            <th>Pn</th>
-                            <th>Wt</th>
-                            <th>Śr</th>
-                            <th>Czw</th>
-                            <th>Pt</th>
-                            <th>Sob</th>
-                            <th>Nd</th>
-                        </tr>
-                        <tr>
-                            <td class="other-month calendar_day">30</td>
-                            <td class="other-month calendar_day">31</td>
-                            <td class="calendar_day">1 <span class="badge important">2</span></td>
-                            <td class="calendar_day">2 <span class="badge">0</span></td>
-                            <td class="calendar_day">3 <span class="badge">0</span></td>
-                            <td class="calendar_day">4 <span class="badge">0</span></td>
-                            <td class="calendar_day">5 <span class="badge">0</span></td>            
-                        </tr>
-                        <tr>
-                            <td class="calendar_day">6 <span class="badge">0</span></td>
-                            <td class="calendar_day">7 <span class="badge">0</span></td>
-                            <td class="calendar_day">8 <span class="badge">0</span></td>
-                            <td class="calendar_day">9 <span class="badge">0</span></td>
-                            <td class="calendar_day">10 <span class="badge occasional">1</span></td>
-                            <td class="calendar_day">11 <span class="badge">0</span></td>
-                            <td class="calendar_day">12 <span class="badge">0</span></td>            
-                        </tr>
-                        <tr>
-                            <td class="calendar_day">13 <span class="badge">0</span></td>
-                            <td class="calendar_day">14 <span class="badge aerobic">1</span></td>
-                            <td class="calendar_day">15 <span class="badge">0</span></td>
-                            <td class="calendar_day">16 <span class="badge">0</span></td>
-                            <td class="calendar_day">17 <span class="badge">0</span></td>
-                            <td class="calendar_day">18 <span class="badge">0</span></td>
-                            <td class="calendar_day">19 <span class="badge">0</span></td>            
-                        </tr>
-                        <tr>
-                            <td class="calendar_day">20 <span class="badge">0</span></td>
-                            <td class="calendar_day">21 <span class="badge">0</span></td>
-                            <td class="calendar_day">22 <span class="badge">0</span></td>
-                            <td class="calendar_day">23 <span class="badge">0</span></td>
-                            <td class="calendar_day">24 <span class="badge">0</span></td>
-                            <td class="calendar_day">25 <span class="badge dance">2</span></td>
-                            <td class="calendar_day">26 <span class="badge">0</span></td>            
-                        </tr>
-                        <tr>
-                            <td class="calendar_day">27 <span class="badge">0</span></td>
-                            <td class="calendar_day">28 <span class="badge">0</span></td>
-                            <td class="calendar_day">29 <span class="badge">0</span></td>
-                            <td class="calendar_day">30 <span class="badge">0</span></td>
-                            <td class="other-month calendar_day">1</td>
-                            <td class="other-month calendar_day">2</td>
-                            <td class="other-month calendar_day">3</td>            
-                        </tr>
-                    </table>
-                </div>
-    <div id="dymek" class="panel panel-default">
-                    <div class="panel-body" id="dymek-content">
-                    </div>
-                </div>
+<div class="calendar-container">
+    <table class="table table-bordered table-responsive table-condensed calendar">
+        <div class="row">
+            <div class="col-md-12 month">
+                <h3 class="pull-left">Czerwiec</h3>
+                <button type="button" class="close pull-right calendar-close" aria-label="Close"
+                        onclick="closeCalendar()"><span aria-hidden="true">&times;</span></button>
+            </div>
+        </div>
+        <tr class="header-row">
+            <th>Pn</th>
+            <th>Wt</th>
+            <th>Śr</th>
+            <th>Czw</th>
+            <th>Pt</th>
+            <th>Sob</th>
+            <th>Nd</th>
+        </tr>
+        <tr>
+            <td class="other-month calendar_day">30</td>
+            <td class="other-month calendar_day">31</td>
+            <td class="calendar_day">1 <span class="badge important">2</span></td>
+            <td class="calendar_day">2 <span class="badge">0</span></td>
+            <td class="calendar_day">3 <span class="badge">0</span></td>
+            <td class="calendar_day">4 <span class="badge">0</span></td>
+            <td class="calendar_day">5 <span class="badge">0</span></td>
+        </tr>
+        <tr>
+            <td class="calendar_day">6 <span class="badge">0</span></td>
+            <td class="calendar_day">7 <span class="badge">0</span></td>
+            <td class="calendar_day">8 <span class="badge">0</span></td>
+            <td class="calendar_day">9 <span class="badge">0</span></td>
+            <td class="calendar_day">10 <span class="badge occasional">1</span></td>
+            <td class="calendar_day">11 <span class="badge">0</span></td>
+            <td class="calendar_day">12 <span class="badge">0</span></td>
+        </tr>
+        <tr>
+            <td class="calendar_day">13 <span class="badge">0</span></td>
+            <td class="calendar_day">14 <span class="badge aerobic">1</span></td>
+            <td class="calendar_day">15 <span class="badge">0</span></td>
+            <td class="calendar_day">16 <span class="badge">0</span></td>
+            <td class="calendar_day">17 <span class="badge">0</span></td>
+            <td class="calendar_day">18 <span class="badge">0</span></td>
+            <td class="calendar_day">19 <span class="badge">0</span></td>
+        </tr>
+        <tr>
+            <td class="calendar_day">20 <span class="badge">0</span></td>
+            <td class="calendar_day">21 <span class="badge">0</span></td>
+            <td class="calendar_day">22 <span class="badge">0</span></td>
+            <td class="calendar_day">23 <span class="badge">0</span></td>
+            <td class="calendar_day">24 <span class="badge">0</span></td>
+            <td class="calendar_day">25 <span class="badge dance">2</span></td>
+            <td class="calendar_day">26 <span class="badge">0</span></td>
+        </tr>
+        <tr>
+            <td class="calendar_day">27 <span class="badge">0</span></td>
+            <td class="calendar_day">28 <span class="badge">0</span></td>
+            <td class="calendar_day">29 <span class="badge">0</span></td>
+            <td class="calendar_day">30 <span class="badge">0</span></td>
+            <td class="other-month calendar_day">1</td>
+            <td class="other-month calendar_day">2</td>
+            <td class="other-month calendar_day">3</td>
+        </tr>
+    </table>
+</div>
+<div id="dymek" class="panel panel-default">
+    <div class="panel-body" id="dymek-content">
+    </div>
+</div>
 <div class="container" id="content">
     <!-- BEGIN #SIDEBAR -->
     <div id="sidebar_social">
         <ol id="socials">
-            <li class="social"><button type="button" class="btn btn-default btn-circle btn-lg l calendar-show" onclick="toggleCalendar()"><i class="glyphicon glyphicon-bell"></i></button></li>
-            <li class="social"><button type="button" class="btn btn-default btn-circle btn-lg"><i class="glyphicon glyphicon-ok"></i></button></li>
-            <li class="social"><button type="button" class="btn btn-default btn-circle btn-lg"><i class="glyphicon glyphicon-ok"></i></button></li>
-            <li class="social"><button type="button" class="btn btn-default btn-circle btn-lg"><i class="glyphicon glyphicon-ok"></i></button></li>
+            <li class="social">
+                <button type="button" class="btn btn-default btn-circle btn-lg l calendar-show"
+                        onclick="toggleCalendar()"><i class="glyphicon glyphicon-bell"></i></button>
+            </li>
+            <li class="social">
+                <button type="button" class="btn btn-default btn-circle btn-lg"><i class="glyphicon glyphicon-ok"></i>
+                </button>
+            </li>
+            <li class="social">
+                <button type="button" class="btn btn-default btn-circle btn-lg"><i class="glyphicon glyphicon-ok"></i>
+                </button>
+            </li>
+            <li class="social">
+                <button type="button" class="btn btn-default btn-circle btn-lg"><i class="glyphicon glyphicon-ok"></i>
+                </button>
+            </li>
         </ol>
     </div>
     <div style="clear:both"></div>
@@ -218,21 +232,25 @@
     <?php if ((!isset($_SESSION['logged'])) || ($_SESSION['logged']['online'] == false)) { ?>
         <?php include_once 'templates/signForms.php'; ?>
     <?php } ?>
-   
-	<?=$p['content'] ?>
 
-	<!-- Bootstrap core JavaScript
-	================================================== -->
-	<!-- Placed at the end of the document so the pages load faster -->
-    <?=$p['calendarData']?>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-	<script>window.jQuery || document.write('<script src="js/vendor/jquery.min.js"><\/script>')</script>
-	<script src="js/bootstrap.min.js"></script>
-	<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-	<script src="js/ie10-viewport-bug-workaround.js"></script>
-	<script src="js/custom_script.js"></script>
-	<script src="js/login_script.js"></script>
-	<script src="js/arrow.js"></script>
+    <?= $p['content'] ?>
+    <div class="scroll-top-wrapper ">
+  <span class="scroll-top-inner">
+    <i class="fa fa-2x fa-arrow-circle-up">UP</i>
+  </span>
+    </div>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <?= $p['calendarData'] ?>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+    <script src="js/custom_script.js"></script>
+    <script src="js/login_script.js"></script>
+    <script src="js/arrow.js"></script>
     <script src="js/calendar_script.js"></script>
-	</body>
+</body>
 </html>

@@ -24,6 +24,6 @@ class ActivationLink extends Action
             $_SESSION['messages'][0] = ['class' => 'alert-danger', 'content' => 'Nie udało się aktywować konta! Sprawdź skopiowany link, jeśli błąd dalej występuje wyślij kod aktywacyjny ponownie.'];
         }
 
-        $this->setContent();
+        $this->loadContent();
     }
 }

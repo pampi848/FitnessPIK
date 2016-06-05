@@ -22,7 +22,7 @@ class LogOut extends Action
             $_SESSION['messages'][0] = ['class' => 'alert-info', 'content' => 'Wylogowano pomyślnie.'];
         }
 
-        $this->setContent();
+        header('location: ?');
     }
     
 }

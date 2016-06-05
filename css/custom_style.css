@@ -107,6 +107,7 @@ span#com {
     -webkit-border-radius: 84px 0px 0px 198px;
     padding-bottom: 3vh;
     display: none;
+    z-index: 100;
 }
 
 .carousel-caption {

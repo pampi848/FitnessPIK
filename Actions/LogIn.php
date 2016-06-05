@@ -30,7 +30,7 @@ class LogIn extends Action
             }
 
         }
-        $this->setContent();
+        header('location: ?');
     }
 
 }

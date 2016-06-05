@@ -11,12 +11,15 @@ namespace Actions;
 require_once "autoload.php";
 
 use Models\News;
-
 class ViewNewsAll extends Action
 {
     function doExecute()
     {
         $tablicaNewsow = News::fetchAllNews();
-        $this->setContent('newsAll', $tablicaNewsow);
+        $galleryData = News::fetchNewsToGallery();
+
+        
+        $gallery = $this->response->processTemplate('gallery', $galleryData);
+        $this->loadContent('newsAll', ['gallery' => $gallery, 'news' => $tablicaNewsow]);
     }
 }

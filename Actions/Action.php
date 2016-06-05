@@ -63,7 +63,7 @@ abstract class Action
         return $this->response;
     }
     
-    protected function setContent($container = 'index', $content = ""){
+    protected function loadContent($container = 'index', $content = ""){
         $calendar = "";
         $logged = $this->session->get('logged');
         if (isset($logged)){

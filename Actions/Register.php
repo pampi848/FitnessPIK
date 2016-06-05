@@ -47,7 +47,7 @@ class Register extends Action
             }
         }
 
-        $this->setContent();
+        $this->loadContent();
     }
 
     private static function randCode()
