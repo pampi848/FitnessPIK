@@ -28,6 +28,7 @@
     <link href="css/arrow.css" rel="stylesheet">
     <link href="css/calendar_style.css" rel="stylesheet">
     <link href="css/circle-button-style.css" rel="stylesheet">
+    <link href="css/profile-style.css" rel="stylesheet">
 </head>
 <body>
 <div class="container-fluid">
@@ -252,5 +253,6 @@
     <script src="js/login_script.js"></script>
     <script src="js/arrow.js"></script>
     <script src="js/calendar_script.js"></script>
+    <script src="js/profile-script.js"></script>
 </body>
 </html>

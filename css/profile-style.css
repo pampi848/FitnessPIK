@@ -1,0 +1,42 @@
+
+.profile-content {
+    width: 80%;
+    margin-top: 80px;
+    background-color: #FAFAFA;
+    border-radius: 35px 35px 35px 35px;
+    -moz-border-radius: 35px 35px 35px 35px;
+    -webkit-border-radius: 35px 35px 35px 35px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2%;
+}
+
+.title {
+    margin-top: -15px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.name {
+    text-align: center;
+}
+
+.contact {
+    text-align: center;
+}
+
+.jobs {
+    text-align: center;
+}
+
+body {
+    background-color: #E5E5E5;
+}
+
+.upper-profile {
+    
+}
+
+.profile-month-name {
+    text-align: center;
+}
