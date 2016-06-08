@@ -31,12 +31,11 @@ class ViewNewsAdd extends Action
 
             if($size <= 16777216 && isset($source) && isset($type) && ($type == 'image/jpeg' || $type == 'image/png' || $type == 'image/bmp')) {
                 $type = substr($type, 6);
-                $nowaSciezka = "/var/www/FitnessPIK/img/img" . time() . ".$type";
+                $nowaSciezka = "img/img" . time() . ".$type";
                 $nowyPlik = fopen($nowaSciezka, "x");
                 $pobranyPlik = fread(fopen($_FILES['newNews']['tmp_name']['img'], 'r'),$size);
                 fwrite($nowyPlik, $pobranyPlik);
                 chmod($nowaSciezka,0755);
-                $nowaSciezka = "img/img" . time() . ".$type";
             }
 
             $news = News::create($nowaSciezka, $newNews['category'], $newNews['content'], $newNews['title'], $newNews['autor'], $newNews['description'], $logged['id']);
