@@ -4,7 +4,7 @@
                 <div class="col-md-4">
                     <?php
                     // WCZYTYWANIE DANYCH DO STRONY PROFILU
-                    $nazwa = $_GET['nazwa'];
+                    $nazwa = $p;
                     switch($nazwa){
                         case "kinga":
                             $user = [
@@ -110,13 +110,14 @@
                         }
                         $content = $content.$user['prowadzi'][$i];
                     }
-                    //KONIEC WCZYTYWANIA DANYCH
-                    echo "<img src=img/profile/\"".$user['folder']."/av.jpg\" alt=\"...\" class=\"img-thumbnail img-responsive center-block\">"; //GENEROWANIE AVATARA
-                    
                     ?>
+<!--                    GENEROWANIE AVATARA-->
+            <img src="img/profile/<?=$user['folder']?>/av.jpg" alt="..." class="img-thumbnail img-responsive center-block">
+                    
+
                 </div>
                 <div class="col-md-8"> <!-- DANE OSOBOWE -->
-                    <div class="row"><div class="col-md-12 name"><h1><?=$user['nazwisko']; ?> <small><?=$user['imie']; ?></small></h1></div></div>
+                    <div class="row"><div class="col-md-12 name"><h1><?=$user['imie']; ?> <small><?=$user['nazwisko']; ?></small></h1></div></div>
                     <div class="row"><div class="col-md-12 title"><h4><?=$user['typ']; ?></h4></div></div>
                     <div class="row">
                         <div class="col-md-8 col-md-offset-2 contact">

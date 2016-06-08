@@ -28,7 +28,7 @@ class ViewNewsAdd extends Action
 
             $nowaSciezka = '';
             $logged = $this->session->get('logged');
-            
+
             if($size <= 16777216 && isset($source) && isset($type) && ($type == 'image/jpeg' || $type == 'image/png' || $type == 'image/bmp')) {
                 $type = substr($type, 6);
                 $nowaSciezka = "/var/www/FitnessPIK/img/img" . time() . ".$type";
@@ -38,7 +38,7 @@ class ViewNewsAdd extends Action
                 chmod($nowaSciezka,0755);
                 $nowaSciezka = "img/img" . time() . ".$type";
             }
-            
+
             $news = News::create($nowaSciezka, $newNews['category'], $newNews['content'], $newNews['title'], $newNews['autor'], $newNews['description'], $logged['id']);
 
             if (is_object($news)) {
@@ -49,7 +49,7 @@ class ViewNewsAdd extends Action
                 $_SESSION['messages'][0] = ['class' => 'alert-danger', 'content' => $news];
                 $this->loadContent('newsForm');
             }
-            
+
         } else {
             //Pierwsze wczytanie strony
             if ((isset($_SESSION['logged']['online'])) && ($_SESSION['logged']['online'] == true) && (isset($_SESSION['logged']['level'])) && ($_SESSION['logged']['level'] == 1)) {

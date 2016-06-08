@@ -6,7 +6,7 @@
             <?php $i=0; ?>
             <?php foreach ($p['news'] as $news){?>
                 <?php if(is_array($news)){ ?>
-                    <div class="col-md-5 <?= ($news['id']%2==0) ? 'col-md-offset-2' : ''?> news">
+                    <div class="col-md-5 <?= ($i%2==0) ? '' : 'col-md-offset-2'?> news">
                         <div class="row">
                             <div class="col-md-4">
                                 <img src='<?="img/{$news['kategoria']}.jpg"?>' alt="..." class="img-thumbnail">
