@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="icon"
+          type="image/png"
+          href="favicon.png"/>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -47,18 +50,19 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">Fitness</a>
+            <a class="navbar-brand" href="index.php">Fitness</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="?action=default">Home <span class="sr-only">(current)</span></a></li>
-                <li><a href="?action=allnews" onclick="console.log(document.documentElement.clientWidth)">News</a></li>
+                <li class="<?=$p['currentAction']=='default' ? 'active' : ''?>"><a href="?action=default">Home <span class="sr-only"></span></a></li>
+                <li class="<?=$p['currentAction']=='offer' ? 'active' : ''?>"><a href="?action=offer">Offer<span class="sr-only"></span></a></li>
+                <li class="<?=$p['currentAction']=='allnews' ? 'active' : ''?>"><a href="?action=allnews" onclick="console.log(document.documentElement.clientWidth)">News</a></li>
                 <?php if ((isset($_SESSION['logged'])) && ($_SESSION['logged']['online'] == true)) { ?>
                     <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                       aria-expanded="false">Dropdown <span class="caret"></span></a>
+                       aria-expanded="false">Instruktor<span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <li><a href="#">Action</a></li>
                         <li><a href="#">Another action</a></li>
@@ -86,9 +90,9 @@
 
                 <?php } ?>
             </ul>
-            <form class="navbar-form navbar-left" role="search">
+            <form action="?action=search" method="post" class="navbar-form navbar-left" role="search">
                 <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Search">
+                    <input name='search' type="text" class="form-control" placeholder="Search">
                 </div>
                 <button type="submit" class="btn btn-default">Submit</button>
             </form>
@@ -103,17 +107,17 @@
 
                 <?php } elseif ((isset($_SESSION['logged'])) && ($_SESSION['logged']['online'] == true)) { ?>
                     <!-- user online -->
-                    <li><a href="#" class="btn btn-lg" role="button" data-toggle="modal"
+                    <li><a href="?action=profile" class="btn btn-lg" role="button"
                            data-target="#login-modal"><?= "Witaj {$_SESSION['logged']['imie']}" ?></a>
-                    </li>  <!--@Iwo, Jakoś to "obuduj w js, bo to już nie będzie przycisk logowania-->
+                    </li>
 
                     <li class="dropdown" id="toto">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                           aria-expanded="false">Dropdown <span class="caret"></span></a>
+                           aria-expanded="false"> <span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="#">Action</a></li>
+                            <li><a href="?action=profile">My account</a></li>
                             <li><a href="#">Another action</a></li>
-                            <li><a href="#">Something else here</a></li>
+                            <li><a href="">Something else here</a></li>
                             <li role="separator" class="divider"></li>
                             <li><a href="?action=logout">Log out</a></li>
                         </ul>

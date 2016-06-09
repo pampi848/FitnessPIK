@@ -91,23 +91,23 @@ abstract class Account
 
         return $konto;
     }
-    public static function fetchAllAccounts()
+    public static function fetchMyProfile($login)
     {
         try {
             $pdo = Database::getInstance()->getConnection();
 
-            $stmt = $pdo->prepare("SELECT * FROM `account`");
+            $stmt = $pdo->prepare("SELECT `id`,`login`,`email`,`nrTel`,`imie`,`nazwisko`,`miejscowosc`,`ulica`,`nrDomu`,`nrMieszkania`,`kodPocztowy`,`dataUrodzin` FROM `account` WHERE login=:login");
 
+            $stmt->bindValue(':login', $login, PDO::PARAM_STR);
             $stmt->execute();
-            $konta = new User();
-            $konta = $stmt->fetchAll(PDO::FETCH_ASSOC);// zwraca obiekt
-
+            $konto = new User();
+            $konto = $stmt->fetch(PDO::FETCH_ASSOC);
         } catch (PDOException $exception) {
             // TODO: log database errors
             throw $exception;
         }
 
-        return $konta;
+        return $konto;
     }
 
 

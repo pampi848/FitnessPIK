@@ -74,7 +74,8 @@ abstract class Action
         $content = $this->response->processTemplate('layout', [
             'title' => 'Strona fitness',
             'content' => $content,
-            'calendarData' => $calendar
+            'calendarData' => $calendar,
+            'currentAction' => $this->request->get('action','default')
         ]);
 
         $this->response->setContent($content);

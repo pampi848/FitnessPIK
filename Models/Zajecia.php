@@ -79,6 +79,24 @@ class Zajecia
         return $tablicaZajec;
     }
 
+    public static function conductedLessons($id)
+    {
+        try {
+            $pdo = Database::getInstance()->getConnection();
+
+            $stmt = $pdo->prepare("SELECT * FROM `zajecia` WHERE `id_instruktor`=:id");
+
+            $stmt->bindValue(':id', $id, PDO::PARAM_STR);
+            $stmt->execute();
+            $zajecia = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        } catch (PDOException $exception) {
+            // TODO: log database errors
+            throw $exception;
+        }
+
+        return $zajecia;
+    }
+
     /**
      * @return int
      */
