@@ -19,7 +19,7 @@ class ViewNewsAdd extends Action
     {
         $newNews = $this->request->get('newNews');
         //Jeśli wysłano dane
-        if (isset($newNews['submit'])) {
+        if (isset($newNews['submit'])&&(isset($_SESSION['logged']['online'])) && ($_SESSION['logged']['online'] == true) && (isset($_SESSION['logged']['level'])) && ($_SESSION['logged']['level'] == 1)){
             unset($newNews['submit']);
 
             $source = isset($_FILES['newNews']['tmp_name']['img']) ? $_FILES['newNews']['tmp_name']['img'] : '';

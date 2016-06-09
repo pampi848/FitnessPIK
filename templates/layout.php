@@ -47,7 +47,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">Brand</a>
+            <a class="navbar-brand" href="#">Fitness</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -77,9 +77,9 @@
                                 <li><a href="?action=addnews">Dodaj news</a></li>
                                 <li><a href="#">Dodaj ofertę</a></li>
                                 <li role="separator" class="divider"></li>
-                                <li><a href="uprawnienia.php">Uprawnienia</a></li> <!-- czoto? -->
+                                <li><a href="#">Uprawnienia</a></li> <!-- czoto? -->
                                 <li role="separator" class="divider"></li>
-                                <li><a href="#">Zarządzaj użytkownikami</a></li>
+                                <li><a href="?action=users">Zarządzaj użytkownikami</a></li>
                             </ul>
                         </li>
                     <?php } ?>

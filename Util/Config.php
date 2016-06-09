@@ -59,7 +59,8 @@ class Config
 			'addnews' => 'Actions\\ViewNewsAdd',
             'allnews' => 'Actions\\ViewNewsAll',
             'news' => 'Actions\\ViewNewsSingle',
-            'profile' => 'Actions\\ViewProfile'
+            'profile' => 'Actions\\ViewProfile',
+            'users' => 'Actions\\ViewUsersAll'
         ];
 
         //TODO: usprawnić to ... // to wszystko co jest wyżej musi zostać w tym pliku, bo windows/xampp nie wykonuje od razu dołączonego pliku 

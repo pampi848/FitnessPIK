@@ -96,7 +96,7 @@ class News
         try {
             $pdo = Database::getInstance()->getConnection();
 
-            $stmt = $pdo->prepare("SELECT `opis`,`naglowek`,`id`,`data_utworzenia`, `img` FROM `newsy` ORDER BY `data_utworzenia` DESC LIMIT 4");
+            $stmt = $pdo->prepare("SELECT `opis`,`naglowek`,`id`,`data_utworzenia`, `img` FROM `newsy` ORDER BY `data_utworzenia` ASC LIMIT 4");
 
             $stmt->execute();
             $newsy = $stmt->fetchAll(PDO::FETCH_ASSOC);

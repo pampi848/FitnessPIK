@@ -91,6 +91,24 @@ abstract class Account
 
         return $konto;
     }
+    public static function fetchAllAccounts()
+    {
+        try {
+            $pdo = Database::getInstance()->getConnection();
+
+            $stmt = $pdo->prepare("SELECT * FROM `account`");
+
+            $stmt->execute();
+            $konta = new User();
+            $konta = $stmt->fetchAll(PDO::FETCH_ASSOC);// zwraca obiekt
+
+        } catch (PDOException $exception) {
+            // TODO: log database errors
+            throw $exception;
+        }
+
+        return $konta;
+    }
 
 
     public function insertAccountIntoSQL()
