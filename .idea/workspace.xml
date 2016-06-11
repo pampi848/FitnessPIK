@@ -15,18 +15,7 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/img/profile/nikola/av.jpg" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/img/profile/pampej/av.jpg" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/img/profile/paulina/av.jpg" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Actions/Controller.php" afterPath="$PROJECT_DIR$/Actions/Controller.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Actions/LogIn.php" afterPath="$PROJECT_DIR$/Actions/LogIn.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Actions/Register.php" afterPath="$PROJECT_DIR$/Actions/Register.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Actions/SendAgainAC.php" afterPath="$PROJECT_DIR$/Actions/SendAgainAC.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Util/Config.php" afterPath="$PROJECT_DIR$/Util/Config.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Util/Response.php" afterPath="$PROJECT_DIR$/Util/Response.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Util/Response404.php" afterPath="$PROJECT_DIR$/Util/Response404.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/error404.php" afterPath="$PROJECT_DIR$/templates/error404.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/instruktorPanel.php" afterPath="$PROJECT_DIR$/templates/instruktorPanel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/users.php" afterPath="$PROJECT_DIR$/templates/users.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test.php" afterPath="$PROJECT_DIR$/test.php" />
     </list>
     <ignored path="FitnessPIK.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -58,10 +47,11 @@
       <file leaf-file-name="instruktorPanel.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/instruktorPanel.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="334">
-              <caret line="74" column="56" selection-start-line="74" selection-start-column="56" selection-end-line="74" selection-end-column="56" />
+            <state relative-caret-position="198">
+              <caret line="20" column="20" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
               <folding>
-                <marker date="1465677865553" expanded="true" signature="3711:3762" ph="..." />
+                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -140,7 +130,8 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="y" value="-1000" />
+    <option name="x" value="1280" />
+    <option name="y" value="24" />
     <option name="width" value="1280" />
     <option name="height" value="1000" />
   </component>
@@ -261,17 +252,17 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/Actions" />
-      <recent name="$PROJECT_DIR$/Util" />
-      <recent name="$PROJECT_DIR$" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/templates" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/Model" />
       <recent name="$PROJECT_DIR$/Actions" />
       <recent name="$PROJECT_DIR$/Actions/View" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Actions" />
+      <recent name="$PROJECT_DIR$/Util" />
+      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="RunManager">
@@ -353,15 +344,15 @@
       <workItem from="1465234209117" duration="3431000" />
       <workItem from="1465487293397" duration="15441000" />
       <workItem from="1465590350879" duration="6508000" />
-      <workItem from="1465641582446" duration="32163000" />
+      <workItem from="1465641582446" duration="33318000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="292890000" />
+    <option name="totallyTimeSpent" value="294045000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="-1000" width="1280" height="1000" extended-state="6" />
+    <frame x="1280" y="24" width="1280" height="1000" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2359375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -807,10 +798,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/instruktorPanel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="334">
-          <caret line="74" column="56" selection-start-line="74" selection-start-column="56" selection-end-line="74" selection-end-column="56" />
+        <state relative-caret-position="198">
+          <caret line="20" column="20" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
           <folding>
-            <marker date="1465677865553" expanded="true" signature="3711:3762" ph="..." />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
