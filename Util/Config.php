@@ -63,7 +63,8 @@ class Config
             'users' => 'Actions\\ViewUsersAll',
             'offer' => 'Actions\\ViewOffer',
             'instruktorPanel' => 'Actions\\ViewInstruktorPanel',
-            'deactivation' => 'Actions\\Deactivation'
+            'deactivation' => 'Actions\\Deactivation',
+            'sendactivation' => 'Actions\\SendAgainAC'
         ];
 
         //TODO: usprawnić to ... // to wszystko co jest wyżej musi zostać w tym pliku, bo windows/xampp nie wykonuje od razu dołączonego pliku 

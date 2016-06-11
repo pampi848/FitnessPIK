@@ -25,6 +25,7 @@ class Register extends Action
         if (isset($_POST['newUser']) && is_array($_POST['newUser']) && (User::findSameLogin($_POST['newUser']['log']) != $_POST['newUser']['log']) && (User::findSameMail($_POST['newUser']['mail']) != $_POST['newUser']['mail'])) {
             $code = $this->randCode(); //losowy kod
             $_POST['newUser']['activationCode'] = $code; // i przypisanie go do usera
+            $_POST['newUser']['pass'] = base64_encode($_POST['newUser']['pass']);
             $user = User::userCreate($_POST['newUser']); // tworzenie obiektu user
 
             if (is_object($user)) { // jeśli nie to jest to komunikat o błędach

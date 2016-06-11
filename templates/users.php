@@ -1,7 +1,6 @@
 <?php foreach ($p as $konto){ ?>
     <div id="id">Id: <?=$konto['id']?> </div>
     <div id="login">Login: <?=$konto['login']?> </div>
-    <div id="haslo">Haslo: <?=$konto['haslo']?> </div>
     <div id="email">E-mail: <?=$konto['email']?> </div>
     <div id="nrTel">Numer Telefonu: <?=$konto['nrTel']?> </div>
     <div id="imie">Imię: <?=$konto['imie']?> </div>
@@ -18,7 +17,7 @@
     <div id="activationCode">Kod aktywacyjny: <?=$konto['activationCode']?> </div>
     <a href="?action=edit&&id=<?=$konto['id']?>"><button>Edytuj</button></a>
     <a href="?action=resetPass&&id=<?=$konto['id']?>"><button>Resetuj hasło</button></a>
-    <a href="?action=sendActivationCode&&id=<?=$konto['id']?>"><button>Wyślij nowy kod aktywacyjny</button></a>
+    <a href="?action=sendactivation&&id=<?=$konto['id']?>&&mail=<?=$konto['email']?>"><button>Wyślij nowy kod aktywacyjny</button></a>
     <?php if ($konto['level']==2){?>
         <a href="#"><button>Dodaj zajęcia</button></a>
     <?php }?>

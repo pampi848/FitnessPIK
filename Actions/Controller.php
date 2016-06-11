@@ -31,8 +31,7 @@ class Controller
         $this->request = new Request();
     }
 
-    public function run()
-    {
+    public function run(){
         $actionMap = $this->config->getActions();
         
         $actionName = $this->request->get('action', 'default');
@@ -52,7 +51,8 @@ class Controller
         }
 
         $response = new Response404();
-        $response->setContent('Strona nie istnieje');
+        $content = $response->processTemplate('error404');
+        $response->setContent($content);
         $response->send();
     }
 }

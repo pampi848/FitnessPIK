@@ -80,7 +80,6 @@ class Response
         $s = $this->session;
 
         ob_start();
-
         $dir = $this->config->getTemplates()['dir'];
 
         $fileName = $dir . DIRECTORY_SEPARATOR . $template . ".php";

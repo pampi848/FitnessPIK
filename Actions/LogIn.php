@@ -12,8 +12,7 @@ class LogIn extends Action
     {
         if (isset($_POST['newUser']['log']) && isset($_POST['newUser']['pass'])) {
             $login = addslashes($_POST['newUser']['log']);
-            $haslo = addslashes($_POST['newUser']['pass']);
-
+            $haslo = addslashes(base64_encode($_POST['newUser']['pass']));
             if ($haslo === Account::fetchPasswordByLogin($login)) {
                 $konto = Account::fetchAccountByLoginAndPass($login, $haslo);
                 if (isset($konto) && is_object($konto) && $konto->activated == true) {

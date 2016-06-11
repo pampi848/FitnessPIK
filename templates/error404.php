@@ -1,7 +1,1 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: pampi
- * Date: 11.06.16
- * Time: 20:17
- */
+<p> Error 404! lol</p>
