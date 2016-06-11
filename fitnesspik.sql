@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Czas wygenerowania: 05 Cze 2016, 21:40
+-- Czas wygenerowania: 11 Cze 2016, 14:21
 -- Wersja serwera: 5.5.49-0ubuntu0.14.04.1
 -- Wersja PHP: 5.5.9-1ubuntu4.17
 
@@ -53,11 +53,11 @@ CREATE TABLE IF NOT EXISTS `account` (
 
 INSERT INTO `account` (`id`, `login`, `haslo`, `email`, `nrTel`, `imie`, `nazwisko`, `miejscowosc`, `ulica`, `nrDomu`, `nrMieszkania`, `kodPocztowy`, `dataUrodzin`, `dataUtworzenia`, `activated`, `level`, `activationCode`) VALUES
 (1, 'administrator', 'administrator', 'fitnesspik@gmail.com', 606214001, 'Fitnes', 'PIK', 'ferfgerf', 'rgergerger', 10, 3, '76-248', '1997-01-18', '2016-05-21', 1, 1, 'iwopedal'),
-(2, 'kinga12', 'kinga12', 'pampi.com@gmail.com', 123456789, 'Kinga', 'Walawicz', 'Dębnica', 'Dębnica', 11, 11, '66-666', '2222-02-22', '2016-05-30', 1, 0, '4ae3b48272beba511a76a3110f587968'),
-(3, 'iwomichu', 'iwomichu', 'pampi.backup@gmail.com', 123456789, 'wefwef', 'rfwergerg', 'rge3rgerg', 'rge3rgerg', 11, 11, '11-111', '2222-02-22', '2016-05-30', 0, 0, '7c3cd21610aa1339a597c220b15fac32'),
+(2, 'kinga12', 'kinga12', 'pampi.com@gmail.com', 123456789, 'Kinga', 'Walawicz', 'Dębnica', 'Dębnica', 11, 11, '66-666', '2222-02-22', '2016-05-30', 1, 2, '4ae3b48272beba511a76a3110f587968'),
+(3, 'iwomichu', 'iwomichu', 'pampi.backup@gmail.com', 123456789, 'wefwef', 'rfwergerg', 'rge3rgerg', 'rge3rgerg', 11, 11, '11-111', '2222-02-22', '2016-05-30', 1, 0, '7c3cd21610aa1339a597c220b15fac32'),
 (4, 'rootwef2ef', 'wrgwrgweg', 'lol@lol.lol', 123456789, 'ergehgergher', 'wetgwegweg', 'wegwegweg', 'wegwegweg', 22, 22, '76-248', '2222-02-22', '2016-06-01', 0, 0, '71ed5ed9ee3c366b58e2c7c64f151340'),
 (5, 'root', 'dev', 'mail@oo.oo', 123456789, 'efwergwg', 'efwegrg', 'wergwegweg', 'wegwegweg', 10, 10, '11-111', '2016-06-04', '2016-06-04', 1, 1, '11111'),
-(6, 'wrgwerg', 'egergg', 'fwefwfwe', 16125656, 'aergege', 'ergergerg', 'ergerger', 'ergergerg', 10, 10, 'wefwerf', '2016-06-02', '2016-06-03', 1, 2, 'fxgfy');
+(6, 'lol', 'lol', 'fwefwfwe', 16125656, 'aergege', 'ergergerg', 'ergerger', 'ergergerg', 10, 10, 'wefwerf', '2016-06-02', '2016-06-03', 1, 2, 'fxgfy');
 
 -- --------------------------------------------------------
 
@@ -131,21 +131,18 @@ CREATE TABLE IF NOT EXISTS `newsy` (
   `data_utworzenia` date NOT NULL,
   `id_account` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci AUTO_INCREMENT=9 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci AUTO_INCREMENT=6 ;
 
 --
 -- Zrzut danych tabeli `newsy`
 --
 
 INSERT INTO `newsy` (`id`, `img`, `naglowek`, `kategoria`, `opis`, `autor`, `zawartosc`, `data_utworzenia`, `id_account`) VALUES
-(1, 'img/img1465152939.jpeg', 'Promocja seksualna', 'Ogłoszenie', 'Lodzik pięćdziesią\r\nDupeczka stóweczka', 'OLAPEREĆ', 'Paulina to jednak ma fajną dupę ( ͡°( ͡° ͜ʖ( ͡° ͜ʖ ͡°)ʖ ͡°) ͡°)', '2016-06-05', 5),
-(2, 'img/img1465153080.png', 'Gratulacje dla uczestniczki konkursu', 'Informacja', 'Nasza faworytka znów z aparatem', 'twó', 'Nasza faworytka Kinga Walawicz znów przegrała konkurs fotograficzny!\r\nGratulujemy \\\\ (•◡•) /', '2016-06-05', 5),
-(3, 'img/img1465153200.jpeg', 'Zwierz zdrów przebiegaprzebiegaprzebieg', 'Oferta', 'HERE COME DAT BOI', 'Dat boi', 'OH SHIT WADDUP', '2016-06-05', 5),
-(4, 'img/img1465153352.jpeg', 'Wiesz co?', 'Informacja', '[...]', 'kutas', '༼ ºل͟º ༼ ºل͟º ༼ ºل͟º ༽ ºل͟º ༽ ºل͟º ༽', '2016-06-05', 5),
-(5, 'img/img1465154623.jpeg', 'Zajęcia odwołane', 'Ogłoszenie', 'Problemy zdrowotne instruktorki Kingi Walawicz', 'iwomichu', 'Zajęcia ze skakania na chuju odwołane!\r\nNiestety nasza instruktorka złamała kark i nie może prowadzić zajęć w tym tygodniu.\r\nPieniądze zostaną zwrócone przy kasie.\r\nPrzepraszamy za niedogodności.', '2016-06-05', 5),
-(6, 'img/img1465154673.jpeg', '( ͡° ͜ʖ ͡°)', 'Oferta', '( ͡° ͜ʖ ͡°)', '( ͡° ͜ʖ ͡°)', '( ͡° ͜ʖ ͡°)', '2016-06-05', 5),
-(7, 'img/img1465155224.jpeg', 'fajne nie?', 'Ogłoszenie', 'fajne nie?', 'fajne nie?', 'fajne nie?', '2016-06-05', 5),
-(8, 'img/img1465155525.jpeg', 'Wojna ESA z NASA', 'Ogłoszenie', 'Dołączamy do wojny', 'Artur Duda', 'Za namową Ptina postanawiamy walczyć z NATO w szeregach POLSA\\''y', '2016-06-05', 5);
+(1, 'img/img1465507031.jpeg', '1', 'Informacja', 'opis', 'autor', 'tresc', '2016-06-09', 5),
+(2, 'img/img1465507060.jpeg', '2', 'Ogłoszenie', 'opis', 'autor', 'tresc', '2016-06-09', 5),
+(3, 'img/img1465507084.jpeg', '3', 'Ogłoszenie', 'opis', 'autor', 'tresc', '2016-06-09', 5),
+(4, 'img/img1465507115.jpeg', '4', 'Informacja', '4', '4', '4', '2016-06-09', 5),
+(5, 'img/img1465507140.jpeg', '5', 'Oferta', '', '5', '5', '2016-06-09', 5);
 
 -- --------------------------------------------------------
 
@@ -156,7 +153,7 @@ INSERT INTO `newsy` (`id`, `img`, `naglowek`, `kategoria`, `opis`, `autor`, `zaw
 CREATE TABLE IF NOT EXISTS `terminarz` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `id_zajecia` int(11) NOT NULL,
-  `dzien` int(11) NOT NULL,
+  `dzienTygodnia` varchar(255) COLLATE utf8_polish_ci NOT NULL,
   `godzina` float NOT NULL,
   `sala` varchar(255) COLLATE utf8_polish_ci NOT NULL,
   PRIMARY KEY (`id`)
@@ -166,9 +163,9 @@ CREATE TABLE IF NOT EXISTS `terminarz` (
 -- Zrzut danych tabeli `terminarz`
 --
 
-INSERT INTO `terminarz` (`id`, `id_zajecia`, `dzien`, `godzina`, `sala`) VALUES
-(1, 1, 1, 22.22, '207'),
-(2, 1, 11, 11, '11');
+INSERT INTO `terminarz` (`id`, `id_zajecia`, `dzienTygodnia`, `godzina`, `sala`) VALUES
+(1, 1, '1', 22.22, '207'),
+(2, 1, '5', 11, '11');
 
 -- --------------------------------------------------------
 
@@ -182,7 +179,7 @@ CREATE TABLE IF NOT EXISTS `uczeszczajacy` (
   `id_account` int(11) NOT NULL,
   `obecnosc` tinyint(1) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci AUTO_INCREMENT=5 ;
 
 --
 -- Zrzut danych tabeli `uczeszczajacy`
@@ -190,7 +187,9 @@ CREATE TABLE IF NOT EXISTS `uczeszczajacy` (
 
 INSERT INTO `uczeszczajacy` (`id`, `id_zajecia`, `id_account`, `obecnosc`) VALUES
 (1, 1, 1, 1),
-(2, 2, 1, 1);
+(2, 2, 1, 1),
+(3, 2, 3, 1),
+(4, 2, 6, 0);
 
 -- --------------------------------------------------------
 
@@ -203,6 +202,7 @@ CREATE TABLE IF NOT EXISTS `zajecia` (
   `nazwa_zajec` varchar(25) COLLATE utf8_polish_ci NOT NULL,
   `id_instruktor` int(11) NOT NULL,
   `opis` varchar(255) COLLATE utf8_polish_ci NOT NULL,
+  `wynagrodzenieMiesieczne` int(11) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
 
@@ -210,8 +210,9 @@ CREATE TABLE IF NOT EXISTS `zajecia` (
 -- Zrzut danych tabeli `zajecia`
 --
 
-INSERT INTO `zajecia` (`id`, `nazwa_zajec`, `id_instruktor`, `opis`) VALUES
-(1, 'zumba', 1, 'zumbiasznie');
+INSERT INTO `zajecia` (`id`, `nazwa_zajec`, `id_instruktor`, `opis`, `wynagrodzenieMiesieczne`) VALUES
+(1, 'zumba', 2, 'zumbiasznie', 500),
+(2, 'lol', 2, 'trjr4jrt', 220);
 
 -- --------------------------------------------------------
 
