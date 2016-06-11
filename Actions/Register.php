@@ -8,7 +8,6 @@ require_once('PHPMailer/class.phpmailer.php');
 require_once 'PHPMailer/PHPMailerAutoload.php';
 require_once "Actions/ActivationMail.php"; // funkcja do wysyłania maili
 
-const ALFABET = 'qwertyuiopasdfghjklzxcvbnm'; //26
 class Register extends Action
 {
     protected function doExecute()
@@ -48,19 +47,5 @@ class Register extends Action
         }
 
         $this->loadContent();
-    }
-
-    private static function randCode()
-    { //
-        $code = '';
-        for ($i = 0; $i < 10; $i++) {
-            $alfabet = str_split(ALFABET, 1);
-            $code .= $alfabet[rand(0, 25)];
-        }
-        $code = md5($code);
-        if (User::findSameCode($code) == $code) {
-            $code = randCode();
-        }
-        return $code;
     }
 }

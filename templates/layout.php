@@ -60,6 +60,8 @@
                 <li class="<?=$p['currentAction']=='offer' ? 'active' : ''?>"><a href="?action=offer">Offer<span class="sr-only"></span></a></li>
                 <li class="<?=$p['currentAction']=='allnews' ? 'active' : ''?>"><a href="?action=allnews" onclick="console.log(document.documentElement.clientWidth)">News</a></li>
                 <?php if ((isset($_SESSION['logged'])) && ($_SESSION['logged']['online'] == true)) { ?>
+
+                <?php if ((isset($_SESSION['logged']['level'])) && ($_SESSION['logged']['level'] == 2)) { ?>
                     <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                        aria-expanded="false">Instruktor<span class="caret"></span></a>
@@ -72,6 +74,8 @@
                         <li role="separator" class="divider"></li>
                         <li><a href="#">One more separated link</a></li>
                     </ul>
+                    <?php } ?>
+
                     <?php if ((isset($_SESSION['logged']['level'])) && ($_SESSION['logged']['level'] == 1)) { ?>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"

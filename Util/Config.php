@@ -62,7 +62,8 @@ class Config
             'profile' => 'Actions\\ViewProfile',
             'users' => 'Actions\\ViewUsersAll',
             'offer' => 'Actions\\ViewOffer',
-            'instruktorPanel' => 'Actions\\ViewInstruktorPanel'
+            'instruktorPanel' => 'Actions\\ViewInstruktorPanel',
+            'deactivation' => 'Actions\\Deactivation'
         ];
 
         //TODO: usprawnić to ... // to wszystko co jest wyżej musi zostać w tym pliku, bo windows/xampp nie wykonuje od razu dołączonego pliku 

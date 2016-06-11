@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" xmlns="http://www.w3.org/1999/html">
         <div class="profile-content">
             <div class="row upper-profile">
                 <div class="col-md-4">
@@ -18,6 +18,9 @@
                                 <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span></button>
                             </div>
                         </div>
+                        <br/>
+                        <br/>
+                        <center><a href="?action=deactivation&&id=<?=$_SESSION['logged']['id']?>"><button>Dezaktywuj konto</button></a></center>
                     </div>
                     <hr/>
                     <div class="row">

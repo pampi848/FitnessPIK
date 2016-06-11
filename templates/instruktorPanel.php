@@ -1,14 +1,18 @@
+<?php if (!empty($p)){?>
     <hr/>
     <div class="row">
         <div class="col-md-4 col-md-offset-4">
             <h3 class="jobs">Prowadzi:</h3>
             <div class="list-group jobs">
 
-                <?php var_dump($p);
+                <?php
+                $razem=0; //XDDDDDDDD
                 foreach($p as $zajecie){ //GENEROWANIE LISTY ZAJĘĆ
-                    echo "<button type='button' class='list-group-item jobs'>{$zajecie['nazwa_zajec']}<span class='glyphicon glyphicon-certificate pull-right' aria-hidden='true'></span></button>";
+                    echo "<button type='button' class='list-group-item jobs'>{$zajecie['nazwa_zajec']} - {$zajecie['wynagrodzenieMiesieczne']}zł<span class='glyphicon glyphicon-certificate pull-right' aria-hidden='true'></span></button>";
+                    $razem += $zajecie['wynagrodzenieMiesieczne'];
                 }
                 ?>
+                <p>Wynagrodzenie miesięczne: <?=$razem?> </p>
             </div>
         </div>
     </div>
@@ -20,9 +24,13 @@
                 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
                     <!-- Indicators -->
                     <ol class="carousel-indicators">
-                        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+
+                        <?php $i=0 ?>
+                        <?php foreach ($p as $zajecie){ ?>
+                        <li data-target="#carousel-example-generic" data-slide-to="<?=$i?>" class="<?= ($i==0) ? 'active' : '' ?>"></li>
+                        <?php } ?>
+                        <?php unset($i) ?>
+
                     </ol>
 
                     <!-- Wrapper for slides -->
@@ -31,6 +39,7 @@
                         <?php foreach ($p as $zajecie){ ?>
                             <div class="item <?= ($i==0) ? 'active' : '' ?>">
                                 <h3><?=$zajecie['nazwa_zajec']?></h3>
+                                <?php $razem += $zajecie['wynagrodzenieMiesieczne'] ?>
                             </div>
                             <?php $i++ ?>
                         <?php } ?>
@@ -90,3 +99,4 @@
             </div>
         </div>
     </div>
+<?php } ?>

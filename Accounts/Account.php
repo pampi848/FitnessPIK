@@ -9,6 +9,7 @@
 namespace Accounts;
 
 require_once "autoload.php";
+
 use PDO;
 use Util\Database;
 
@@ -50,6 +51,75 @@ abstract class Account
         }
 
         return $haslo;
+    }
+    public static function fetchAllAccounts()
+    {
+        try {
+            $pdo = Database::getInstance()->getConnection();
+
+            $stmt = $pdo->prepare("SELECT * FROM `account`");
+
+            $stmt->execute();
+            $konta = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        } catch (PDOException $exception) {
+            // TODO: log database errors
+            $haslo = "error";
+            throw $exception;
+        }
+
+        return $konta;
+    }
+    public static function ban($id,$admin = false)
+    {
+        try {
+            $pdo = Database::getInstance()->getConnection();
+
+            $stmt = $pdo->prepare("UPDATE `account` SET `activated`=0 WHERE `id`=:id");
+            $stmt->bindValue(':id', $id, PDO::PARAM_STR);
+            $stmt->execute();
+            if($admin == true) {
+                $stmt = $pdo->prepare("UPDATE `account` SET `activationCode`='disable' WHERE `id`=:id");
+                $stmt->bindValue(':id', $id, PDO::PARAM_STR);
+                $stmt->execute();
+            }
+        } catch (PDOException $exception) {
+            // TODO: log database errors
+            throw $exception;
+        }
+    }
+    public static function unban($id,$code)
+    {
+        try {
+            $pdo = Database::getInstance()->getConnection();
+
+            $stmt = $pdo->prepare("UPDATE `account` SET `activated`=1 WHERE `id`=:id");
+            $stmt->bindValue(':id', $id, PDO::PARAM_STR);
+            $stmt->execute();
+
+            $stmt = $pdo->prepare("UPDATE `account` SET `activationCode`=:code WHERE `id`=:id");
+            $stmt->bindValue(':id', $id, PDO::PARAM_STR);
+            $stmt->bindValue(':code', $code, PDO::PARAM_STR);
+            $stmt->execute();
+
+        } catch (PDOException $exception) {
+            // TODO: log database errors
+            throw $exception;
+        }
+    }
+    public static function isActivatedInDatabase($id)
+    {
+        try {
+            $pdo = Database::getInstance()->getConnection();
+
+            $stmt = $pdo->prepare("SELECT `activated`,`activationCode` FROM `account` WHERE `id`=:id");
+            $stmt->bindValue(':id', $id, PDO::PARAM_STR);
+            $stmt->execute();
+            $aktywne = $stmt->fetch(PDO::FETCH_ASSOC);
+        } catch (PDOException $exception) {
+            // TODO: log database errors
+            throw $exception;
+        }
+        return $aktywne;
     }
     public static function fetchIdByLogin($login)
     {
