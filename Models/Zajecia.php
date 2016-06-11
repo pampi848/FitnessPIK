@@ -88,11 +88,24 @@ class Zajecia
             $stmt->bindValue(':id', $id, PDO::PARAM_STR);
             $stmt->execute();
             $zajecia = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            $i = 0;
+            foreach ($zajecia as $zajecie) {
+                $zajecia[$i]['data'] = self::fetchDateByIdZajecia($zajecia[$i]['id']);
+                $j = 0;
+                foreach ($zajecia[$i]['data'] as $data) {
+                    $frekwencja = self::fetchFrequency($zajecia[$i]['data'][$j]['id']);
+                    $zajecia[$i]['data'][$j]['obecnych'] = $frekwencja['obecnych'];
+                    $zajecia[$i]['data'][$j]['wszystkich'] = $frekwencja['wszystkich'];
+                    $j++;
+                }
+                unset($j);
+                $i++;
+            }
+            unset($i);
         } catch (PDOException $exception) {
             // TODO: log database errors
             throw $exception;
         }
-
         return $zajecia;
     }
     public static function fetchAllZajecia()
@@ -130,7 +143,7 @@ class Zajecia
         try {
             $pdo = Database::getInstance()->getConnection();
 
-            $stmt = $pdo->prepare("SELECT `dzienTygodnia`,`godzina`,`sala` FROM `terminarz` WHERE `id_zajecia`=:zajecia");
+            $stmt = $pdo->prepare("SELECT `id`,`dzienTygodnia`,`godzina`,`sala` FROM `terminarz` WHERE `id_zajecia`=:zajecia");
             $stmt->bindValue(':zajecia', $idZajec, PDO::PARAM_STR);
 
             $stmt->execute();
@@ -165,14 +178,14 @@ class Zajecia
         try {
             $pdo = Database::getInstance()->getConnection();
 
-            $stmt = $pdo->prepare("SELECT COUNT(`id_account`) FROM `uczeszczajacy` WHERE `id_zajecia`=:id");
+            $stmt = $pdo->prepare("SELECT COUNT(`id_account`) FROM `uczeszczajacy` WHERE `id_terminarz`=:id");
 
             $stmt->bindValue(':id', $id, PDO::PARAM_STR);
             $stmt->execute();
             $wszystkich = $stmt->fetch(PDO::FETCH_NUM);
             $wszystkich=$wszystkich[0];
 
-            $stmt = $pdo->prepare("SELECT SUM(`obecnosc`) FROM `uczeszczajacy` WHERE `id_zajecia`=:id");
+            $stmt = $pdo->prepare("SELECT SUM(`obecnosc`) FROM `uczeszczajacy` WHERE `id_terminarz`=:id");
 
             $stmt->bindValue(':id', $id, PDO::PARAM_STR);
             $stmt->execute();

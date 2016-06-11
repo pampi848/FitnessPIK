@@ -20,12 +20,7 @@ class ViewInstruktorPanel extends Action
     {
         if (isset($_SESSION['logged']['level'])&&($_SESSION['logged']['level']==2)) {
             $zajecia = Zajecia::conductedLessons($_SESSION['logged']['id']);
-            foreach ($zajecia as &$zajecie ){
-                $uczeszczajacy =  Zajecia::fetchFrequency($zajecie['id']);
-                $zajecie = array_merge($zajecie,$uczeszczajacy);
-                //trzeba dołączyć datę z terminarza, i można rozwalić tabelę zajęć, na patern zajęć, oraz zajęcia jako pojedyncza lekcja...
-            }
-
+            
             $this->loadContent('instruktorPanel',$zajecia);
         }
         elseif (isset($_SESSION['logged']['level'])&&($_SESSION['logged']['level']==1)){

@@ -14,16 +14,9 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/img/profile/nikola/av.jpg" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/img/profile/pampej/av.jpg" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/img/profile/paulina/av.jpg" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/favicon.png" afterPath="$PROJECT_DIR$/favicon.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Actions/ViewInstruktorPanel.php" afterPath="$PROJECT_DIR$/Actions/ViewInstruktorPanel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Actions/ViewOffer.php" afterPath="$PROJECT_DIR$/Actions/ViewOffer.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Actions/ViewProfile.php" afterPath="$PROJECT_DIR$/Actions/ViewProfile.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Models/Zajecia.php" afterPath="$PROJECT_DIR$/Models/Zajecia.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Util/Config.php" afterPath="$PROJECT_DIR$/Util/Config.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/instruktorPanel.php" afterPath="$PROJECT_DIR$/templates/instruktorPanel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/layout.php" afterPath="$PROJECT_DIR$/templates/layout.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/profile.php" afterPath="$PROJECT_DIR$/templates/profile.php" />
     </list>
     <ignored path="FitnessPIK.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -52,12 +45,56 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ViewOffer.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Actions/ViewOffer.php">
+      <file leaf-file-name="ViewInstruktorPanel.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Actions/ViewInstruktorPanel.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="22" column="1" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
+            <state relative-caret-position="270">
+              <caret line="21" column="40" selection-start-line="21" selection-start-column="40" selection-end-line="21" selection-end-column="40" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="instruktorPanel.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/instruktorPanel.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1278">
+              <caret line="71" column="56" selection-start-line="71" selection-start-column="56" selection-end-line="71" selection-end-column="56" />
+              <folding>
+                <marker date="1465653495646" expanded="true" signature="2268:4466" ph="..." />
+                <marker date="1465653495646" expanded="true" signature="2304:4451" ph="..." />
+                <marker date="1465653495646" expanded="true" signature="2400:4432" ph="..." />
+                <marker date="1465653495646" expanded="true" signature="2493:2836" ph="..." />
+                <marker date="1465653495646" expanded="true" signature="2949:4369" ph="..." />
+                <marker date="1465653495646" expanded="true" signature="3120:4264" ph="..." />
+                <marker date="1465653495646" expanded="true" signature="3182:4233" ph="..." />
+                <marker date="1465653495646" expanded="true" signature="3219:3266" ph="..." />
+                <marker date="1465653495646" expanded="true" signature="3219:3630" ph="..." />
+                <marker date="1465653495646" expanded="true" signature="3749:4153" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Zajecia.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Models/Zajecia.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="326">
+              <caret line="97" column="84" selection-start-line="97" selection-start-column="84" selection-end-line="97" selection-end-column="84" />
+              <folding>
+                <marker date="1465652224962" expanded="true" signature="578:672" ph="SELECT `id_z... uczeszczajacy" />
+                <marker date="1465652224962" expanded="true" signature="1041:1114" ph="SELECT `nazw... zajecia" />
+                <marker date="1465652224962" expanded="true" signature="1527:1606" ph="SELECT `dzie... terminarz" />
+                <marker date="1465652224962" expanded="true" signature="1983:2044" ph="SELECT `cena... cennik" />
+                <marker date="1465652224962" expanded="true" signature="3053:3076" ph="SELECT * FRO... zajecia" />
+                <marker date="1465652224962" expanded="true" signature="3053:3102" ph="SELECT * FRO... zajecia" />
+                <marker date="1465652224962" expanded="true" signature="4195:4218" ph="SELECT * FRO... zajecia" />
+                <marker date="1465652224962" expanded="true" signature="5475:5536" ph="SELECT * FRO... zajecia" />
+                <marker date="1465652224962" expanded="true" signature="5475:5564" ph="SELECT * FRO... terminarz" />
+                <marker date="1465652224962" expanded="true" signature="6064:6130" ph="SELECT `cena... terminarz" />
+                <marker date="1465652224962" expanded="true" signature="6606:6678" ph="SELECT * FRO... zajecia" />
+                <marker date="1465652224962" expanded="true" signature="6903:6971" ph="SELECT SUM(`... uczeszczajacy" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -115,12 +152,12 @@
         <option value="$PROJECT_DIR$/templates/profile.php" />
         <option value="$PROJECT_DIR$/Util/Config.php" />
         <option value="$PROJECT_DIR$/Actions/ViewProfile.php" />
-        <option value="$PROJECT_DIR$/templates/instruktorPanel.php" />
         <option value="$PROJECT_DIR$/templates/layout.php" />
-        <option value="$PROJECT_DIR$/Actions/ViewInstruktorPanel.php" />
-        <option value="$PROJECT_DIR$/Models/Zajecia.php" />
         <option value="$PROJECT_DIR$/Actions/ViewOffer.php" />
         <option value="$PROJECT_DIR$/templates/cennik.php" />
+        <option value="$PROJECT_DIR$/Actions/ViewInstruktorPanel.php" />
+        <option value="$PROJECT_DIR$/Models/Zajecia.php" />
+        <option value="$PROJECT_DIR$/templates/instruktorPanel.php" />
       </list>
     </option>
   </component>
@@ -135,7 +172,6 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="1280" />
     <option name="y" value="24" />
     <option name="width" value="1280" />
     <option name="height" value="1000" />
@@ -405,15 +441,15 @@
       <workItem from="1465234209117" duration="3431000" />
       <workItem from="1465487293397" duration="15441000" />
       <workItem from="1465590350879" duration="6508000" />
-      <workItem from="1465641582446" duration="4963000" />
+      <workItem from="1465641582446" duration="10307000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="265690000" />
+    <option name="totallyTimeSpent" value="271034000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1280" y="24" width="1280" height="1000" extended-state="6" />
+    <frame x="0" y="24" width="1280" height="1000" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20546874" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -735,6 +771,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="666">
           <caret line="37" column="63" selection-start-line="37" selection-start-column="63" selection-end-line="37" selection-end-column="63" />
+          <folding>
+            <marker date="1465594474211" expanded="true" signature="3059:3862" ph="..." />
+            <marker date="1465594474211" expanded="true" signature="5354:5400" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -750,24 +790,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
           <caret line="21" column="44" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/instruktorPanel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="648">
-          <caret line="75" column="30" selection-start-line="75" selection-start-column="30" selection-end-line="75" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Actions/ViewInstruktorPanel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="25" column="139" selection-start-line="25" selection-start-column="139" selection-end-line="25" selection-end-column="139" />
-          <folding>
-            <element signature="e#137#158#0#PHP" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -790,27 +812,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Models/Zajecia.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5742">
-          <caret line="325" column="40" selection-start-line="325" selection-start-column="40" selection-end-line="325" selection-end-column="40" />
-          <folding>
-            <marker date="1465645626542" expanded="true" signature="578:672" ph="SELECT `id_z... uczeszczajacy" />
-            <marker date="1465645626542" expanded="true" signature="1041:1114" ph="SELECT `nazw... zajecia" />
-            <marker date="1465645626542" expanded="true" signature="1527:1606" ph="SELECT `dzie... terminarz" />
-            <marker date="1465645626542" expanded="true" signature="1983:2044" ph="SELECT `cena... cennik" />
-            <marker date="1465645626542" expanded="true" signature="3053:3100" ph="SELECT `id`,... account" />
-            <marker date="1465645626542" expanded="true" signature="3053:3102" ph="SELECT * FRO... zajecia" />
-            <marker date="1465645626542" expanded="true" signature="3572:3595" ph="SELECT * FRO... zajecia" />
-            <marker date="1465645626542" expanded="true" signature="4852:4908" ph="SELECT * FRO... zajecia" />
-            <marker date="1465645626542" expanded="true" signature="4852:4936" ph="SELECT * FRO... terminarz" />
-            <marker date="1465645626542" expanded="true" signature="5436:5502" ph="SELECT `cena... terminarz" />
-            <marker date="1465645626542" expanded="true" signature="5978:6048" ph="SELECT * FRO... zajecia" />
-            <marker date="1465645626542" expanded="true" signature="6273:6339" ph="SELECT SUM(`... uczeszczajacy" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/cennik.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -824,6 +825,54 @@
         <state relative-caret-position="306">
           <caret line="22" column="1" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Models/Zajecia.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="326">
+          <caret line="97" column="84" selection-start-line="97" selection-start-column="84" selection-end-line="97" selection-end-column="84" />
+          <folding>
+            <marker date="1465652224962" expanded="true" signature="578:672" ph="SELECT `id_z... uczeszczajacy" />
+            <marker date="1465652224962" expanded="true" signature="1041:1114" ph="SELECT `nazw... zajecia" />
+            <marker date="1465652224962" expanded="true" signature="1527:1606" ph="SELECT `dzie... terminarz" />
+            <marker date="1465652224962" expanded="true" signature="1983:2044" ph="SELECT `cena... cennik" />
+            <marker date="1465652224962" expanded="true" signature="3053:3076" ph="SELECT * FRO... zajecia" />
+            <marker date="1465652224962" expanded="true" signature="3053:3102" ph="SELECT * FRO... zajecia" />
+            <marker date="1465652224962" expanded="true" signature="4195:4218" ph="SELECT * FRO... zajecia" />
+            <marker date="1465652224962" expanded="true" signature="5475:5536" ph="SELECT * FRO... zajecia" />
+            <marker date="1465652224962" expanded="true" signature="5475:5564" ph="SELECT * FRO... terminarz" />
+            <marker date="1465652224962" expanded="true" signature="6064:6130" ph="SELECT `cena... terminarz" />
+            <marker date="1465652224962" expanded="true" signature="6606:6678" ph="SELECT * FRO... zajecia" />
+            <marker date="1465652224962" expanded="true" signature="6903:6971" ph="SELECT SUM(`... uczeszczajacy" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Actions/ViewInstruktorPanel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="21" column="40" selection-start-line="21" selection-start-column="40" selection-end-line="21" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/instruktorPanel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1278">
+          <caret line="71" column="56" selection-start-line="71" selection-start-column="56" selection-end-line="71" selection-end-column="56" />
+          <folding>
+            <marker date="1465653495646" expanded="true" signature="2268:4466" ph="..." />
+            <marker date="1465653495646" expanded="true" signature="2304:4451" ph="..." />
+            <marker date="1465653495646" expanded="true" signature="2400:4432" ph="..." />
+            <marker date="1465653495646" expanded="true" signature="2493:2836" ph="..." />
+            <marker date="1465653495646" expanded="true" signature="2949:4369" ph="..." />
+            <marker date="1465653495646" expanded="true" signature="3120:4264" ph="..." />
+            <marker date="1465653495646" expanded="true" signature="3182:4233" ph="..." />
+            <marker date="1465653495646" expanded="true" signature="3219:3266" ph="..." />
+            <marker date="1465653495646" expanded="true" signature="3219:3630" ph="..." />
+            <marker date="1465653495646" expanded="true" signature="3749:4153" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>

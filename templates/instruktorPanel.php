@@ -27,15 +27,14 @@
 
                     <!-- Wrapper for slides -->
                     <div class="carousel-inner" role="listbox">
-                        <div class="item">
-                            <h3>Maj</h3>
-                        </div>
-                        <div class="item active">
-                            <h3>Czerwiec</h3>
-                        </div>
-                        <div class="item">
-                            <h3>Lipiec</h3>
-                        </div>
+                        <?php $i=0 ?>
+                        <?php foreach ($p as $zajecie){ ?>
+                            <div class="item <?= ($i==0) ? 'active' : '' ?>">
+                                <h3><?=$zajecie['nazwa_zajec']?></h3>
+                            </div>
+                            <?php $i++ ?>
+                        <?php } ?>
+                        <?php unset($i) ?>
                     </div>
 
                     <!-- Controls -->
@@ -49,67 +48,40 @@
                 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
                     <!-- Indicators -->
                     <ol class="carousel-indicators">
-                        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+
+                        <?php $i=0 ?>
+                        <?php foreach ($p as $zajecie){ ?>
+                            <li data-target="#carousel-example-generic" data-slide-to="<?=$i?>" class="<?= ($i==0) ? 'active' : '' ?>"></li>
+                        <?php } ?>
+                        <?php unset($i) ?>
                     </ol>
 
                     <!-- Wrapper for slides -->
                     <div class="carousel-inner" role="listbox">
-                        <div class="item">
+                        <?php $i=0 ?>
+                        <?php foreach ($p as $zajecie){ ?>
+                        <div class="item <?= ($i==0) ? 'active' : '' ?>">
                             <table class="table text-center">
                                 <tr>
-                                    <th class="text-center">Dzień</th>
-                                    <th class="text-center">Rodzaj</th>
-                                    <th class="text-center">Ilość obecnych</th>
-                                    <th class="text-center">Ilość osób</th>
-                                    <th class="text-center">Należność</th>
+                                    <th class="text-center">Dzień tygodnia</th>
+                                    <th class="text-center">Godzina</th>
+                                    <th class="text-center">Sala</th>
+                                    <th class="text-center">Obecnych</th>
+                                    <th class="text-center">Wszystkich</th>
                                 </tr>
-                                <tr>
-                                    <td>3</td>
-                                    <td>Zumba</td>
-                                    <td>12</td>
-                                    <td>400</td>
-                                    <td>400</td>
-                                </tr>
+                                <?php foreach ($zajecie['data'] as $data){ ?>
+                                    <tr>
+                                        <td><?=$data['dzienTygodnia']?></td>
+                                        <td><?=$data['godzina']?></td>
+                                        <td><?=$data['sala']?></td>
+                                        <td><?=$data['obecnych']?></td>
+                                        <td><?=$data['wszystkich']?></td>
+                                    </tr>
+                                <?php } ?>
                             </table>
                         </div>
-                        <div class="item active">
-                            <table class="table text-center">
-                                <tr>
-                                    <th class="text-center">Dzień</th>
-                                    <th class="text-center">Rodzaj</th>
-                                    <th class="text-center">Ilość obecnych</th>
-                                    <th class="text-center">Ilość osób</th>
-                                    <th class="text-center">Należność</th>
-                                </tr>
-                                <tr>
-                                    <td>3</td>
-                                    <td>Rumba</td>
-                                    <td>12</td>
-                                    <td>12</td>
-                                    <td>400</td>
-                                </tr>
-                            </table>
-                        </div>
-                        <div class="item">
-                            <table class="table text-center">
-                                <tr>
-                                    <th class="text-center">Dzień</th>
-                                    <th class="text-center">Rodzaj</th>
-                                    <th class="text-center">Ilość obecnych</th>
-                                    <th class="text-center">Ilość osób</th>
-                                    <th class="text-center">Należność</th>
-                                </tr>
-                                <tr>
-                                    <td>3</td>
-                                    <td>Pumba</td>
-                                    <td>12</td>
-                                    <td>12</td>
-                                    <td>400</td>
-                                </tr>
-                            </table>
-                        </div>
+                        <?php } ?>
+                        <?php unset($i) ?>
                     </div>
 
                     <!-- Controls -->
