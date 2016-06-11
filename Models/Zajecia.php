@@ -19,10 +19,9 @@ class Zajecia
     var $nazwa = '';
     var $opis = '';
     var $idInstruktor = 0;
+    var $wynagrodzenieInstruktora = 0;
     var $data = []; // dzien, godzina, sala
-    var $cena = 0;
-    var $promocja = 0;
-    var $obecnosc = 0;
+    var $cena = [];
 
     public static function fetchZajeciaByIdAccount($idAccount){
         try {
@@ -50,7 +49,7 @@ class Zajecia
                 $zajecie = is_array($pobraneDane) ? array_merge($zajecie,$pobraneDane) : array_merge($zajecie,['nazwa_zajec'=>'','id_instruktor'=>0,'opis'=>'']);
 
                 //terminarz
-                $stmt = $pdo->prepare("SELECT `dzien`,`godzina`,`sala` FROM `terminarz` WHERE `id_zajecia`=:id");
+                $stmt = $pdo->prepare("SELECT `dzienTygodnia`,`godzina`,`sala` FROM `terminarz` WHERE `id_zajecia`=:id");
                 $stmt->bindValue(':id', $zajecie['id_zajecia'], PDO::PARAM_INT);
 
                 $stmt->execute();
@@ -95,6 +94,96 @@ class Zajecia
         }
 
         return $zajecia;
+    }
+    public static function fetchAllZajecia()
+    {
+        try {
+            $pdo = Database::getInstance()->getConnection();
+
+            $stmt = $pdo->prepare("SELECT * FROM `zajecia`");
+
+            $stmt->execute();
+            $zajecia = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+            $zajeciaObiekty = [];
+            $zajeciaObiekty = &$zajeciaO;
+            foreach ($zajecia as $zajecie) {
+                $zajeciaO[$zajecie['id']] = new self();
+                $zajeciaO[$zajecie['id']]->setId($zajecie['id']);
+                $zajeciaO[$zajecie['id']]->setNazwa($zajecie['nazwa_zajec']);
+                $zajeciaO[$zajecie['id']]->setIdInstruktor($zajecie['id_instruktor']);
+                $zajeciaO[$zajecie['id']]->setOpis($zajecie['opis']);
+                $zajeciaO[$zajecie['id']]->setWynagrodzenieInstruktora($zajecie['wynagrodzenieMiesieczne']);
+                $zajeciaO[$zajecie['id']]->setData(self::fetchDateByIdZajecia($zajecie['id']));
+                $zajeciaO[$zajecie['id']]->setCena(self::fetchCennikByIdZajecia($zajecie['id']));
+
+            }
+            unset($zajecia);
+        } catch (PDOException $exception) {
+            // TODO: log database errors
+            throw $exception;
+        }
+        return $zajeciaObiekty;
+    }
+    public static function fetchDateByIdZajecia($idZajec)
+    {
+        try {
+            $pdo = Database::getInstance()->getConnection();
+
+            $stmt = $pdo->prepare("SELECT `dzienTygodnia`,`godzina`,`sala` FROM `terminarz` WHERE `id_zajecia`=:zajecia");
+            $stmt->bindValue(':zajecia', $idZajec, PDO::PARAM_STR);
+
+            $stmt->execute();
+            $terminarz = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+        } catch (PDOException $exception) {
+            // TODO: log database errors
+            throw $exception;
+        }
+
+        return $terminarz;
+    }
+    public static function fetchCennikByIdZajecia($idZajec)
+    {
+        try {
+            $pdo = Database::getInstance()->getConnection();
+
+            $stmt = $pdo->prepare("SELECT `cena`,`promocja` FROM `cennik` WHERE `id_zajecia`=:zajecia");
+            $stmt->bindValue(':zajecia', $idZajec, PDO::PARAM_STR);
+
+            $stmt->execute();
+            $cena = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+        } catch (PDOException $exception) {
+            // TODO: log database errors
+            throw $exception;
+        }
+        return $cena;
+    }
+    public static function fetchFrequency($id)
+    {
+        try {
+            $pdo = Database::getInstance()->getConnection();
+
+            $stmt = $pdo->prepare("SELECT COUNT(`id_account`) FROM `uczeszczajacy` WHERE `id_zajecia`=:id");
+
+            $stmt->bindValue(':id', $id, PDO::PARAM_STR);
+            $stmt->execute();
+            $wszystkich = $stmt->fetch(PDO::FETCH_NUM);
+            $wszystkich=$wszystkich[0];
+
+            $stmt = $pdo->prepare("SELECT SUM(`obecnosc`) FROM `uczeszczajacy` WHERE `id_zajecia`=:id");
+
+            $stmt->bindValue(':id', $id, PDO::PARAM_STR);
+            $stmt->execute();
+            $obecnych = $stmt->fetch(PDO::FETCH_NUM);
+            $obecnych=$obecnych[0];
+        } catch (PDOException $exception) {
+            // TODO: log database errors
+            throw $exception;
+        }
+
+        return ['obecnych' => $obecnych, 'wszystkich' => $wszystkich];
     }
 
     /**
@@ -196,22 +285,6 @@ class Zajecia
     /**
      * @return int
      */
-    public function getPromocja()
-    {
-        return $this->promocja;
-    }
-
-    /**
-     * @param int $promocja
-     */
-    public function setPromocja($promocja)
-    {
-        $this->promocja = $promocja;
-    }
-
-    /**
-     * @return int
-     */
     public function getObecnosc()
     {
         return $this->obecnosc;
@@ -224,23 +297,35 @@ class Zajecia
     {
         $this->obecnosc = $obecnosc;
     }
+    /**
+     * @return int
+     */
+    public function getWynagrodzenieInstruktora()
+    {
+        return $this->wynagrodzenieInstruktora;
+    }
+
+    /**
+     * @param int $wynagrodzenieInstruktora
+     */
+    public function setWynagrodzenieInstruktora($wynagrodzenieInstruktora)
+    {
+        $this->wynagrodzenieInstruktora = $wynagrodzenieInstruktora;
+    }
+
 
     /**
      * Zajecia constructor.
      * @param int $id
-     * @param int $obecnosc
-     * @param int $promocja
-     * @param int $cena
+     * @param array $cena
      * @param array $data
      * @param int $idInstruktor
      * @param string $opis
      * @param string $nazwa
      */
-    public function __construct($id, $obecnosc, $promocja, $cena, array $data, $idInstruktor, $opis, $nazwa)
+    public function __construct($id = 0, array $cena = [0,0], array $data = [0,0,0], $idInstruktor = 0, $opis = '', $nazwa = '')
     {
         $this->id = $id;
-        $this->obecnosc = $obecnosc;
-        $this->promocja = $promocja;
         $this->cena = $cena;
         $this->data = $data;
         $this->idInstruktor = $idInstruktor;

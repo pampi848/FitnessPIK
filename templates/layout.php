@@ -34,9 +34,9 @@
     <link href="css/profile-style.css" rel="stylesheet">
 </head>
 <body>
-<div class="container-fluid">
-    <div class="jumbotron" style="margin-bottom: 0px;">
-        TO JEST MOJA STRONA //zrób coś z tym bo brzydko
+<div class="container-fluid" ">
+    <div class="jumbotron" style="margin-bottom: 0px; padding:1%!important;">
+        <center><img width="25%" src="img/logo.png"/></center>
     </div>
 </div>
 <nav class="navbar navbar-default">
@@ -64,7 +64,7 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                        aria-expanded="false">Instruktor<span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="#">Action</a></li>
+                        <li><a href="?action=instruktorPanel">Panel</a></li>
                         <li><a href="#">Another action</a></li>
                         <li><a href="#">Something else here</a></li>
                         <li role="separator" class="divider"></li>

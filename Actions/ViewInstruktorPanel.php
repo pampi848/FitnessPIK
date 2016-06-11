@@ -13,27 +13,24 @@ require_once "autoload.php";
 use Accounts\Account;
 use Models\Zajecia;
 
-class ViewProfile extends Action
+class ViewInstruktorPanel extends Action
 {
 
     function doExecute()
     {
-        if (isset($_SESSION['logged'])) {
-            $konto = [];
-            $konto = Account::fetchMyProfile($_SESSION['logged']['login']);
-            $zajecia = Zajecia::conductedLessons($konto['id']);
-            switch ($_SESSION['logged']['level']){
-                case 0:
-                    $konto['level'] = 'User';
-                    break;
-                case 1:
-                    $konto['level'] = 'Administrator';
-                    break;
-                case 2:
-                    $konto['level'] = 'Instruktor';
-                    break;
+        if (isset($_SESSION['logged']['level'])&&($_SESSION['logged']['level']==2)) {
+            $zajecia = Zajecia::conductedLessons($_SESSION['logged']['id']);
+            foreach ($zajecia as &$zajecie ){
+                $uczeszczajacy =  Zajecia::fetchFrequency($zajecie['id']);
+                $zajecie = array_merge($zajecie,$uczeszczajacy);
+                //trzeba dołączyć datę z terminarza, i można rozwalić tabelę zajęć, na patern zajęć, oraz zajęcia jako pojedyncza lekcja...
             }
-            $this->loadContent('profile',$konto);
+
+            $this->loadContent('instruktorPanel',$zajecia);
+        }
+        elseif (isset($_SESSION['logged']['level'])&&($_SESSION['logged']['level']==1)){
+            $_SESSION['messages'][0] = ['class' => 'alert-warning', 'content' => 'Nie ma czego wyświetlić, nie jesteś instruktorem!'];
+            header("location: index.php");
         }
         else{
             header("location: index.php");

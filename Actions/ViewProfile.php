@@ -19,9 +19,7 @@ class ViewProfile extends Action
     function doExecute()
     {
         if (isset($_SESSION['logged'])) {
-            $konto = [];
             $konto = Account::fetchMyProfile($_SESSION['logged']['login']);
-            $zajecia = Zajecia::conductedLessons($konto['id']);
             switch ($_SESSION['logged']['level']){
                 case 0:
                     $konto['level'] = 'User';
@@ -33,7 +31,7 @@ class ViewProfile extends Action
                     $konto['level'] = 'Instruktor';
                     break;
             }
-            $this->loadContent('profile', ['konto' => $konto, 'zajecia' => $zajecia]);
+            $this->loadContent('profile',$konto);
         }
         else{
             header("location: index.php");

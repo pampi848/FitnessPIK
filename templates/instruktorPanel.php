@@ -1,12 +1,11 @@
-<?php if($_SESSION['logged']['level'] == 2){//WARUNEK CZY UŻYTKOWNIK JEST INSTRUKTOREM LUB ADMINISTRATOREM ?>
     <hr/>
     <div class="row">
         <div class="col-md-4 col-md-offset-4">
             <h3 class="jobs">Prowadzi:</h3>
             <div class="list-group jobs">
 
-                <?php
-                foreach($p['zajecia'] as $zajecie){ //GENEROWANIE LISTY ZAJĘĆ
+                <?php var_dump($p);
+                foreach($p as $zajecie){ //GENEROWANIE LISTY ZAJĘĆ
                     echo "<button type='button' class='list-group-item jobs'>{$zajecie['nazwa_zajec']}<span class='glyphicon glyphicon-certificate pull-right' aria-hidden='true'></span></button>";
                 }
                 ?>
@@ -62,6 +61,7 @@
                                 <tr>
                                     <th class="text-center">Dzień</th>
                                     <th class="text-center">Rodzaj</th>
+                                    <th class="text-center">Ilość obecnych</th>
                                     <th class="text-center">Ilość osób</th>
                                     <th class="text-center">Należność</th>
                                 </tr>
@@ -70,24 +70,7 @@
                                     <td>Zumba</td>
                                     <td>12</td>
                                     <td>400</td>
-                                </tr>
-                                <tr>
-                                    <td>12</td>
-                                    <td>Zumba</td>
-                                    <td>16</td>
                                     <td>400</td>
-                                </tr>
-                                <tr>
-                                    <td>26</td>
-                                    <td>Aerobik</td>
-                                    <td>7</td>
-                                    <td>300</td>
-                                </tr>
-                                <tr>
-                                    <td>30</td>
-                                    <td>Capoeira</td>
-                                    <td>20</td>
-                                    <td>600</td>
                                 </tr>
                             </table>
                         </div>
@@ -96,6 +79,7 @@
                                 <tr>
                                     <th class="text-center">Dzień</th>
                                     <th class="text-center">Rodzaj</th>
+                                    <th class="text-center">Ilość obecnych</th>
                                     <th class="text-center">Ilość osób</th>
                                     <th class="text-center">Należność</th>
                                 </tr>
@@ -103,25 +87,8 @@
                                     <td>3</td>
                                     <td>Rumba</td>
                                     <td>12</td>
-                                    <td>400</td>
-                                </tr>
-                                <tr>
                                     <td>12</td>
-                                    <td>Rumba</td>
-                                    <td>16</td>
                                     <td>400</td>
-                                </tr>
-                                <tr>
-                                    <td>26</td>
-                                    <td>Aerobik</td>
-                                    <td>7</td>
-                                    <td>300</td>
-                                </tr>
-                                <tr>
-                                    <td>30</td>
-                                    <td>Capoeira</td>
-                                    <td>20</td>
-                                    <td>600</td>
                                 </tr>
                             </table>
                         </div>
@@ -130,6 +97,7 @@
                                 <tr>
                                     <th class="text-center">Dzień</th>
                                     <th class="text-center">Rodzaj</th>
+                                    <th class="text-center">Ilość obecnych</th>
                                     <th class="text-center">Ilość osób</th>
                                     <th class="text-center">Należność</th>
                                 </tr>
@@ -137,29 +105,11 @@
                                     <td>3</td>
                                     <td>Pumba</td>
                                     <td>12</td>
-                                    <td>400</td>
-                                </tr>
-                                <tr>
                                     <td>12</td>
-                                    <td>Pumba</td>
-                                    <td>16</td>
                                     <td>400</td>
-                                </tr>
-                                <tr>
-                                    <td>26</td>
-                                    <td>Aerobik</td>
-                                    <td>7</td>
-                                    <td>300</td>
-                                </tr>
-                                <tr>
-                                    <td>30</td>
-                                    <td>Capoeira</td>
-                                    <td>20</td>
-                                    <td>600</td>
                                 </tr>
                             </table>
                         </div>
-                        ...
                     </div>
 
                     <!-- Controls -->
@@ -168,4 +118,3 @@
             </div>
         </div>
     </div>
-<?php } ?>
