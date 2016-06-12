@@ -3,7 +3,22 @@
                 <div class="col-md-4">
 <!--                    GENEROWANIE AVATARA-->
             <img src="<?=file_exists("img/profile/{$p['login']}.jpg")? "img/profile/{$p['login']}.jpg" : "img/profile/default.png"?>" alt="..." class="img-thumbnail img-responsive center-block">
-                    
+                 <div class="row">
+                    <div class="col-md-12">
+                        <form action="" method="" class="form-horizontal">
+                            <div class="row margin-row">
+                                <div class="col-md-12">
+                                    <input class="center-block" type="file" name="fileToUpload" id="fileToUpload">
+                                </div>
+                            </div>
+                            <div class="row margin-row">
+                                <div class="col-md-12">
+                                    <input type="submit" class="btn btn-primary center-block">
+                                </div>
+                            </div>
+                        </form>
+                     </div>
+                    </div>   
 
                 </div>
                 <div class="col-md-8"> <!-- DANE OSOBOWE -->
@@ -19,7 +34,7 @@
                         </div>
                         <br/>
                         <br/>
-                        <center><a href="?action=deactivation&&id=<?=$_SESSION['logged']['id']?>"><button>Dezaktywuj konto</button></a></center>
+                        <center><a href="?action=deactivation&&id=<?=$_SESSION['logged']['id']?>"><button type="button" class="btn btn-danger margin-row">Dezaktywuj konto</button></a></center>
                     </div>
                     <hr/>
                     <div class="row">
