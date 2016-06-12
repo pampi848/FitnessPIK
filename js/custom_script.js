@@ -63,6 +63,12 @@ $('#edit').click(function(){
     $('.modify').fadeToggle(500);
 });
 
+$('.modify').click(function(){
+    $('.modify').fadeToggle(500);
+    $('.profile-input').attr('readonly', true);
+    $('#edit').fadeToggle(500);
+});
+
 
 
 
