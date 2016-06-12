@@ -10,6 +10,8 @@ namespace Actions;
 
 require_once "autoload.php";
 
+use Accounts\Account;
+
 class EditProfile extends Action
 {
     function doExecute()
@@ -19,7 +21,6 @@ class EditProfile extends Action
             $konto = $_POST['Edit'];
             
             $checker = '';
-            $checker .= isset($konto['log']) && has_spaces($konto['log']) && (mb_strlen($konto['log'], 'utf-8') > 5) ? '' : 'Zły login! <br/>';
 
             $checker .= isset($konto['mail']) && has_spaces($konto['mail']) && is_mail($konto['mail']) ? '' : 'Zły mail! <br/>';
             $checker .= isset($konto['phone']) && is_numeric($konto['phone']) && ($konto['phone'] > 0) && (strlen((string)$konto['phone']) == 9) ? '' : 'Zły numer telefonu! <br/>';
@@ -33,8 +34,7 @@ class EditProfile extends Action
             $checker .= isset($konto['date']) && checkdate(substr($konto['date'], 5, -3), substr($konto['date'], 8), substr($konto['date'], 0, -6)) ? '' : 'Zła data urodzin! <br/>'; // $miesiąc, $dzień, $rok
 
             if (empty($checker)) { //TODO: przerobić to na wzykłego konstrukta XD
-                $nowekonto = new User;
-                $nowekonto->setLogin(addslashes(mb_strtolower($konto['log'])));
+                $nowekonto = new Account;
                 
                 $nowekonto->setEmail(addslashes(mb_strtolower($konto['mail'])));
                 $nowekonto->setNrTel(addslashes($konto['phone']));
@@ -46,8 +46,8 @@ class EditProfile extends Action
                 $nowekonto->setNrMieszkania(addslashes($konto['flat']));
                 $nowekonto->setKodPocztowy(addslashes($konto['post']));
                 $nowekonto->setDataUrodzin(addslashes($konto['date']));
-                
-                
+
+                updateAccountIntoSQL($id);
             } else {
                 $checker .= 'Spróbuj jeszcze raz.';
                 $this->session->add('messages', ['class' => 'alert-danger', 'content' => $checker]);

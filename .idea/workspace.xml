@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="127cc81d-169e-40f7-b176-a1349521a095" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Accounts/Account.php" afterPath="$PROJECT_DIR$/Accounts/Account.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Accounts/User.php" afterPath="$PROJECT_DIR$/Accounts/User.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Actions/EditProfile.php" afterPath="$PROJECT_DIR$/Actions/EditProfile.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Actions/Register.php" afterPath="$PROJECT_DIR$/Actions/Register.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Models/Zajecia.php" afterPath="$PROJECT_DIR$/Models/Zajecia.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Util/Config.php" afterPath="$PROJECT_DIR$/Util/Config.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/profile.php" afterPath="$PROJECT_DIR$/templates/profile.php" />
     </list>
     <ignored path="FitnessPIK.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -36,11 +34,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="EditProfile.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="EditProfile.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Actions/EditProfile.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="622">
-              <caret line="49" column="16" selection-start-line="49" selection-start-column="16" selection-end-line="49" selection-end-column="16" />
+            <state relative-caret-position="316">
+              <caret line="36" column="35" selection-start-line="36" selection-start-column="35" selection-end-line="36" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -49,22 +47,23 @@
       <file leaf-file-name="Account.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Accounts/Account.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3510">
-              <caret line="201" column="61" selection-start-line="201" selection-start-column="61" selection-end-line="201" selection-end-column="61" />
+            <state relative-caret-position="4392">
+              <caret line="250" column="20" selection-start-line="250" selection-start-column="20" selection-end-line="250" selection-end-column="45" />
               <folding>
-                <marker date="1465767551527" expanded="true" signature="768:826" ph="SELECT `hasl... account" />
-                <marker date="1465767551527" expanded="true" signature="1342:1365" ph="SELECT * FRO... account" />
-                <marker date="1465767551527" expanded="true" signature="1809:1858" ph="UPDATE `acco... " />
-                <marker date="1465767551527" expanded="true" signature="2022:2084" ph="UPDATE `acco... " />
-                <marker date="1465767551527" expanded="true" signature="2490:2539" ph="UPDATE `acco... " />
-                <marker date="1465767551527" expanded="true" signature="2667:2725" ph="UPDATE `acco... " />
-                <marker date="1465767551527" expanded="true" signature="3182:3247" ph="SELECT `acti... account" />
-                <marker date="1465767551527" expanded="true" signature="3724:3772" ph="UPDATE `acco... " />
-                <marker date="1465767551527" expanded="true" signature="4224:4279" ph="SELECT `id` account" />
-                <marker date="1465767551527" expanded="true" signature="4815:4877" ph="SELECT * FRO... account" />
-                <marker date="1465767551527" expanded="true" signature="5449:5612" ph="SELECT `id`,... account" />
-                <marker date="1465767551527" expanded="true" signature="6119:6284" ph="SELECT `id`,... account" />
-                <marker date="1465767551527" expanded="true" signature="6792:7072" ph="INSERT INTO `account`... " />
+                <marker date="1465774273423" expanded="true" signature="768:826" ph="SELECT `hasl... account" />
+                <marker date="1465774273423" expanded="true" signature="1342:1365" ph="SELECT * FRO... account" />
+                <marker date="1465774273423" expanded="true" signature="1809:1858" ph="UPDATE `acco... " />
+                <marker date="1465774273423" expanded="true" signature="2022:2084" ph="UPDATE `acco... " />
+                <marker date="1465774273423" expanded="true" signature="2490:2539" ph="UPDATE `acco... " />
+                <marker date="1465774273423" expanded="true" signature="2667:2725" ph="UPDATE `acco... " />
+                <marker date="1465774273423" expanded="true" signature="3182:3247" ph="SELECT `acti... account" />
+                <marker date="1465774273423" expanded="true" signature="3724:3772" ph="UPDATE `acco... " />
+                <marker date="1465774273423" expanded="true" signature="4224:4279" ph="SELECT `id` account" />
+                <marker date="1465774273423" expanded="true" signature="4815:4877" ph="SELECT * FRO... account" />
+                <marker date="1465774273423" expanded="true" signature="5449:5612" ph="SELECT `id`,... account" />
+                <marker date="1465774273423" expanded="true" signature="6119:6284" ph="SELECT `id`,... account" />
+                <marker date="1465774273423" expanded="true" signature="6792:7072" ph="INSERT INTO `account`... " />
+                <marker date="1465774273423" expanded="true" signature="8601:8766" ph="UPDATE `acco... " />
               </folding>
             </state>
           </provider>
@@ -73,8 +72,8 @@
       <file leaf-file-name="Register.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Actions/Register.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="226">
-              <caret line="20" column="161" selection-start-line="20" selection-start-column="161" selection-end-line="20" selection-end-column="161" />
+            <state relative-caret-position="510">
+              <caret line="35" column="35" selection-start-line="35" selection-start-column="35" selection-end-line="35" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -90,16 +89,16 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="User.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="User.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Accounts/User.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="594">
-              <caret line="37" column="58" selection-start-line="37" selection-start-column="58" selection-end-line="37" selection-end-column="58" />
+            <state relative-caret-position="432">
+              <caret line="51" column="4" selection-start-line="51" selection-start-column="4" selection-end-line="51" selection-end-column="4" />
               <folding>
-                <marker date="1465772800295" expanded="true" signature="3612:3681" ph="SELECT `acti... account" />
-                <marker date="1465772800295" expanded="true" signature="4174:4226" ph="SELECT `emai... account" />
-                <marker date="1465772800295" expanded="true" signature="4712:4764" ph="SELECT `logi... account" />
-                <marker date="1465772800295" expanded="true" signature="5261:5328" ph="UPDATE `acco... " />
+                <marker date="1465773937231" expanded="true" signature="3568:3637" ph="SELECT `acti... account" />
+                <marker date="1465773937231" expanded="true" signature="4130:4182" ph="SELECT `emai... account" />
+                <marker date="1465773937231" expanded="true" signature="4668:4720" ph="SELECT `logi... account" />
+                <marker date="1465773937231" expanded="true" signature="5217:5284" ph="UPDATE `acco... " />
               </folding>
             </state>
           </provider>
@@ -191,13 +190,13 @@
         <option value="$PROJECT_DIR$/Util/Session.php" />
         <option value="$PROJECT_DIR$/templates/cennik.php" />
         <option value="$PROJECT_DIR$/Actions/ViewProfile.php" />
-        <option value="$PROJECT_DIR$/Accounts/Account.php" />
         <option value="$PROJECT_DIR$/templates/users.php" />
         <option value="$PROJECT_DIR$/Models/Zajecia.php" />
         <option value="$PROJECT_DIR$/Util/Config.php" />
         <option value="$PROJECT_DIR$/templates/profile.php" />
-        <option value="$PROJECT_DIR$/Accounts/User.php" />
         <option value="$PROJECT_DIR$/Actions/Register.php" />
+        <option value="$PROJECT_DIR$/Accounts/User.php" />
+        <option value="$PROJECT_DIR$/Accounts/Account.php" />
         <option value="$PROJECT_DIR$/Actions/EditProfile.php" />
       </list>
     </option>
@@ -471,12 +470,12 @@
       <workItem from="1465590350879" duration="6508000" />
       <workItem from="1465641582446" duration="42551000" />
       <workItem from="1465741547558" duration="3122000" />
-      <workItem from="1465746348290" duration="25341000" />
+      <workItem from="1465746348290" duration="26466000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="331741000" />
+    <option name="totallyTimeSpent" value="332866000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1280" y="24" width="1280" height="1000" extended-state="6" />
@@ -885,36 +884,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Accounts/Account.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3510">
-          <caret line="201" column="61" selection-start-line="201" selection-start-column="61" selection-end-line="201" selection-end-column="61" />
-          <folding>
-            <marker date="1465767551527" expanded="true" signature="768:826" ph="SELECT `hasl... account" />
-            <marker date="1465767551527" expanded="true" signature="1342:1365" ph="SELECT * FRO... account" />
-            <marker date="1465767551527" expanded="true" signature="1809:1858" ph="UPDATE `acco... " />
-            <marker date="1465767551527" expanded="true" signature="2022:2084" ph="UPDATE `acco... " />
-            <marker date="1465767551527" expanded="true" signature="2490:2539" ph="UPDATE `acco... " />
-            <marker date="1465767551527" expanded="true" signature="2667:2725" ph="UPDATE `acco... " />
-            <marker date="1465767551527" expanded="true" signature="3182:3247" ph="SELECT `acti... account" />
-            <marker date="1465767551527" expanded="true" signature="3724:3772" ph="UPDATE `acco... " />
-            <marker date="1465767551527" expanded="true" signature="4224:4279" ph="SELECT `id` account" />
-            <marker date="1465767551527" expanded="true" signature="4815:4877" ph="SELECT * FRO... account" />
-            <marker date="1465767551527" expanded="true" signature="5449:5612" ph="SELECT `id`,... account" />
-            <marker date="1465767551527" expanded="true" signature="6119:6284" ph="SELECT `id`,... account" />
-            <marker date="1465767551527" expanded="true" signature="6792:7072" ph="INSERT INTO `account`... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Actions/Register.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="20" column="161" selection-start-line="20" selection-start-column="161" selection-end-line="20" selection-end-column="161" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/profile.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-378">
@@ -931,24 +900,55 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Actions/EditProfile.php">
+    <entry file="file://$PROJECT_DIR$/Actions/Register.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="622">
-          <caret line="49" column="16" selection-start-line="49" selection-start-column="16" selection-end-line="49" selection-end-column="16" />
+        <state relative-caret-position="510">
+          <caret line="35" column="35" selection-start-line="35" selection-start-column="35" selection-end-line="35" selection-end-column="35" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Accounts/User.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="37" column="58" selection-start-line="37" selection-start-column="58" selection-end-line="37" selection-end-column="58" />
+        <state relative-caret-position="432">
+          <caret line="51" column="4" selection-start-line="51" selection-start-column="4" selection-end-line="51" selection-end-column="4" />
           <folding>
-            <marker date="1465772800295" expanded="true" signature="3612:3681" ph="SELECT `acti... account" />
-            <marker date="1465772800295" expanded="true" signature="4174:4226" ph="SELECT `emai... account" />
-            <marker date="1465772800295" expanded="true" signature="4712:4764" ph="SELECT `logi... account" />
-            <marker date="1465772800295" expanded="true" signature="5261:5328" ph="UPDATE `acco... " />
+            <marker date="1465773937231" expanded="true" signature="3568:3637" ph="SELECT `acti... account" />
+            <marker date="1465773937231" expanded="true" signature="4130:4182" ph="SELECT `emai... account" />
+            <marker date="1465773937231" expanded="true" signature="4668:4720" ph="SELECT `logi... account" />
+            <marker date="1465773937231" expanded="true" signature="5217:5284" ph="UPDATE `acco... " />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Accounts/Account.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4392">
+          <caret line="250" column="20" selection-start-line="250" selection-start-column="20" selection-end-line="250" selection-end-column="45" />
+          <folding>
+            <marker date="1465774273423" expanded="true" signature="768:826" ph="SELECT `hasl... account" />
+            <marker date="1465774273423" expanded="true" signature="1342:1365" ph="SELECT * FRO... account" />
+            <marker date="1465774273423" expanded="true" signature="1809:1858" ph="UPDATE `acco... " />
+            <marker date="1465774273423" expanded="true" signature="2022:2084" ph="UPDATE `acco... " />
+            <marker date="1465774273423" expanded="true" signature="2490:2539" ph="UPDATE `acco... " />
+            <marker date="1465774273423" expanded="true" signature="2667:2725" ph="UPDATE `acco... " />
+            <marker date="1465774273423" expanded="true" signature="3182:3247" ph="SELECT `acti... account" />
+            <marker date="1465774273423" expanded="true" signature="3724:3772" ph="UPDATE `acco... " />
+            <marker date="1465774273423" expanded="true" signature="4224:4279" ph="SELECT `id` account" />
+            <marker date="1465774273423" expanded="true" signature="4815:4877" ph="SELECT * FRO... account" />
+            <marker date="1465774273423" expanded="true" signature="5449:5612" ph="SELECT `id`,... account" />
+            <marker date="1465774273423" expanded="true" signature="6119:6284" ph="SELECT `id`,... account" />
+            <marker date="1465774273423" expanded="true" signature="6792:7072" ph="INSERT INTO `account`... " />
+            <marker date="1465774273423" expanded="true" signature="8601:8766" ph="UPDATE `acco... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Actions/EditProfile.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="316">
+          <caret line="36" column="35" selection-start-line="36" selection-start-column="35" selection-end-line="36" selection-end-column="35" />
+          <folding />
         </state>
       </provider>
     </entry>

@@ -48,12 +48,8 @@ class User extends Account
             return $checker;
         }
     }
-
-    public function userAlreadyExist()
-    {
-
-    }
-
+    
+    
     public static function findSameCode($activationCode)
     {
         try {

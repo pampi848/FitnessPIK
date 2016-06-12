@@ -240,6 +240,32 @@ abstract class Account
             $stmt->bindValue(14, $this->isActivated(), PDO::PARAM_BOOL);
             $stmt->bindValue(15, $this->getLevel(), PDO::PARAM_INT);
             $stmt->bindValue(16, $this->getActivationCode(), PDO::PARAM_STR);
+            
+            $stmt->execute();
+        } catch (PDOException $exception) {
+            // TODO: log database errors
+            $haslo = "error";
+            throw $exception;
+        }
+    }
+    public function updateAccountIntoSQL($id)
+    {
+        try {
+            $pdo = Database::getInstance()->getConnection();
+            $stmt = $pdo->prepare(" UPDATE `account` SET (`email`=?,`nrTel`=?,`imie`=?,`nazwisko`=?,`miejscowosc`=?,`ulica`=?,`nrDomu`=?,`nrMieszkania`=?,`kodPocztowy`=?,`dataUrodzin`=?) WHERE `id`=:id");
+            
+            $stmt->bindValue(1, $this->getEmail(), PDO::PARAM_STR);
+            $stmt->bindValue(2, $this->getNrTel(), PDO::PARAM_STR);
+            $stmt->bindValue(3, $this->getImie(), PDO::PARAM_STR);
+            $stmt->bindValue(4, $this->getNazwisko(), PDO::PARAM_STR);
+            $stmt->bindValue(5, $this->getMiejscowosc(), PDO::PARAM_STR);
+            $stmt->bindValue(6, $this->getUlica(), PDO::PARAM_STR);
+            $stmt->bindValue(7, $this->getNrDomu(), PDO::PARAM_INT);
+            $stmt->bindValue(8, $this->getNrMieszkania(), PDO::PARAM_INT);
+            $stmt->bindValue(9, $this->getKodPocztowy(), PDO::PARAM_STR);
+            $stmt->bindValue(10, $this->getDataUrodzin(), PDO::PARAM_STR);
+
+            $stmt->bindValue(':id', $id, PDO::PARAM_INT);
 
             $stmt->execute();
         } catch (PDOException $exception) {
