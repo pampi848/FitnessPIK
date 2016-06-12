@@ -1,4 +1,3 @@
-<div class="container">
             <div class="row">
                 <div class="col-md-12">
                     <img src="img/logo-login.png" class="img-responsive center-block img-circle">
@@ -164,4 +163,3 @@
                     </div>
                 </div>
             </div>
-        </div>

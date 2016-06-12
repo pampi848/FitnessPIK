@@ -219,3 +219,21 @@ div#div-forms button.btn-primary{
 .padding-row {
     margin: 0 5vw 0 5vw;
 }
+
+.margin-row {
+    margin-top: 3vh;
+}
+
+.praca-praca{
+    display: none;
+    background-color: crimson;
+    color: white;
+    border: 1px solid #ddd;
+    border-bottom: none;
+    border-top: none;
+    font-size: 25px;
+}
+
+.praca-praca:last-of-type{
+    border-bottom: 1px solid #ddd;
+}

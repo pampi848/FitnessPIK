@@ -40,3 +40,8 @@ body {
 .profile-month-name {
     text-align: center;
 }
+
+.job{
+    text-transform: capitalize;
+    font-size: 20px;
+}

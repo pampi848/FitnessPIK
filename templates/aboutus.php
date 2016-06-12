@@ -1,5 +1,3 @@
-<div class="container">
-
         <div class="row info-div">
             <div class="col-md-8 about-data">
                 <p class="lead">
@@ -56,7 +54,7 @@
                     <div class="data-about" id="data-subs">2600</div>
                 </div>
             </div>
-            <div class="col-md-8 text-center data-text-about center-block pull-left">
+            <div class="col-md-8 text-center data-text-about center-block">
                 subskrybcji miesięcznie
             </div>
         </div>
@@ -70,5 +68,3 @@
             <div class="col-md-8 text-center data-text-about center-block" id="titles-text">tytułów najlepszego klubu fitness w Radomiu</div>
         </div>
         <hr/>
-
-    </div>
