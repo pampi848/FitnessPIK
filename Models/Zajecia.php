@@ -165,7 +165,7 @@ class Zajecia
             $stmt->bindValue(':zajecia', $idZajec, PDO::PARAM_STR);
 
             $stmt->execute();
-            $cena = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            $cena = $stmt->fetch(PDO::FETCH_ASSOC);
 
         } catch (PDOException $exception) {
             // TODO: log database errors

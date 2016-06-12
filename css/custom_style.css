@@ -281,3 +281,17 @@ div#div-forms button.btn-primary{
 .margin-row-small {
     margin-top: 2vh;
 }
+
+.scroll-top-font {
+    font-size: 20px;
+    line-height: 200%;
+}
+
+.footer {
+    background-color: black;
+    width: 100vw;
+}
+
+body {
+    overflow-x: hidden;
+}

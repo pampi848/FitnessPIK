@@ -251,9 +251,19 @@
     <?php } ?>
 
     <?= $p['content'] ?>
+    </div>
+    <div class="row footer">
+        <div class="col-md-6 col-md-offset-3">
+            <div class="panel panel-default center-block text-center margin-row-small">
+              <div class="panel-body center-block text-center">
+                  <h1><span style="color: #86CE39">P</span><span style="color: crimson">I</span><span style="color: #8186EE">K</span>team &copy;  </h1>
+              </div>
+            </div>
+        </div>
+    </div>
     <div class="scroll-top-wrapper ">
   <span class="scroll-top-inner">
-    <i class="fa fa-2x fa-arrow-circle-up">UP</i>
+    <i class="glyphicon glyphicon-arrow-up scroll-top-font"></i>
   </span>
     </div>
     <!-- Bootstrap core JavaScript
