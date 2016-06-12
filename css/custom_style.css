@@ -241,3 +241,19 @@ div#div-forms button.btn-primary{
     max-height: 100%;
     width: 100%;
 }
+
+.profile-input {
+    border-radius: 5% 5% 5% 5%;
+    box-shadow: 0 0 0 0;
+    border: 0.1px solid black;
+    margin: 0 !important;
+}
+
+.margin-center {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.modify {
+    display: none;
+}

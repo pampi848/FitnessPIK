@@ -56,3 +56,15 @@ $('.job').click(function(){
     console.log(identyfikator);
     $("#"+identyfikator+"a").slideToggle(200);
 });
+
+$('#edit').click(function(){
+    $(this).fadeToggle(500);
+    $('.profile-input').removeAttr('readonly');
+    $('.modify').fadeToggle(500);
+});
+
+
+
+
+
+
