@@ -239,7 +239,7 @@
         <!-- BEGIN #MESSAGES -->
             <div class="alert <?= isset($_SESSION['messages']['class']) ? $_SESSION['messages']['class'] : '' ?>"
                  <?= isset($_SESSION['messages']['style']) ? "style='{$_SESSION['messages']['style']}'" : '' ?>role="alert" id="porn"
-                 onclick="alert()"><?= $_SESSION['messages']['content'] ?><span id="clicker">X</span></div>
+                 onclick="alert()"><?= isset($_SESSION['messages']['content']) ? $_SESSION['messages']['content'] : '' ?><span id="clicker">X</span></div>
         <?php unset($_SESSION['messages']); ?>
         <!-- END #MESSAGES -->
     <?php } ?>

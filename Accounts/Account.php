@@ -303,7 +303,7 @@ abstract class Account
     /**
      * @param string $haslo
      */
-    protected function setHaslo($haslo)
+    public function setHaslo($haslo)
     {
         $this->haslo = $haslo;
 
@@ -320,7 +320,7 @@ abstract class Account
     /**
      * @param string $login
      */
-    protected function setLogin($login)
+    public function setLogin($login)
     {
         $this->login = $login;
     }
@@ -336,7 +336,7 @@ abstract class Account
     /**
      * @param int $nrTel
      */
-    protected function setNrTel($nrTel)
+    public function setNrTel($nrTel)
     {
         $this->nrTel = $nrTel;
     }
@@ -352,7 +352,7 @@ abstract class Account
     /**
      * @param string $email
      */
-    protected function setEmail($email)
+    public function setEmail($email)
     {
         $this->email = $email;
     }
@@ -368,7 +368,7 @@ abstract class Account
     /**
      * @param string $imie
      */
-    protected function setImie($imie)
+    public function setImie($imie)
     {
         $this->imie = $imie;
     }
@@ -384,7 +384,7 @@ abstract class Account
     /**
      * @param string $nazwisko
      */
-    protected function setNazwisko($nazwisko)
+    public function setNazwisko($nazwisko)
     {
         $this->nazwisko = $nazwisko;
     }
@@ -400,7 +400,7 @@ abstract class Account
     /**
      * @param string $miejscowosc
      */
-    protected function setMiejscowosc($miejscowosc)
+    public function setMiejscowosc($miejscowosc)
     {
         $this->miejscowosc = $miejscowosc;
     }
@@ -416,7 +416,7 @@ abstract class Account
     /**
      * @param string $ulica
      */
-    protected function setUlica($ulica)
+    public function setUlica($ulica)
     {
         $this->ulica = $ulica;
     }
@@ -432,7 +432,7 @@ abstract class Account
     /**
      * @param int $nrDomu
      */
-    protected function setNrDomu($nrDomu)
+    public function setNrDomu($nrDomu)
     {
         $this->nrDomu = $nrDomu;
     }
@@ -448,7 +448,7 @@ abstract class Account
     /**
      * @param string $kodPocztowy
      */
-    protected function setKodPocztowy($kodPocztowy)
+    public function setKodPocztowy($kodPocztowy)
     {
         $this->kodPocztowy = $kodPocztowy;
     }
@@ -464,7 +464,7 @@ abstract class Account
     /**
      * @param int $nrMieszkania
      */
-    protected function setNrMieszkania($nrMieszkania)
+    public function setNrMieszkania($nrMieszkania)
     {
         $this->nrMieszkania = $nrMieszkania;
     }
@@ -480,7 +480,7 @@ abstract class Account
     /**
      * @param string $dataUtworzenia
      */
-    protected function setDataUtworzenia($dataUtworzenia)
+    public function setDataUtworzenia($dataUtworzenia)
     {
         $this->dataUtworzenia = $dataUtworzenia;
     }
@@ -512,7 +512,7 @@ abstract class Account
     /**
      * @param boolean $activated
      */
-    protected function setActivated($activated = false)
+    public function setActivated($activated = false)
     {
         $this->activated = $activated;
     }
@@ -528,7 +528,7 @@ abstract class Account
     /**
      * @param int $level
      */
-    protected function setLevel($level = 0)
+    public function setLevel($level = 0)
     {
         $this->level = $level;
     }
@@ -544,7 +544,7 @@ abstract class Account
     /**
      * @param string $activationCode
      */
-    protected function setActivationCode($activationCode)
+    public function setActivationCode($activationCode)
     {
         $this->activationCode = $activationCode;
     }
