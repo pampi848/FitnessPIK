@@ -60,6 +60,7 @@ class Config
             'allnews' => 'Actions\\ViewNewsAll',
             'news' => 'Actions\\ViewNewsSingle',
             'profile' => 'Actions\\ViewProfile',
+            'editprofile' => 'Actions\\EditProfile',
             'users' => 'Actions\\ViewUsersAll',
             'offer' => 'Actions\\ViewOffer',
             'instruktorPanel' => 'Actions\\ViewInstruktorPanel',

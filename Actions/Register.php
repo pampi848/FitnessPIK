@@ -13,14 +13,12 @@ class Register extends Action
     protected function doExecute()
     {
 
-        $_SESSION['messages'] = [];
         if (isset($_POST['newUser']) && is_array($_POST['newUser']) && (User::findSameMail($_POST['newUser']['mail']) == $_POST['newUser']['mail'])) {
-            $_SESSION['messages'][0] = ['class' => 'alert-warning', 'content' => 'Podany adres e-mail jest już zajęty!', 'style' => 'z-index: 50;'];
+            $this->session->add('messages', ['class' => 'alert-warning', 'content' => 'Podany adres e-mail jest już zajęty!', 'style' => 'z-index: 50;']);
         }
 
         if (isset($_POST['newUser']) && is_array($_POST['newUser']) && (User::findSameLogin($_POST['newUser']['log']) == $_POST['newUser']['log'])) {
-            $i = isset($_SESSION['messages'][0]) && !empty($_SESSION['messages'][0]) ? 1 : 0;
-            $_SESSION['messages'][$i] = ['class' => 'alert-warning', 'content' => 'Podany login jest już zajęty!', 'style' => 'z-index: 100;'];
+            $this->session->add('messages', ['class' => 'alert-warning', 'content' => "Podany login".(isset($_SESSION['messages']) ? $_SESSION['messages'] : ' ')."jest już zajęty!", 'style' => 'z-index: 100;']);
         }
         if (isset($_POST['newUser']) && is_array($_POST['newUser']) && (User::findSameLogin($_POST['newUser']['log']) != $_POST['newUser']['log']) && (User::findSameMail($_POST['newUser']['mail']) != $_POST['newUser']['mail'])) {
             $code = $this->randCode(); //losowy kod
@@ -41,9 +39,9 @@ class Register extends Action
                 $body = "Link aktywanycjny: http://localhost/FitnessPIK/?action=activation&&code=$code";
                 smtpmailer($_POST['newUser']['mail'], FROM, FROMNAME, $subject, $body);
 
-                $_SESSION['messages'][0] = ['class' => 'alert-success', 'content' => 'Zarejestrowano pomyślnie! Aby aktywować konto kliknij w link w wiadomości na twoim mailu.'];
+                $this->session->add('messages', ['class' => 'alert-success', 'content' => 'Zarejestrowano pomyślnie! Aby aktywować konto kliknij w link w wiadomości na twoim mailu.']);
             } else {
-                $_SESSION['messages'][0] = ['class' => 'alert-warning', 'content' => $user];
+                $this->session->add('messages', ['class' => 'alert-warning', 'content' => $user]);
             }
         }
 

@@ -40,14 +40,13 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div>
-                                   <form action="" method="" class="form-horizontal">
+                                   <form action="?action=editprofile" method="POST" class="form-horizontal">
                                        <?php 
                                            if(isset($_GET['id'])) {
                                                $_SESSION['data']['id'] = $_GET['id'];
                                            }
                                            elseif(isset($_SESSION['logged']['level'])){
                                                $_SESSION['data']['id'] = $_SESSION['logged']['level'];
-
                                            }
                                        ?>
                                        <div class="row text-center form-group">

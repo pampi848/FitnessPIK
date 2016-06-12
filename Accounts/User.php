@@ -35,7 +35,7 @@ class User extends Account
             $nowekonto->setImie(addslashes($konto['name']));
             $nowekonto->setNazwisko(addslashes($konto['lastname']));
             $nowekonto->setMiejscowosc(addslashes($konto['place']));
-            $nowekonto->setUlica(addslashes($konto['place']));
+            $nowekonto->setUlica(addslashes($konto['street']));
             $nowekonto->setNrDomu(addslashes($konto['home']));
             $nowekonto->setNrMieszkania(addslashes($konto['flat']));
             $nowekonto->setKodPocztowy(addslashes($konto['zipcode']));
