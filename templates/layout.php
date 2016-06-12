@@ -3,7 +3,7 @@
 <head>
     <link rel="icon"
           type="image/png"
-          href="favicon.png"/>
+          href="img/logo-login.png"/>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -25,21 +25,27 @@
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-
+    
+    <!-- Background pattern from subtlepatterns.com -->
     <link href="css/custom_style.css" rel="stylesheet">
     <link href="css/login_css.css" rel="stylesheet">
     <link href="css/arrow.css" rel="stylesheet">
     <link href="css/calendar_style.css" rel="stylesheet">
     <link href="css/circle-button-style.css" rel="stylesheet">
     <link href="css/profile-style.css" rel="stylesheet">
+    <link href="css/contact_style.css" rel="stylesheet">
+    <link href="css/about_style.css" rel="stylesheet">
+    
+    <!-- Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Ubuntu+Condensed' rel='stylesheet' type='text/css'>
 </head>
 <body>
-<div class="container-fluid" ">
-    <div class="jumbotron" style="margin-bottom: 0px; padding:1%!important;">
-        <center><img width="25%" src="img/logo.png"/></center>
+<div class="container-fluid opacity-container">
+    <div class="jumbotron" style="margin-bottom: 0px;background-image: url('img/banner-back.png');">
+        <img src="img/banner.png" class="img-responsive center-block">
     </div>
 </div>
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-default style nav-layout opacity-container">
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -50,15 +56,17 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="index.php">Fitness</a>
+            <a class="navbar-brand" href="index.php"><img src="img/logo-login.png" class="img-resposive" style="height: 42px; margin-top: -9px;"></a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li class="<?=(isset($p['currentAction']) && $p['currentAction']=='default') ? 'active' : ''?>"><a href="?action=default">Home <span class="sr-only"></span></a></li>
-                <li class="<?=(isset($p['currentAction']) && $p['currentAction']=='offer') ? 'active' : ''?>"><a href="?action=offer">Offer<span class="sr-only"></span></a></li>
-                <li class="<?=(isset($p['currentAction']) && $p['currentAction']=='allnews') ? 'active' : ''?>"><a href="?action=allnews" onclick="console.log(document.documentElement.clientWidth)">News</a></li>
+                <li class="<?=isset($p['currentAction']) && $p['currentAction']=='default' ? 'active' : ''?>"><a href="?action=default">Home <span class="sr-only"></span></a></li>
+                <li class="<?=isset($p['currentAction']) && $p['currentAction']=='offer' ? 'active' : ''?>"><a href="?action=offer">Offer<span class="sr-only"></span></a></li>
+                <li class="<?=isset($p['currentAction']) && $p['currentAction']=='allnews' ? 'active' : ''?>"><a href="?action=allnews" onclick="console.log(document.documentElement.clientWidth)">News</a></li>
+                <li class="<?=isset($p['currentAction']) && $p['currentAction']=='aboutus' ? 'active' : ''?>"><a href="?action=aboutus">O nas <span class="sr-only"></span></a></li>
+                <li class="<?=isset($p['currentAction']) && $p['currentAction']=='contact' ? 'active' : ''?>"><a href="?action=contact">Kontakt <span class="sr-only"></span></a></li>
                 <?php if ((isset($_SESSION['logged'])) && ($_SESSION['logged']['online'] == true)) { ?>
 
                 <?php if ((isset($_SESSION['logged']['level'])) && ($_SESSION['logged']['level'] == 2)) { ?>
@@ -66,13 +74,9 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                        aria-expanded="false">Instruktor<span class="caret"></span></a>
                     <ul class="dropdown-menu">
+                        <li><a href="?action=addnews">Dodaj news</a></li>
+                        <li role="separator" class="divider"></li>
                         <li><a href="?action=instruktorPanel">Panel</a></li>
-                        <li><a href="#">Another action</a></li>
-                        <li><a href="#">Something else here</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li><a href="#">Separated link</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li><a href="#">One more separated link</a></li>
                     </ul>
                     <?php } ?>
 
@@ -81,11 +85,8 @@
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
                                aria-haspopup="true" aria-expanded="false">Admin panel <span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li><a href="#">Zaplanuj event</a></li>
                                 <li><a href="?action=addnews">Dodaj news</a></li>
-                                <li><a href="#">Dodaj ofertę</a></li>
-                                <li role="separator" class="divider"></li>
-                                <li><a href="#">Uprawnienia</a></li> <!-- czoto? -->
+                                <li><a href="?action=addlesson">Dodaj ofertę</a></li>
                                 <li role="separator" class="divider"></li>
                                 <li><a href="?action=users">Zarządzaj użytkownikami</a></li>
                             </ul>
@@ -201,7 +202,7 @@
     <div class="panel-body" id="dymek-content">
     </div>
 </div>
-<div class="container" id="content">
+<div class="container opacity-container" id="content">
     <!-- BEGIN #SIDEBAR -->
     <div id="sidebar_social">
         <ol id="socials">

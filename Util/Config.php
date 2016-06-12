@@ -66,7 +66,9 @@ class Config
             'deactivation' => 'Actions\\Deactivation',
             'sendactivation' => 'Actions\\SendAgainAC',
             'uprawnienia' => 'Actions\\ChangePermissions',
-            'addlesson' => 'Actions\\ViewLessonAdd'
+            'addlesson' => 'Actions\\ViewLessonAdd',
+            'contact' => 'Actions\\ViewContact',
+            'aboutus' => 'Actions\\ViewAboutUS',
         ];
 
         //TODO: usprawnić to ... // to wszystko co jest wyżej musi zostać w tym pliku, bo windows/xampp nie wykonuje od razu dołączonego pliku 

@@ -1,0 +1,56 @@
+
+.margin {
+    margin-top: 5vh;
+}
+
+.contact-div {
+    font-size: 30px;
+}
+
+#trainers {
+    font-size: 20px;
+}
+
+#admins {
+    font-size: 20px;
+}
+
+.social-brick {
+    width: auto;
+    height: 40px;
+    background-color: blue;
+}
+.social-brick:hover {
+    -webkit-box-shadow: 0px 6px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 6px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 6px 5px 0px rgba(0,0,0,0.75);
+    cursor: pointer;
+}
+
+#socials-contact {
+    color: white;
+}
+
+#fb {
+    background-color: #3B5998;
+}
+
+#yt {
+    background-color: #cd201f;
+}
+
+#tw {
+    background-color: #00aced;
+}
+
+#gplus {
+    background-color: #d34836;
+}
+
+#insta {
+    background-color: #5851db;
+}
+
+#snap {
+    background-color: #fffc01;
+}

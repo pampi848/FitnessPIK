@@ -1,0 +1,66 @@
+
+.info-div {
+    margin-top: 5vh;
+    padding: 2vh;
+}
+
+.info-div:nth-child(2) {
+    background-color: aliceblue;
+}
+
+.image-info {
+    margin-top: 2vh;
+}
+
+.circle-info {
+    border-radius: 50%;
+	width: 200px;
+	height: 200px; 
+    background-color: coral;
+}
+
+.data-about {
+    font-size: 145px;
+    color: aliceblue;
+    text-align: center;
+    margin-bottom: auto;
+    margin-top: auto;
+    height: 150px;
+    font-family: 'Ubuntu Condensed', sans-serif;
+    line-height: 130%;
+}
+
+.data-text-about {
+    font-size: 70px;
+    margin-top: auto;
+    margin-bottom: auto;
+    line-height: 200%;
+}
+
+#subs {
+    background-color: crimson;
+}
+
+#data-subs {
+    font-size: 100px !important;
+    line-height: 200%;
+}
+
+#titles {
+    background-color: darkslateblue;
+}
+
+#titles-text {
+    line-height: 150%;
+}
+
+.data-circle-center {
+    margin: 0 auto 0 auto;
+}
+
+.about-data {
+    font-size: 26px;
+}
+
+.header-about {
+}

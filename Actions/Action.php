@@ -74,7 +74,7 @@ abstract class Action
        
         $content = $this->response->processTemplate($container, $content);
         $content = $this->response->processTemplate('layout', [
-            'title' => 'Strona fitness',
+            'title' => 'Fortitudo',
             'content' => $content,
             'calendarData' => $calendar,
             'currentAction' => $this->request->get('action','default')
@@ -85,7 +85,7 @@ abstract class Action
 
 
     protected static function randCode()
-    { //
+    {
         $code = '';
         for ($i = 0; $i < 10; $i++) {
             $alfabet = str_split(ALFABET, 1);
