@@ -68,13 +68,9 @@ class Config
             'uprawnienia' => 'Actions\\ChangePermissions',
             'addlesson' => 'Actions\\ViewLessonAdd',
             'contact' => 'Actions\\ViewContact',
-            'aboutus' => 'Actions\\ViewAboutUS',
+            'aboutus' => 'Actions\\ViewAboutUs'
         ];
 
-        //TODO: usprawnić to ... // to wszystko co jest wyżej musi zostać w tym pliku, bo windows/xampp nie wykonuje od razu dołączonego pliku 
-        //  if (file_exists('config.php')) {
-        //   include_once 'config.php';
-        // }
     }
 
     /**

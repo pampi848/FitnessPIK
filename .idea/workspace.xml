@@ -2,26 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="127cc81d-169e-40f7-b176-a1349521a095" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/back-land.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/banner-back.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/banner.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/logo-login.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/about_style.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/contact_style.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/aboutus.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/contact.php" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FitnessPIK.sql" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/favicon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/fitnesspik.sql" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Actions/ViewAboutUs.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Actions/ViewContact.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Actions/Action.php" afterPath="$PROJECT_DIR$/Actions/Action.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Util/Config.php" afterPath="$PROJECT_DIR$/Util/Config.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/custom_style.css" afterPath="$PROJECT_DIR$/css/custom_style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/calendar_script.js" afterPath="$PROJECT_DIR$/js/calendar_script.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/custom_script.js" afterPath="$PROJECT_DIR$/js/custom_script.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/layout.php" afterPath="$PROJECT_DIR$/templates/layout.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/signForms.php" afterPath="$PROJECT_DIR$/templates/signForms.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/error404.php" afterPath="$PROJECT_DIR$/templates/error404.php" />
     </list>
     <ignored path="FitnessPIK.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -50,21 +35,51 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="layout.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/templates/layout.php">
+      <file leaf-file-name="ViewUsersAll.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Actions/ViewUsersAll.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="76" column="73" selection-start-line="76" selection-start-column="73" selection-end-line="76" selection-end-column="73" />
+            <state relative-caret-position="252">
+              <caret line="19" column="12" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Config.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="layout.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/layout.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="67" column="89" selection-start-line="67" selection-start-column="89" selection-end-line="67" selection-end-column="89" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Config.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Util/Config.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="213">
-              <caret line="58" column="20" selection-start-line="58" selection-start-column="13" selection-end-line="58" selection-end-column="20" />
+            <state relative-caret-position="654">
+              <caret line="72" column="0" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ViewContact.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Actions/ViewContact.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="144">
+              <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ViewAboutUs.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Actions/ViewAboutUs.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="144">
+              <caret line="13" column="17" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -78,8 +93,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="/etc/phpmyadmin/config.inc.php" />
-        <option value="$PROJECT_DIR$/Accounts/Zajecia.php" />
         <option value="$PROJECT_DIR$/test/test.php" />
         <option value="$PROJECT_DIR$/Model/Zajecia.php" />
         <option value="$PROJECT_DIR$/Util/Cookie.php" />
@@ -122,13 +135,15 @@
         <option value="$PROJECT_DIR$/templates/instruktorPanel.php" />
         <option value="$PROJECT_DIR$/Actions/Controller.php" />
         <option value="$PROJECT_DIR$/Actions/ViewUsersAll.php" />
-        <option value="$PROJECT_DIR$/templates/error404.php" />
         <option value="$PROJECT_DIR$/Actions/ChangePermissions.php" />
         <option value="$PROJECT_DIR$/Accounts/Account.php" />
         <option value="$PROJECT_DIR$/templates/users.php" />
         <option value="$PROJECT_DIR$/Actions/Action.php" />
-        <option value="$PROJECT_DIR$/Util/Config.php" />
+        <option value="$PROJECT_DIR$/templates/error404.php" />
+        <option value="$PROJECT_DIR$/Actions/ViewAboutUs.php" />
+        <option value="$PROJECT_DIR$/Actions/ViewContact.php" />
         <option value="$PROJECT_DIR$/templates/layout.php" />
+        <option value="$PROJECT_DIR$/Util/Config.php" />
       </list>
     </option>
   </component>
@@ -279,17 +294,17 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Actions" />
+      <recent name="$PROJECT_DIR$/Util" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/templates" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/Model" />
       <recent name="$PROJECT_DIR$/Actions" />
       <recent name="$PROJECT_DIR$/Actions/View" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/Actions" />
-      <recent name="$PROJECT_DIR$/Util" />
-      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="RunManager">
@@ -372,12 +387,12 @@
       <workItem from="1465487293397" duration="15441000" />
       <workItem from="1465590350879" duration="6508000" />
       <workItem from="1465641582446" duration="42551000" />
-      <workItem from="1465741547558" duration="1490000" />
+      <workItem from="1465741547558" duration="3122000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="304768000" />
+    <option name="totallyTimeSpent" value="306400000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1280" y="24" width="1280" height="1000" extended-state="6" />
@@ -425,20 +440,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/templates/newsAll.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="23" column="26" selection-start-line="23" selection-start-column="26" selection-end-line="23" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Actions/ViewNewsSingle.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="21" column="46" selection-start-line="21" selection-start-column="46" selection-end-line="21" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Models/News.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="173">
@@ -538,13 +539,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Util/Response404.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="12" column="20" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/profile.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
@@ -619,20 +613,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1164">
           <caret line="47" column="46" selection-start-line="47" selection-start-column="46" selection-end-line="47" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/error404.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="1" column="46" selection-start-line="1" selection-start-column="46" selection-end-line="1" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Actions/ViewUsersAll.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="19" column="12" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
         </state>
       </provider>
     </entry>
@@ -791,18 +771,60 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Util/Config.php">
+    <entry file="file://$PROJECT_DIR$/Util/Response404.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="58" column="20" selection-start-line="58" selection-start-column="13" selection-end-line="58" selection-end-column="20" />
+        <state relative-caret-position="216">
+          <caret line="12" column="20" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/error404.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="1" column="77" selection-start-line="1" selection-start-column="77" selection-end-line="1" selection-end-column="77" />
+          <folding>
+            <element signature="n#style#0;n#h1#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Actions/ViewUsersAll.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="19" column="12" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/layout.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="76" column="73" selection-start-line="76" selection-start-column="73" selection-end-line="76" selection-end-column="73" />
+        <state relative-caret-position="180">
+          <caret line="67" column="89" selection-start-line="67" selection-start-column="89" selection-end-line="67" selection-end-column="89" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Actions/ViewContact.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Actions/ViewAboutUs.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="13" column="17" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Util/Config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="654">
+          <caret line="72" column="0" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
           <folding />
         </state>
       </provider>
