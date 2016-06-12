@@ -7,9 +7,12 @@
 
                 <?php
                 $razem = 0; //XDDDDDDDD
+                $i = 0;
                 foreach ($p as $zajecie) { //GENEROWANIE LISTY ZAJĘĆ
-                    echo "<button type='button' class='list-group-item jobs'>{$zajecie['nazwa_zajec']} - {$zajecie['wynagrodzenieMiesieczne']}zł<span class='glyphicon glyphicon-certificate pull-right' aria-hidden='true'></span></button>";
+                    echo "<button type='button' id='$i' class='list-group-item jobs job'>{$zajecie['nazwa_zajec']}<span class='glyphicon glyphicon-certificate pull-right' aria-hidden='true'></span></button>";
+                    echo "<div class=\"praca-praca\" id=\"".$i."a\">+ {$zajecie['wynagrodzenieMiesieczne']}zł </div>";
                     $razem += $zajecie['wynagrodzenieMiesieczne'];
+                    $i++;
                 }
                 ?>
                 <p>Wynagrodzenie miesięczne: <?= $razem ?> </p>
@@ -43,7 +46,7 @@
                             <div class="item <?= ($i == 0) ? 'active' : '' ?>" style="font-size: large; min-height: 300px">
                                 <h3><?= $zajecie['nazwa_zajec'] ?></h3>
 
-                                <table class="table text-center"">
+                                <table class="table text-center">
                                     <tr>
                                         <th class="text-center">Dzień tygodnia</th>
                                         <th class="text-center">Godzina</th>

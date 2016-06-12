@@ -35,10 +35,14 @@
         <div class="row">
             <div class="col-md-4">
                 <div class="form-group">
-                    <label>Kategoria</label>
-                    <button type="button" id="1" class="btn btn-default cat">Informacja</button>
-                    <button type="button" id="2" class="btn btn-default cat">Ogłoszenie</button>
-                    <button type="button" id="3" class="btn btn-default cat">Oferta</button>
+                    <div class="row">
+                        <label>Kategoria</label>
+                    </div>
+                    <div class="row">
+                        <button type="button" id="1" class="btn btn-default cat">Informacja</button>
+                        <button type="button" id="2" class="btn btn-default cat">Ogłoszenie</button>
+                        <button type="button" id="3" class="btn btn-default cat">Oferta</button>
+                    </div>
                     <input id="cat" class="hidden" type="text" name="newNews[category]">
                 </div>
             </div>

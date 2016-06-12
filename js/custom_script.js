@@ -45,3 +45,14 @@ $(document).ready(function() {
       stickyNav();
    });
    });
+
+function showPayment(){
+    var identyfikator = $(this).attr('id');
+    console.log(identyfikator);
+}
+
+$('.job').click(function(){
+    var identyfikator = $(this).attr('id');
+    console.log(identyfikator);
+    $("#"+identyfikator+"a").slideToggle(200);
+});
