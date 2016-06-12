@@ -12,6 +12,7 @@ namespace Util;
 class Session
 {
     const SESSION_IDENTIFIER = 'FitnessPIK';
+
     const SESSION_LIFETIME = 14400; //24min //+0
 
     /**

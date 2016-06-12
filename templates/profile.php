@@ -1,4 +1,3 @@
-<div class="container" xmlns="http://www.w3.org/1999/html">
         <div class="profile-content">
             <div class="row upper-profile">
                 <div class="col-md-4">
@@ -25,17 +24,71 @@
                     <hr/>
                     <div class="row">
                         <div class="col-md-12">
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h3 class="panel-title">O sobie</h3>
+                            <div>
+                                   <form action="" method="" class="form-horizontal">
+                                       <div class="row text-center form-group">
+                                           <div class="col-md-6">
+                                               <div class="col-md-6"><label for="name">Imię</label></div>
+                                               <div class="col-md-6"><input type="text" class="form-control profile-input pull-right" id="name" value="<?=$p['imie']?>" readonly required></div>
+                                           </div>
+                                           <div class="col-md-6">
+                                               <div class="col-md-6"><label for="lastname">Nazwisko</label></div>
+                                               <div class="col-md-6"><input type="text" class="form-control profile-input pull-right" id="lastname" value="<?=$p['nazwisko']?>" readonly required></div>
+                                           </div>
+                                       </div>
+                                       <div class="row text-center form-group">
+                                           <div class="col-md-6">
+                                               <div class="col-md-6"><label for="mail">E-mail</label></div>
+                                               <div class="col-md-6"><input type="email" class="form-control profile-input pull-right" id="mail" value="<?=$p['email']?>" readonly required></div>
+                                           </div>
+                                           <div class="col-md-6">
+                                               <div class="col-md-6"><label for="tel">Telefon</label></div>
+                                               <div class="col-md-6"><input type="tel" class="form-control profile-input pull-right" id="tel" value="<?=$p['nrTel']?>" readonly required></div>
+                                           </div>
+                                       </div>
+                                       <div class="row text-center form-group">
+                                           <div class="col-md-6">
+                                               <div class="col-md-6"><label for="place">Miejscowość</label></div>
+                                               <div class="col-md-6"><input type="text" class="form-control profile-input pull-right" id="place" value="<?=$p['miejscowosc']?>" readonly required></div>
+                                           </div>
+                                           <div class="col-md-6">
+                                               <div class="col-md-6"><label for="street">Ulica</label></div>
+                                               <div class="col-md-6"><input type="text" class="form-control profile-input pull-right" id="street" value="<?=$p['ulica']?>" readonly required></div>
+                                           </div>
+                                       </div>
+                                       <div class="row text-center form-group">
+                                           <div class="col-md-6">
+                                               <div class="col-md-6"><label for="place_number">Numer domu</label></div>
+                                               <div class="col-md-6"><input type="number" class="form-control profile-input pull-right" id="place_number" value="<?=$p['nrDomu']?>" readonly required></div>
+                                           </div>
+                                           <div class="col-md-6">
+                                               <div class="col-md-6"><label for="room_number">Numer mieszkania</label></div>
+                                               <div class="col-md-6"><input type="number" class="form-control profile-input pull-right" id="room_number" value="<?=$p['nrMieszkania']?>" readonly required></div>
+                                           </div>
+                                       </div>
+                                       <div class="row text-center form-group">
+                                           <div class="col-md-6">
+                                               <div class="col-md-6"><label for="date">Data urodzenia</label></div>
+                                               <div class="col-md-6"><input type="date" class="form-control profile-input pull-right" id="date" value="<?=$p['dataUrodzin']?>" readonly required></div>
+                                           </div>
+                                           <div class="col-md-6">
+                                               <div class="col-md-6"><label for="post">Kod pocztowy</label></div>
+                                               <div class="col-md-6"><input type="text" class="form-control profile-input pull-right" id="post" value="<?=$p['kodPocztowy']?>" readonly required></div>
+                                           </div>
+                                       </div>
+                                <hr/>
+                                <div class="row center-block">
+                                    <div class="col-md-4 center-block"><input type="submit" id="send" value="Wyślij" class="btn btn-success modify center-block"></button></div>
+                                    <div class="col-md-4 center-block"><button type="button" id="edit" class="btn btn-info center-block">Edytuj</button></div>
+                                    <div class="col-md-4 center-block"><button type="button" id="cancel" class="btn btn-danger modify pull-right center-block">Anuluj</button></div>
                                 </div>
-                                <div class="panel-body">
+                                   </form>
+                                </div>
+                            <div class="panel-body hidden">
                                     <?php var_dump($p)?>
-                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div><!-- /.container -->

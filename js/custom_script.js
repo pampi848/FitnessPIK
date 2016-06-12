@@ -56,3 +56,21 @@ $('.job').click(function(){
     console.log(identyfikator);
     $("#"+identyfikator+"a").slideToggle(200);
 });
+
+$('#edit').click(function(){
+    $(this).fadeToggle(500);
+    $('.profile-input').removeAttr('readonly');
+    $('.modify').fadeToggle(500);
+});
+
+$('.modify').click(function(){
+    $('.modify').fadeToggle(500);
+    $('.profile-input').attr('readonly', true);
+    $('#edit').fadeToggle(500);
+});
+
+
+
+
+
+

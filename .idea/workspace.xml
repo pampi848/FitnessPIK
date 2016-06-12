@@ -2,16 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="127cc81d-169e-40f7-b176-a1349521a095" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Actions/Action.php" afterPath="$PROJECT_DIR$/Actions/Action.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Actions/Controller.php" afterPath="$PROJECT_DIR$/Actions/Controller.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Actions/Deactivation.php" afterPath="$PROJECT_DIR$/Actions/Deactivation.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Actions/LogIn.php" afterPath="$PROJECT_DIR$/Actions/LogIn.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Util/Cookie.php" afterPath="$PROJECT_DIR$/Util/Cookie.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Util/Session.php" afterPath="$PROJECT_DIR$/Util/Session.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/index.php" afterPath="$PROJECT_DIR$/templates/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/layout.php" afterPath="$PROJECT_DIR$/templates/layout.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/signForms.php" afterPath="$PROJECT_DIR$/templates/signForms.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/custom_style.css" afterPath="$PROJECT_DIR$/css/custom_style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/custom_script.js" afterPath="$PROJECT_DIR$/js/custom_script.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/profile.php" afterPath="$PROJECT_DIR$/templates/profile.php" />
     </list>
     <ignored path="FitnessPIK.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -50,7 +44,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Action.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Action.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Actions/Action.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="182">
@@ -62,11 +56,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Session.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Session.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Util/Session.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="21" column="24" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
+            <state relative-caret-position="324">
+              <caret line="23" column="5" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -262,7 +256,6 @@
         <option value="$PROJECT_DIR$/Actions/SendAgainAC.php" />
         <option value="$PROJECT_DIR$/Actions/ViewInstruktorPanel.php" />
         <option value="$PROJECT_DIR$/Actions/ViewNewsAdd.php" />
-        <option value="$PROJECT_DIR$/Util/Session.php" />
         <option value="$PROJECT_DIR$/templates/profile.php" />
         <option value="$PROJECT_DIR$/Actions/Deactivation.php" />
         <option value="$PROJECT_DIR$/templates/index.php" />
@@ -273,6 +266,7 @@
         <option value="$PROJECT_DIR$/templates/signForms.php" />
         <option value="$PROJECT_DIR$/Actions/LogIn.php" />
         <option value="$PROJECT_DIR$/Util/Cookie.php" />
+        <option value="$PROJECT_DIR$/Util/Session.php" />
       </list>
     </option>
   </component>
@@ -503,12 +497,12 @@
       <workItem from="1465590350879" duration="6508000" />
       <workItem from="1465641582446" duration="42551000" />
       <workItem from="1465741547558" duration="3122000" />
-      <workItem from="1465746348290" duration="16706000" />
+      <workItem from="1465746348290" duration="16836000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="323106000" />
+    <option name="totallyTimeSpent" value="323236000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1280" y="24" width="1280" height="1000" extended-state="6" />
@@ -920,14 +914,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Util/Session.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="21" column="24" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
@@ -1015,6 +1001,14 @@
           <folding>
             <element signature="e#65#81#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Util/Session.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="23" column="5" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
+          <folding />
         </state>
       </provider>
     </entry>
