@@ -75,11 +75,11 @@ abstract class Account
             $pdo = Database::getInstance()->getConnection();
 
             $stmt = $pdo->prepare("UPDATE `account` SET `activated`=0 WHERE `id`=:id");
-            $stmt->bindValue(':id', $id, PDO::PARAM_STR);
+            $stmt->bindValue(':id', $id, PDO::PARAM_INT);
             $stmt->execute();
             if($admin == true) {
                 $stmt = $pdo->prepare("UPDATE `account` SET `activationCode`='disable' WHERE `id`=:id");
-                $stmt->bindValue(':id', $id, PDO::PARAM_STR);
+                $stmt->bindValue(':id', $id, PDO::PARAM_INT);
                 $stmt->execute();
             }
         } catch (PDOException $exception) {
@@ -93,11 +93,11 @@ abstract class Account
             $pdo = Database::getInstance()->getConnection();
 
             $stmt = $pdo->prepare("UPDATE `account` SET `activated`=1 WHERE `id`=:id");
-            $stmt->bindValue(':id', $id, PDO::PARAM_STR);
+            $stmt->bindValue(':id', $id, PDO::PARAM_INT);
             $stmt->execute();
 
             $stmt = $pdo->prepare("UPDATE `account` SET `activationCode`=:code WHERE `id`=:id");
-            $stmt->bindValue(':id', $id, PDO::PARAM_STR);
+            $stmt->bindValue(':id', $id, PDO::PARAM_INT);
             $stmt->bindValue(':code', $code, PDO::PARAM_STR);
             $stmt->execute();
 
@@ -112,7 +112,7 @@ abstract class Account
             $pdo = Database::getInstance()->getConnection();
 
             $stmt = $pdo->prepare("SELECT `activated`,`activationCode` FROM `account` WHERE `id`=:id");
-            $stmt->bindValue(':id', $id, PDO::PARAM_STR);
+            $stmt->bindValue(':id', $id, PDO::PARAM_INT);
             $stmt->execute();
             $aktywne = $stmt->fetch(PDO::FETCH_ASSOC);
         } catch (PDOException $exception) {
@@ -120,6 +120,20 @@ abstract class Account
             throw $exception;
         }
         return $aktywne;
+    }
+    public static function changePremissions($id,$level)
+    {
+        try {
+            $pdo = Database::getInstance()->getConnection();
+
+            $stmt = $pdo->prepare("UPDATE `account` SET `level`=:lvl WHERE `id`=:id");
+            $stmt->bindValue(':id', $id, PDO::PARAM_INT);
+            $stmt->bindValue(':lvl', $level, PDO::PARAM_INT);
+            $stmt->execute();
+        } catch (PDOException $exception) {
+            // TODO: log database errors
+            throw $exception;
+        }
     }
     public static function fetchIdByLogin($login)
     {

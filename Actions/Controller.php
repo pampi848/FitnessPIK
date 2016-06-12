@@ -52,6 +52,7 @@ class Controller
 
         $response = new Response404();
         $content = $response->processTemplate('error404');
+        $content = $response->processTemplate('layout', ['content' => $content]);
         $response->setContent($content);
         $response->send();
     }
