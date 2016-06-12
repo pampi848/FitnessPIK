@@ -15,7 +15,7 @@
             <?php $i=0 ?>
             <?php foreach ($p as $news){ ?>
                 <div class="item <?= ($i==0) ? 'active' : '' ?>">
-                    <img src="<?=$news['img']?>" alt="<?=($i+1).'.'?> slide">
+                    <img src="<?=$news['img']?>" alt="<?=($i+1).'.'?> slide" class="img-responsive img-reliable">
                     <div class="carousel-caption">
                         <a href='index.php?action=news&&id=<?=$news['id']?>'>
                             <h3><?= $news['naglowek'] ?></h3>

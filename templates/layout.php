@@ -40,11 +40,11 @@
     <link href='https://fonts.googleapis.com/css?family=Ubuntu+Condensed' rel='stylesheet' type='text/css'>
 </head>
 <body>
-<div class="container-fluid opacity-container">
-    <div class="jumbotron" style="margin-bottom: 0px;background-image: url('img/banner-back.png');">
+<!--<div class="container opacity-container"> -->
+    <div class="jumbotron opacity-container" style="margin-bottom: 0px;background-image: url('img/banner-back.png');">
         <img src="img/banner.png" class="img-responsive center-block">
     </div>
-</div>
+<!--</div> -->
 <nav class="navbar navbar-default style nav-layout">
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
