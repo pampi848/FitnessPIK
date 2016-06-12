@@ -1,10 +1,6 @@
-<div class="container">
-
-    <div class="starter-template">
+<div class="row padding-row">
+    <div class="col-md-12">
         <h1>Dodawanie newsa</h1>
-        <!--<p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p> -->
-    </div>
-
     <form id="news" action="" method="post" enctype="multipart/form-data">
         <div class="row">
             <div class="col-md-7">
@@ -59,6 +55,5 @@
                 <input type="submit" name="newNews[submit]" class="btn btn-primary btn-lg" value="Publikuj">
             </div>
         </div>
-    </form>
-
-</div><!-- /.container -->
+    </div>
+        </div>

@@ -215,3 +215,7 @@ div#div-forms button.btn-primary{
 .opacity-container {
     opacity: 0.9;
 }
+
+.padding-row {
+    margin: 0 5vw 0 5vw;
+}

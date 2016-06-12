@@ -28,13 +28,13 @@
     
     <!-- Background pattern from subtlepatterns.com -->
     <link href="css/custom_style.css" rel="stylesheet">
-    <link href="css/login_css.css" rel="stylesheet">
     <link href="css/arrow.css" rel="stylesheet">
     <link href="css/calendar_style.css" rel="stylesheet">
     <link href="css/circle-button-style.css" rel="stylesheet">
     <link href="css/profile-style.css" rel="stylesheet">
     <link href="css/contact_style.css" rel="stylesheet">
     <link href="css/about_style.css" rel="stylesheet">
+    <link href="css/login_css.css" rel="stylesheet">
     
     <!-- Fonts -->
     <link href='https://fonts.googleapis.com/css?family=Ubuntu+Condensed' rel='stylesheet' type='text/css'>
@@ -45,7 +45,7 @@
         <img src="img/banner.png" class="img-responsive center-block">
     </div>
 </div>
-<nav class="navbar navbar-default style nav-layout opacity-container">
+<nav class="navbar navbar-default style nav-layout">
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -62,11 +62,13 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
+
                 <li class="<?=isset($p['currentAction']) && $p['currentAction']=='default' ? 'active' : ''?>"><a href="?action=default">Home <span class="sr-only"></span></a></li>
                 <li class="<?=isset($p['currentAction']) && $p['currentAction']=='offer' ? 'active' : ''?>"><a href="?action=offer">Offer<span class="sr-only"></span></a></li>
                 <li class="<?=isset($p['currentAction']) && $p['currentAction']=='allnews' ? 'active' : ''?>"><a href="?action=allnews" onclick="console.log(document.documentElement.clientWidth)">News</a></li>
                 <li class="<?=isset($p['currentAction']) && $p['currentAction']=='aboutus' ? 'active' : ''?>"><a href="?action=aboutus">O nas <span class="sr-only"></span></a></li>
                 <li class="<?=isset($p['currentAction']) && $p['currentAction']=='contact' ? 'active' : ''?>"><a href="?action=contact">Kontakt <span class="sr-only"></span></a></li>
+
                 <?php if ((isset($_SESSION['logged'])) && ($_SESSION['logged']['online'] == true)) { ?>
 
                 <?php if ((isset($_SESSION['logged']['level'])) && ($_SESSION['logged']['level'] == 2)) { ?>
@@ -202,7 +204,7 @@
     <div class="panel-body" id="dymek-content">
     </div>
 </div>
-<div class="container opacity-container" id="content">
+<div class="container" id="content">
     <!-- BEGIN #SIDEBAR -->
     <div id="sidebar_social">
         <ol id="socials">
@@ -224,7 +226,7 @@
             </li>
         </ol>
     </div>
-    <div style="clear:both"></div>
+    <div style="clear:both;"></div>
     <!-- END # SIDEBAR -->
     <?php if (isset($_SESSION['messages']) && is_array($_SESSION['messages'])) { ?>
         <!-- BEGIN #MESSAGES -->
@@ -259,9 +261,9 @@
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="js/ie10-viewport-bug-workaround.js"></script>
     <script src="js/custom_script.js"></script>
-    <script src="js/login_script.js"></script>
     <script src="js/arrow.js"></script>
     <script src="js/calendar_script.js"></script>
     <script src="js/profile-script.js"></script>
+    <script src="js/login_script.js"></script>
 </body>
 </html>
