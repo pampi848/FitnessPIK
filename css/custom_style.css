@@ -100,7 +100,7 @@ span#com {
     width: 7vw;
     float: right;
     position: fixed;
-    bottom: 20vh;
+    bottom: 15vh;
     right: 0;
     border-radius: 84px 0px 0px 198px;
     -moz-border-radius: 84px 0px 0px 198px;
@@ -276,4 +276,8 @@ div#div-forms button.btn-primary{
 
 .social-font {
     color: white;
+}
+
+.margin-row-small {
+    margin-top: 2vh;
 }
