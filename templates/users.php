@@ -15,7 +15,7 @@
     <div id="activated">Aktywne: <?= ($konto['activated']==1) ? 'tak' : 'nie' ?> </div>
     <div id="level">Typ konta: <?= ($konto['level']==0) ? 'User' : '' ?> <?= ($konto['level']==1) ? 'Admin' : '' ?> <?= ($konto['level']==2) ? 'Instruktor' : '' ?> </div>
     <div id="activationCode">Kod aktywacyjny: <?=$konto['activationCode']?> </div>
-    <a href="?action=edit&&id=<?=$konto['id']?>"><button>Edytuj</button></a>
+    <a href="?action=profile&&id=<?=$konto['id']?>"><button>Edytuj</button></a>
     <a href="?action=resetPass&&id=<?=$konto['id']?>"><button>Resetuj hasło</button></a>
     <a href="?action=sendactivation&&id=<?=$konto['id']?>&&mail=<?=$konto['email']?>"><button>Wyślij nowy kod aktywacyjny</button></a>
     <?php if ($konto['level']==2){?>

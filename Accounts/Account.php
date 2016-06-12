@@ -180,9 +180,28 @@ abstract class Account
         try {
             $pdo = Database::getInstance()->getConnection();
 
-            $stmt = $pdo->prepare("SELECT `id`,`login`,`email`,`nrTel`,`imie`,`nazwisko`,`miejscowosc`,`ulica`,`nrDomu`,`nrMieszkania`,`kodPocztowy`,`dataUrodzin` FROM `account` WHERE login=:login");
+            $stmt = $pdo->prepare("SELECT `id`,`login`,`email`,`nrTel`,`imie`,`nazwisko`,`miejscowosc`,`ulica`,`nrDomu`,`nrMieszkania`,`kodPocztowy`,`dataUrodzin` FROM `account` WHERE `login`=:login");
 
             $stmt->bindValue(':login', $login, PDO::PARAM_STR);
+            $stmt->execute();
+            $konto = new User();
+            $konto = $stmt->fetch(PDO::FETCH_ASSOC);
+        } catch (PDOException $exception) {
+            // TODO: log database errors
+            throw $exception;
+        }
+
+        return $konto;
+    }
+
+    public static function fetchUserProfile($id)
+    {
+        try {
+            $pdo = Database::getInstance()->getConnection();
+
+            $stmt = $pdo->prepare("SELECT `id`,`login`,`level`,`email`,`nrTel`,`imie`,`nazwisko`,`miejscowosc`,`ulica`,`nrDomu`,`nrMieszkania`,`kodPocztowy`,`dataUrodzin` FROM `account` WHERE `id`=:id");
+
+            $stmt->bindValue(':id', $id, PDO::PARAM_STR);
             $stmt->execute();
             $konto = new User();
             $konto = $stmt->fetch(PDO::FETCH_ASSOC);

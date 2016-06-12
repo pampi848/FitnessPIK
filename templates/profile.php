@@ -41,54 +41,63 @@
                         <div class="col-md-12">
                             <div>
                                    <form action="" method="" class="form-horizontal">
+                                       <?php 
+                                           if(isset($_GET['id'])) {
+                                               $_SESSION['data']['id'] = $_GET['id'];
+                                           }
+                                           elseif(isset($_SESSION['logged']['level'])){
+                                               $_SESSION['data']['id'] = $_SESSION['logged']['level'];
+
+                                           }
+                                       ?>
                                        <div class="row text-center form-group">
                                            <div class="col-md-6">
                                                <div class="col-md-6"><label for="name">Imię</label></div>
-                                               <div class="col-md-6"><input type="text" class="form-control profile-input pull-right" id="name" value="<?=$p['imie']?>" readonly required></div>
+                                               <div class="col-md-6"><input name="Edit['name']" type="text" class="form-control profile-input pull-right" id="name" value="<?=$p['imie']?>" readonly required></div>
                                            </div>
                                            <div class="col-md-6">
                                                <div class="col-md-6"><label for="lastname">Nazwisko</label></div>
-                                               <div class="col-md-6"><input type="text" class="form-control profile-input pull-right" id="lastname" value="<?=$p['nazwisko']?>" readonly required></div>
+                                               <div class="col-md-6"><input name="Edit['lastname']" type="text" class="form-control profile-input pull-right" id="lastname" value="<?=$p['nazwisko']?>" readonly required></div>
                                            </div>
                                        </div>
                                        <div class="row text-center form-group">
                                            <div class="col-md-6">
                                                <div class="col-md-6"><label for="mail">E-mail</label></div>
-                                               <div class="col-md-6"><input type="email" class="form-control profile-input pull-right" id="mail" value="<?=$p['email']?>" readonly required></div>
+                                               <div class="col-md-6"><input name="Edit['mail']" type="email" class="form-control profile-input pull-right" id="mail" value="<?=$p['email']?>" readonly required></div>
                                            </div>
                                            <div class="col-md-6">
                                                <div class="col-md-6"><label for="tel">Telefon</label></div>
-                                               <div class="col-md-6"><input type="tel" class="form-control profile-input pull-right" id="tel" value="<?=$p['nrTel']?>" readonly required></div>
+                                               <div class="col-md-6"><input name="Edit['phone']" type="number" class="form-control profile-input pull-right" id="tel" value="<?=$p['nrTel']?>" readonly required></div>
                                            </div>
                                        </div>
                                        <div class="row text-center form-group">
                                            <div class="col-md-6">
                                                <div class="col-md-6"><label for="place">Miejscowość</label></div>
-                                               <div class="col-md-6"><input type="text" class="form-control profile-input pull-right" id="place" value="<?=$p['miejscowosc']?>" readonly required></div>
+                                               <div class="col-md-6"><input name="Edit['place']" type="text" class="form-control profile-input pull-right" id="place" value="<?=$p['miejscowosc']?>" readonly required></div>
                                            </div>
                                            <div class="col-md-6">
                                                <div class="col-md-6"><label for="street">Ulica</label></div>
-                                               <div class="col-md-6"><input type="text" class="form-control profile-input pull-right" id="street" value="<?=$p['ulica']?>" readonly required></div>
+                                               <div class="col-md-6"><input name="Edit['street']" type="text" class="form-control profile-input pull-right" id="street" value="<?=$p['ulica']?>" readonly required></div>
                                            </div>
                                        </div>
                                        <div class="row text-center form-group">
                                            <div class="col-md-6">
                                                <div class="col-md-6"><label for="place_number">Numer domu</label></div>
-                                               <div class="col-md-6"><input type="number" class="form-control profile-input pull-right" id="place_number" value="<?=$p['nrDomu']?>" readonly required></div>
+                                               <div class="col-md-6"><input name="Edit['home']" type="number" class="form-control profile-input pull-right" id="place_number" value="<?=$p['nrDomu']?>" readonly required></div>
                                            </div>
                                            <div class="col-md-6">
                                                <div class="col-md-6"><label for="room_number">Numer mieszkania</label></div>
-                                               <div class="col-md-6"><input type="number" class="form-control profile-input pull-right" id="room_number" value="<?=$p['nrMieszkania']?>" readonly required></div>
+                                               <div class="col-md-6"><input name="Edit['flat']" type="number" class="form-control profile-input pull-right" id="room_number" value="<?=$p['nrMieszkania']?>" readonly required></div>
                                            </div>
                                        </div>
                                        <div class="row text-center form-group">
                                            <div class="col-md-6">
                                                <div class="col-md-6"><label for="date">Data urodzenia</label></div>
-                                               <div class="col-md-6"><input type="date" class="form-control profile-input pull-right" id="date" value="<?=$p['dataUrodzin']?>" readonly required></div>
+                                               <div class="col-md-6"><input name="Edit['date']" type="date" class="form-control profile-input pull-right" id="date" value="<?=$p['dataUrodzin']?>" readonly required></div>
                                            </div>
                                            <div class="col-md-6">
                                                <div class="col-md-6"><label for="post">Kod pocztowy</label></div>
-                                               <div class="col-md-6"><input type="text" class="form-control profile-input pull-right" id="post" value="<?=$p['kodPocztowy']?>" readonly required></div>
+                                               <div class="col-md-6"><input name="Edit['post']" type="text" class="form-control profile-input pull-right" id="post" value="<?=$p['kodPocztowy']?>" readonly required></div>
                                            </div>
                                        </div>
                                 <hr/>
@@ -99,9 +108,6 @@
                                 </div>
                                    </form>
                                 </div>
-                            <div class="panel-body hidden">
-                                    <?php var_dump($p)?>
-                            </div>
                         </div>
                     </div>
                 </div>
