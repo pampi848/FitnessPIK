@@ -34,7 +34,7 @@
                         </div>
                         <br/>
                         <br/>
-                        <center><a href="?action=deactivation&&id=<?=$_SESSION['logged']['id']?>"><button type="button" class="btn btn-danger margin-row">Dezaktywuj konto</button></a></center>
+                        <center><a href="?action=deactivation&&id=<?=$_SESSION['logged']['id']?>"><button type="button" class="btn btn-warning margin-row">Dezaktywuj konto</button></a></center>
                     </div>
                     <hr/>
                     <div class="row">
