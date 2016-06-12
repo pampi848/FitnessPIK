@@ -76,13 +76,13 @@
                                                <div class="col-md-6"><input type="text" class="form-control profile-input pull-right" id="post" value="<?=$p['kodPocztowy']?>" readonly required></div>
                                            </div>
                                        </div>
-                                   </form>
                                 <hr/>
                                 <div class="row center-block">
                                     <div class="col-md-4 center-block"><input type="submit" id="send" value="Wyślij" class="btn btn-success modify center-block"></button></div>
                                     <div class="col-md-4 center-block"><button type="button" id="edit" class="btn btn-info center-block">Edytuj</button></div>
                                     <div class="col-md-4 center-block"><button type="button" id="cancel" class="btn btn-danger modify pull-right center-block">Anuluj</button></div>
                                 </div>
+                                   </form>
                                 </div>
                             <div class="panel-body hidden">
                                     <?php var_dump($p)?>
