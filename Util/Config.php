@@ -61,13 +61,16 @@ class Config
             'news' => 'Actions\\ViewNewsSingle',
             'profile' => 'Actions\\ViewProfile',
             'users' => 'Actions\\ViewUsersAll',
-            'offer' => 'Actions\\ViewOffer'
+            'offer' => 'Actions\\ViewOffer',
+            'instruktorPanel' => 'Actions\\ViewInstruktorPanel',
+            'deactivation' => 'Actions\\Deactivation',
+            'sendactivation' => 'Actions\\SendAgainAC',
+            'uprawnienia' => 'Actions\\ChangePermissions',
+            'addlesson' => 'Actions\\ViewLessonAdd',
+            'contact' => 'Actions\\ViewContact',
+            'aboutus' => 'Actions\\ViewAboutUs'
         ];
 
-        //TODO: usprawnić to ... // to wszystko co jest wyżej musi zostać w tym pliku, bo windows/xampp nie wykonuje od razu dołączonego pliku 
-        //  if (file_exists('config.php')) {
-        //   include_once 'config.php';
-        // }
     }
 
     /**

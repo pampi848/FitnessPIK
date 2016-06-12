@@ -8,7 +8,9 @@ use Util\Config;
 use Util\Request;
 use Util\Response;
 use Util\Session;
+use Accounts\User;
 
+const ALFABET = 'qwertyuiopasdfghjklzxcvbnm'; //26
 abstract class Action
 {
     protected $content = "";
@@ -79,5 +81,20 @@ abstract class Action
         ]);
 
         $this->response->setContent($content);
+    }
+
+
+    protected static function randCode()
+    {
+        $code = '';
+        for ($i = 0; $i < 10; $i++) {
+            $alfabet = str_split(ALFABET, 1);
+            $code .= $alfabet[rand(0, 25)];
+        }
+        $code = md5($code);
+        if (User::findSameCode($code) == $code) {
+            $code = randCode();
+        }
+        return $code;
     }
 }

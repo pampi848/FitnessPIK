@@ -8,15 +8,16 @@
 
 namespace Actions;
 
-require_once "autoload.php";
+use Models\Zajecia;
 
+require_once "autoload.php";
 
 class ViewOffer extends Action
 {
 
     function doExecute()
     {
-        $p = 'TODO: Pobrać wszystko z zajęc, wg pobranych danych pobrać kolejne dane z terminarza i cennika.';
-        $this->loadContent('index', $p);
+        $zajecia = Zajecia::fetchAllZajecia();
+        $this->loadContent('cennik', $zajecia);
     }
 }

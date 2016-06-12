@@ -12,6 +12,7 @@ class Response404 extends Response
 
     public function __construct()
     {
+        $this->config = Config::getInstance(); // utwórz Config, jeśli jeszcze nie istnieje
         $this->setHeader(self::HEADER_404);
     }
 }

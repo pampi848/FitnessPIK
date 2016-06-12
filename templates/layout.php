@@ -3,7 +3,7 @@
 <head>
     <link rel="icon"
           type="image/png"
-          href="favicon.png"/>
+          href="img/logo-login.png"/>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,7 +11,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title><?= $p['title'] ?></title>
+    <title><?=(isset($p['title'])) ? $p['title'] : 'Error404'?></title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -62,34 +62,33 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li class="<?=$p['currentAction']=='default' ? 'active' : ''?>"><a href="?action=default">Home <span class="sr-only"></span></a></li>
-                <li class="<?=$p['currentAction']=='offer' ? 'active' : ''?>"><a href="?action=offer">Offer<span class="sr-only"></span></a></li>
-                <li class="<?=$p['currentAction']=='allnews' ? 'active' : ''?>"><a href="?action=allnews" onclick="console.log(document.documentElement.clientWidth)">News</a></li>
-                <li class="<?=$p['currentAction']=='aboutus' ? 'active' : ''?>"><a href="?action=aboutus">O nas <span class="sr-only"></span></a></li>
-                <li class="<?=$p['currentAction']=='contact' ? 'active' : ''?>"><a href="?action=contact">Kontakt <span class="sr-only"></span></a></li>
+
+                <li class="<?=isset($p['currentAction']) && $p['currentAction']=='default' ? 'active' : ''?>"><a href="?action=default">Home <span class="sr-only"></span></a></li>
+                <li class="<?=isset($p['currentAction']) && $p['currentAction']=='offer' ? 'active' : ''?>"><a href="?action=offer">Offer<span class="sr-only"></span></a></li>
+                <li class="<?=isset($p['currentAction']) && $p['currentAction']=='allnews' ? 'active' : ''?>"><a href="?action=allnews" onclick="console.log(document.documentElement.clientWidth)">News</a></li>
+                <li class="<?=isset($p['currentAction']) && $p['currentAction']=='aboutus' ? 'active' : ''?>"><a href="?action=aboutus">O nas <span class="sr-only"></span></a></li>
+                <li class="<?=isset($p['currentAction']) && $p['currentAction']=='contact' ? 'active' : ''?>"><a href="?action=contact">Kontakt <span class="sr-only"></span></a></li>
+
                 <?php if ((isset($_SESSION['logged'])) && ($_SESSION['logged']['online'] == true)) { ?>
+
+                <?php if ((isset($_SESSION['logged']['level'])) && ($_SESSION['logged']['level'] == 2)) { ?>
                     <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                        aria-expanded="false">Instruktor<span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="#">Action</a></li>
-                        <li><a href="#">Another action</a></li>
-                        <li><a href="#">Something else here</a></li>
+                        <li><a href="?action=addnews">Dodaj news</a></li>
                         <li role="separator" class="divider"></li>
-                        <li><a href="#">Separated link</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li><a href="#">One more separated link</a></li>
+                        <li><a href="?action=instruktorPanel">Panel</a></li>
                     </ul>
+                    <?php } ?>
+
                     <?php if ((isset($_SESSION['logged']['level'])) && ($_SESSION['logged']['level'] == 1)) { ?>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
                                aria-haspopup="true" aria-expanded="false">Admin panel <span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li><a href="#">Zaplanuj event</a></li>
                                 <li><a href="?action=addnews">Dodaj news</a></li>
-                                <li><a href="#">Dodaj ofertę</a></li>
-                                <li role="separator" class="divider"></li>
-                                <li><a href="#">Uprawnienia</a></li> <!-- czoto? -->
+                                <li><a href="?action=addlesson">Dodaj ofertę</a></li>
                                 <li role="separator" class="divider"></li>
                                 <li><a href="?action=users">Zarządzaj użytkownikami</a></li>
                             </ul>
@@ -255,7 +254,7 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <?= $p['calendarData'] ?>
+    <?=(isset($p['calendarData'])) ? $p['calendarData'] : ''?>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/vendor/jquery.min.js"><\/script>')</script>
     <script src="js/bootstrap.min.js"></script>
