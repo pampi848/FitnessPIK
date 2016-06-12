@@ -19,6 +19,7 @@
     width: auto;
     height: 40px;
     background-color: blue;
+    line-height: 300%;
 }
 .social-brick:hover {
     -webkit-box-shadow: 0px 6px 5px 0px rgba(0,0,0,0.75);
