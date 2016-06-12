@@ -20,12 +20,12 @@
                             <span id="text-login-msg">Type your username and password.</span>
                         </div>
                         <input id="login_username" name="newUser[log]" class="form-control" type="text"
-                               placeholder="Username (type ERROR for error effect)" required>
+                               placeholder="Username (type ERROR for error effect)" value="<?=isset($_COOKIE['login']) ? $_COOKIE['login'] : '' ?>" required>
                         <input id="login_password" name="newUser[pass]" class="form-control" type="password"
-                               placeholder="Password" required>
+                               placeholder="Password" value="<?=isset($_COOKIE['password']) ? $_COOKIE['password'] : '' ?>" required>
                         <div class="checkbox">
                             <label>
-                                <input type="checkbox"> Remember me
+                                <input <?=isset($_COOKIE['password'])&&($_COOKIE['password']) ? 'checked' : '' ?> type="checkbox" name="newUser[remember]" > Remember me
                             </label>
                         </div>
                     </div>

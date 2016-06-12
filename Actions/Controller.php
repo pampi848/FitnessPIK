@@ -3,6 +3,7 @@
 namespace Actions;
 
 use Util\Config;
+use Util\Cookie;
 use Util\Request;
 use Util\Response404;
 use Util\Session;
@@ -24,11 +25,17 @@ class Controller
      */
     protected $request = null;
 
+    /**
+     * @var Cookie
+     */
+    protected $cookie = null;
+
     public function __construct()
     {
         $this->config = Config::getInstance(); // utwórz Config, jeśli jeszcze nie istnieje
         $this->session = new Session();
         $this->request = new Request();
+        $this->cookie = new Cookie();
     }
 
     public function run(){
@@ -40,7 +47,7 @@ class Controller
             $actionClassName = $actionMap[$actionName];
 
             if (class_exists($actionClassName)) {
-                $action = new $actionClassName($this->request, $this->session);
+                $action = new $actionClassName($this->request, $this->session, $this->cookie);
 
                 if ($action instanceof Action) {
                     $response = $action->execute();

@@ -39,6 +39,7 @@
     <!-- Fonts -->
     <link href='https://fonts.googleapis.com/css?family=Ubuntu+Condensed' rel='stylesheet' type='text/css'>
 </head>
+
 <body>
 <!--<div class="container opacity-container"> -->
     <div class="jumbotron opacity-container" style="margin-bottom: 0px;background-image: url('img/banner-back.png');">

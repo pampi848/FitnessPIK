@@ -18,7 +18,6 @@ class LogIn extends Action
                 if (isset($konto) && is_object($konto) && $konto->activated == true) {
                     $this->session->add('logged',['online' => true, 'imie' => $konto->imie, 'level' => $konto->level, 'login' => $login, 'id' => $konto->id]);//  $_SESSION['logged'] = ['online' => true, 'imie' => $konto->imie, 'level' => $konto->level];
                     $this->session->add('messages', ['class' => 'alert-success', 'content' => 'Zalogowano pomyślnie.']);
-
                 } else {
                     $aktywne = Account::isActivatedInDatabase(Account::fetchIdByLogin($login));
                     if ($aktywne['activationCode'] == 'disable') {
@@ -31,7 +30,15 @@ class LogIn extends Action
             } else {
                 $this->session->add('messages', ['class' => 'alert-danger', 'content' => 'Zapewne pomyliłeś login lub hasło.']);
             }
-
+        }
+        
+        if(isset($_POST['newUser']['remember']) && $_POST['newUser']['remember']=='on'){
+            $this->cookie->add('login', $_POST['newUser']['log']);
+            $this->cookie->add('password', $_POST['newUser']['pass']);
+        }
+        else{
+           if( isset($_COOKIE['login']) ) $this->cookie->remove('login');
+           if( isset($_COOKIE['password']) ) $this->cookie->remove('password');
         }
         header('location: ?');
     }

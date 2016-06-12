@@ -11,29 +11,17 @@ namespace Util;
 
 class Cookie
 {
-    const COOKIE_LIFETIME = 604800;//(60*60*24*7) - tydzień
+    const COOKIE_LIFETIME = 2419200;//(60*60*24*7*4) - tydzień * 4
+    
 
-    /**
-     * Session constructor.
-     */
-    public function __construct($cookieName,$cookieValue, $cookieLifetime = self::COOKIE_LIFETIME)
-    {
-       $this->create($cookieName,$cookieValue, $cookieLifetime);
-    }
-
-    protected static function create($cookieName,$cookieValue, $cookieLifetime)
+    public function add($cookieName,$cookieValue, $cookieLifetime = self::COOKIE_LIFETIME)
     {
         setcookie($cookieName,$cookieValue, ((int)$cookieLifetime+time()) );
     }
 
-    public function add($name, $value)
-    {
-        $_COOKIE[$name] = $value;
-    }
-
     public function remove($name)
     {
-        if (isset($_COOKIE[$name])) unset($_COOKIE[$name]);
+        if (isset($_COOKIE[$name])) setcookie($name, "", time()-3600);
     }
 
     public function get($name, $default = null)

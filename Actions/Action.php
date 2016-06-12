@@ -5,6 +5,7 @@ namespace Actions;
 require_once 'ViewCalendarData.php';
 
 use Util\Config;
+use Util\Cookie;
 use Util\Request;
 use Util\Response;
 use Util\Session;
@@ -30,7 +31,7 @@ abstract class Action
     protected $cookie = null;
 
     /**
-     * @var Config
+     * @var Cookie
      */
     protected $config = null;
 
@@ -44,14 +45,14 @@ abstract class Action
     /**
      * @param Request $request
      * @param Session $session
-    // * @param Cookie $cookie
+     * @param Cookie $cookie
      * @param Config $config
      */
-    public function __construct(Request $request, Session $session)
+    public function __construct(Request $request, Session $session, Cookie $cookie)
     {
         $this->request = $request;
         $this->session = $session;
-        $this->cookie = $session;
+        $this->cookie = $cookie;
         $this->config = Config::getInstance();
 
         $this->response = new Response($this->session, $this->request);

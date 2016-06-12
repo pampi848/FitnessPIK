@@ -22,6 +22,10 @@ class Deactivation extends Action
                 if ($_SESSION['logged']['level']==1) {
                     Account::ban($this->request->get('id'),true);
                     $this->session->add('messages', ['class' => 'alert-success', 'content' => 'Konto dezaktywowane.']);
+                    if((int)$this->request->get('id')==(int)$_SESSION['logged']['id']){
+                        header('location: ?action=logout');
+                        die();
+                    }
                     header('location: ?action=users');
                 }
                 else{
