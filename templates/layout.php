@@ -35,6 +35,8 @@
     <link href="css/contact_style.css" rel="stylesheet">
     <link href="css/about_style.css" rel="stylesheet">
     <link href="css/login_css.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/animation.css">
+    <link rel="stylesheet" href="css/fontello.css">
     
     <!-- Fonts -->
     <link href='https://fonts.googleapis.com/css?family=Ubuntu+Condensed' rel='stylesheet' type='text/css'>
@@ -210,19 +212,23 @@
     <div id="sidebar_social">
         <ol id="socials">
             <li class="social">
-                <button type="button" class="btn btn-default btn-circle btn-lg l calendar-show"
-                        onclick="toggleCalendar()"><i class="glyphicon glyphicon-bell"></i></button>
+                <button type="button" class="btn btn-default btn-circle btn-lg calendar-show center-block text-center"
+                        onclick="toggleCalendar()"><span class="icon-calendar-empty fontello-icon-sidebar center-block text-center"></span></button>
             </li>
             <li class="social">
-                <button type="button" class="btn btn-default btn-circle btn-lg"><i class="glyphicon glyphicon-ok"></i>
+                <button type="button" id="fb" class="btn btn-default btn-circle btn-lg social-font"><span class="icon-facebook fontello-icon-sidebar center-block text-center">
                 </button>
             </li>
             <li class="social">
-                <button type="button" class="btn btn-default btn-circle btn-lg"><i class="glyphicon glyphicon-ok"></i>
+                <button type="button" id="yt" class="btn btn-default btn-circle btn-lg social-font"><span class="icon-youtube fontello-icon-sidebar center-block text-center">
                 </button>
             </li>
             <li class="social">
-                <button type="button" class="btn btn-default btn-circle btn-lg"><i class="glyphicon glyphicon-ok"></i>
+                <button type="button" id="tw" class="btn btn-default btn-circle btn-lg social-font"><span class="icon-twitter fontello-icon-sidebar center-block text-center">
+                </button>
+            </li>
+            <li class="social">
+                <button type="button" id="insta" class="btn btn-default btn-circle btn-lg social-font"><span class="icon-instagram fontello-icon-sidebar center-block text-center">
                 </button>
             </li>
         </ol>
