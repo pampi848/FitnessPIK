@@ -72,7 +72,7 @@ abstract class Action
        
         $content = $this->response->processTemplate($container, $content);
         $content = $this->response->processTemplate('layout', [
-            'title' => 'Strona fitness',
+            'title' => 'Fortitudo',
             'content' => $content,
             'calendarData' => $calendar,
             'currentAction' => $this->request->get('action','default')

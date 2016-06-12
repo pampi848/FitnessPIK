@@ -7,22 +7,6 @@ $(document).ready(function(){
     siteWidth = $(document).width();
     console.log(siteWidth);
 });
-/*$('td#test').click(function(){
-    var object = $(this);
-    var position = object.position();
-    var parent_one_position = $(object).parent().position();
-    var parent_two_position = $(object).parent().parent().position();
-    console.log('Parent one: top '+parent_one_position.top+' , left: '+parent_one_position.left+'; parent two: top '+parent_two_position.top+' , left: '+parent_two_position.left);
-    var ready_left = parent_one_position.left + 0 + position.left;
-    var ready_top = 0 + parent_two_position.top + position.top;
-    var dymek = $('#dymek');
-    var dymek_position = dymek.position();
-    console.log('Object - left: '+position.left+' top: '+position.top);
-    dymek.css('top', ready_top);
-    dymek.css('left', ready_left);
-    console.log('Dymek - left: '+dymek_position.left+' top: '+dymek_position.top);
-    console.log('work');
-    });*/
 $('td.calendar_day').click(function(){
     var object = $(this);
     var position = object.offset();
@@ -32,13 +16,6 @@ $('td.calendar_day').click(function(){
     var content = event(day, dymek);
     $('#dymek-content').html(content);
     dymek.toggle(500, function(){
-        /*console.log(sizeOfEvent());
-        var size = sizeOfEvent();
-        dymek.css('width', size[0]);
-        var dymekHeight = size[1] * size[2];
-        dymekHeight= dymekHeight * 1.3;
-        dymek.css('height', dymekHeight);
-        console.log(dymek.css('height'));*/
     });
     dymek.css('top', position.top);
     dymek.css('left', position.left);

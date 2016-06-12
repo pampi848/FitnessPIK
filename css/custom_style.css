@@ -100,7 +100,7 @@ span#com {
     width: 7vw;
     float: right;
     position: fixed;
-    bottom: 40vh;
+    bottom: 20vh;
     right: 0;
     border-radius: 84px 0px 0px 198px;
     -moz-border-radius: 84px 0px 0px 198px;
@@ -108,6 +108,9 @@ span#com {
     padding-bottom: 3vh;
     display: none;
     z-index: 100;
+    -webkit-box-shadow: -4px 6px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: -4px 6px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: -4px 6px 5px 0px rgba(0,0,0,0.75);
 }
 
 .carousel-caption {
@@ -128,7 +131,8 @@ span#com {
 }
 
 body {
-    background-image: url("../img/back.png");
+    background-image: url("../img/back-land.jpg");
+    background-attachment: scroll;
 }
 
 .container {
@@ -153,4 +157,61 @@ body {
 
 .news_row {
     margin-bottom: 5vh;
+}
+
+.style {
+    background: white;
+}
+
+ul.nav li.active a{
+    background-color: crimson !important;
+    color: white !important;
+}
+
+ul.nav li a:hover{
+    background-color: crimson !important;
+    opacity: 0.6 !important;
+    color: white !important;
+}
+
+ul.nav li.active a:hover{
+    background-color: none;
+    opacity: none !important;
+    color: white;
+}
+
+.navbar-form button{
+    background-color: crimson;
+    color: white;
+    border-radius: 80px 80px 80px 80px;
+    -moz-border-radius: 80px 80px 80px 80px;
+    -webkit-border-radius: 80px 80px 80px 80px;
+}
+
+.navbar-form button:hover{
+    background-color: crimson;
+    opacity: 0.6;
+    color: white;
+}
+
+input:focus{
+    outline: none;
+}
+
+div#div-forms button.btn-primary{
+    background-color: crimson !important;
+    border-color: #EC244C
+}
+
+.sticky
+{
+	width: 100%;
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 100;
+}
+
+.opacity-container {
+    opacity: 0.9;
 }

@@ -25,3 +25,23 @@ $('button.cat').click(function(){
     $('button.cat').removeClass('active');
     $('button#'+objectID).addClass('active');
 });
+
+$(document).ready(function() {
+   var stickyNavTop = $('.nav-layout').offset().top;
+
+   var stickyNav = function(){
+   var scrollTop = $(window).scrollTop();
+
+   if (scrollTop > stickyNavTop) { 
+      $('.nav-layout').addClass('sticky');
+   } else {
+      $('.nav-layout').removeClass('sticky');
+    }
+   };
+
+   stickyNav();
+
+   $(window).scroll(function() {
+      stickyNav();
+   });
+   });

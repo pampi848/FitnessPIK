@@ -25,21 +25,27 @@
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-
+    
+    <!-- Background pattern from subtlepatterns.com -->
     <link href="css/custom_style.css" rel="stylesheet">
     <link href="css/login_css.css" rel="stylesheet">
     <link href="css/arrow.css" rel="stylesheet">
     <link href="css/calendar_style.css" rel="stylesheet">
     <link href="css/circle-button-style.css" rel="stylesheet">
     <link href="css/profile-style.css" rel="stylesheet">
+    <link href="css/contact_style.css" rel="stylesheet">
+    <link href="css/about_style.css" rel="stylesheet">
+    
+    <!-- Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Ubuntu+Condensed' rel='stylesheet' type='text/css'>
 </head>
 <body>
-<div class="container-fluid">
-    <div class="jumbotron" style="margin-bottom: 0px;">
-        TO JEST MOJA STRONA //zrób coś z tym bo brzydko
+<div class="container-fluid opacity-container">
+    <div class="jumbotron" style="margin-bottom: 0px;background-image: url('img/banner-back.png');">
+        <img src="img/banner.png" class="img-responsive center-block">
     </div>
 </div>
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-default style nav-layout opacity-container">
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -50,7 +56,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="index.php">Fitness</a>
+            <a class="navbar-brand" href="index.php"><img src="img/logo-login.png" class="img-resposive" style="height: 42px; margin-top: -9px;"></a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -59,6 +65,8 @@
                 <li class="<?=$p['currentAction']=='default' ? 'active' : ''?>"><a href="?action=default">Home <span class="sr-only"></span></a></li>
                 <li class="<?=$p['currentAction']=='offer' ? 'active' : ''?>"><a href="?action=offer">Offer<span class="sr-only"></span></a></li>
                 <li class="<?=$p['currentAction']=='allnews' ? 'active' : ''?>"><a href="?action=allnews" onclick="console.log(document.documentElement.clientWidth)">News</a></li>
+                <li class="<?=$p['currentAction']=='aboutus' ? 'active' : ''?>"><a href="?action=aboutus">O nas <span class="sr-only"></span></a></li>
+                <li class="<?=$p['currentAction']=='aboutus' ? 'contact' : ''?>"><a href="?action=contact">Kontakt <span class="sr-only"></span></a></li>
                 <?php if ((isset($_SESSION['logged'])) && ($_SESSION['logged']['online'] == true)) { ?>
                     <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
@@ -197,7 +205,7 @@
     <div class="panel-body" id="dymek-content">
     </div>
 </div>
-<div class="container" id="content">
+<div class="container opacity-container" id="content">
     <!-- BEGIN #SIDEBAR -->
     <div id="sidebar_social">
         <ol id="socials">
