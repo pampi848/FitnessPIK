@@ -6,16 +6,16 @@
             <div id="socials-contact">
                 <div class="row margin text-center">
                     <div class="col-md-3">
-                        <div class="social-brick" id="fb">fb</div>
+                        <div class="social-brick" id="fb"><span class="icon-facebook fontello-icon-sidebar center-block text-center"></span></div>
                     </div>
                     <div class="col-md-3">
-                        <div class="social-brick" id="yt">yt</div>
+                        <div class="social-brick" id="yt"><span class="icon-youtube fontello-icon-sidebar center-block text-center"></span></div>
                     </div>
                     <div class="col-md-3">
-                        <div class="social-brick" id="tw">tw</div>
+                        <div class="social-brick" id="tw"><span class="icon-twitter fontello-icon-sidebar center-block text-center"></span></div>
                     </div>
                     <div class="col-md-3">
-                        <div class="social-brick" id="insta">insta</div>
+                        <div class="social-brick" id="insta"><span class="icon-instagram fontello-icon-sidebar center-block text-center"></span></div>
                     </div>
                 </div>
             </div>
