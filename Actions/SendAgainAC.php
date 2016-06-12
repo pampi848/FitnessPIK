@@ -26,7 +26,7 @@ class SendAgainAC extends Action
                 $body = "Link aktywanycjny: http://localhost/FitnessPIK/?action=activation&&code={$activated['activationCode']}";
                 smtpmailer($email, FROM, FROMNAME, $subject, $body);
 
-                $_SESSION['messages'][0] = ['class' => 'alert-success', 'content' => 'Wysłano link aktywacyjny!'];
+                $this->session->add('messages', ['class' => 'alert-success', 'content' => 'Wysłano link aktywacyjny!']);
                 header('location: ?action=users');
                 die();
         }
@@ -42,11 +42,11 @@ class SendAgainAC extends Action
                 $body = "Link aktywanycjny: http://localhost/FitnessPIK/?action=activation&&code={$activated['activationCode']}";
                 smtpmailer($email, FROM, FROMNAME, $subject, $body);
 
-                $_SESSION['messages'][0] = ['class' => 'alert-success', 'content' => 'Wysłano link aktywacyjny! Aby aktywować konto kliknij w link w wiadomości na twoim mailu.'];
+                $this->session->add('messages', ['class' => 'alert-success', 'content' => 'Wysłano link aktywacyjny! Aby aktywować konto kliknij w link w wiadomości na twoim mailu.']);
             }
         }
         else{
-            $_SESSION['messages'][0] = ['class' => 'alert-warning', 'content' => 'Aby wysłać link aktywacyjny potrzeba loginu, hasła oraz emaila!'];
+            $this->session->add('messages', ['class' => 'alert-warning', 'content' => 'Aby wysłać link aktywacyjny potrzeba loginu, hasła oraz emaila!']);
         }
         header('location: ?');
         }

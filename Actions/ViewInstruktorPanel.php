@@ -24,7 +24,7 @@ class ViewInstruktorPanel extends Action
             $this->loadContent('instruktorPanel',$zajecia);
         }
         elseif (isset($_SESSION['logged']['level'])&&($_SESSION['logged']['level']==1)){
-            $_SESSION['messages'][0] = ['class' => 'alert-warning', 'content' => 'Nie ma czego wyświetlić, nie jesteś instruktorem!'];
+            $this->session->add('messages', ['class' => 'alert-warning', 'content' => 'Nie ma czego wyświetlić, nie jesteś instruktorem!']);
             header("location: index.php");
         }
         else{

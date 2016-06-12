@@ -3,9 +3,16 @@
   <component name="ChangeListManager">
     <list default="true" id="127cc81d-169e-40f7-b176-a1349521a095" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/custom_style.css" afterPath="$PROJECT_DIR$/css/custom_style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Actions/ActivationLink.php" afterPath="$PROJECT_DIR$/Actions/ActivationLink.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Actions/ChangePermissions.php" afterPath="$PROJECT_DIR$/Actions/ChangePermissions.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Actions/Deactivation.php" afterPath="$PROJECT_DIR$/Actions/Deactivation.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Actions/LogIn.php" afterPath="$PROJECT_DIR$/Actions/LogIn.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Actions/LogOut.php" afterPath="$PROJECT_DIR$/Actions/LogOut.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Actions/SendAgainAC.php" afterPath="$PROJECT_DIR$/Actions/SendAgainAC.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Actions/ViewInstruktorPanel.php" afterPath="$PROJECT_DIR$/Actions/ViewInstruktorPanel.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Actions/ViewNewsAdd.php" afterPath="$PROJECT_DIR$/Actions/ViewNewsAdd.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/instruktorPanel.php" afterPath="$PROJECT_DIR$/templates/instruktorPanel.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/layout.php" afterPath="$PROJECT_DIR$/templates/layout.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/newsForm.php" afterPath="$PROJECT_DIR$/templates/newsForm.php" />
     </list>
     <ignored path="FitnessPIK.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -34,16 +41,22 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="layout.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ViewNewsAdd.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Actions/ViewNewsAdd.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="244">
+              <caret line="21" column="204" selection-start-line="21" selection-start-column="204" selection-end-line="21" selection-end-column="204" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="layout.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/layout.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="622">
-              <caret line="261" column="41" selection-start-line="261" selection-start-column="41" selection-end-line="261" selection-end-column="41" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="279">
+              <caret line="78" column="52" selection-start-line="78" selection-start-column="52" selection-end-line="78" selection-end-column="52" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -60,7 +73,6 @@
         <option value="$PROJECT_DIR$/Model/Zajecia.php" />
         <option value="$PROJECT_DIR$/Util/Cookie.php" />
         <option value="$PROJECT_DIR$/Util/Session.php" />
-        <option value="$PROJECT_DIR$/Actions/ActivationLink.php" />
         <option value="$PROJECT_DIR$/js/login_script.js" />
         <option value="$PROJECT_DIR$/news.php" />
         <option value="$PROJECT_DIR$/Actions/ViewCalendarData.php" />
@@ -68,36 +80,28 @@
         <option value="$PROJECT_DIR$/Actions/ViewNewsSingle.php" />
         <option value="$PROJECT_DIR$/Actions/ViewNewsAll.php" />
         <option value="$PROJECT_DIR$/templates/index.php" />
-        <option value="$PROJECT_DIR$/Actions/LogOut.php" />
         <option value="$PROJECT_DIR$/templates/newsSingle.php" />
         <option value="$PROJECT_DIR$/templates/gallery.php" />
         <option value="$PROJECT_DIR$/templates/newsAll.php" />
         <option value="$PROJECT_DIR$/Models/News.php" />
         <option value="$PROJECT_DIR$/templates/table.html" />
-        <option value="$PROJECT_DIR$/Actions/ViewNewsAdd.php" />
         <option value="$PROJECT_DIR$/css/custom_style.css" />
         <option value="$PROJECT_DIR$/Actions/ActionIndex.php" />
         <option value="$PROJECT_DIR$/templates/ewgfwerg.php" />
         <option value="$PROJECT_DIR$/Actions/ViewProfile.php" />
         <option value="$PROJECT_DIR$/Actions/ViewOffer.php" />
         <option value="$PROJECT_DIR$/templates/cennik.php" />
-        <option value="$PROJECT_DIR$/Actions/ViewInstruktorPanel.php" />
         <option value="$PROJECT_DIR$/Models/Zajecia.php" />
         <option value="$PROJECT_DIR$/templates/profile.php" />
         <option value="$PROJECT_DIR$/templates/signForms.php" />
-        <option value="$PROJECT_DIR$/Actions/Deactivation.php" />
         <option value="$PROJECT_DIR$/Actions/SendAgainAM.php" />
         <option value="$PROJECT_DIR$/Util/Response.php" />
         <option value="$PROJECT_DIR$/Util/Response404.php" />
         <option value="$PROJECT_DIR$/Actions/Register.php" />
         <option value="$PROJECT_DIR$/test.php" />
         <option value="$PROJECT_DIR$/Accounts/User.php" />
-        <option value="$PROJECT_DIR$/Actions/LogIn.php" />
-        <option value="$PROJECT_DIR$/Actions/SendAgainAC.php" />
-        <option value="$PROJECT_DIR$/templates/instruktorPanel.php" />
         <option value="$PROJECT_DIR$/Actions/Controller.php" />
         <option value="$PROJECT_DIR$/Actions/ViewUsersAll.php" />
-        <option value="$PROJECT_DIR$/Actions/ChangePermissions.php" />
         <option value="$PROJECT_DIR$/Accounts/Account.php" />
         <option value="$PROJECT_DIR$/templates/users.php" />
         <option value="$PROJECT_DIR$/Actions/Action.php" />
@@ -106,7 +110,16 @@
         <option value="$PROJECT_DIR$/Actions/ViewContact.php" />
         <option value="$PROJECT_DIR$/Util/Config.php" />
         <option value="$PROJECT_DIR$/templates/newsForm.php" />
+        <option value="$PROJECT_DIR$/templates/instruktorPanel.php" />
+        <option value="$PROJECT_DIR$/Actions/ActivationLink.php" />
         <option value="$PROJECT_DIR$/templates/layout.php" />
+        <option value="$PROJECT_DIR$/Actions/ChangePermissions.php" />
+        <option value="$PROJECT_DIR$/Actions/Deactivation.php" />
+        <option value="$PROJECT_DIR$/Actions/LogIn.php" />
+        <option value="$PROJECT_DIR$/Actions/LogOut.php" />
+        <option value="$PROJECT_DIR$/Actions/SendAgainAC.php" />
+        <option value="$PROJECT_DIR$/Actions/ViewInstruktorPanel.php" />
+        <option value="$PROJECT_DIR$/Actions/ViewNewsAdd.php" />
       </list>
     </option>
   </component>
@@ -121,7 +134,8 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="y" value="-1000" />
+    <option name="x" value="1280" />
+    <option name="y" value="24" />
     <option name="width" value="1280" />
     <option name="height" value="1000" />
   </component>
@@ -181,20 +195,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="FitnessPIK" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FitnessPIK" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FitnessPIK" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Util" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -350,15 +350,15 @@
       <workItem from="1465590350879" duration="6508000" />
       <workItem from="1465641582446" duration="42551000" />
       <workItem from="1465741547558" duration="3122000" />
-      <workItem from="1465746348290" duration="1675000" />
+      <workItem from="1465746348290" duration="7920000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="308075000" />
+    <option name="totallyTimeSpent" value="314320000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="-1000" width="1280" height="1000" extended-state="6" />
+    <frame x="1280" y="24" width="1280" height="1000" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2359375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -403,41 +403,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/css/custom_style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Actions/LogOut.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="18" column="8" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Util/Request.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="23" column="24" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Actions/ViewProfile.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="21" column="44" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/cennik.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -445,45 +410,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Actions/ViewOffer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="22" column="1" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Actions/ViewInstruktorPanel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="20" column="7" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="84" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Actions/ActionIndex.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="1" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Models/Zajecia.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="245">
           <caret line="34" column="29" selection-start-line="34" selection-start-column="29" selection-end-line="35" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Actions/ViewCalendarData.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="17" column="47" selection-start-line="17" selection-start-column="47" selection-end-line="17" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Actions/ActivationLink.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="26" selection-end-column="29" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -515,31 +446,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Actions/ActivationMail.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="9" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Actions/Deactivation.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="18" column="7" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="77" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Actions/Register.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="5" column="28" selection-start-line="5" selection-start-column="28" selection-end-line="8" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Actions/SendAgainAC.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="28" column="111" selection-start-line="28" selection-start-column="111" selection-end-line="28" selection-end-column="111" />
         </state>
       </provider>
     </entry>
@@ -550,31 +460,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/instruktorPanel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="20" column="20" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Util/Response.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1164">
           <caret line="47" column="46" selection-start-line="47" selection-start-column="46" selection-end-line="47" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Actions/LogIn.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Actions/ChangePermissions.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="18" column="101" selection-start-line="18" selection-start-column="101" selection-end-line="18" selection-end-column="101" />
         </state>
       </provider>
     </entry>
@@ -610,24 +499,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Actions/ViewNewsAll.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="24" column="1" selection-start-line="0" selection-start-column="0" selection-end-line="24" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/lessonadd.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Actions/ViewLessonAdd.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="18" column="50" selection-start-line="18" selection-start-column="50" selection-end-line="18" selection-end-column="50" />
         </state>
       </provider>
     </entry>
@@ -642,13 +517,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2226">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Actions/Controller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="37" column="8" selection-start-line="37" selection-start-column="8" selection-end-line="37" selection-end-column="8" />
         </state>
       </provider>
     </entry>
@@ -677,6 +545,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
           <caret line="12" column="20" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -684,14 +553,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18">
           <caret line="1" column="77" selection-start-line="1" selection-start-column="77" selection-end-line="1" selection-end-column="77" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Actions/ViewUsersAll.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="19" column="12" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
           <folding />
         </state>
       </provider>
@@ -728,18 +589,113 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Actions/ViewNewsAdd.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="474">
-          <caret line="48" column="44" selection-start-line="48" selection-start-column="36" selection-end-line="48" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/newsForm.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img/profile/default.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Actions/Action.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1206">
+          <caret line="67" column="57" selection-start-line="67" selection-start-column="57" selection-end-line="67" selection-end-column="57" />
+          <folding>
+            <element signature="e#65#81#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/instruktorPanel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="810">
+          <caret line="45" column="64" selection-start-line="45" selection-start-column="64" selection-end-line="45" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Actions/ActionIndex.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" column="1" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Actions/ActivationMail.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="9" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Actions/ActivationLink.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="16" column="18" selection-start-line="16" selection-start-column="18" selection-end-line="17" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Actions/ChangePermissions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="20" column="128" selection-start-line="20" selection-start-column="128" selection-end-line="20" selection-end-column="128" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Actions/Controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="37" column="8" selection-start-line="37" selection-start-column="8" selection-end-line="37" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Actions/Deactivation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="721">
+          <caret line="47" column="114" selection-start-line="47" selection-start-column="114" selection-end-line="47" selection-end-column="114" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Actions/LogIn.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="31" column="127" selection-start-line="31" selection-start-column="127" selection-end-line="31" selection-end-column="127" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Actions/LogOut.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="21" column="15" selection-start-line="21" selection-start-column="15" selection-end-line="21" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Actions/SendAgainAC.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="34" column="19" selection-start-line="34" selection-start-column="19" selection-end-line="34" selection-end-column="19" />
           <folding />
         </state>
       </provider>
@@ -752,6 +708,70 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Actions/ViewCalendarData.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="17" column="47" selection-start-line="17" selection-start-column="47" selection-end-line="17" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Actions/ViewInstruktorPanel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="26" column="139" selection-start-line="26" selection-start-column="139" selection-end-line="26" selection-end-column="139" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Actions/ViewLessonAdd.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="18" column="50" selection-start-line="18" selection-start-column="50" selection-end-line="18" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Actions/ViewNewsAll.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="24" column="1" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Actions/ViewNewsSingle.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Actions/ViewOffer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="22" column="1" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Actions/ViewProfile.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="22" column="26" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Actions/ViewUsersAll.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="24" column="8" selection-start-line="24" selection-start-column="8" selection-end-line="24" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Actions/ViewContact.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
@@ -760,25 +780,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Actions/Action.php">
+    <entry file="file://$PROJECT_DIR$/templates/layout.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="67" column="57" selection-start-line="67" selection-start-column="57" selection-end-line="67" selection-end-column="57" />
-          <folding>
-            <element signature="e#65#81#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="279">
+          <caret line="78" column="52" selection-start-line="78" selection-start-column="52" selection-end-line="78" selection-end-column="52" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/layout.php">
+    <entry file="file://$PROJECT_DIR$/Actions/ViewNewsAdd.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="622">
-          <caret line="261" column="41" selection-start-line="261" selection-start-column="41" selection-end-line="261" selection-end-column="41" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="244">
+          <caret line="21" column="204" selection-start-line="21" selection-start-column="204" selection-end-line="21" selection-end-column="204" />
+          <folding />
         </state>
       </provider>
     </entry>

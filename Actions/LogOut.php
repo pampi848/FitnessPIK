@@ -19,7 +19,7 @@ class LogOut extends Action
         if (isset($_SESSION['logged'])) {
             session_destroy();
             session_start();
-            $_SESSION['messages'][0] = ['class' => 'alert-info', 'content' => 'Wylogowano pomyślnie.'];
+            $this->session->add('messages', ['class' => 'alert-info', 'content' => 'Wylogowano pomyślnie.']);
         }
 
         header('location: ?');

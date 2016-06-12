@@ -62,7 +62,7 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-
+                
                 <li class="<?=isset($p['currentAction']) && $p['currentAction']=='default' ? 'active' : ''?>"><a href="?action=default">Home <span class="sr-only"></span></a></li>
                 <li class="<?=isset($p['currentAction']) && $p['currentAction']=='offer' ? 'active' : ''?>"><a href="?action=offer">Offer<span class="sr-only"></span></a></li>
                 <li class="<?=isset($p['currentAction']) && $p['currentAction']=='allnews' ? 'active' : ''?>"><a href="?action=allnews" onclick="console.log(document.documentElement.clientWidth)">News</a></li>
@@ -230,11 +230,9 @@
     <!-- END # SIDEBAR -->
     <?php if (isset($_SESSION['messages']) && is_array($_SESSION['messages'])) { ?>
         <!-- BEGIN #MESSAGES -->
-        <?php foreach ($_SESSION['messages'] as $message) { ?>
-            <div class="alert <?= isset($message['class']) ? $message['class'] : '' ?>"
-                 <?= isset($message['style']) ? "style='{$message['style']}'" : '' ?>role="alert" id="porn"
-                 onclick="alert()"><?= $message['content'] ?><span id="clicker">X</span></div>
-        <?php } ?>
+            <div class="alert <?= isset($_SESSION['messages']['class']) ? $_SESSION['messages']['class'] : '' ?>"
+                 <?= isset($_SESSION['messages']['style']) ? "style='{$_SESSION['messages']['style']}'" : '' ?>role="alert" id="porn"
+                 onclick="alert()"><?= $_SESSION['messages']['content'] ?><span id="clicker">X</span></div>
         <?php unset($_SESSION['messages']); ?>
         <!-- END #MESSAGES -->
     <?php } ?>

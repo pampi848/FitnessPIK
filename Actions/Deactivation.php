@@ -21,19 +21,19 @@ class Deactivation extends Action
             if ( ($aktywne['activated']==1) && ($aktywne['activationCode']!='disable') ) {
                 if ($_SESSION['logged']['level']==1) {
                     Account::ban($this->request->get('id'),true);
-                    $_SESSION['messages'][0] = ['class' => 'alert-success', 'content' => 'Konto dezaktywowane.'];
+                    $this->session->add('messages', ['class' => 'alert-success', 'content' => 'Konto dezaktywowane.']);
                     header('location: ?action=users');
                 }
                 else{
                     Account::ban($this->request->get('id'));
-                    $_SESSION['messages'][0] = ['class' => 'alert-success', 'content' => 'Konto dezaktywowane.'];
+                    $this->session->add('messages', ['class' => 'alert-success', 'content' => 'Konto dezaktywowane.']);
                     header('location: ?action=logout');
                 }
             }
             elseif( ($aktywne['activated']==0) && ($aktywne['activationCode']!='disable') ){
                 $code = $this->randCode();
                 Account::unban($this->request->get('id'),$code);
-                $_SESSION['messages'][0] = ['class' => 'alert-success', 'content' => 'Konto aktywowane!'];
+                $this->session->add('messages', ['class' => 'alert-success', 'content' => 'Konto aktywowane!']);
                 if ($_SESSION['logged']['level'] == 1) {
                     header('location: ?action=users');
                 } else {
@@ -45,7 +45,7 @@ class Deactivation extends Action
                if($_SESSION['logged']['level']==1){
                    $code = $this->randCode();
                    Account::unban($this->request->get('id'),$code);
-                   $_SESSION['messages'][0] = ['class' => 'alert-success', 'content' => 'Konto aktywowane!'];
+                   $this->session->add('messages', ['class' => 'alert-success', 'content' => 'Konto aktywowane!']);
                    header('location: ?action=users');
                }
             }

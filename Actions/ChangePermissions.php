@@ -17,7 +17,8 @@ class ChangePermissions extends Action
     {
         if((isset($_SESSION['logged']['level'])) && ($_SESSION['logged']['level'] == 1) && (isset($_GET['id']) && (isset($_GET['level'])) )){
             Account::changePremissions((int)$this->request->get('id'),(int)$this->request->get('level'));
-            $_SESSION['messages'][0] = ['class' => 'alert-success', 'content' => 'Zmieniono uprawnienia wybranego konta.'];
+
+            $this->session->add('messages', ['class' => 'alert-success', 'content' => 'Zmieniono uprawnienia wybranego konta.']);
             header('location: ?action=users');
         }
         else{

@@ -43,7 +43,7 @@
                             <div class="item <?= ($i == 0) ? 'active' : '' ?>" style="font-size: large; min-height: 300px">
                                 <h3><?= $zajecie['nazwa_zajec'] ?></h3>
 
-                                <table class="table text-center"">
+                                <table class="table text-center">
                                     <tr>
                                         <th class="text-center">Dzień tygodnia</th>
                                         <th class="text-center">Godzina</th>
