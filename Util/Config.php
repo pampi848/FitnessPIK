@@ -68,6 +68,7 @@ class Config
             'sendactivation' => 'Actions\\SendAgainAC',
             'uprawnienia' => 'Actions\\ChangePermissions',
             'addlesson' => 'Actions\\ViewLessonAdd',
+            'lessonaddprocess' => 'Actions\\AddLesson',
             'contact' => 'Actions\\ViewContact',
             'aboutus' => 'Actions\\ViewAboutUs'
         ];

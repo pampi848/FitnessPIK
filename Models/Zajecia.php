@@ -288,7 +288,7 @@ class Zajecia
     }
 
     /**
-     * @param int $cena
+     * @param array $cena
      */
     public function setCena($cena)
     {

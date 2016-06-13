@@ -10,51 +10,40 @@ namespace Actions;
 
 require_once "autoload.php";
 
-use Accounts\Account;
-use Accounts\User;
+use Models\Zajecia;
 
 class EditProfile extends Action
 {
     function doExecute()
     {
-        if( isset($_SESSION['logged']) && isset($_SESSION['data']['id']) && isset($_POST['Edit']) ){
+        if( isset($_SESSION['logged']['level']) && $_SESSION['logged']['level']==1 && isset($_POST['lesson']) ){
 
-            $konto = $_POST['Edit'];
+            $lesson = $_POST['lesson'];
             $checker = '';
 
-            $checker .= isset($konto['mail']) && has_spaces($konto['mail']) && is_mail($konto['mail']) ? '' : 'Zły mail! <br/>';
-            $checker .= isset($konto['phone']) && is_numeric($konto['phone']) && ($konto['phone'] > 0) && (strlen((string)$konto['phone']) == 9) ? '' : 'Zły numer telefonu! <br/>';
-            $checker .= isset($konto['name']) && has_spaces($konto['name']) && (mb_strlen($konto['name'], 'utf-8') > 3) ? '' : 'Złe imię! <br/>';
-            $checker .= isset($konto['lastname']) && has_spaces($konto['lastname']) && (mb_strlen($konto['lastname'], 'utf-8') > 3) ? '' : 'Złe nazwisko! <br/>';
-            $checker .= isset($konto['place']) && (mb_strlen($konto['place'], 'utf-8') > 3) ? '' : 'Zła miejscowość! <br/>'; // ma spacje bo np Dębnica Kaszubska
-            $checker .= isset($konto['street']) && has_spaces($konto['street']) && (mb_strlen($konto['street'], 'utf-8') > 3) ? '' : 'Zła ulica! <br/>';
-            $checker .= isset($konto['home']) && is_numeric($konto['home']) && ($konto['home'] > 0) ? '' : 'Zły nr. domu! <br/>';
-            $checker .= isset($konto['flat']) && is_numeric($konto['flat']) && ($konto['flat'] > 0) ? '' : 'Zły nr. mieszkania! <br/>';
-            $checker .= isset($konto['post']) && is_zipcode($konto['post']) ? '' : 'Zły kod pocztowy! <br/>';
-            $checker .= isset($konto['date']) && checkdate(substr($konto['date'], 5, -3), substr($konto['date'], 8), substr($konto['date'], 0, -6)) ? '' : 'Zła data urodzin! <br/>'; // $miesiąc, $dzień, $rok
+            $checker .= isset($lesson['name']) && has_spaces($lesson['name']) && (mb_strlen($lesson['name'], 'utf-8') > 3) ? '' : 'Zła nazwa! <br/>';
+            $checker .= isset($lesson['opis']) && (mb_strlen($lesson['opis'], 'utf-8') > 3) ? '' : 'Zły Opis! <br/>';
+            $checker .= isset($lesson['idInstruktor']) && is_numeric($lesson['idInstruktor']) && ($lesson['idInstruktor'] > 0) ? '' : 'Złe id instruktora! <br/>';
+            $checker .= isset($lesson['cena']) && is_numeric($lesson['cena']) && ($lesson['cena'] > 0) ? '' : 'Zła cena! <br/>';
+            $checker .= isset($lesson['promocja']) && is_numeric($lesson['promocja']) && ($lesson['promocja'] > 0) && ($lesson['promocja'] <= 1)? '' : 'Zła promocja! <br/>';
+            $checker .= isset($lesson['wynagrodzenie']) && is_numeric($lesson['wynagrodzenie']) && ($lesson['wynagrodzenie'] > 0) && ($lesson['wynagrodzenie'] > 1)? '' : 'Złe wynagrodzenie! <br/>';
 
             if (empty($checker)) {
-                $nowekonto = new User();
+                $nowalekcja = new Zajecia();
                 
-                $nowekonto->setEmail(addslashes(mb_strtolower($konto['mail'])));
-                $nowekonto->setNrTel(addslashes($konto['phone']));
-                $nowekonto->setImie(addslashes($konto['name']));
-                $nowekonto->setNazwisko(addslashes($konto['lastname']));
-                $nowekonto->setMiejscowosc(addslashes($konto['place']));
-                $nowekonto->setUlica(addslashes($konto['street']));
-                $nowekonto->setNrDomu(addslashes($konto['home']));
-                $nowekonto->setNrMieszkania(addslashes($konto['flat']));
-                $nowekonto->setKodPocztowy(addslashes($konto['post']));
-                $nowekonto->setDataUrodzin(addslashes($konto['date']));
+                $nowalekcja->setNazwa(addslashes($lesson['name']));
+                $nowalekcja->setOpis(addslashes($lesson['opis']));
+                $nowalekcja->setIdInstruktor(addslashes($lesson['idInstruktor']));
+                $nowalekcja->setCena(['cena' => addslashes($lesson['cena']), 'promocja' => addslashes($lesson['promocja'])]);
+                $nowalekcja->setWynagrodzenieInstruktora(addslashes($lesson['wynagrodzenie']));
 
-                $nowekonto->updateAccountIntoSQL($_SESSION['data']['id']);
+                $nowalekcja->pushNewZajeciaToDB();
             } else {
                 $checker .= 'Spróbuj jeszcze raz.';
                 $this->session->add('messages', ['class' => 'alert-danger', 'content' => $checker]);
             }
             
-            header("location: ?action=profile&&id={$_SESSION['data']['id']}");
-            unset($_SESSION['data']['id']);
+            header("location: ?action=lessonadd");
             die();
         }
         header('location: ?');
