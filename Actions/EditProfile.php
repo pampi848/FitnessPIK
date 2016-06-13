@@ -20,8 +20,6 @@ class EditProfile extends Action
         if( isset($_SESSION['logged']) && isset($_SESSION['data']['id']) && isset($_POST['Edit']) ){
 
             $konto = $_POST['Edit'];
-            var_dump($konto);
-            die();
             $checker = '';
 
             $checker .= isset($konto['mail']) && has_spaces($konto['mail']) && is_mail($konto['mail']) ? '' : 'Zły mail! <br/>';
@@ -35,7 +33,7 @@ class EditProfile extends Action
             $checker .= isset($konto['post']) && is_zipcode($konto['post']) ? '' : 'Zły kod pocztowy! <br/>';
             $checker .= isset($konto['date']) && checkdate(substr($konto['date'], 5, -3), substr($konto['date'], 8), substr($konto['date'], 0, -6)) ? '' : 'Zła data urodzin! <br/>'; // $miesiąc, $dzień, $rok
 
-            if (empty($checker)) { //TODO: przerobić to na wzykłego konstrukta XD
+            if (empty($checker)) {
                 $nowekonto = new User();
                 
                 $nowekonto->setEmail(addslashes(mb_strtolower($konto['mail'])));
@@ -56,6 +54,7 @@ class EditProfile extends Action
             }
             
             header("location: ?action=profile&&id={$_SESSION['data']['id']}");
+            unset($_SESSION['data']['id']);
             die();
         }
         header('location: ?');

@@ -175,24 +175,6 @@ abstract class Account
 
         return $konto;
     }
-    public static function fetchMyProfile($login)
-    {
-        try {
-            $pdo = Database::getInstance()->getConnection();
-
-            $stmt = $pdo->prepare("SELECT `id`,`login`,`email`,`nrTel`,`imie`,`nazwisko`,`miejscowosc`,`ulica`,`nrDomu`,`nrMieszkania`,`kodPocztowy`,`dataUrodzin` FROM `account` WHERE `login`=:login");
-
-            $stmt->bindValue(':login', $login, PDO::PARAM_STR);
-            $stmt->execute();
-            $konto = new User();
-            $konto = $stmt->fetch(PDO::FETCH_ASSOC);
-        } catch (PDOException $exception) {
-            // TODO: log database errors
-            throw $exception;
-        }
-
-        return $konto;
-    }
 
     public static function fetchUserProfile($id)
     {
@@ -252,7 +234,7 @@ abstract class Account
     {
         try {
             $pdo = Database::getInstance()->getConnection();
-            $stmt = $pdo->prepare(" UPDATE `account` SET (`email`=?,`nrTel`=?,`imie`=?,`nazwisko`=?,`miejscowosc`=?,`ulica`=?,`nrDomu`=?,`nrMieszkania`=?,`kodPocztowy`=?,`dataUrodzin`=?) WHERE `id`=:id");
+            $stmt = $pdo->prepare(" UPDATE `account` SET `email`=?,`nrTel`=?,`imie`=?,`nazwisko`=?,`miejscowosc`=?,`ulica`=?,`nrDomu`=?,`nrMieszkania`=?,`kodPocztowy`=?,`dataUrodzin`=? WHERE `id`=?");
             
             $stmt->bindValue(1, $this->getEmail(), PDO::PARAM_STR);
             $stmt->bindValue(2, $this->getNrTel(), PDO::PARAM_STR);
@@ -265,7 +247,7 @@ abstract class Account
             $stmt->bindValue(9, $this->getKodPocztowy(), PDO::PARAM_STR);
             $stmt->bindValue(10, $this->getDataUrodzin(), PDO::PARAM_STR);
 
-            $stmt->bindValue(':id', $id, PDO::PARAM_INT);
+            $stmt->bindValue(11, $id, PDO::PARAM_INT);
 
             $stmt->execute();
         } catch (PDOException $exception) {

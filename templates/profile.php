@@ -1,3 +1,4 @@
+ <?php if (isset($p)){ ?>
         <div class="profile-content">
             <div class="row upper-profile">
                 <div class="col-md-4">
@@ -5,7 +6,7 @@
             <img src="<?=file_exists("img/profile/{$p['login']}.jpg")? "img/profile/{$p['login']}.jpg" : "img/profile/default.png"?>" alt="..." class="img-thumbnail img-responsive center-block">
                  <div class="row">
                     <div class="col-md-12">
-                        <form action="" method="" class="form-horizontal">
+                        <form action="?action=profile" method="post" class="form-horizontal">
                             <div class="row margin-row">
                                 <div class="col-md-12">
                                     <input class="center-block" type="file" name="fileToUpload" id="fileToUpload">
@@ -45,8 +46,8 @@
                                            if(isset($_GET['id'])) {
                                                $_SESSION['data']['id'] = $_GET['id'];
                                            }
-                                           elseif(isset($_SESSION['logged']['level'])){
-                                               $_SESSION['data']['id'] = $_SESSION['logged']['level'];
+                                           elseif(isset($_SESSION['logged']['id'])){
+                                               $_SESSION['data']['id'] = $_SESSION['logged']['id'];
                                            }
                                        ?>
                                        <div class="row text-center form-group">
@@ -112,3 +113,4 @@
                 </div>
             </div>
         </div>
+ <?php } ?>
