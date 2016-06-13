@@ -129,7 +129,6 @@ class Zajecia
                 $zajeciaO[$zajecie['id']]->setWynagrodzenieInstruktora($zajecie['wynagrodzenie_miesieczne']);
                 $zajeciaO[$zajecie['id']]->setData(self::fetchDateByIdZajecia($zajecie['id']));
                 $zajeciaO[$zajecie['id']]->setCena(self::fetchCennikByIdZajecia($zajecie['id']));
-
             }
             unset($zajecia);
         } catch (PDOException $exception) {

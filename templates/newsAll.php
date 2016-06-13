@@ -9,7 +9,7 @@
                     <div class="col-md-5 <?= ($i%2==0) ? '' : 'col-md-offset-2'?> news">
                         <div class="row margin-row">
                             <div class="col-md-4">
-                                <img src='<?="img/{$news['kategoria']}.jpg"?>' alt="..." class="img-thumbnail">
+                                <img src='<?="img/{$news['kategoria']}.png"?>' alt="..." class="img-thumbnail">
                             </div>
                             <div class="col-md-8">
                                 <div class="row">
