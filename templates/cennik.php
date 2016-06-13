@@ -54,39 +54,6 @@
                     </div>
                     <?php } ?>
                 </td>
-                <!--
-                <td>
-                    <?php foreach ($oferta->data as $data){ ?>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <h4><?=$data['dzienTygodnia'].' '.str_replace(".",":",$data['godzina'])?></h4>
-                            </div>
-                    </div>
-                            <?php if (isset($_SESSION['logged']['level']) && $_SESSION['logged']['level']==1){ ?>
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <button class="btn btn-warning">Usuń Termin</button>
-                                </div>
-                            </div>
-                            <?php } ?>
-                    <?php } ?>
-                    <?php if (isset($_SESSION['logged']['level']) && $_SESSION['logged']['level']==1){ ?>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <button class="btn btn-primary">Dodaj termin</button>
-                            </div>
-                        </div>
-                    <?php } ?>
-                </td>
-                    <td>
-                        <?php foreach ($oferta->data as $data){?>
-                            <div class="row">
-                                <div class="col-md-12">
-                                <h4><?=$data['sala'];?></h4>
-                                </div>
-                            </div>
-                        <?php }?>
-                    </td> -->
                 <td>
                     <div class="row">
                         <div class="col-md-12">
