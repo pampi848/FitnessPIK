@@ -10,9 +10,10 @@ namespace Actions;
 
 require_once "autoload.php";
 
+use Accounts\Account;
 use Models\Zajecia;
 
-class EditProfile extends Action
+class AddLesson extends Action
 {
     function doExecute()
     {
@@ -23,7 +24,7 @@ class EditProfile extends Action
 
             $checker .= isset($lesson['name']) && has_spaces($lesson['name']) && (mb_strlen($lesson['name'], 'utf-8') > 3) ? '' : 'Zła nazwa! <br/>';
             $checker .= isset($lesson['opis']) && (mb_strlen($lesson['opis'], 'utf-8') > 3) ? '' : 'Zły Opis! <br/>';
-            $checker .= isset($lesson['idInstruktor']) && is_numeric($lesson['idInstruktor']) && ($lesson['idInstruktor'] > 0) ? '' : 'Złe id instruktora! <br/>';
+            $checker .= isset($lesson['idInstruktor']) && is_numeric($lesson['idInstruktor']) && (Account::checkLevel($lesson['idInstruktor'])==2) && ($lesson['idInstruktor'] > 0) ? '' : 'Złe id instruktora! <br/>';
             $checker .= isset($lesson['cena']) && is_numeric($lesson['cena']) && ($lesson['cena'] > 0) ? '' : 'Zła cena! <br/>';
             $checker .= isset($lesson['promocja']) && is_numeric($lesson['promocja']) && ($lesson['promocja'] > 0) && ($lesson['promocja'] <= 1)? '' : 'Zła promocja! <br/>';
             $checker .= isset($lesson['wynagrodzenie']) && is_numeric($lesson['wynagrodzenie']) && ($lesson['wynagrodzenie'] > 0) && ($lesson['wynagrodzenie'] > 1)? '' : 'Złe wynagrodzenie! <br/>';
@@ -37,13 +38,15 @@ class EditProfile extends Action
                 $nowalekcja->setCena(['cena' => addslashes($lesson['cena']), 'promocja' => addslashes($lesson['promocja'])]);
                 $nowalekcja->setWynagrodzenieInstruktora(addslashes($lesson['wynagrodzenie']));
 
-                $nowalekcja->pushNewZajeciaToDB();
+                $id = $nowalekcja->pushNewZajeciaToDB();
+                $nowalekcja->pushNewCennikToDB($id);
+                $this->session->add('messages', ['class' => 'alert-success', 'content' => 'Dodano nowe zajecie']);
             } else {
                 $checker .= 'Spróbuj jeszcze raz.';
                 $this->session->add('messages', ['class' => 'alert-danger', 'content' => $checker]);
             }
             
-            header("location: ?action=lessonadd");
+            header("location: ?action=addlesson&&id={$lesson['idInstruktor']}");
             die();
         }
         header('location: ?');

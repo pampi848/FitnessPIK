@@ -126,7 +126,7 @@ class Zajecia
                 $zajeciaO[$zajecie['id']]->setNazwa($zajecie['nazwa_zajec']);
                 $zajeciaO[$zajecie['id']]->setIdInstruktor($zajecie['id_instruktor']);
                 $zajeciaO[$zajecie['id']]->setOpis($zajecie['opis']);
-                $zajeciaO[$zajecie['id']]->setWynagrodzenieInstruktora($zajecie['wynagrodzenieMiesieczne']);
+                $zajeciaO[$zajecie['id']]->setWynagrodzenieInstruktora($zajecie['wynagrodzenie_miesieczne']);
                 $zajeciaO[$zajecie['id']]->setData(self::fetchDateByIdZajecia($zajecie['id']));
                 $zajeciaO[$zajecie['id']]->setCena(self::fetchCennikByIdZajecia($zajecie['id']));
 
@@ -173,6 +173,47 @@ class Zajecia
         }
         return $cena;
     }
+
+    public function pushNewZajeciaToDB()
+    {
+        try {
+            $pdo = Database::getInstance()->getConnection();
+
+            $stmt = $pdo->prepare("INSERT INTO `zajecia` (`nazwa_zajec`,`id_instruktor`,`opis`,`wynagrodzenie_miesieczne`) VALUES (?,?,?,?);");
+            $stmt->bindValue(1, $this->getNazwa(), PDO::PARAM_STR);
+            $stmt->bindValue(2, $this->getIdInstruktor(), PDO::PARAM_STR);
+            $stmt->bindValue(3, $this->getOpis(), PDO::PARAM_STR);
+            $stmt->bindValue(4, $this->getWynagrodzenieInstruktora(), PDO::PARAM_STR);
+
+            $stmt->execute();
+
+            $lastId = $pdo->lastInsertId();
+        } catch (PDOException $exception) {
+            // TODO: log database errors
+            throw $exception;
+        }
+        return $lastId;
+    }
+    public function pushNewCennikToDB($id)
+    {
+        try {
+            $pdo = Database::getInstance()->getConnection();
+
+            $stmt = $pdo->prepare("INSERT INTO `cennik` (`id_zajecia`,`cena`,`promocja`) VALUES (?,?,?);");
+            $stmt->bindValue(1, $id, PDO::PARAM_STR);
+            $stmt->bindValue(2, $this->getCena()['cena'], PDO::PARAM_STR);
+            $stmt->bindValue(3, $this->getCena()['promocja'], PDO::PARAM_STR);
+
+            $stmt->execute();
+
+            $lastId = $pdo->lastInsertId();
+        } catch (PDOException $exception) {
+            // TODO: log database errors
+            throw $exception;
+        }
+        return $lastId;
+    }
+
     public static function fetchFrequency($id)
     {
         try {

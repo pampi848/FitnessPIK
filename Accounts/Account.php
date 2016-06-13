@@ -139,6 +139,21 @@ abstract class Account
         }
         return $aktywne;
     }
+    public static function checkLevel($id)
+    {
+        try {
+            $pdo = Database::getInstance()->getConnection();
+
+            $stmt = $pdo->prepare("SELECT `level` FROM `account` WHERE `id`=:id");
+            $stmt->bindValue(':id', $id, PDO::PARAM_INT);
+            $stmt->execute();
+            $level = $stmt->fetch(PDO::FETCH_ASSOC);
+        } catch (PDOException $exception) {
+            // TODO: log database errors
+            throw $exception;
+        }
+        return $level;
+    }
     public static function changePremissions($id,$level)
     {
         try {
