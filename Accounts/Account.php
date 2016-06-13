@@ -63,11 +63,29 @@ abstract class Account
             $konta = $stmt->fetchAll(PDO::FETCH_ASSOC);
         } catch (PDOException $exception) {
             // TODO: log database errors
-            $haslo = "error";
+            $konta = "error";
             throw $exception;
         }
 
         return $konta;
+    }
+    public static function fetchNamesById($id)
+    {
+        try {
+            $pdo = Database::getInstance()->getConnection();
+
+            $stmt = $pdo->prepare("SELECT `imie`,`nazwisko` FROM `account` WHERE `id`=:id");
+            $stmt->bindValue(':id', $id, PDO::PARAM_INT);
+
+            $stmt->execute();
+            $names = $stmt->fetch(PDO::FETCH_ASSOC);
+        } catch (PDOException $exception) {
+            // TODO: log database errors
+            $names = "error";
+            throw $exception;
+        }
+        $names = $names['imie'].' '.$names['nazwisko'];
+        return $names;
     }
     public static function ban($id,$admin = false)
     {

@@ -11,14 +11,13 @@ namespace Actions;
 require_once "autoload.php";
 
 use Accounts\Account;
-class ViewUsersAll extends Action
+class ViewLessonAdd extends Action
 {
-    function doExecute()
-    {
-        if((isset($_SESSION['logged']['online'])) && ($_SESSION['logged']['online'] == true) && (isset($_SESSION['logged']['level'])) && ($_SESSION['logged']['level'] == 1)) {
-            $allUsers = Account::fetchAllAccounts();
-            
-            $this->loadContent('users', $allUsers);
+    function doExecute(){
+
+        if ((isset($_SESSION['logged']['level'])) && (($_SESSION['logged']['level'] == 1) || ($_SESSION['logged']['level'] == 2)) && $_GET['id']){
+
+
         }
         else{
             header('location: ?action=404');

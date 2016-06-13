@@ -7,36 +7,48 @@
         <th>Sala</th>
         <th>Cena</th>
     </tr>
-    <tr>
-        <td>Zumba</td>
-        <td>Ogniste ruchy wprost z Mordoru</td>
-        <td>Marta Walawicz-Jaroć</td>
-        <td>
-            <div class="row">
-                <div class="col-md-12">Piątek 19:00</div>
-            </div>
-            <div class="row">
-                <div class="col-md-12">Sobota 15:00</div>
-            </div>
-        </td>
-        <td>16</td>
-        <td>90 PLN</td>
-    </tr>
-    <tr>
-        <td>Programowanie</td>
-        <td>Zakoduj sobie własną waifu</td>
-        <td>Maciej Nowak</td>
-        <td>
-            <div class="row">
-                <div class="col-md-12">Wtorek 14:30</div>
-            </div>
-            <div class="row">
-                <div class="col-md-12">Sobota 21:00</div>
-            </div>
-        </td>
-        <td>21</td>
-        <td>150 PLN</td>
-    </tr>
+    <?php foreach ($p as $oferta){ ?>
+        <?php if(isset($oferta) && is_object($oferta)){ ?>
+            <tr>
+                <td>
+                    <div class="row" style="margin-left: 5%">
+                        <?=$oferta->getNazwa()?>
+                    </div>
+                    <?php if (isset($_SESSION['logged']['level']) && $_SESSION['logged']['level']==1){ ?>
+                        <button style="margin-bottom: 4%">Usuń Zajęcia</button>
+                    <?php } ?>
+                </td>
+                <td><?=$oferta->getOpis()?></td>
+                <td><?=$oferta->getIdInstruktor()?></td>
+                    <td>
+                        <?php foreach ($oferta->data as $data){ ?>
+                            <div class="row">
+                                <div class="col-md-12"><?=$data['dzienTygodnia'].' '.str_replace(".",":",$data['godzina'])?></div>
+                                <?php if (isset($_SESSION['logged']['level']) && $_SESSION['logged']['level']==1){ ?>
+                                    <button style="margin-bottom: 4%">Usuń Termin</button>
+                                <?php } ?>
+                            </div>
+                        <?php } ?>
+
+                        <?php if (isset($_SESSION['logged']['level']) && $_SESSION['logged']['level']==1){ ?>
+                            <div class="row">
+                                <button>Dodaj termin</button>
+                            </div>
+                        <?php } ?>
+                    </td>
+                    <td>
+                        <?php foreach ($oferta->data as $data){?>
+                            <div class="row" style="margin-bottom: 60%;margin-left: 5%;" >
+                                <?=$data['sala'];?>
+                            </div>
+                        <?php }?>
+                    </td>
+                <td><?=($oferta->getCena()['promocja'] > 0) && ($oferta->getCena()['promocja'] < 1) ? "Cena po promocji!".($oferta->getCena()['cena']*$oferta->getCena()['promocja']) : $oferta->getCena()['cena'];?></td>
+            </tr>
+        <?php } ?>
+    <?php } ?>
+
+
 </table>
 
-<?php //var_dump($p) ?>
+<?php var_dump($p) ?>
