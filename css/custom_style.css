@@ -296,3 +296,19 @@ div#div-forms button.btn-primary{
 body {
     overflow-x: hidden;
 }
+
+.empty-block {
+    height: 4vh;
+}
+
+.btn-table {
+    width: 100%;
+}
+
+.termin-i-miejsce {
+    margin-top: 2vh;
+}
+
+.termin-i-miejsce:first-of-type {
+    margin-top: 0;
+}
