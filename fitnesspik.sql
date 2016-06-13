@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Czas wygenerowania: 13 Cze 2016, 21:38
+-- Czas wygenerowania: 13 Cze 2016, 23:24
 -- Wersja serwera: 5.5.49-0ubuntu0.14.04.1
 -- Wersja PHP: 5.5.9-1ubuntu4.17
 
@@ -73,7 +73,7 @@ CREATE TABLE IF NOT EXISTS `cennik` (
   `cena` float NOT NULL,
   `promocja` float NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci AUTO_INCREMENT=5 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci AUTO_INCREMENT=6 ;
 
 --
 -- Zrzut danych tabeli `cennik`
@@ -83,7 +83,8 @@ INSERT INTO `cennik` (`id`, `id_zajecia`, `cena`, `promocja`) VALUES
 (1, 1, 11.11, 1),
 (2, 10, 2, 1),
 (3, 11, 2, 1),
-(4, 12, 2, 1);
+(4, 12, 2, 1),
+(5, 15, 222, 0.1);
 
 -- --------------------------------------------------------
 
@@ -190,16 +191,16 @@ CREATE TABLE IF NOT EXISTS `zajecia` (
   `nazwa_zajec` varchar(25) COLLATE utf8_polish_ci NOT NULL,
   `id_instruktor` int(11) NOT NULL,
   `opis` varchar(255) COLLATE utf8_polish_ci NOT NULL,
-  `wynagrodzenieMiesieczne` int(11) NOT NULL,
+  `wynagrodzenie_miesieczne` int(11) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `id` (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci AUTO_INCREMENT=13 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci AUTO_INCREMENT=16 ;
 
 --
 -- Zrzut danych tabeli `zajecia`
 --
 
-INSERT INTO `zajecia` (`id`, `nazwa_zajec`, `id_instruktor`, `opis`, `wynagrodzenieMiesieczne`) VALUES
+INSERT INTO `zajecia` (`id`, `nazwa_zajec`, `id_instruktor`, `opis`, `wynagrodzenie_miesieczne`) VALUES
 (1, 'zumba', 2, 'zumbiasznie', 500),
 (2, 'lol', 2, 'trjr4jrt', 220),
 (3, 'fdssg', 2, 'Opisl', 0),
@@ -211,7 +212,10 @@ INSERT INTO `zajecia` (`id`, `nazwa_zajec`, `id_instruktor`, `opis`, `wynagrodze
 (9, 'wgewerg', 2, 'trrthrthr', 2),
 (10, 'wgewerg', 2, 'trrthrthr', 2),
 (11, '4twerg', 2, 'Opiseherher', 2),
-(12, '4twerg', 2, 'Opiseherher', 2);
+(12, '4twerg', 2, 'Opiseherher', 2),
+(13, 'eherhe', 1, 'lol', 1),
+(14, 'ethaetheth', 222, 'Opisethesthesheth', 2222),
+(15, 'ethaetheth', 222, 'Opisethesthesheth', 2222);
 
 -- --------------------------------------------------------
 

@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="127cc81d-169e-40f7-b176-a1349521a095" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Accounts/Account.php" afterPath="$PROJECT_DIR$/Accounts/Account.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Actions/AddLesson.php" afterPath="$PROJECT_DIR$/Actions/AddLesson.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Models/Zajecia.php" afterPath="$PROJECT_DIR$/Models/Zajecia.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/lessonadd.php" afterPath="$PROJECT_DIR$/templates/lessonadd.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Actions/ViewOffer.php" afterPath="$PROJECT_DIR$/Actions/ViewOffer.php" />
     </list>
     <ignored path="FitnessPIK.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -35,11 +31,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="AddLesson.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AddLesson.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Actions/AddLesson.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="672">
-              <caret line="48" column="77" selection-start-line="48" selection-start-column="77" selection-end-line="48" selection-end-column="77" />
+            <state relative-caret-position="114">
+              <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
               <folding>
                 <element signature="e#137#158#0#PHP" expanded="true" />
               </folding>
@@ -50,7 +46,7 @@
       <file leaf-file-name="Zajecia.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Models/Zajecia.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="488">
+            <state relative-caret-position="1676">
               <caret line="208" column="43" selection-start-line="208" selection-start-column="43" selection-end-line="208" selection-end-column="43" />
               <folding>
                 <marker date="1465851983605" expanded="true" signature="578:672" ph="SELECT `id_z... uczeszczajacy" />
@@ -98,6 +94,16 @@
                 <marker date="1465852710173" expanded="true" signature="7229:7509" ph="INSERT INTO `account`... " />
                 <marker date="1465852710173" expanded="true" signature="9038:9199" ph="UPDATE `acco... " />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ViewOffer.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Actions/ViewOffer.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="288">
+              <caret line="22" column="95" selection-start-line="22" selection-start-column="95" selection-end-line="22" selection-end-column="95" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -159,7 +165,6 @@
         <option value="$PROJECT_DIR$/templates/profile.php" />
         <option value="$PROJECT_DIR$/Actions/ViewProfile.php" />
         <option value="$PROJECT_DIR$/templates/cennik.php" />
-        <option value="$PROJECT_DIR$/Actions/ViewOffer.php" />
         <option value="$PROJECT_DIR$/Actions/ViewLessonAdd.php" />
         <option value="$PROJECT_DIR$/templates/users.php" />
         <option value="$PROJECT_DIR$/Actions/ViewInstruktorPanel.php" />
@@ -171,6 +176,7 @@
         <option value="$PROJECT_DIR$/templates/lessonadd.php" />
         <option value="$PROJECT_DIR$/Actions/AddLesson.php" />
         <option value="$PROJECT_DIR$/Accounts/Account.php" />
+        <option value="$PROJECT_DIR$/Actions/ViewOffer.php" />
       </list>
     </option>
   </component>
@@ -445,12 +451,12 @@
       <workItem from="1465641582446" duration="42551000" />
       <workItem from="1465741547558" duration="3122000" />
       <workItem from="1465746348290" duration="29740000" />
-      <workItem from="1465825949356" duration="13496000" />
+      <workItem from="1465825949356" duration="13872000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="349636000" />
+    <option name="totallyTimeSpent" value="350012000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1280" y="24" width="1280" height="1000" extended-state="6" />
@@ -724,16 +730,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Actions/ViewOffer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-          <folding>
-            <element signature="e#107#128#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/layout.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="364">
@@ -848,14 +844,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/users.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="829">
-          <caret line="60" column="0" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/lessonadd.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
@@ -864,9 +852,19 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Actions/AddLesson.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+          <folding>
+            <element signature="e#137#158#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Models/Zajecia.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="488">
+        <state relative-caret-position="1676">
           <caret line="208" column="43" selection-start-line="208" selection-start-column="43" selection-end-line="208" selection-end-column="43" />
           <folding>
             <marker date="1465851983605" expanded="true" signature="578:672" ph="SELECT `id_z... uczeszczajacy" />
@@ -885,6 +883,14 @@
             <marker date="1465851983605" expanded="true" signature="8073:8145" ph="SELECT COUNT... uczeszczajacy" />
             <marker date="1465851983605" expanded="true" signature="8370:8438" ph="SELECT SUM(`... uczeszczajacy" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/users.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="829">
+          <caret line="60" column="0" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -915,13 +921,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Actions/AddLesson.php">
+    <entry file="file://$PROJECT_DIR$/Actions/ViewOffer.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="672">
-          <caret line="48" column="77" selection-start-line="48" selection-start-column="77" selection-end-line="48" selection-end-column="77" />
-          <folding>
-            <element signature="e#137#158#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="288">
+          <caret line="22" column="95" selection-start-line="22" selection-start-column="95" selection-end-line="22" selection-end-column="95" />
+          <folding />
         </state>
       </provider>
     </entry>

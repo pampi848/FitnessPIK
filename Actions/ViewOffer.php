@@ -20,7 +20,7 @@ class ViewOffer extends Action
     {
         $zajecia = Zajecia::fetchAllZajecia();
 
-        $dniTygodnia = ['Poniedziałki','Wtorki','Środy','Czwartki','Piątki','Soboty','Niedziele'];
+        $dniTygodnia = ['Poniedziałek','Wtorek','Środa','Czwartek','Piątek','Sobota','Niedziela'];
         $i = 1;
         foreach ($zajecia as $oferta){
             $oferta->setIdInstruktor(Account::fetchNamesById($oferta->getIdInstruktor()));
