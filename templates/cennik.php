@@ -26,6 +26,7 @@
                 <td><h4><?=$oferta->getOpis()?></h4></td>
                 <td><h4><?=$oferta->getIdInstruktor()?></h4></td>
                 <td>
+                    <?php $count = count($oferta->data)?>
                     <?php foreach ($oferta->data as $data){ ?>
                     <div class="row termin-i-miejsce">
                         <div class="col-md-6">
@@ -39,7 +40,7 @@
                                 </div>
                             </div>
                             <?php } ?>
-                            <?php if (isset($_SESSION['logged']['level']) && $_SESSION['logged']['level']==1){ ?>
+                            <?php if (isset($_SESSION['logged']['level']) && $_SESSION['logged']['level']==1 && $count==1){ ?>
                             <div class="row">
                                 <div class="col-md-12">
                                     <button class="btn btn-primary btn-table">Dodaj termin</button>
@@ -50,7 +51,7 @@
                         <div class="col-md-6">
                             <h4><?=$data['sala'];?></h4>
                         </div>
-                        
+                        <?php $count--; ?>
                     </div>
                     <?php } ?>
                 </td>

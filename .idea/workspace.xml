@@ -41,9 +41,14 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/img/news_2.jpg" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/img/news_3.jpg" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/img/news_4.jpg" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Models/Zajecia.php" afterPath="$PROJECT_DIR$/Models/Zajecia.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/newsAll.php" afterPath="$PROJECT_DIR$/templates/newsAll.php" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/profile/aga/av.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/profile/babik/av.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/profile/kinga/av.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/profile/marika/av.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/profile/nikola/av.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/profile/pampej/av.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/profile/paulina/av.jpg" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/cennik.php" afterPath="$PROJECT_DIR$/templates/cennik.php" />
     </list>
     <ignored path="FitnessPIK.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -110,7 +115,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="newsAll.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="newsAll.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/newsAll.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="198">
@@ -169,11 +174,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cennik.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="cennik.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/cennik.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="496">
-              <caret line="56" column="20" selection-start-line="56" selection-start-column="20" selection-end-line="56" selection-end-column="20" />
+            <state relative-caret-position="324">
+              <caret line="42" column="121" selection-start-line="42" selection-start-column="121" selection-end-line="42" selection-end-column="121" />
               <folding />
             </state>
           </provider>
@@ -245,9 +250,9 @@
         <option value="$PROJECT_DIR$/Actions/AddLesson.php" />
         <option value="$PROJECT_DIR$/Accounts/Account.php" />
         <option value="$PROJECT_DIR$/Actions/ViewOffer.php" />
-        <option value="$PROJECT_DIR$/templates/cennik.php" />
         <option value="$PROJECT_DIR$/Models/Zajecia.php" />
         <option value="$PROJECT_DIR$/templates/newsAll.php" />
+        <option value="$PROJECT_DIR$/templates/cennik.php" />
       </list>
     </option>
   </component>
@@ -522,12 +527,12 @@
       <workItem from="1465641582446" duration="42551000" />
       <workItem from="1465741547558" duration="3122000" />
       <workItem from="1465746348290" duration="29740000" />
-      <workItem from="1465825949356" duration="16348000" />
+      <workItem from="1465825949356" duration="16859000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="352488000" />
+    <option name="totallyTimeSpent" value="352999000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1280" y="24" width="1280" height="1000" extended-state="6" />
@@ -911,26 +916,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/users.php">
+    <entry file="file://$PROJECT_DIR$/Models/Zajecia.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="829">
-          <caret line="60" column="0" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="380">
+          <caret line="130" column="97" selection-start-line="130" selection-start-column="97" selection-end-line="130" selection-end-column="97" />
+          <folding>
+            <marker date="1465854307513" expanded="true" signature="578:672" ph="SELECT `id_z... uczeszczajacy" />
+            <marker date="1465854307513" expanded="true" signature="1041:1114" ph="SELECT `nazw... zajecia" />
+            <marker date="1465854307513" expanded="true" signature="1527:1606" ph="SELECT `dzie... terminarz" />
+            <marker date="1465854307513" expanded="true" signature="1983:2044" ph="SELECT `cena... cennik" />
+            <marker date="1465854307513" expanded="true" signature="3053:3102" ph="SELECT * FRO... zajecia" />
+            <marker date="1465854307513" expanded="true" signature="4195:4218" ph="SELECT * FRO... zajecia" />
+            <marker date="1465854307513" expanded="true" signature="5475:5564" ph="SELECT `id`,... terminarz" />
+            <marker date="1465854307513" expanded="true" signature="6064:6130" ph="SELECT `cena... cennik" />
+            <marker date="1465854307513" expanded="true" signature="6598:6685" ph="INSERT INTO `zajecia`... " />
+            <marker date="1465854307513" expanded="true" signature="6598:6702" ph="INSERT INTO `zajecia`... " />
+            <marker date="1465854307513" expanded="true" signature="6598:6703" ph="INSERT INTO `zajecia`... " />
+            <marker date="1465854307513" expanded="true" signature="6609:6685" ph="SELECT `cena... cennik" />
+            <marker date="1465854307513" expanded="true" signature="7395:7463" ph="INSERT INTO `zajecia`... " />
+            <marker date="1465854307513" expanded="true" signature="8072:8144" ph="SELECT COUNT... uczeszczajacy" />
+            <marker date="1465854307513" expanded="true" signature="8369:8437" ph="SELECT SUM(`... uczeszczajacy" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/cennik.php">
+    <entry file="file://$PROJECT_DIR$/templates/newsAll.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="496">
-          <caret line="56" column="20" selection-start-line="56" selection-start-column="20" selection-end-line="56" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="1" column="20" selection-start-line="1" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+        <state relative-caret-position="198">
+          <caret line="11" column="74" selection-start-line="11" selection-start-column="74" selection-end-line="11" selection-end-column="74" />
           <folding />
         </state>
       </provider>
@@ -939,6 +952,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
           <caret line="22" column="95" selection-start-line="22" selection-start-column="95" selection-end-line="22" selection-end-column="95" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/users.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="829">
+          <caret line="60" column="0" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="1" column="20" selection-start-line="1" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -970,34 +999,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Models/Zajecia.php">
+    <entry file="file://$PROJECT_DIR$/templates/cennik.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="130" column="97" selection-start-line="130" selection-start-column="97" selection-end-line="130" selection-end-column="97" />
-          <folding>
-            <marker date="1465854307513" expanded="true" signature="578:672" ph="SELECT `id_z... uczeszczajacy" />
-            <marker date="1465854307513" expanded="true" signature="1041:1114" ph="SELECT `nazw... zajecia" />
-            <marker date="1465854307513" expanded="true" signature="1527:1606" ph="SELECT `dzie... terminarz" />
-            <marker date="1465854307513" expanded="true" signature="1983:2044" ph="SELECT `cena... cennik" />
-            <marker date="1465854307513" expanded="true" signature="3053:3102" ph="SELECT * FRO... zajecia" />
-            <marker date="1465854307513" expanded="true" signature="4195:4218" ph="SELECT * FRO... zajecia" />
-            <marker date="1465854307513" expanded="true" signature="5475:5564" ph="SELECT `id`,... terminarz" />
-            <marker date="1465854307513" expanded="true" signature="6064:6130" ph="SELECT `cena... cennik" />
-            <marker date="1465854307513" expanded="true" signature="6598:6685" ph="INSERT INTO `zajecia`... " />
-            <marker date="1465854307513" expanded="true" signature="6598:6702" ph="INSERT INTO `zajecia`... " />
-            <marker date="1465854307513" expanded="true" signature="6598:6703" ph="INSERT INTO `zajecia`... " />
-            <marker date="1465854307513" expanded="true" signature="6609:6685" ph="SELECT `cena... cennik" />
-            <marker date="1465854307513" expanded="true" signature="7395:7463" ph="INSERT INTO `zajecia`... " />
-            <marker date="1465854307513" expanded="true" signature="8072:8144" ph="SELECT COUNT... uczeszczajacy" />
-            <marker date="1465854307513" expanded="true" signature="8369:8437" ph="SELECT SUM(`... uczeszczajacy" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/newsAll.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" column="74" selection-start-line="11" selection-start-column="74" selection-end-line="11" selection-end-column="74" />
+        <state relative-caret-position="324">
+          <caret line="42" column="121" selection-start-line="42" selection-start-column="121" selection-end-line="42" selection-end-column="121" />
           <folding />
         </state>
       </provider>
