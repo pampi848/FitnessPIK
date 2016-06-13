@@ -152,6 +152,7 @@ abstract class Account
             // TODO: log database errors
             throw $exception;
         }
+        $level = $level['level'];
         return $level;
     }
     public static function changePremissions($id,$level)

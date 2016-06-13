@@ -193,6 +193,74 @@ class Zajecia
         }
         return $lastId;
     }
+    public static function delZajeciaFromDB($id)
+    {
+        try {
+            $pdo = Database::getInstance()->getConnection();
+
+            $stmt = $pdo->prepare("DELETE FROM `zajecia` WHERE `id`=:id");
+            $stmt->bindValue(':id', $id, PDO::PARAM_INT);
+
+            $stmt->execute();
+
+            $lastId = $pdo->lastInsertId();
+        } catch (PDOException $exception) {
+            // TODO: log database errors
+            throw $exception;
+        }
+        return $lastId;
+    }
+    public static function delCennikFromDB($id)
+    {
+        try {
+            $pdo = Database::getInstance()->getConnection();
+
+            $stmt = $pdo->prepare("DELETE FROM `cennik` WHERE `id_zajecia`=:id");
+            $stmt->bindValue(':id', $id, PDO::PARAM_INT);
+
+            $stmt->execute();
+
+            $lastId = $pdo->lastInsertId();
+        } catch (PDOException $exception) {
+            // TODO: log database errors
+            throw $exception;
+        }
+        return $lastId;
+    }
+    public static function delTerminarzFromDB($id)
+    {
+        try {
+            $pdo = Database::getInstance()->getConnection();
+
+            $stmt = $pdo->prepare("DELETE FROM `terminarz` WHERE `id_zajecia`=:id");
+            $stmt->bindValue(':id', $id, PDO::PARAM_INT);
+
+            $stmt->execute();
+
+            $lastId = $pdo->lastInsertId();
+        } catch (PDOException $exception) {
+            // TODO: log database errors
+            throw $exception;
+        }
+        return $lastId;
+    }
+    public static function delTerminarzFromDBByOwnId($id)
+    {
+        try {
+            $pdo = Database::getInstance()->getConnection();
+
+            $stmt = $pdo->prepare("DELETE FROM `terminarz` WHERE `id`=:id");
+            $stmt->bindValue(':id', $id, PDO::PARAM_INT);
+
+            $stmt->execute();
+
+            $lastId = $pdo->lastInsertId();
+        } catch (PDOException $exception) {
+            // TODO: log database errors
+            throw $exception;
+        }
+        return $lastId;
+    }
     public function pushNewCennikToDB($id)
     {
         try {

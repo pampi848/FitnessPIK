@@ -69,6 +69,8 @@ class Config
             'uprawnienia' => 'Actions\\ChangePermissions',
             'addlesson' => 'Actions\\ViewLessonAdd',
             'lessonaddprocess' => 'Actions\\AddLesson',
+            'lessondelprocess' => 'Actions\\DelLesson',
+            'termindelprocess' => 'Actions\\DelTermin',
             'contact' => 'Actions\\ViewContact',
             'aboutus' => 'Actions\\ViewAboutUs'
         ];

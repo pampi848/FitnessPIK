@@ -24,7 +24,7 @@ class AddLesson extends Action
 
             $checker .= isset($lesson['name']) && has_spaces($lesson['name']) && (mb_strlen($lesson['name'], 'utf-8') > 3) ? '' : 'Zła nazwa! <br/>';
             $checker .= isset($lesson['opis']) && (mb_strlen($lesson['opis'], 'utf-8') > 3) ? '' : 'Zły Opis! <br/>';
-            $checker .= isset($lesson['idInstruktor']) && is_numeric($lesson['idInstruktor']) && (Account::checkLevel($lesson['idInstruktor'])==2) && ($lesson['idInstruktor'] > 0) ? '' : 'Złe id instruktora! <br/>';
+            $checker .= isset($lesson['idInstruktor']) && is_numeric($lesson['idInstruktor']) && ((int)Account::checkLevel($lesson['idInstruktor'])==2) && ($lesson['idInstruktor'] > 0) ? '' : 'Złe id instruktora! <br/>';
             $checker .= isset($lesson['cena']) && is_numeric($lesson['cena']) && ($lesson['cena'] > 0) ? '' : 'Zła cena! <br/>';
             $checker .= isset($lesson['promocja']) && is_numeric($lesson['promocja']) && ($lesson['promocja'] > 0) && ($lesson['promocja'] <= 1)? '' : 'Zła promocja! <br/>';
             $checker .= isset($lesson['wynagrodzenie']) && is_numeric($lesson['wynagrodzenie']) && ($lesson['wynagrodzenie'] > 0) && ($lesson['wynagrodzenie'] > 1)? '' : 'Złe wynagrodzenie! <br/>';
