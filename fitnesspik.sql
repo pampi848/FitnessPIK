@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Czas wygenerowania: 12 Cze 2016, 16:51
+-- Czas wygenerowania: 13 Cze 2016, 21:38
 -- Wersja serwera: 5.5.49-0ubuntu0.14.04.1
 -- Wersja PHP: 5.5.9-1ubuntu4.17
 
@@ -45,20 +45,21 @@ CREATE TABLE IF NOT EXISTS `account` (
   `level` int(11) NOT NULL,
   `activationCode` varchar(255) COLLATE utf8_polish_ci NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci AUTO_INCREMENT=15 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci AUTO_INCREMENT=16 ;
 
 --
 -- Zrzut danych tabeli `account`
 --
 
 INSERT INTO `account` (`id`, `login`, `haslo`, `email`, `nrTel`, `imie`, `nazwisko`, `miejscowosc`, `ulica`, `nrDomu`, `nrMieszkania`, `kodPocztowy`, `dataUrodzin`, `dataUtworzenia`, `activated`, `level`, `activationCode`) VALUES
-(2, 'kinia16', 'a2luaWExNg==', 'pampi.com@gmail.com', 111111111, 'kinia16', 'kinia16', 'kinia16', 'kinia16', 11, 11, '11-111', '1111-11-11', '2016-06-11', 1, 2, '87c1f77db34a61658764d0ccaaed6c3c'),
-(6, 'root', 'ZGV2', 'rootroot@ro.ot', 606214001, 'root', 'root', 'root', 'root', 11, 11, '11-111', '1111-11-11', '2016-06-11', 1, 1, 'efa0f8a59f692e29b26cce6ea9d31c3e'),
+(2, 'kinia16', 'a2luaWExNg==', 'pampi.com@gmail.com', 111111111, 'Kingaf', 'Walawicz', 'Dębnica Kaszubska', 'kinia16', 11, 11, '11-111', '1111-11-11', '2016-06-11', 1, 2, '87c1f77db34a61658764d0ccaaed6c3c'),
+(6, 'root', 'ZGV2', 'rootroot@ro.ot', 606214001, 'Pampi', 'Dampi', 'rootrddd', 'root', 11, 11, '11-111', '1111-11-11', '2016-06-11', 1, 1, 'root'),
 (10, 'uzytkownik', 'dXp5dGtvd25paw==', 'uzytkownik@ll.pp', 111111111, 'uzytkownik', 'uzytkownik', 'uzytkownik', 'uzytkownik', 11, 11, '11-111', '1111-11-11', '2016-06-11', 1, 0, '442b90e7a0b11ecc6d437c64180173d1'),
 (11, 'uzytkownik1', 'dXp5dGtvd25pazE=', 'uzytkownik1@ll.pp', 111111111, 'uzytkownik', 'uzytkownik', 'uzytkownik', 'uzytkownik', 11, 11, '11-111', '1111-11-11', '2016-06-11', 0, 0, '4ad368b84469bb056733465bda59d4b0'),
 (12, 'uzytkownik2', 'dXp5dGtvd25pazI=', 'uzytkownik2@ll.pp', 111111111, 'uzytkownik', 'uzytkownik', 'uzytkownik', 'uzytkownik', 11, 11, '11-111', '1111-11-11', '2016-06-11', 0, 0, '95f7d0a2dad0e4828f8964b3e257ff86'),
 (13, 'uzytkownik3', 'dXp5dGtvd25pazM=', 'uzytkownik3@ll.pp', 111111111, 'uzytkownik', 'uzytkownik', 'uzytkownik', 'uzytkownik', 11, 11, '11-111', '1111-11-11', '2016-06-11', 0, 0, 'disable'),
-(14, 'pampi848', 'cG93ZVJ2b2x1bUU0', 'pampi.com@gmail.com', 606214001, 'Michał', 'Klemiato', 'wegwegweg', 'wegwegweg', 10, 11, '76-248', '1997-01-18', '2016-06-11', 1, 0, '280e1ff0379eee84e9423ebc782b6499');
+(14, 'pampi848', 'cG93ZVJ2b2x1bUU0', 'pampi.com@gmail.com', 606214001, 'Michał', 'Klemiato', 'wegwegweg', 'wegwegweg', 10, 11, '76-248', '1997-01-18', '2016-06-11', 1, 1, '280e1ff0379eee84e9423ebc782b6499'),
+(15, 'jakieskonto', 'amFraWVza29udG8=', 'pampi.backup@gmail.com', 123123123, 'jakieskonto', 'jakieskonto', 'jakieskonto', 'jakieskonto', 11, 11, '11-111', '2222-02-22', '2016-06-13', 1, 0, 'ab5aa3d4ae50e2b4b19378221cb735de');
 
 -- --------------------------------------------------------
 
@@ -101,26 +102,6 @@ CREATE TABLE IF NOT EXISTS `galeria` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `instruktor`
---
-
-CREATE TABLE IF NOT EXISTS `instruktor` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `id_account` int(11) NOT NULL,
-  `pensja` float NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci AUTO_INCREMENT=2 ;
-
---
--- Zrzut danych tabeli `instruktor`
---
-
-INSERT INTO `instruktor` (`id`, `id_account`, `pensja`) VALUES
-(1, 6, 270);
-
--- --------------------------------------------------------
-
---
 -- Struktura tabeli dla tabeli `newsy`
 --
 
@@ -135,7 +116,7 @@ CREATE TABLE IF NOT EXISTS `newsy` (
   `data_utworzenia` date NOT NULL,
   `id_account` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci AUTO_INCREMENT=6 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci AUTO_INCREMENT=9 ;
 
 --
 -- Zrzut danych tabeli `newsy`
@@ -146,7 +127,10 @@ INSERT INTO `newsy` (`id`, `img`, `naglowek`, `kategoria`, `opis`, `autor`, `zaw
 (2, 'img/img1465507060.jpeg', '2', 'Ogłoszenie', 'opis', 'autor', 'tresc', '2016-06-09', 5),
 (3, 'img/img1465507084.jpeg', '3', 'Ogłoszenie', 'opis', 'autor', 'tresc', '2016-06-09', 5),
 (4, 'img/img1465507115.jpeg', '4', 'Informacja', '4', '4', '4', '2016-06-09', 5),
-(5, 'img/img1465507140.jpeg', '5', 'Oferta', '', '5', '5', '2016-06-09', 5);
+(5, 'img/img1465507140.jpeg', '5', 'Oferta', '', '5', '5', '2016-06-09', 5),
+(6, 'img/img1465752954.bmp', 'rtjrfj', 'Informacja', 'rtjrtjrtj', 'tjr4tj', 'etjrtjr', '2016-06-12', 6),
+(7, 'img/news/img1465753532.jpeg', 'lolwergw3g', 'Informacja', 'erherhesrherh', 'wehwerher', 'herherherh', '2016-06-12', 6),
+(8, 'img/news/img1465753580.jpeg', 'lolwergw3g', 'Informacja', 'erherhesrherh', 'wehwerher', 'herherherh', '2016-06-12', 6);
 
 -- --------------------------------------------------------
 

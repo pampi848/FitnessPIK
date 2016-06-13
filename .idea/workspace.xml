@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="127cc81d-169e-40f7-b176-a1349521a095" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Actions/ViewInstruktorPanel.php" afterPath="$PROJECT_DIR$/Actions/ViewInstruktorPanel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Actions/ViewLessonAdd.php" afterPath="$PROJECT_DIR$/Actions/ViewLessonAdd.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/lessonadd.php" afterPath="$PROJECT_DIR$/templates/lessonadd.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/users.php" afterPath="$PROJECT_DIR$/templates/users.php" />
-    </list>
+    <list default="true" id="127cc81d-169e-40f7-b176-a1349521a095" name="Default" comment="" />
     <ignored path="FitnessPIK.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -416,12 +411,12 @@
       <workItem from="1465641582446" duration="42551000" />
       <workItem from="1465741547558" duration="3122000" />
       <workItem from="1465746348290" duration="29740000" />
-      <workItem from="1465825949356" duration="7341000" />
+      <workItem from="1465825949356" duration="7400000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="343481000" />
+    <option name="totallyTimeSpent" value="343540000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1280" y="24" width="1280" height="1000" extended-state="6" />
