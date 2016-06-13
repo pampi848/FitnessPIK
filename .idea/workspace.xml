@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="127cc81d-169e-40f7-b176-a1349521a095" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Accounts/Account.php" afterPath="$PROJECT_DIR$/Accounts/Account.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Actions/ViewInstruktorPanel.php" afterPath="$PROJECT_DIR$/Actions/ViewInstruktorPanel.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Actions/ViewLessonAdd.php" afterPath="$PROJECT_DIR$/Actions/ViewLessonAdd.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Actions/ViewOffer.php" afterPath="$PROJECT_DIR$/Actions/ViewOffer.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/cennik.php" afterPath="$PROJECT_DIR$/templates/cennik.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/lessonadd.php" afterPath="$PROJECT_DIR$/templates/lessonadd.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/users.php" afterPath="$PROJECT_DIR$/templates/users.php" />
     </list>
     <ignored path="FitnessPIK.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -35,86 +34,52 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Config.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Util/Config.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="438">
-              <caret line="69" column="51" selection-start-line="69" selection-start-column="51" selection-end-line="69" selection-end-column="51" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="ViewLessonAdd.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Actions/ViewLessonAdd.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+            <state relative-caret-position="216">
+              <caret line="17" column="129" selection-start-line="17" selection-start-column="129" selection-end-line="17" selection-end-column="129" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Account.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Accounts/Account.php">
+      <file leaf-file-name="lessonadd.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/lessonadd.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="522">
-              <caret line="86" column="55" selection-start-line="86" selection-start-column="55" selection-end-line="86" selection-end-column="55" />
-              <folding>
-                <marker date="1465842402829" expanded="true" signature="768:826" ph="SELECT `hasl... account" />
-                <marker date="1465842402829" expanded="true" signature="1342:1365" ph="SELECT * FRO... account" />
-                <marker date="1465842402829" expanded="true" signature="1805:1850" ph="SELECT `imie... account" />
-                <marker date="1465842402829" expanded="true" signature="1805:1857" ph="SELECT `imie... account" />
-                <marker date="1465842402829" expanded="true" signature="1805:1859" ph="SELECT `imie... account" />
-                <marker date="1465842402829" expanded="true" signature="2413:2462" ph="UPDATE `acco... " />
-                <marker date="1465842402829" expanded="true" signature="2626:2688" ph="UPDATE `acco... " />
-                <marker date="1465842402829" expanded="true" signature="3094:3143" ph="UPDATE `acco... " />
-                <marker date="1465842402829" expanded="true" signature="3271:3329" ph="UPDATE `acco... " />
-                <marker date="1465842402829" expanded="true" signature="3786:3851" ph="SELECT `acti... account" />
-                <marker date="1465842402829" expanded="true" signature="4328:4376" ph="UPDATE `acco... " />
-                <marker date="1465842402829" expanded="true" signature="4828:4883" ph="SELECT `id` account" />
-                <marker date="1465842402829" expanded="true" signature="5419:5481" ph="SELECT * FRO... account" />
-                <marker date="1465842402829" expanded="true" signature="6053:6218" ph="SELECT `id`,... account" />
-                <marker date="1465842402829" expanded="true" signature="6726:7006" ph="INSERT INTO `account`... " />
-                <marker date="1465842402829" expanded="true" signature="8535:8696" ph="UPDATE `acco... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ViewOffer.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Actions/ViewOffer.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-              <folding>
-                <element signature="e#107#128#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="layout.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/templates/layout.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="364">
-              <caret line="96" column="33" selection-start-line="96" selection-start-column="33" selection-end-line="96" selection-end-column="33" />
+            <state relative-caret-position="108">
+              <caret line="6" column="79" selection-start-line="6" selection-start-column="79" selection-end-line="6" selection-end-column="79" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cennik.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/cennik.php">
+      <file leaf-file-name="users.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/users.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="649">
+              <caret line="50" column="58" selection-start-line="50" selection-start-column="58" selection-end-line="50" selection-end-column="58" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ViewInstruktorPanel.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Actions/ViewInstruktorPanel.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="450">
-              <caret line="25" column="78" selection-start-line="25" selection-start-column="78" selection-end-line="25" selection-end-column="78" />
-              <folding>
-                <element signature="e#369#392#0#HTML" expanded="true" />
-                <element signature="e#608#633#0#HTML" expanded="true" />
-                <element signature="e#1246#1271#0#HTML" expanded="true" />
-                <element signature="e#1857#1900#0#HTML" expanded="true" />
-              </folding>
+              <caret line="31" column="64" selection-start-line="31" selection-start-column="64" selection-end-line="31" selection-end-column="64" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Config.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Util/Config.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="366">
+              <caret line="65" column="28" selection-start-line="65" selection-start-column="13" selection-end-line="65" selection-end-column="28" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -127,7 +92,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/news.php" />
         <option value="$PROJECT_DIR$/Actions/ViewCalendarData.php" />
         <option value="$PROJECT_DIR$/templates/calendarData.php" />
         <option value="$PROJECT_DIR$/Actions/ViewNewsSingle.php" />
@@ -154,7 +118,6 @@
         <option value="$PROJECT_DIR$/Actions/ChangePermissions.php" />
         <option value="$PROJECT_DIR$/Actions/LogOut.php" />
         <option value="$PROJECT_DIR$/Actions/SendAgainAC.php" />
-        <option value="$PROJECT_DIR$/Actions/ViewInstruktorPanel.php" />
         <option value="$PROJECT_DIR$/Actions/ViewNewsAdd.php" />
         <option value="$PROJECT_DIR$/Actions/Deactivation.php" />
         <option value="$PROJECT_DIR$/templates/index.php" />
@@ -165,7 +128,6 @@
         <option value="$PROJECT_DIR$/Actions/LogIn.php" />
         <option value="$PROJECT_DIR$/Util/Cookie.php" />
         <option value="$PROJECT_DIR$/Util/Session.php" />
-        <option value="$PROJECT_DIR$/templates/users.php" />
         <option value="$PROJECT_DIR$/Models/Zajecia.php" />
         <option value="$PROJECT_DIR$/Util/Config.php" />
         <option value="$PROJECT_DIR$/Actions/Register.php" />
@@ -174,10 +136,13 @@
         <option value="$PROJECT_DIR$/templates/layout.php" />
         <option value="$PROJECT_DIR$/templates/profile.php" />
         <option value="$PROJECT_DIR$/Actions/ViewProfile.php" />
-        <option value="$PROJECT_DIR$/Actions/ViewLessonAdd.php" />
         <option value="$PROJECT_DIR$/Accounts/Account.php" />
         <option value="$PROJECT_DIR$/templates/cennik.php" />
         <option value="$PROJECT_DIR$/Actions/ViewOffer.php" />
+        <option value="$PROJECT_DIR$/Actions/ViewLessonAdd.php" />
+        <option value="$PROJECT_DIR$/templates/lessonadd.php" />
+        <option value="$PROJECT_DIR$/templates/users.php" />
+        <option value="$PROJECT_DIR$/Actions/ViewInstruktorPanel.php" />
       </list>
     </option>
   </component>
@@ -192,6 +157,7 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
+    <option name="x" value="1280" />
     <option name="y" value="24" />
     <option name="width" value="1280" />
     <option name="height" value="1000" />
@@ -450,15 +416,15 @@
       <workItem from="1465641582446" duration="42551000" />
       <workItem from="1465741547558" duration="3122000" />
       <workItem from="1465746348290" duration="29740000" />
-      <workItem from="1465825949356" duration="6240000" />
+      <workItem from="1465825949356" duration="7341000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="342380000" />
+    <option name="totallyTimeSpent" value="343481000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="24" width="1280" height="1000" extended-state="6" />
+    <frame x="1280" y="24" width="1280" height="1000" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2359375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -503,14 +469,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/templates/aboutus.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/img/profile/default.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -560,24 +518,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Actions/ViewAboutUs.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="13" column="17" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Actions/ViewCalendarData.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
           <caret line="17" column="47" selection-start-line="17" selection-start-column="47" selection-end-line="17" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Actions/ViewInstruktorPanel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="26" column="139" selection-start-line="26" selection-start-column="139" selection-end-line="26" selection-end-column="139" />
         </state>
       </provider>
     </entry>
@@ -710,14 +654,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/users.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="32" column="31" selection-start-line="32" selection-start-column="31" selection-end-line="32" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Models/News.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -809,26 +745,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Util/Config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="438">
-          <caret line="69" column="51" selection-start-line="69" selection-start-column="51" selection-end-line="69" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Actions/ViewNewsAdd.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
           <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Actions/ViewLessonAdd.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -904,6 +824,54 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="364">
           <caret line="96" column="33" selection-start-line="96" selection-start-column="33" selection-end-line="96" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Actions/ViewLessonAdd.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="17" column="129" selection-start-line="17" selection-start-column="129" selection-end-line="17" selection-end-column="129" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Actions/ViewAboutUs.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="17" column="4" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/lessonadd.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="79" selection-start-line="6" selection-start-column="79" selection-end-line="6" selection-end-column="79" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Util/Config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="366">
+          <caret line="65" column="28" selection-start-line="65" selection-start-column="13" selection-end-line="65" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/users.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="649">
+          <caret line="50" column="58" selection-start-line="50" selection-start-column="58" selection-end-line="50" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Actions/ViewInstruktorPanel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="31" column="64" selection-start-line="31" selection-start-column="64" selection-end-line="31" selection-end-column="64" />
           <folding />
         </state>
       </provider>

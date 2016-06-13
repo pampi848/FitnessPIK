@@ -47,6 +47,9 @@
     <?php if ($konto['level']!=0){?>
     <a href="?action=uprawnienia&&id=<?=$konto['id']?>&&level=0"><button class="btn btn-warning">Zabierz uprawnienia</button></a>
     <?php }?>
+    <?php if ($konto['level']==2){?>
+    <a href="?action=instruktorPanel&&id=<?=$konto['id']?>"><button class="btn btn-primary">Panel instruktora</button></a>
+    <?php }?>
     <a href="?action=deactivation&&id=<?=$konto['id']?>"><button class="btn btn-danger"><?= ($konto['activated']==1) && ($konto['activationCode'] != 'disable') ? 'Dezaktywuj' : 'Aktywuj' ?></button></a>
         
     </div>
