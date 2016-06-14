@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Czas wygenerowania: 13 Cze 2016, 23:24
+-- Czas wygenerowania: 14 Cze 2016, 02:07
 -- Wersja serwera: 5.5.49-0ubuntu0.14.04.1
 -- Wersja PHP: 5.5.9-1ubuntu4.17
 
@@ -73,7 +73,7 @@ CREATE TABLE IF NOT EXISTS `cennik` (
   `cena` float NOT NULL,
   `promocja` float NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci AUTO_INCREMENT=6 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci AUTO_INCREMENT=7 ;
 
 --
 -- Zrzut danych tabeli `cennik`
@@ -81,24 +81,7 @@ CREATE TABLE IF NOT EXISTS `cennik` (
 
 INSERT INTO `cennik` (`id`, `id_zajecia`, `cena`, `promocja`) VALUES
 (1, 1, 11.11, 1),
-(2, 10, 2, 1),
-(3, 11, 2, 1),
-(4, 12, 2, 1),
-(5, 15, 222, 0.1);
-
--- --------------------------------------------------------
-
---
--- Struktura tabeli dla tabeli `galeria`
---
-
-CREATE TABLE IF NOT EXISTS `galeria` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `naglowek` varchar(100) COLLATE utf8_polish_ci NOT NULL,
-  `opis` text COLLATE utf8_polish_ci NOT NULL,
-  `id_zdjecia` int(11) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci AUTO_INCREMENT=1 ;
+(6, 16, 2222, 1);
 
 -- --------------------------------------------------------
 
@@ -117,21 +100,17 @@ CREATE TABLE IF NOT EXISTS `newsy` (
   `data_utworzenia` date NOT NULL,
   `id_account` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci AUTO_INCREMENT=9 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci AUTO_INCREMENT=5 ;
 
 --
 -- Zrzut danych tabeli `newsy`
 --
 
 INSERT INTO `newsy` (`id`, `img`, `naglowek`, `kategoria`, `opis`, `autor`, `zawartosc`, `data_utworzenia`, `id_account`) VALUES
-(1, 'img/img1465507031.jpeg', '1', 'Informacja', 'opis', 'autor', 'tresc', '2016-06-09', 5),
-(2, 'img/img1465507060.jpeg', '2', 'Ogłoszenie', 'opis', 'autor', 'tresc', '2016-06-09', 5),
-(3, 'img/img1465507084.jpeg', '3', 'Ogłoszenie', 'opis', 'autor', 'tresc', '2016-06-09', 5),
-(4, 'img/img1465507115.jpeg', '4', 'Informacja', '4', '4', '4', '2016-06-09', 5),
-(5, 'img/img1465507140.jpeg', '5', 'Oferta', '', '5', '5', '2016-06-09', 5),
-(6, 'img/img1465752954.bmp', 'rtjrfj', 'Informacja', 'rtjrtjrtj', 'tjr4tj', 'etjrtjr', '2016-06-12', 6),
-(7, 'img/news/img1465753532.jpeg', 'lolwergw3g', 'Informacja', 'erherhesrherh', 'wehwerher', 'herherherh', '2016-06-12', 6),
-(8, 'img/news/img1465753580.jpeg', 'lolwergw3g', 'Informacja', 'erherhesrherh', 'wehwerher', 'herherherh', '2016-06-12', 6);
+(1, 'img/news/img1465854134.jpeg', 'First News', 'Informacja', 'Welcome on our page!', 'admin', 'Welcome on our page!', '2016-06-13', 6),
+(2, 'img/news/img1465854186.jpeg', 'UFO', 'Ogłoszenie', 'Niezidentyfikowany obiekt latający!', 'alien', 'Wykryto kosmitów', '2016-06-13', 6),
+(3, 'img/news/img1465854472.jpeg', 'Konkurs', 'Oferta', 'Nasza faworytka startuje w konkursie fotograficznym!', 'lol', 'Kinga znowu przegrała konkurs.\r\nGratulujemy', '2016-06-13', 6),
+(4, 'img/news/img1465854539.jpeg', 'nowy admin', 'Informacja', 'Wybrano nowego admina!', 'nowy admin', 'Z tej strony nowy admin, liczę na to , że się polubimy ;)', '2016-06-13', 6);
 
 -- --------------------------------------------------------
 
@@ -142,19 +121,11 @@ INSERT INTO `newsy` (`id`, `img`, `naglowek`, `kategoria`, `opis`, `autor`, `zaw
 CREATE TABLE IF NOT EXISTS `terminarz` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `id_zajecia` int(11) NOT NULL,
-  `dzienTygodnia` varchar(255) COLLATE utf8_polish_ci NOT NULL,
+  `dzienTygodnia` int(11) NOT NULL,
   `godzina` float NOT NULL,
   `sala` varchar(255) COLLATE utf8_polish_ci NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci AUTO_INCREMENT=3 ;
-
---
--- Zrzut danych tabeli `terminarz`
---
-
-INSERT INTO `terminarz` (`id`, `id_zajecia`, `dzienTygodnia`, `godzina`, `sala`) VALUES
-(1, 1, '1', 22.22, '207'),
-(2, 1, '5', 11, '11');
 
 -- --------------------------------------------------------
 
@@ -183,6 +154,19 @@ INSERT INTO `uczeszczajacy` (`id`, `id_terminarz`, `id_account`, `obecnosc`) VAL
 -- --------------------------------------------------------
 
 --
+-- Struktura tabeli dla tabeli `wykupione`
+--
+
+CREATE TABLE IF NOT EXISTS `wykupione` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id_user` int(11) NOT NULL,
+  `id_zajecia` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
 -- Struktura tabeli dla tabeli `zajecia`
 --
 
@@ -194,7 +178,7 @@ CREATE TABLE IF NOT EXISTS `zajecia` (
   `wynagrodzenie_miesieczne` int(11) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `id` (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci AUTO_INCREMENT=16 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci AUTO_INCREMENT=17 ;
 
 --
 -- Zrzut danych tabeli `zajecia`
@@ -202,33 +186,7 @@ CREATE TABLE IF NOT EXISTS `zajecia` (
 
 INSERT INTO `zajecia` (`id`, `nazwa_zajec`, `id_instruktor`, `opis`, `wynagrodzenie_miesieczne`) VALUES
 (1, 'zumba', 2, 'zumbiasznie', 500),
-(2, 'lol', 2, 'trjr4jrt', 220),
-(3, 'fdssg', 2, 'Opisl', 0),
-(4, 'fdssg', 2, 'Opisl', 0),
-(5, 'fdssg', 2, 'Opisl', 2),
-(6, 'ryeryereh', 2, 'Opiserherherh', 22),
-(7, 'ryeryereh', 2, 'Opiserherherh', 22),
-(8, 'wgewerg', 2, 'trrthrthr', 2),
-(9, 'wgewerg', 2, 'trrthrthr', 2),
-(10, 'wgewerg', 2, 'trrthrthr', 2),
-(11, '4twerg', 2, 'Opiseherher', 2),
-(12, '4twerg', 2, 'Opiseherher', 2),
-(13, 'eherhe', 1, 'lol', 1),
-(14, 'ethaetheth', 222, 'Opisethesthesheth', 2222),
-(15, 'ethaetheth', 222, 'Opisethesthesheth', 2222);
-
--- --------------------------------------------------------
-
---
--- Struktura tabeli dla tabeli `zdjecia`
---
-
-CREATE TABLE IF NOT EXISTS `zdjecia` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `zdjecie` mediumblob NOT NULL,
-  `data_dodania` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci AUTO_INCREMENT=1 ;
+(16, 'fwgwgw', 2, 'gwregwgerg', 222222);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

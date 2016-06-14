@@ -21,7 +21,7 @@ class ViewUsersAll extends Action
             $this->loadContent('users', $allUsers);
         }
         else{
-            header('location: ?action=404');
+            header('location: ?action=401');
         }
     }
 }

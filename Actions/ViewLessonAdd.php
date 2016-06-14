@@ -19,7 +19,7 @@ class ViewLessonAdd extends Action
             $this->loadContent('lessonadd');
         }
         else{
-            header('location: ?action=404');
+            header('location: ?action=401');
         }
     }
 }

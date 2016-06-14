@@ -5,7 +5,7 @@
             <h4>Zapisz się już dzisiaj na jeden z wielu rodzajów zajęć prowadzonych w Fortitudo Fitness Club</h4>
             <div class="row">
                 <div class="col-md-12">
-                    <button type="button" class="pull-right btn btn-primary btn-lg">Zapisz się</button>
+                    <a href="?action=offer"><button type="button" class="pull-right btn btn-primary btn-lg">Zapisz się</button></a>
                 </div>
             </div> 
         </div>

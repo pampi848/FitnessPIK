@@ -21,6 +21,12 @@
                         <a href="?action=lessondelprocess&&id=<?=$oferta->getId()?>"><button class="btn btn-warning">Usuń Zajęcia</button></a>
                         </div>
                     </div>
+                    <?php } elseif (isset($_SESSION['logged']['level']) && $_SESSION['logged']['level']==0){?>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <a href="?action=dolacz&&id=<?=$oferta->getId()?>"><button class="btn btn-success">Dołącz!</button></a>
+                        </div>
+                    </div>
                     <?php } ?>
                 </td>
                 <td><h4><?=$oferta->getOpis()?></h4></td>
@@ -43,7 +49,7 @@
                             <?php if (isset($_SESSION['logged']['level']) && $_SESSION['logged']['level']==1 && $count==1){ ?>
                             <div class="row">
                                 <div class="col-md-12">
-                                    <button class="btn btn-primary btn-table">Dodaj termin</button>
+                                    <a href="?action=terminaddprocess&&id=<?=$oferta->getId()?>"><button class="btn btn-primary btn-table">Dodaj termin</button></a>
                                 </div>
                             </div>
                             <?php } ?>
@@ -54,12 +60,12 @@
                         <?php $count--; ?>
                     </div>
                     <?php } ?>
-                    <?php if(!is_array($oferta->data) || empty($oferta->data)){ ?>
+                    <?php if(isset($_SESSION['logged']['level']) && $_SESSION['logged']['level']==1 && !is_array($oferta->data) || empty($oferta->data)){ ?>
                     <div class="row termin-i-miejsce">
                         <div class="col-md-6">
                             <div class="row">
                                 <div class="col-md-12">
-                                    <button class="btn btn-primary btn-table">Dodaj termin</button>
+                                    <a href="?action=terminaddprocess&&id=<?=$oferta->getId()?>"><button class="btn btn-primary btn-table">Dodaj termin</button></a>
                                 </div>
                             </div>
                         </div>

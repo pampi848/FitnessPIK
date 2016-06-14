@@ -55,10 +55,7 @@ class ViewNewsAdd extends Action
                 $this->loadContent('newsForm');
             } //Nieautoryzowany dostęp
             else {
-                // TODO: 401
-                $this->session->add('messages', ['class' => 'alert-danger', 'content' => 'Coś poszło nie tak! 401']);
-
-                $this->loadContent();
+                header('location: ?action=401');
             }
         }
     }

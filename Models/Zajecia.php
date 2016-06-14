@@ -193,6 +193,26 @@ class Zajecia
         }
         return $lastId;
     }
+    public function pushNewTerminToDB()
+    {
+        try {
+            $pdo = Database::getInstance()->getConnection();
+
+            $stmt = $pdo->prepare("INSERT INTO `terminarz` (`id_zajecia`,`godzina`,`sala`,`dzienTygodnia`) VALUES (?,?,?,?);");
+            $stmt->bindValue(1, $this->getId(), PDO::PARAM_STR);
+            $stmt->bindValue(2, $this->getData()['godzina'], PDO::PARAM_STR);
+            $stmt->bindValue(3, $this->getData()['sala'], PDO::PARAM_STR);
+            $stmt->bindValue(4, $this->getData()['dzienTygodnia'], PDO::PARAM_STR);
+
+            $stmt->execute();
+
+            $lastId = $pdo->lastInsertId();
+        } catch (PDOException $exception) {
+            // TODO: log database errors
+            throw $exception;
+        }
+        return $lastId;
+    }
     public static function delZajeciaFromDB($id)
     {
         try {

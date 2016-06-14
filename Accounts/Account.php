@@ -69,6 +69,23 @@ abstract class Account
 
         return $konta;
     }
+    public static function fetchUczestniczacy($id)
+    {
+        try {
+            $pdo = Database::getInstance()->getConnection();
+
+            $stmt = $pdo->prepare("SELECT * FROM `uczestniczacy` WHERE ");// TODO:
+
+            $stmt->execute();
+            $konta = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        } catch (PDOException $exception) {
+            // TODO: log database errors
+            $konta = "error";
+            throw $exception;
+        }
+
+        return $konta;
+    }
     public static function fetchNamesById($id)
     {
         try {

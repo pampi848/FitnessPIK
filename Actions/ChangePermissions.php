@@ -22,7 +22,7 @@ class ChangePermissions extends Action
             header('location: ?action=users');
         }
         else{
-            header('location: ?action=404');
+            header('location: ?action=401');
         }
     }
 }

@@ -70,9 +70,11 @@ class Config
             'addlesson' => 'Actions\\ViewLessonAdd',
             'lessonaddprocess' => 'Actions\\AddLesson',
             'lessondelprocess' => 'Actions\\DelLesson',
+            'terminaddprocess' => 'Actions\\AddTermin',
             'termindelprocess' => 'Actions\\DelTermin',
             'contact' => 'Actions\\ViewContact',
-            'aboutus' => 'Actions\\ViewAboutUs'
+            'aboutus' => 'Actions\\ViewAboutUs',
+            'userlist' => 'Actions\\ViewUserList'
         ];
 
     }
