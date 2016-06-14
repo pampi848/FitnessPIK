@@ -6,7 +6,9 @@
         <th class="text-center">Termin</th>
         <th class="text-center">Cena</th>
     </tr>
-    <?php foreach ($p as $oferta){ ?>
+    <?php 
+        $iterator = 0;
+        foreach ($p as $oferta){ ?>
         <?php if(isset($oferta) && is_object($oferta)){ ?>
             <tr>
                 <td>
@@ -29,7 +31,7 @@
                     <?php $count = count($oferta->data)?>
                     <?php foreach ($oferta->data as $data){ ?>
                     <div class="row termin-i-miejsce">
-                        <div class="col-md-6">
+                        <div class="col-md-8">
                             <div class="row">
                                 <h4><?=$data['dzienTygodnia'].' '.str_replace(".",":",$data['godzina'])?></h4>
                             </div>
@@ -43,12 +45,34 @@
                             <?php if (isset($_SESSION['logged']['level']) && $_SESSION['logged']['level']==1 && $count==1){ ?>
                             <div class="row">
                                 <div class="col-md-12">
-                                    <button class="btn btn-primary btn-table">Dodaj termin</button>
+                                    <button id="<?=$iterator ?>" class="btn btn-primary btn-table text-center add-term">Dodaj termin</button>
+                                    <div id="<?=$iterator ?>" class="add-term-forms">
+                                        <form class="form-horizontal">
+                                            <div class="form-group">
+                                                <input type="number" placeholder="Godzina">
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="number" placeholder="Sala">
+                                            </div>
+                                            <div class="form-group">
+                                                <label><input type="radio" name="day"> Poniedzałek </label>
+                                                <label><input type="radio" name="day"> Wtorek </label>
+                                                <label><input type="radio" name="day"> Środa </label>
+                                                <label><input type="radio" name="day"> Czwartek </label>
+                                                <label><input type="radio" name="day"> Piątek </label>
+                                                <label><input type="radio" name="day"> Sobota </label>
+                                                <label><input type="radio" name="day"> Niedziela </label>
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="submit" class="btn btn-success">
+                                            </div>
+                                        </form>
+                                    </div>
                                 </div>
                             </div>
                             <?php } ?>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-4">
                             <h4><?=$data['sala'];?></h4>
                         </div>
                         <?php $count--; ?>
@@ -56,10 +80,32 @@
                     <?php } ?>
                     <?php if(!is_array($oferta->data) || empty($oferta->data)){ ?>
                     <div class="row termin-i-miejsce">
-                        <div class="col-md-6">
+                        <div class="col-md-8">
                             <div class="row">
                                 <div class="col-md-12">
-                                    <button class="btn btn-primary btn-table">Dodaj termin</button>
+                                    <button id="<?=$iterator ?>" class="btn btn-primary btn-table text-center add-term">Dodaj termin</button>
+                                    <div id="<?=$iterator ?>" class="add-term-forms">
+                                        <form class="form-horizontal">
+                                            <div class="form-group">
+                                                <input type="number" placeholder="Godzina">
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="number" placeholder="Sala">
+                                            </div>
+                                            <div class="form-group">
+                                                <label><input type="radio" name="day"> Poniedzałek </label>
+                                                <label><input type="radio" name="day"> Wtorek </label>
+                                                <label><input type="radio" name="day"> Środa </label>
+                                                <label><input type="radio" name="day"> Czwartek </label>
+                                                <label><input type="radio" name="day"> Piątek </label>
+                                                <label><input type="radio" name="day"> Sobota </label>
+                                                <label><input type="radio" name="day"> Niedziela </label>
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="submit" class="btn btn-success">
+                                            </div>
+                                        </form>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -75,7 +121,9 @@
                 </td>
             </tr>
         <?php } ?>
-    <?php } ?>
+    <?php 
+                            $iterator++;
+                               } ?>
 
 
 </table>

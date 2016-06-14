@@ -304,6 +304,7 @@ body {
 
 .btn-table {
     width: 100%;
+    margin-bottom: 2vh;
 }
 
 .termin-i-miejsce {
@@ -332,4 +333,10 @@ body {
 
 .margin-bot {
     margin-bottom: 3vh;
+}
+
+
+
+.add-term-forms {
+    display: none;
 }

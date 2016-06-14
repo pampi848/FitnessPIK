@@ -69,6 +69,13 @@ $('.modify').click(function(){
     $('#edit').fadeToggle(500);
 });
 
+$('button.add-term').click(function(){
+    var ajdi = $(this).attr('id');
+    ajdi = parseInt(ajdi);
+    console.log(ajdi);
+    $('div#'+ajdi).slideToggle(600);
+})
+
 
 
 
