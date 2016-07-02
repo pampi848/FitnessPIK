@@ -1,3 +1,4 @@
+<?php if(is_array($p)){ ?>
 <table class="table table-stripped text-center">
     <tr class="text-center">
         <th class="text-center">Nazwa</th>
@@ -37,39 +38,73 @@
                     <div class="row termin-i-miejsce">
                         <div class="col-md-6">
                             <div class="row">
-                                <h4><?=$data['dzienTygodnia'].' '.str_replace(".",":",$data['godzina'])?></h4>
+                                <table id="tabelka">
+                                    <tr><td class="tede">Dzień: </td><td class="tede">&nbsp;<?=$oferta->$data["dzienTygodnia"]?></td></tr>
+                                    <tr><td class="tede">Godzina: </td><td class="tede">&nbsp;<?=str_replace('.',':',$data['godzina'])?></td></tr>
+                                    <tr><td class="tede">Sala: </td><td class="tede">&nbsp;<?=$data['sala'];?></td></tr>
+                                </table>
                             </div>
                             <?php if (isset($_SESSION['logged']['level']) && $_SESSION['logged']['level']==1){ ?>
                             <div class="row">
                                 <div class="col-md-12">
-                                    <a href="?action=termindelprocess&&id=<?=$oferta->getId()?>"><button class="btn btn-warning btn-table">Usuń termin</button></a>
+                                    <a href="?action=termindelprocess&&id=<?=$data['id']?>"><button class="btn btn-warning btn-table">Usuń termin</button></a>
                                 </div>
                             </div>
                             <?php } ?>
                             <?php if (isset($_SESSION['logged']['level']) && $_SESSION['logged']['level']==1 && $count==1){ ?>
                             <div class="row">
-                                <div class="col-md-12">
-                                    <a href="?action=terminaddprocess&&id=<?=$oferta->getId()?>"><button class="btn btn-primary btn-table">Dodaj termin</button></a>
-                                </div>
+                                <div class="col-md-12 btn-group">
+                                    <!-- Single button -->
+                                    <div class="btn-group">
+                                        <form action="?action=terminaddprocess&&id=<?=$oferta->getId()?>" method="post">
+                                            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dodaj termin <span class="caret"></span></button>
+                                            <ul class="dropdown-menu">
+                                                <li style="padding-left: 2%;margin-bottom: 7%"><input class="" style="width:48%!important;" name="termin[hour]" type="number" min="0" max="23" step="1" placeholder="godzina"/>:<input class="" style="width:48%!important;" name="termin[min]" type="number" min="0" max="59" step="1" placeholder="minuta"/></li>
+                                                <li style="padding-left: 2%"><input class="form-control" style="width:98.5%!important;"name="termin[sala]" type="text" placeholder="sala"/></li>
+                                                <li style="padding-left: 2%"><input class="form-control" style="width:98.5%!important;"name="termin[day]" type="number" min="1" max="7" step="1" placeholder="dzień tygodnia"/></li>
+                                                <li role="separator" class="divider"></li>
+                                                <li><input class="btn btn-success form-control" type="submit" value="Wyślij"</li>
+                                            </ul>
+                                        </form>
+                                    </div>
                             </div>
                             <?php } ?>
-                        </div>
-                        <div class="col-md-6">
-                            <h4><?=$data['sala'];?></h4>
                         </div>
                         <?php $count--; ?>
                     </div>
                     <?php } ?>
-                    <?php if(isset($_SESSION['logged']['level']) && $_SESSION['logged']['level']==1 && !is_array($oferta->data) || empty($oferta->data)){ ?>
+                    <?php if(isset($_SESSION['logged']['level']) && $_SESSION['logged']['level']==1 && (!is_array($oferta->data) || empty($oferta->data))){ ?>
                     <div class="row termin-i-miejsce">
                         <div class="col-md-6">
                             <div class="row">
-                                <div class="col-md-12">
-                                    <a href="?action=terminaddprocess&&id=<?=$oferta->getId()?>"><button class="btn btn-primary btn-table">Dodaj termin</button></a>
+                                <div class="col-md-12 btn-group">
+                                    <!-- Single button -->
+                                    <div class="btn-group">
+                                        <form action="?action=terminaddprocess&&id=<?=$oferta->getId()?>" method="post">
+                                            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dodaj termin <span class="caret"></span></button>
+                                            <ul class="dropdown-menu">
+                                                <li style="padding-left: 2%;margin-bottom: 7%"><input class="" style="width:48%!important;" name="termin[hour]" type="number" min="0" max="23" step="1" placeholder="godzina"/>:<input class="" style="width:48%!important;" name="termin[min]" type="number" min="0" max="59" step="1" placeholder="minuta"/></li>
+                                                <li style="padding-left: 2%"><input class="form-control" style="width:98.5%!important;"name="termin[sala]" type="text" placeholder="sala"/></li>
+                                                <li style="padding-left: 2%"><input class="form-control" style="width:98.5%!important;"name="termin[day]" type="number" min="1" max="7" step="1" placeholder="dzień tygodnia"/></li>
+                                                <li role="separator" class="divider"></li>
+                                                <li><input class="btn btn-success form-control" type="submit" value="Wyślij"</li>
+                                            </ul>
+                                        </form>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                        <script src="js/terminAdd.js"></script>
+                    <?php }elseif((!is_array($oferta->data) || empty($oferta->data))){ ?>
+                        <div class="row termin-i-miejsce">
+                            <div class="col-md-6">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <button class="btn btn-danger btn-table" style="cursor:default;">Brak terminów! </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     <?php } ?>
                 </td>
                 <td>
@@ -85,3 +120,5 @@
 
 
 </table>
+<?php } else {?>
+<?='Brak dodanej oferty!';}?>

@@ -69,7 +69,10 @@ $('.modify').click(function(){
     $('#edit').fadeToggle(500);
 });
 
-
+// $('#addTermin').click(function(){
+// });
+//
+//
 
 
 

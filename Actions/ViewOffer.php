@@ -19,21 +19,19 @@ class ViewOffer extends Action
     function doExecute()
     {
         $zajecia = Zajecia::fetchAllZajecia();
+        if (is_array($zajecia)) {
+            $dniTygodnia = ['Poniedziałek', 'Wtorek', 'Środa', 'Czwartek', 'Piątek', 'Sobota', 'Niedziela'];
+            foreach ($zajecia as $oferta) {
+                $oferta->setIdInstruktor(Account::fetchNamesById($oferta->getIdInstruktor()));
+                foreach ($oferta->getData() as $data) {
 
-        $dniTygodnia = ['Poniedziałek','Wtorek','Środa','Czwartek','Piątek','Sobota','Niedziela'];
-        $i = 1;
-        foreach ($zajecia as $oferta){
-            $oferta->setIdInstruktor(Account::fetchNamesById($oferta->getIdInstruktor()));
-            $j=0;
-            foreach ($oferta->getData() as $data) {
-                if(empty($data)) $data=[];
-                $zajecia[$i]->data[$j]['dzienTygodnia'] = $dniTygodnia[((int)$zajecia[$i]->getData()[$j]['dzienTygodnia'])] ;
-                $j++;
+                    if (empty($data)) $data = [];
+                    $dzienSlownie = (int)($data['dzienTygodnia']);
+                    $dzienSlownie = --$dzienSlownie;
+                    $oferta->$data["dzienTygodnia"] = $dniTygodnia[$dzienSlownie];
+                }
             }
-            unset($j);
-            $i++;
         }
-        unset($i);
         $this->loadContent('cennik', $zajecia);
     }
 }

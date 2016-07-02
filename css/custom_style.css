@@ -333,3 +333,12 @@ body {
 .margin-bot {
     margin-bottom: 3vh;
 }
+#tabelka {
+    width:90%;
+    padding-left:5%;
+    padding-right:5%;
+    text-align: right;
+}
+.tede{
+    width:50%;
+}
